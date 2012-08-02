@@ -1,0 +1,238 @@
+"=============================================================================
+"     FileName: _vimrc
+"         Desc: 
+"       Author: loseblue
+"        Email: loseblue[a]163.com
+"     HomePage: http://www.google.com
+"      Version: 0.0.1
+"   LastChange: 2012-08-01 10:19:30
+"      History:
+"=============================================================================
+" Platform
+function! MySys()
+  if has('win32') || has('win64')
+    return "windows"
+  else
+    return "linux"
+  endif
+endfunction
+
+"set backupdir=E:\VIM
+set nobackup      " 关闭自动备份
+syntax enable       " 语法高亮
+syntax on
+set display=lastline
+filetype plugin indent on " 文件类型检测
+au BufEnter *.txt setlocal ft=txt "txtBrowser 调用
+colorscheme spring  " 配色方案
+set backspace=2     " 设置退格键可用
+set nu!             " 显示行号
+set autoread        " Set to auto read when a file is changed from the outside
+set foldenable
+set fdm=indent      " 以大括号做文本折叠
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+set showcmd "提示nomoal下光标的位置
+set cursorcolumn  " 高亮光标列
+set cursorline    " 高亮光标行
+set linespace=5   " 设置行距
+set lines=20 columns=110 "初始化20行，100列
+set linebreak      "换行不截断单词 
+" set foldmethod=marker
+" let g:showmarks_marks = 'abcdefghijklmnopqrstuvwxyz'  " 设置bookMark
+
+"缩进线设置，这里你可以把"|"改为你喜欢的缩进线符号
+set list
+set listchars=tab:\|-
+" set spell " 为了折行气泡弹出信息
+set tabpagemax=15 " 取消系统自带的tab功能
+set showtabline=2
+
+set paste
+nmap <silent> <A-q> :q<CR>
+
+" 关闭错误声音
+set noerrorbells
+set novisualbell
+set t_vb=
+
+"窗口分割时,进行切换的按键热键需要连接两次,比如从下方窗口移动
+"光标到上方窗口,需要<c-w><c-w>k,非常麻烦,现在重映射为<c-k>,切换的
+"时候会变得非常方便.
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" 状态行显示的内容 [包括系统平台、文件类型、坐标、所占比例、时间等]
+"set statusline=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
+
+" 文件编码识别
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+"set fileencoding=chinese
+set fileencoding=utf-8
+else
+set fileencoding=utf-8
+endif
+
+" C 设置
+set sm              " 重口味
+set tabstop=4       " 设置tab键的宽度
+set softtabstop=4
+set shiftwidth=4    " 设置缩进的空格数为4
+set autoindent      "每行的缩进值与上一行相等
+set cindent         
+
+"Set mapleader
+let mapleader = ","
+let g:mapleader = ","
+set ignorecase smartcase "搜索时全小写相当于不区分大小写，只要有一个大写字母出现就区分大小写
+
+
+" VIM 字体设置
+" 17~19（或更大）英寸屏幕
+set guifont=yaheiInconsolata:h10.5:cANSI
+"set gfw=Yahei_Mono:h10.5:cGB2312
+" 12（或更小）~14英寸屏幕
+" set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
+"set gfw=Yahei_Mono:h10:cGB231
+
+" 模仿MS Windows中的保存命令: Ctrl+S
+imap <C-s> <Esc>:wa!<cr>i<Right>
+nmap <C-s> :wa!<cr>
+set nocompatible
+"source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+"映射复制、粘贴、剪贴ctrl+c ctrl+v ctrl+x
+:map <C-V> "+pa
+:map <C-C> "+y
+:map <C-X> "+x
+
+" 文件编码类型
+set ffs=dos,unix
+nmap <leader>fd :se ff=dos<cr>
+nmap <leader>fu :se ff=unix<cr>
+
+" copy current file/path to clipboard ,p文件及目录 ,P只有目录
+noremap ,p :let @*=expand("%:p")<CR><Esc>
+noremap ,P :let @*=expand("%:p:h")<CR><Esc>
+
+"To hex modle
+let s:hexModle = "N"
+function! ToHexModle()
+  if s:hexModle == "Y"
+    %!xxd -r
+    let s:hexModle = "N"
+  else
+    %!xxd
+    let s:hexModle = "Y"
+  endif
+endfunction
+
+
+" """"""""""""""""""" F1-F12的用处"""""""""""""""""""""""""
+" F1 Toggle Menu and Toolbar
+set guioptions-=m
+set guioptions-=T
+set guioptions-=l
+"set guioptions-=r
+map <silent> <F1> :if &guioptions =~# 'T' <Bar>
+		\set guioptions-=T <Bar>
+        \set guioptions-=m <bar>
+        \set guioptions-=l <bar>
+        "\set guioptions-=r <bar>
+    \else <Bar>
+		\set guioptions+=T <Bar>
+        \set guioptions+=m <Bar>
+        \set guioptions+=l <Bar>
+        "\set guioptions+=r <Bar>
+    \endif<CR>
+
+"F2显示以前打开的文件
+map <F2> :MRU<cr>
+
+"F4 显示文件信息
+let g:vimrc_author='loseblue' 
+let g:vimrc_email='loseblue[a]163.com' 
+let g:vimrc_homepage='http://www.google.com' 
+nmap <F4> :AuthorInfoDetect<cr>
+
+"F5使用python
+map <F5> :!python.exe %<CR>
+"F6 切换16进制显示
+map <F6> :call ToHexModle()<cr>
+"F7插入当前时间
+imap <F7> <C-R>=strftime("%c")<CR>
+
+" <F9>打开关闭Tagbar
+nmap <silent> <F9> :TagbarToggle<CR>
+nmap <silent> <C-F9> :Tlist<CR>
+let tags=$VIM . "\\soft\\ctags.exe"
+let g:tagbar_left = 1
+let g:tagbar_singleclick = 0
+let g:tagbar_ctags_bin = 'ctags'
+let g:tagbar_width = 30
+
+" 上下滚屏
+noremap <A-j> <C-f>
+noremap <A-k> <C-b>
+
+" TabBar 配置
+"let g:Tb_SplitToEdge = 0
+"let g:Tb_ModSelTarget = 1
+
+"=========================== Vundle配置 ================================
+set nocompatible    " be iMproved
+filetype off        " required!
+
+if MySys() == 'windows'
+	set rtp+=~/.vim/bundle/vundle/
+else
+	set rtp+=~/.vim/bundle/vundle/
+endif
+
+call vundle#rc()
+" required!
+Bundle 'gmarik/vundle'
+
+" vim-scripts repos
+Bundle 'a.vim'
+Bundle 'AuthorInfo'
+Bundle 'EasyMotion'
+Bundle 'Mark'
+Bundle 'matchit.zip'
+Bundle 'The-NERD-Commenter'
+Bundle 'project.tar.gz'
+Bundle 'Tagbar'
+Bundle 'taglist.vim'
+Bundle 'TeTrIs.vim'
+Bundle 'TxtBrowser'
+Bundle 'winmanager--Fox'
+
+filetype plugin indent on    " required!
+"=========================== END Vundle配置 ================================
+" winManger设置
+
+let g:Tagbar_title="[Tagbar]"
+let g:Project_title="[Project]"
+"let g:winManagerWindowLayout="Tagbar|Project"
+let g:winManagerWindowLayout="TagList|FileExplorer"
+
+function! Tagbar_Start()
+	exec 'TagbarToggle'
+endfunction
+function! Tagbar_IsValid()
+	return 1
+endfunction
+function! Project_Start()
+	exec 'Project'
+endfunction
+function! Project_IsValid()
+	return 1
+endfunction
+
+nmap wm :WMToggle<cr>
+

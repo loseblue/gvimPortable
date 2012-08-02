@@ -1,0 +1,2055 @@
+
+platform=e:\TDDOWNLOAD\platform filter="*.c *.h *.hp *.def" {
+ baseband=baseband {
+  boot=boot {
+   include=include {
+    boot.def
+   }
+   lib=lib {
+   }
+   src=src {
+   }
+  }
+  dsp=dsp {
+   ddrv=ddrv {
+    common=common {
+     include=include {
+      common.h
+      ddrv.h
+     }
+     src=src {
+      simul_xirq.c
+     }
+    }
+    include=include {
+    }
+    lib=lib {
+    }
+    xdma=xdma {
+     include=include {
+      xdma.h
+     }
+     src=src {
+      xdma.c
+     }
+    }
+    xirq=xirq {
+     include=include {
+      xirq.h
+     }
+     src=src {
+      xirq.c
+     }
+    }
+    xpiu=xpiu {
+     include=include {
+      xpiu.h
+     }
+     src=src {
+      xpiu.c
+     }
+    }
+   }
+   entry=entry {
+    dsp_main.c
+   }
+   include=include {
+    typedef.h
+    dsp.def
+   }
+   init=init {
+    include=include {
+     init.h
+    }
+    lib=lib {
+    }
+    src=src {
+     init.c
+    }
+   }
+   lib=lib {
+   }
+  }
+  include=include {
+   rk_types.h
+   baseband.def
+  }
+  l1c=l1c {
+   include=include {
+    gsm.h
+    l1c_gsm.h
+   }
+  }
+  mdrv=mdrv {
+   common=common {
+    include=include {
+     common.h
+     mdrv.h
+    }
+    src=src {
+     boot_dsp.c
+     driver_delay.c
+     fpga.c
+     simul_irq.c
+    }
+   }
+   dma=dma {
+    include=include {
+     dma.h
+    }
+    src=src {
+     dma.c
+    }
+   }
+   gpio=gpio {
+    include=include {
+     gpio.h
+    }
+    src=src {
+     gpio.c
+    }
+   }
+   i2c=i2c {
+    include=include {
+     i2c.h
+    }
+    src=src {
+     i2c.c
+    }
+   }
+   i2s=i2s {
+    include=include {
+     i2s.h
+    }
+    src=src {
+     i2s.c
+    }
+   }
+   include=include {
+    hal_common.h
+    hal_mdrv.h
+    hal_piu.h
+    hal_timer.h
+    hal_uart.h
+    mdrv.def
+   }
+   interface=interface {
+    include=include {
+    }
+    src=src {
+     hal_common.c
+     hal_piu.c
+     hal_timer.c
+     hal_uart.c
+    }
+   }
+   iomux=iomux {
+    include=include {
+     iomux.h
+    }
+    src=src {
+     iomux.c
+    }
+   }
+   irq=irq {
+    include=include {
+     irq.h
+    }
+    src=src {
+     irq.c
+    }
+   }
+   lib=lib {
+   }
+   mm=mm {
+    include=include {
+     mm.h
+    }
+    src=src {
+     mm.c
+    }
+   }
+   piu=piu {
+    include=include {
+     piu.h
+    }
+    src=src {
+     piu.c
+    }
+   }
+   pmu=pmu {
+    include=include {
+     pmu.h
+    }
+    src=src {
+     pmu.c
+    }
+   }
+   rtc=rtc {
+    rtc.c
+    api_rtc.h
+    rtc.h
+   }
+   scu=scu {
+    include=include {
+     scu.h
+    }
+    src=src {
+     pll.c
+     scu.c
+    }
+   }
+   timer=timer {
+    include=include {
+     timer.h
+    }
+    src=src {
+     timer.c
+    }
+   }
+   uart=uart {
+    include=include {
+     uart.h
+    }
+    src=src {
+     uart.c
+    }
+   }
+  }
+  ros=ros {
+   asm=asm {
+    include=include {
+    }
+    src=src {
+    }
+   }
+   common=common {
+    include=include {
+    }
+    src=src {
+     ros_init.c
+    }
+   }
+   include=include {
+    ros.h
+    sxr_cnf.h
+    sxr_csp.h
+    sxr_jbsd.h
+    sxr_mem.h
+    sxr_ops.h
+    sxr_queu.h
+    sxr_sbx.h
+    sxr_tim.h
+    sxr_tksd.h
+    sxr_tls.h
+    sxs_cfg.h
+    sxs_debug.h
+    sxs_io.h
+    sxs_lib.h
+    sxs_rmc.h
+    sxs_rmt.h
+    sxs_srl.h
+    sxs_type.h
+    ros.def
+   }
+   io=io {
+    include=include {
+     sxs_io.hp
+     sxs_rmt.hp
+     sxs_srl.hp
+    }
+    src=src {
+     sxs_io.c
+     sxs_rmc.c
+     sxs_rmt.c
+     sxs_srl.c
+    }
+   }
+   jbsd=jbsd {
+    include=include {
+     sxr_jbsd.hp
+    }
+    src=src {
+     sxr_jbsd.c
+     sxs_jbsd.c
+    }
+   }
+   lib=lib {
+   }
+   mem=mem {
+    include=include {
+     sxr_mem.hp
+    }
+    src=src {
+     sxr_mem.c
+     sxs_mem.c
+    }
+   }
+   queu=queu {
+    include=include {
+     sxr_queu.hp
+    }
+    src=src {
+     sxr_queu.c
+    }
+   }
+   sbx=sbx {
+    include=include {
+     sxr_sbx.hp
+    }
+    src=src {
+     sxr_sbx.c
+     sxs_sbx.c
+    }
+   }
+   tim=tim {
+    include=include {
+     sxr_tim.hp
+    }
+    src=src {
+     sxr_tim.c
+     sxs_tim.c
+    }
+   }
+   tksd=tksd {
+    include=include {
+     sxr_tksd.hp
+    }
+    src=src {
+     sxr_tksd.c
+     sxs_tksd.c
+    }
+   }
+   tls=tls {
+    include=include {
+    }
+    src=src {
+     sxr_tls.c
+    }
+   }
+  }
+  sap=sap {
+   include=include {
+    sap.def
+   }
+   src=src {
+    main.c
+    main_my.c
+   }
+  }
+  stack=stack {
+   api=api {
+    include=include {
+     api_capa.h
+     api_data.h
+     api_defs.h
+     api_evt.h
+     api_fsm.h
+     api_func.h
+     api_iitf.h
+     api_out.h
+    }
+    src=src {
+     api.c
+     api_capa.c
+     api_evt.c
+     api_fsm.c
+     api_gene.c
+     api_out.c
+     api_util.c
+     stack_vers.c
+    }
+   }
+   cb=cb {
+    include=include {
+     cb_data.h
+     cb_defs.h
+     cb_evt.h
+     cb_fsm.h
+     cb_func.h
+     cb_msg.h
+     cb_trc.h
+    }
+    src=src {
+     cb.c
+     cb_evt.c
+     cb_fsm.c
+     cb_out.c
+     cb_trs.c
+     cb_util.c
+    }
+   }
+   cc=cc {
+    include=include {
+     cc_ctxt.h
+     cc_def.h
+     cc_dtmf.h
+     cc_evt.h
+     cc_fsm.h
+     cc_intra.h
+     cc_msg.h
+     cc_out.h
+     cc_tool.h
+    }
+    src=src {
+     cc.c
+     cc_crss.c
+     cc_dtmf.c
+     cc_evt.c
+     cc_fsm.c
+     cc_gene.c
+     cc_out.c
+     cc_reest.c
+     cc_route.c
+     cc_tool.c
+     cc_u0.c
+     cc_u01.c
+     cc_u1.c
+     cc_u10.c
+     cc_u11.c
+     cc_u12.c
+     cc_u19.c
+     cc_u6.c
+     cc_u8.c
+     cc_u9.c
+    }
+   }
+   cmn=cmn {
+    include=include {
+     cmn_dec.h
+    }
+   }
+   cod=cod {
+    include=include {
+     ccDl.h
+     ccUl.h
+     cc_ccDl.h
+     cc_ccUl.h
+     cc_ed_c.h
+     cc_edc1.h
+     cc_edcf.h
+     cc_edre.h
+     Ccch.h
+     DchD.h
+     csn1lib.h
+     ed_c.h
+     ed_data.h
+     ed_lib.h
+     ed_rr.h
+     ed_tlv.h
+     ed_user.h
+     edc1.h
+     edcf.h
+     edie.h
+     edre.h
+     edsf.h
+     edud.h
+     mmDl.h
+     mmUl.h
+     mm_ed_c.h
+     mm_edc1.h
+     mm_edcf.h
+     mm_edre.h
+     mm_edsf.h
+     mm_edud.h
+     mm_mmDl.h
+     mm_mmUl.h
+     rrd_Ccch.h
+     rrd_DchD.h
+     rrd_ed_c.h
+     rrd_edc1.h
+     rrd_edcf.h
+     rrd_edre.h
+     rrd_edud.h
+     rri_ed_c.h
+     rri_edc1.h
+     rri_edcf.h
+     rri_edre.h
+    }
+    src=src {
+     cc_ccdl.c
+     cc_ccul.c
+     cc_ed_c.c
+     cc_edc1.c
+     cc_edre.c
+     ccch.c
+     ccdl.c
+     ccul.c
+     csn1lib.c
+     dchd.c
+     ed_lib.c
+     edc1.c
+     edie.c
+     edre.c
+     edsf.c
+     edud.c
+     mm_ed_c.c
+     mm_edc1.c
+     mm_edre.c
+     mm_edsf.c
+     mm_edud.c
+     mm_mmdl.c
+     mm_mmul.c
+     mmdl.c
+     mmul.c
+     rrd_ccch.c
+     rrd_dchd.c
+     rrd_ed_c.c
+     rrd_edc1.c
+     rrd_edre.c
+     rrd_edud.c
+     rri_ed_c.c
+     rri_edc1.c
+     rri_edre.c
+    }
+   }
+   fsm=fsm {
+    include=include {
+    }
+    src=src {
+     fsm.c
+    }
+   }
+   include=include {
+    api_msg.h
+    cmn_defs.h
+    fsm.h
+    itf_api.h
+    itf_cc.h
+    itf_defs.h
+    itf_il.h
+    itf_l1.h
+    itf_msg.h
+    itf_msgc.h
+    itf_rlc.h
+    itf_rr.h
+    itf_sim.h
+    itf_sms.h
+    itf_snd.h
+    itf_stk.h
+    itf_stt.h
+    stack_version.h
+   }
+   itf=itf {
+    include=include {
+     itf_cb.h
+     itf_l1c.h
+     itf_lap.h
+     itf_llc.h
+     itf_mm.h
+     itf_pal.h
+     itf_rlp.h
+     itf_sm.h
+     itf_ss.h
+    }
+   }
+   l1=l1 {
+    include=include {
+     l1.h
+     l1a.h
+     l1a_msg.h
+     l1s.h
+     l1s_def.h
+     l1s_gnbp.h
+     l1s_pnbp.h
+     l1s_spy.h
+     l1s.hp
+    }
+    src=src {
+     l1a_gnbp.c
+     l1a_gncp.c
+     l1a_gtls.c
+     l1a_pnbp.c
+     l1a_task.c
+     l1s_gctk.c
+     l1s_gnbp.c
+     l1s_gncp.c
+     l1s_irq.c
+     l1s_pnbp.c
+    }
+   }
+   lap=lap {
+    include=include {
+     lap_data.h
+     lap_evt.h
+     lap_frm.h
+     lap_fsm.h
+     lap_iitf.h
+     lap_msg.h
+     lap_out.h
+     lap_rout.h
+     lap_trc.h
+    }
+    src=src {
+     lap.c
+     lap_evt.c
+     lap_frm.c
+     lap_fsm.c
+     lap_out.c
+     lap_proc.c
+     lap_rout.c
+    }
+   }
+   llc=llc {
+    include=include {
+     llc_data.h
+     llc_defs.h
+     llc_evt.h
+     llc_frm.h
+     llc_fsm.h
+     llc_func.h
+     llc_iitf.h
+     llc_msg.h
+     llc_rout.h
+     llc_trc.h
+    }
+    src=src {
+     llc.c
+     llc_ctx.c
+     llc_evt.c
+     llc_frm.c
+     llc_fsm.c
+     llc_out.c
+     llc_rout.c
+     llc_spy.c
+     llc_trs.c
+     llc_util.c
+    }
+   }
+   mm=mm {
+    include=include {
+     mm_ctxt.h
+     mm_def.h
+     mm_e2p.h
+     mm_evt.h
+     mm_func.h
+     mm_intra.h
+     mm_msg.h
+     mm_out.h
+     mm_tool.h
+     mm_trc.h
+     mmc_ctxt.h
+     mmc_fsm.h
+     mmc_mmp.h
+     mmc_tool.h
+     mmp_ctxt.h
+     mmp_fsm.h
+     mmp_tool.h
+    }
+    src=src {
+     mm.c
+     mm_evt.c
+     mm_func.c
+     mm_out.c
+     mm_route.c
+     mm_spy.c
+     mm_tool.c
+     mmc_cntd.c
+     mmc_fsm.c
+     mmc_gene.c
+     mmc_idle.c
+     mmc_mmp.c
+     mmc_null.c
+     mmc_tool.c
+     mmc_wnkc.c
+     mmc_wnkr.c
+     mmc_wrrc.c
+     mmp_dreg.c
+     mmp_fsm.c
+     mmp_gene.c
+     mmp_ndet.c
+     mmp_null.c
+     mmp_pend.c
+     mmp_pip.c
+     mmp_reg.c
+     mmp_tool.c
+    }
+   }
+   rld=rld {
+    include=include {
+     rld_data.h
+     rld_evt.h
+     rld_func.h
+     rld_msg.h
+     rld_trce.h
+    }
+    src=src {
+     rld.c
+     rld_evt.c
+     rld_out.c
+     rld_tool.c
+     rld_trsf.c
+    }
+   }
+   rlp=rlp {
+    include=include {
+     rlp_data.h
+     rlp_defs.h
+     rlp_evt.h
+     rlp_fsm.h
+     rlp_func.h
+     rlp_iitf.h
+     rlp_msg.h
+     rlp_trc.h
+    }
+    src=src {
+     rlp.c
+     rlp_evt.c
+     rlp_fsm.c
+     rlp_i_s.c
+     rlp_out.c
+     rlp_rout.c
+     rlp_trs.c
+     rlp_util.c
+    }
+   }
+   rlu=rlu {
+    include=include {
+     rlc_defs.h
+     rlu_cod.h
+     rlu_data.h
+     rlu_defs.h
+     rlu_evt.h
+     rlu_fsm.h
+     rlu_func.h
+     rlu_iitf.h
+     rlu_msg.h
+     rlu_trce.h
+    }
+    src=src {
+     rlu.c
+     rlu_arq.c
+     rlu_cond.c
+     rlu_evt.c
+     rlu_fctr.c
+     rlu_fsm.c
+     rlu_gene.c
+     rlu_nack.c
+     rlu_out.c
+     rlu_rcfg.c
+     rlu_spy.c
+     rlu_tbf.c
+     rlu_trsc.c
+     rlu_tst.c
+     rlu_tx.c
+     rlu_util.c
+     rlu_void.c
+     rlu_wcon.c
+     rlu_wrls.c
+    }
+   }
+   rr=rr {
+    include=include {
+     mac_data.h
+     mac_dec.h
+     mac_func.h
+     mac_trce.h
+     rr_capa.h
+     rr_cell.h
+     rr_data.h
+     rr_dec.h
+     rr_defs.h
+     rr_evt.h
+     rr_freq.h
+     rr_fsm.h
+     rr_func.h
+     rr_iitf.h
+     rr_msg.h
+     rr_trce.h
+     rrd_data.h
+     rrd_dec.h
+     rrd_defs.h
+     rri_cmon.h
+     rri_data.h
+     rri_dec.h
+     rri_defs.h
+     rri_psel.h
+     rrp_data.h
+     rrp_enc.h
+    }
+    src=src {
+     mac_ctrl.c
+     mac_data.c
+     mac_in.c
+     mac_out.c
+     mac_tool.c
+     rr.c
+     rr_cell.c
+     rr_dec.c
+     rr_dfrq.c
+     rr_evt.c
+     rr_fsm.c
+     rr_out.c
+     rr_sim.c
+     rr_sort.c
+     rr_spy.c
+     rr_util.c
+     rrd_acci.c
+     rrd_cond.c
+     rrd_data.c
+     rrd_dec.c
+     rrd_fsm.c
+     rrd_gene.c
+     rrd_util.c
+     rrd_void.c
+     rrd_wrsl.c
+     rrg_acci.c
+     rrg_cond.c
+     rrg_data.c
+     rrg_dec.c
+     rrg_util.c
+     rrg_void.c
+     rrg_wcni.c
+     rrg_wcnn.c
+     rrg_wrls.c
+     rri_api.c
+     rri_ba.c
+     rri_bcch.c
+     rri_cell.c
+     rri_cfsm.c
+     rri_cmon.c
+     rri_csel.c
+     rri_ctrs.c
+     rri_dec.c
+     rri_inst.c
+     rri_meas2.c
+     rri_pag.c
+     rri_pbch.c
+     rri_pdec.c
+     rri_pfsm.c
+     rri_psel.c
+     rri_ptrs.c
+     rri_rsel.c
+     rri_rssi.c
+     rri_scan.c
+     rri_util.c
+     rrp_acci.c
+     rrp_accn.c
+     rrp_cond.c
+     rrp_dec.c
+     rrp_enc.c
+     rrp_gene.c
+     rrp_msg.c
+     rrp_util.c
+     rrp_void.c
+     rrp_wcni.c
+     rrp_wcnn.c
+     rrp_wrsl.c
+    }
+   }
+   sim=sim {
+    include=include {
+     sim_data.h
+     sim_evt.h
+     sim_msg.h
+     sim_proc.h
+     sim_prot.h
+     sim_trc.h
+    }
+    src=src {
+     sim.c
+     sim_evt.c
+     sim_proc.c
+     sim_prot.c
+    }
+   }
+   sm=sm {
+    include=include {
+     sm_data.h
+     sm_defs.h
+     sm_evt.h
+     sm_fsm.h
+     sm_iitf.h
+     sm_mmcod.h
+     sm_mmdec.h
+     sm_msg.h
+     sm_out.h
+     sm_route.h
+     sm_trc.h
+     sm_trs.h
+     sm_util.h
+    }
+    src=src {
+     sm.c
+     sm_evt.c
+     sm_fsm.c
+     sm_mmcod.c
+     sm_mmdec.c
+     sm_out.c
+     sm_route.c
+     sm_trs.c
+     sm_util.c
+    }
+   }
+   sms=sms {
+    include=include {
+     smc_data.h
+     smc_fsm.h
+     smc_proc.h
+     smc_uti.h
+     smr_data.h
+     smr_fsm.h
+     smr_proc.h
+     smr_uti.h
+     sms.h
+     sms_data.h
+     sms_evt.h
+     sms_iitf.h
+     sms_msg.h
+     sms_out.h
+     sms_rout.h
+     sms_trc.h
+    }
+    src=src {
+     smc_fsm.c
+     smc_proc.c
+     smc_uti.c
+     smr_fsm.c
+     smr_proc.c
+     smr_uti.c
+     sms.c
+     sms_evt.c
+     sms_out.c
+     sms_rout.c
+    }
+   }
+   snd=snd {
+    include=include {
+     snd_comp.h
+     snd_data.h
+     snd_evt.h
+     snd_fsm.h
+     snd_iitf.h
+     snd_msg.h
+     snd_out.h
+     snd_rout.h
+     snd_trc.h
+     snd_trs.h
+     snd_uti.h
+    }
+    src=src {
+     snd.c
+     snd_comp.c
+     snd_evt.c
+     snd_fsm.c
+     snd_out.c
+     snd_rout.c
+     snd_trs.c
+     snd_uti.c
+    }
+   }
+   ss=ss {
+    include=include {
+     ss_ctxt.h
+     ss_debug.h
+     ss_evt.h
+     ss_fsm.h
+     ss_intra.h
+     ss_msg.h
+     ss_msgtypes.h
+     ss_rxmsgparse.h
+     ss_tool.h
+    }
+    src=src {
+     ss.c
+     ss_evt.c
+     ss_fsm.c
+     ss_gene.c
+     ss_rxmsgparse.c
+     ss_tool.c
+     ss_u0.c
+     ss_u01.c
+     ss_u1.c
+    }
+   }
+  }
+ }
+ bin=bin {
+ }
+ config=config {
+ }
+ doc=doc {
+  ros=ros {
+  }
+ }
+ test=test {
+  boot=boot {
+  }
+  dsp=dsp {
+   ddrv=ddrv {
+    integration=integration {
+    }
+    unit=unit {
+     xdma=xdma {
+      dsp=dsp {
+       test_xdma.c
+       lib=lib {
+       }
+      }
+      mcu=mcu {
+       test_xdma.c
+       bin=bin {
+       }
+      }
+     }
+     xirq=xirq {
+      dsp=dsp {
+       test_xirq.c
+       lib=lib {
+       }
+      }
+      mcu=mcu {
+       test_xirq.c
+       bin=bin {
+       }
+      }
+     }
+    }
+   }
+  }
+  mdrv=mdrv {
+   integration=integration {
+    dsp=dsp {
+     dsp_stub.c
+     lib=lib {
+     }
+    }
+    mcu=mcu {
+     test_hal.c
+     bin=bin {
+     }
+    }
+   }
+   unit=unit {
+    common=common {
+     dsp=dsp {
+      test_simul_xirq.c
+      lib=lib {
+      }
+     }
+     mcu=mcu {
+      test_common.c
+      bin=bin {
+      }
+     }
+    }
+    dma=dma {
+     test_dma.c
+     bin=bin {
+     }
+    }
+    fpga=fpga {
+     test_fpga.c
+     bin=bin {
+     }
+    }
+    gpio=gpio {
+     test_gpio.c
+     bin=bin {
+     }
+    }
+    i2s=i2s {
+     test_i2s.c
+     bin=bin {
+     }
+    }
+    irq=irq {
+     test_irq.c
+     bin=bin {
+     }
+    }
+    piu=piu {
+     dsp=dsp {
+      test_xpiu.c
+      lib=lib {
+      }
+     }
+     mcu=mcu {
+      test_piu.c
+      bin=bin {
+      }
+     }
+    }
+    timer=timer {
+     test_timer.c
+     bin=bin {
+     }
+     test_timer_Data=test_timer_Data {
+      Debug=Debug {
+       ObjectCode=ObjectCode {
+       }
+      }
+     }
+    }
+    uart=uart {
+     test_uart.c
+     test_uart_app.c
+     bin=bin {
+     }
+    }
+   }
+  }
+  ros=ros {
+   unit=unit {
+    io=io {
+     main.c
+     test_io.c
+     test_io_case1.c
+     test_io_case2.c
+     test_io_case3.c
+     test_io_case4.c
+     test_io_case5.c
+     bin=bin {
+     }
+    }
+    jbsd=jbsd {
+     test_jbsd.c
+     test_jbsd_case1.c
+     test_jbsd_case2.c
+     test_jbsd_case3.c
+     test_jbsd_case4.c
+     test_jbsd_case5.c
+     test_jbsd_case6.c
+     test_jbsd_case7.c
+     test_jbsd_case8.c
+     bin=bin {
+     }
+    }
+    mem=mem {
+     test_mem.c
+     test_mem_case1.c
+     test_mem_case10.c
+     test_mem_case11.c
+     test_mem_case2.c
+     test_mem_case3.c
+     test_mem_case4.c
+     test_mem_case5.c
+     test_mem_case6.c
+     test_mem_case7.c
+     test_mem_case8.c
+     test_mem_case9.c
+     bin=bin {
+     }
+    }
+    queu=queu {
+     test_queu.c
+     test_queu_case1.c
+     test_queu_case2.c
+     test_queu_case3.c
+     test_queu_case4.c
+     test_queu_case5.c
+     test_queu_case6.c
+     test_queu_case7.c
+     test_queu_case8.c
+     bin=bin {
+     }
+    }
+    sbx=sbx {
+     test_sbx.c
+     test_sbx_case1.c
+     test_sbx_case2.c
+     test_sbx_case3.c
+     test_sbx_case4.c
+     test_sbx_case5.c
+     test_sbx_case6.c
+     bin=bin {
+     }
+    }
+    tim=tim {
+     test_tim.c
+     test_tim_case1.c
+     test_tim_case2.c
+     test_tim_case3.c
+     test_tim_case4.c
+     test_tim_case5.c
+     test_tim_case6.c
+     test_tim_case7.c
+     test_tim_case8.c
+     test_tim_case9.c
+     bin=bin {
+     }
+    }
+    tksd=tksd {
+     test_tksd.c
+     test_tksd_case1.c
+     test_tksd_case2.c
+     test_tksd_case3.c
+     test_tksd_case4.c
+     test_tksd_case5.c
+     test_tksd_case6.c
+     bin=bin {
+     }
+     test_tksd_Data=test_tksd_Data {
+      Debug=Debug {
+       ObjectCode=ObjectCode {
+       }
+      }
+     }
+    }
+    tls=tls {
+     test_tls.c
+     test_tls_case1.c
+     bin=bin {
+     }
+    }
+   }
+  }
+  stack=stack {
+   micro_mmi=micro_mmi {
+    proto=proto {
+     include=include {
+      mmi_call.h
+      mmi_cb.h
+      mmi_data.h
+      mmi_mm.h
+      mmi_msg.h
+      mmi_plmn.h
+      mmi_rr.h
+      mmi_sim.h
+      mmi_sm.h
+      mmi_snd.h
+      mmi_ss.h
+     }
+     src=src {
+      mmi.c
+      mmi_call.c
+      mmi_cb.c
+      mmi_mm.c
+      mmi_plmn.c
+      mmi_rr.c
+      mmi_scen.c
+      mmi_sim.c
+      mmi_sm.c
+      mmi_snd.c
+      mmi_ss.c
+     }
+    }
+    sap=sap {
+     include=include {
+      sap_cfg.h
+      sap_cnf.h
+      sap_cust.h
+     }
+     src=src {
+      sap_main.c
+      sap_usr.c
+     }
+    }
+    stt=stt {
+     include=include {
+      stt.h
+      stt_msg.h
+     }
+     src=src {
+      stt_task.c
+      stt_tool.c
+     }
+    }
+   }
+   unit_test=unit_test {
+    output=output {
+    }
+    source insight="source insight" {
+    }
+    support_lib=support_lib {
+    }
+    trace=trace {
+    }
+    vc_project=vc_project {
+     cb=cb {
+      test=test {
+       include=include {
+        api_simu.h
+        api_stub.h
+        l1_simu.h
+        l1_stub.h
+        rr_simu.h
+        rr_stub.h
+        sce_cb.h
+       }
+       src=src {
+        api_simu.c
+        api_stub.c
+        cb_cfg.c
+        l1_simu.c
+        l1_stub.c
+        rr_simu.c
+        rr_stub.c
+        sce_cb.c
+        sce_gen.c
+       }
+      }
+     }
+     cc=cc {
+      test=test {
+       include=include {
+        api_simu.h
+        api_stub.h
+        cc_msg_s31.h
+        cc_simu.h
+        mm_simu.h
+        mm_stub.h
+        sce_cc.h
+       }
+       src=src {
+        api_simu.c
+        api_stub.c
+        cc_cfg.c
+        cc_simu.c
+        mm_simu.c
+        mm_stub.c
+        nwk_simu.c
+        rr_patch.c
+        sce_cc.c
+        sce_com.c
+        sce_crss.c
+        sce_dtmf.c
+        sce_s265.c
+        sce_s268.c
+        sce_s31.c
+        sim_stub.c
+       }
+      }
+     }
+     l1=l1 {
+      test=test {
+       include=include {
+        lap_simu.h
+        lap_stub.h
+        pal_stub.h
+        rr_simu.h
+        rr_stub.h
+        sce_l1.h
+       }
+       src=src {
+        l1_cfg.c
+        lap_simu.c
+        lap_stub.c
+        pal_stub.c
+        rr_simu.c
+        rr_stub.c
+        sce_l1.c
+        sce_l1_test01.c
+        sce_l1_test02.c
+       }
+      }
+     }
+     lap=lap {
+      test=test {
+       include=include {
+        l1_simu.h
+        l1_simud.h
+        l1_simup.h
+        l1_stub.h
+        rr_simu.h
+        rr_stub.h
+        sce_gen.h
+        sce_lap.h
+       }
+       src=src {
+        l1_simu.c
+        lap_cfg.c
+        nwk_simu.c
+        rr_simu.c
+        rr_stub.c
+        sce_gen.c
+        sce_lap.c
+       }
+      }
+     }
+     llc=llc {
+      test=test {
+       include=include {
+        mmp_simu.h
+        mmp_stub.h
+        rld_simu.h
+        rlu_stub.h
+        sce_ack.h
+        sce_assi.h
+        sce_frm.h
+        sce_l3.h
+        sce_llc.h
+        sce_s461.h
+        snd_simu.h
+        snd_stub.h
+       }
+       src=src {
+        llc_cfg.c
+        mmp_simu.c
+        mmp_stub.c
+        pal_stub.c
+        rld_simu.c
+        rld_stub.c
+        rlu_stub.c
+        sce_ack.c
+        sce_assi.c
+        sce_frm.c
+        sce_l3.c
+        sce_llc.c
+        sce_s461.c
+        snd_simu.c
+        snd_stub.c
+       }
+      }
+     }
+     mm=mm {
+      test=test {
+       include=include {
+        cc_simu.h
+        cc_stub.h
+        cm_stub.h
+        mm_simu.h
+        pal_simu.h
+        rr_simu.h
+        rr_stub.h
+        sce_mm.h
+        sim_simu.h
+        sim_stub.h
+       }
+       src=src {
+        cc_simu.c
+        cc_stub.c
+        cm_stub.c
+        mm_cfg.c
+        mm_simu.c
+        pal_simu.c
+        rr_patch.c
+        rr_simu.c
+        rr_stub.c
+        sce_gen.c
+        sce_mm.c
+        sim_simu.c
+        sim_stub.c
+       }
+      }
+     }
+     rld=rld {
+      test=test {
+       include=include {
+        api_capa.h
+        llc_simu.h
+        llc_stub.h
+        nwk_simu.h
+        rr_simu.h
+        rr_stub.h
+        sce_rld.h
+       }
+       src=src {
+        Sce_eg_data.c
+        Sce_s43.c
+        Sce_s53.c
+        llc_stub.c
+        nwk_simu.c
+        rld_cfg.c
+        rr_simu.c
+        rr_stub.c
+        sce_data.c
+        sce_rld.c
+       }
+      }
+     }
+     rlu=rlu {
+      test=test {
+       include=include {
+        api_capa.h
+        api_stub.h
+        l1_simu.h
+        l1_stub.h
+        llc_simu.h
+        llc_stub.h
+        mm_simu.h
+        mm_stub.h
+        rr_simu.h
+        rr_stub.h
+        sce_rlu.h
+       }
+       src=src {
+        api_stub.c
+        l1_simu.c
+        l1_stub.c
+        llc_simu.c
+        llc_stub.c
+        mm_simu.c
+        mm_stub.c
+        rlu_cfg.c
+        rr_simu.c
+        rr_stub.c
+        sce_EG_limit.c
+        sce_EG_rsb.c
+        sce_arq.c
+        sce_cv.c
+        sce_gene.c
+        sce_me.c
+        sce_rlu.c
+        sce_s43.c
+        sce_s53.c
+        sce_seg.c
+        sce_stal.c
+        sce_susp.c
+       }
+      }
+     }
+     rrd=rrd {
+      test=test {
+       include=include {
+        cc_stub.h
+        l1_simud.h
+        l1_simup.h
+        l1_stub.h
+        lap_simu.h
+        lap_stub.h
+        mm_simu.h
+        mm_stub.h
+        rld_simu.h
+        rld_stub.h
+        rlu_simu.h
+        rlu_stub.h
+        rri_simu.h
+        sce_pgen.h
+        sce_rrd.h
+        sim_simu.h
+       }
+       src=src {
+        cc_stub.c
+        e2p_simu.c
+        l1_simud.c
+        l1_simup.c
+        l1_stub.c
+        lap_simu.c
+        lap_stub.c
+        mm_simu.c
+        mm_stub.c
+        nwk_simu.c
+        rld_simu.c
+        rld_stub.c
+        rlu_simu.c
+        rlu_stub.c
+        rrd_cfg.c
+        rri_simu.c
+        sce_acci.c
+        sce_ass.c
+        sce_cond.c
+        sce_cr.c
+        sce_dl.c
+        sce_gen.c
+        sce_hov.c
+        sce_pgen.c
+        sce_rls.c
+        sce_rrd.c
+        sce_s266.c
+        sce_s412.c
+        sce_s413.c
+        sce_s421.c
+        sce_s422.c
+        sce_s423.c
+        sce_s424.c
+        sce_s521.c
+        sce_s5211.c
+        Sce_s5212.c
+        sce_s523.c
+        sce_s525.c
+        sce_s526.c
+        sce_sms.c
+        sce_ul.c
+        sim_stub.c
+        simu_uti.c
+       }
+      }
+     }
+     rri=rri {
+      test=test {
+       include=include {
+        api_simu.h
+        api_stub.h
+        l1_simui.h
+        l1_stub.h
+        lap_simu.h
+        lap_stub.h
+        mm_simu.h
+        mm_stub.h
+        rrd_simu.h
+        rri_simu.h
+        sce_rri.h
+        sim_simu.h
+       }
+       src=src {
+        api_simu.c
+        api_stub.c
+        e2p_simu.c
+        l1_simub.c
+        l1_simui.c
+        l1_stub.c
+        lap_simu.c
+        lap_stub.c
+        mm_simu.c
+        mm_stub.c
+        nwk_simu.c
+        rrd_simu.c
+        rri_cfg.c
+        rri_simu.c
+        sce_bcch.c
+        sce_conn.c
+        sce_cp.c
+        sce_csl.c
+        sce_dcod.c
+        sce_init.c
+        sce_meas.c
+        sce_psl.c
+        sce_rip.c
+        sce_rri.c
+        sce_rsl.c
+        sce_rssi.c
+        sce_s20.c
+        sce_s26.c
+        sce_scan.c
+        sim_simu.c
+        sim_stub.c
+        simu_uti.c
+       }
+      }
+     }
+     sim=sim {
+      test=test {
+       include=include {
+        l1_simu.h
+        l1_simud.h
+        l1_simup.h
+        l1_stub.h
+        mm_simu.h
+        mm_stub.h
+        pal_sim.h
+        pal_simu.h
+        rr_simu.h
+        rr_stub.h
+        sce_sim.h
+       }
+       src=src {
+        l1_simu.c
+        mm_simu.c
+        mm_stub.c
+        nwk_simu.c
+        pal_simu.c
+        rr_simu.c
+        rr_stub.c
+        sce_sim.c
+        sce_test01.c
+        sim_cfg.c
+       }
+      }
+     }
+     sm=sm {
+      test=test {
+       include=include {
+        api_simu.h
+        api_stub.h
+        mm_simu.h
+        mm_stub.h
+        sce_sm.h
+        snd_simu.h
+        snd_stub.h
+       }
+       src=src {
+        api_simu.c
+        api_stub.c
+        mm_simu.c
+        mm_stub.c
+        sce_gen.c
+        sce_sm.c
+        sm_cfg.c
+        snd_simu.c
+        snd_stub.c
+       }
+      }
+     }
+     sms=sms {
+      test=test {
+       include=include {
+        api_simu.h
+        api_stub.h
+        mm_simu.h
+        mm_stub.h
+        sce_sms.h
+       }
+       src=src {
+        api_simu.c
+        api_stub.c
+        mm_simu.c
+        mm_stub.c
+        sce_gen.c
+        sce_sms.c
+        sms_cfg.c
+       }
+      }
+     }
+     snd=snd {
+      test=test {
+       include=include {
+        api_simu.h
+        api_stub.h
+        llc_simu.h
+        llc_stub.h
+        mm_simu.h
+        mm_stub.h
+        sce_snd.h
+        sm_simu.h
+        sm_stub.h
+       }
+       src=src {
+        api_simu.c
+        api_stub.c
+        llc_simu.c
+        llc_stub.c
+        mm_simu.c
+        mm_stub.c
+        sce_gen.c
+        sce_snd.c
+        sm_simu.c
+        sm_stub.c
+        snd_cfg.c
+       }
+      }
+     }
+     ss=ss {
+      test=test {
+       include=include {
+        api_simu.h
+        api_stub.h
+        mm_simu.h
+        mm_stub.h
+        mmi_msg.h
+        mmi_ss.h
+        sce_ss.h
+        ss_msg_data.h
+       }
+       src=src {
+        api_simu.c
+        api_stub.c
+        mm_simu.c
+        mm_stub.c
+        sce_gen.c
+        sce_ss.c
+        ss_cfg.c
+       }
+      }
+     }
+     support=support {
+      sap=sap {
+       include=include {
+        sap_cfg.h
+        sap_cust.h
+       }
+       src=src {
+        sap_main.c
+       }
+      }
+      stt=stt {
+       include=include {
+        stt.h
+        stt_msg.h
+       }
+       src=src {
+        stt_task.c
+        stt_tool.c
+       }
+      }
+     }
+    }
+    vc_workspace=vc_workspace {
+     ps_unit_test=ps_unit_test {
+      Debug=Debug {
+      }
+     }
+    }
+   }
+  }
+ }
+ tools=tools {
+  development=development {
+   BCalibration=BCalibration {
+   }
+   Bin2BinMerge=Bin2BinMerge {
+    sram_init=sram_init {
+     src=src {
+      sram_init.c
+     }
+    }
+   }
+   CevaA2Out=CevaA2Out {
+    include=include {
+     head.h
+    }
+    src=src {
+     main.c
+     parser.c
+    }
+    workspace=workspace {
+    }
+   }
+   ComTools=ComTools {
+    ComTools2.0=ComTools2.0 {
+    }
+   }
+   FlashDownloadTool=FlashDownloadTool {
+    Language=Language {
+    }
+    Log=Log {
+    }
+   }
+   GMonitor=GMonitor {
+    bin=bin {
+    }
+    build=build {
+    }
+    config=config {
+    }
+    include=include {
+     itf_stt.h
+     pal_simu.h
+     palsgsm.h
+     stt_msg.h
+     sxs_io.h
+     sxs_rmc.h
+     sxs_spy.h
+     sxs_type.h
+    }
+    projects=projects {
+    }
+    res=res {
+    }
+    source=source {
+     about=about {
+      About.h
+     }
+     comment=comment {
+      Comment.h
+     }
+     comselect=comselect {
+      ComSelect.h
+     }
+     filter=filter {
+      TraceFilter.h
+     }
+     find=find {
+      AsgFind.h
+      Find.h
+     }
+     mainform=mainform {
+      MainForm.h
+     }
+     mem=mem {
+      MemRead1.h
+      MemWrite1.h
+     }
+     s2tcp=s2tcp {
+      proto=proto {
+      }
+      serial2tcp=serial2tcp {
+       Seveur.h
+      }
+     }
+     sap=sap {
+     }
+     timeinterval=timeinterval {
+      TimeInterval.h
+     }
+     utils=utils {
+      PcSym.c
+      Printf32.c
+      Common.h
+      MyPrintf.h
+      PcSym.h
+      Printf32.h
+     }
+     windows=windows {
+      AT.h
+      Script0.h
+      Script2.h
+     }
+    }
+    workspace=workspace {
+    }
+   }
+   GenBinFile=GenBinFile {
+    bin=bin {
+    }
+    config=config {
+    }
+    include=include {
+     Common.h
+     CreateBin.h
+     GenBinFile.h
+     GenBinFileDlg.h
+     StdAfx.h
+     Utils.h
+    }
+    src=src {
+    }
+    vcproject=vcproject {
+     resource.h
+     res=res {
+     }
+    }
+    workspace=workspace {
+    }
+   }
+   Profile=Profile {
+   }
+   RPhone_PC=RPhone_PC {
+    bin=bin {
+    }
+    build=build {
+    }
+    include=include {
+     cmn_defs.h
+     cs_types.h
+     itf_api.h
+     itf_cc.h
+     itf_defs.h
+     itf_il.h
+     itf_l1.h
+     itf_msg.h
+     itf_msgc.h
+     itf_rlc.h
+     itf_rr.h
+     itf_sim.h
+     itf_sms.h
+     itf_snd.h
+     itf_stk.h
+     pal_gsm.h
+     sxs_defs.h
+     sxs_type.h
+    }
+    mainframe=mainframe {
+     include=include {
+      AnimateDlgIcon.h
+      PushPin.h
+      RPhone.h
+      RPhoneAbout.h
+      RPhoneDlg.h
+      StdAfx.h
+      resource.h
+     }
+     src=src {
+     }
+    }
+    res=res {
+    }
+    scenario=scenario {
+     include=include {
+      SceCallControl.h
+      SceEngineerMode.h
+      SceGprsControl.h
+      SceNetControl.h
+      SceSimControl.h
+      SceSmsCbControl.h
+      SceSmsP2pMo.h
+      SceSmsP2pMt.h
+      SceSsControl.h
+      SceSysCfg.h
+     }
+     src=src {
+     }
+    }
+    serialport=serialport {
+     include=include {
+      SerialPort.h
+     }
+     src=src {
+     }
+    }
+    tcpip=tcpip {
+     include=include {
+      RPhoneIP.h
+      RPhoneMemBuf.h
+      RPhoneSocket.h
+      RPhoneTCP.h
+      RPhoneUDP.h
+     }
+     src=src {
+     }
+    }
+    utils=utils {
+     include=include {
+      RPhoneCommon.h
+      RPhoneConst.h
+      RPhoneMsg.h
+      RPhoneSceTables.h
+      RPhoneTools.h
+     }
+     src=src {
+     }
+    }
+    vcproject=vcproject {
+    }
+    workspace=workspace {
+    }
+   }
+  }
+  release=release {
+   ArmJtag=ArmJtag {
+   }
+   Bin2BinMerge=Bin2BinMerge {
+   }
+   CevaA2Out=CevaA2Out {
+   }
+   ComTools=ComTools {
+    ComTools2.0=ComTools2.0 {
+    }
+   }
+   FlashDownloadTool=FlashDownloadTool {
+    Language=Language {
+    }
+    Log=Log {
+    }
+   }
+   GMonitor=GMonitor {
+   }
+   GenBinFile=GenBinFile {
+   }
+   RK28UsbDriver=RK28UsbDriver {
+   }
+   Usb2SerialDriver=Usb2SerialDriver {
+    An232B=An232B {
+     documents=documents {
+     }
+     install=install {
+     }
+    }
+   }
+  }
+ }
+ workspace=workspace {
+  boot=boot {
+  }
+  dsp=dsp {
+   ddrv=ddrv {
+    Debug=Debug {
+     s4ao.1init.c
+     s4ao.2simul_xirq.c
+     s4ao.3xirq.c
+     s4ao.4xdma.c
+     s4ao.5dsp_main.c
+     s4ao.xpiu.c
+    }
+    Release=Release {
+    }
+   }
+  }
+  mdrv=mdrv {
+   mdrv_Data=mdrv_Data {
+    Debug=Debug {
+     ObjectCode=ObjectCode {
+     }
+    }
+   }
+  }
+  ros=ros {
+   ros_Data=ros_Data {
+    Debug=Debug {
+     ObjectCode=ObjectCode {
+     }
+    }
+   }
+  }
+ }
+}
