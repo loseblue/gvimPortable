@@ -14,6 +14,10 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1><F1><F1><F1>
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1>
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1>
 :w
 :BundleInstall
 :BundleInstall!
@@ -30,10 +34,6 @@ $+ \2 (\1\/\2)
 :BundleInstall
 :set runtimepath?
 :h vundle
-:q!
-:A
-:BundleInstall!
-:cd ~\vimfiles\
 
 # Search String History (newest to oldest):
 ?/project
@@ -109,18 +109,19 @@ $+ \2 (\1\/\2)
 	https://github.com/loseblue
 
 # File marks:
-'0  15  42  F:\gVimPortable\README.md
-'1  16  0  F:\gVimPortable\[Vundle] Installer
-'2  10  0  F:\gVimPortable\README.md
-'3  1  0  F:\gVimPortable\README.md
-'4  164  26  ~\_vimrc
-'5  13  39  F:\gVimPortable\README.md
-'6  12  34  F:\gVimPortable\README.md
-'7  7  0  F:\gVimPortable\__Tagbar__
-'8  5  0  F:\gVimPortable\[Vundle] clean
-'9  11  34  F:\gVimPortable\Data\Temp\VIA5852.tmp
+'0  1  19  C:\Users\Administrator\Desktop\1.c
+'1  15  42  F:\gVimPortable\README.md
+'2  16  0  F:\gVimPortable\[Vundle] Installer
+'3  10  0  F:\gVimPortable\README.md
+'4  1  0  F:\gVimPortable\README.md
+'5  164  26  ~\_vimrc
+'6  13  39  F:\gVimPortable\README.md
+'7  12  34  F:\gVimPortable\README.md
+'8  7  0  F:\gVimPortable\__Tagbar__
+'9  5  0  F:\gVimPortable\[Vundle] clean
 
 # Jumplist (newest first):
+-'  1  19  C:\Users\Administrator\Desktop\1.c
 -'  15  42  F:\gVimPortable\README.md
 -'  12  0  F:\gVimPortable\README.md
 -'  1  0  F:\gVimPortable\README.md
@@ -215,11 +216,51 @@ $+ \2 (\1\/\2)
 -'  235  27  ~\.vim\bundle\vundle\doc\vundle.txt
 -'  15  42  F:\gVimPortable\README.md
 -'  12  0  F:\gVimPortable\README.md
--'  1  0  F:\gVimPortable\README.md
--'  16  0  F:\gVimPortable\[Vundle] Installer
--'  10  0  F:\gVimPortable\README.md
 
 # History of marks within files (newest to oldest):
+
+> C:\Users\Administrator\Desktop\1.c
+	"	1	19
+	^	1	0
+	.	1	636
+	+	1	0
+	+	1	636
+
+> F:\gVimPortable\NERD_tree_1
+	"	47	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> F:\gVimPortable\[Vundle] Installer
+	"	17	0
+	.	1	0
+	+	338	0
+	+	319	0
+	+	305	0
+	+	290	0
+	+	275	0
+	+	260	0
+	+	245	0
+	+	230	0
+	+	215	0
+	+	200	0
+	+	185	0
+	+	170	0
+	+	155	0
+	+	140	0
+	+	125	0
+	+	110	0
+	+	92	0
+	+	77	0
+	+	62	0
+	+	47	0
+	+	32	0
+	+	17	0
+	+	1	0
 
 > F:\gVimPortable\README.md
 	"	15	42
@@ -244,32 +285,6 @@ $+ \2 (\1\/\2)
 	.	1	0
 	+	6	0
 	+	2	0
-	+	1	0
-
-> F:\gVimPortable\[Vundle] Installer
-	"	16	0
-	.	1	0
-	+	322	0
-	+	303	0
-	+	289	0
-	+	274	0
-	+	259	0
-	+	244	0
-	+	229	0
-	+	214	0
-	+	199	0
-	+	184	0
-	+	169	0
-	+	154	0
-	+	139	0
-	+	124	0
-	+	109	0
-	+	94	0
-	+	76	0
-	+	61	0
-	+	46	0
-	+	31	0
-	+	16	0
 	+	1	0
 
 > ~\.vimprojects
@@ -538,13 +553,6 @@ $+ \2 (\1\/\2)
 
 > F:\gVimPortable\Data\Temp\VIAD825.tmp
 	"	9	17
-
-> C:\Users\Administrator\Desktop\1.c
-	"	1	30
-	^	1	0
-	.	1	636
-	+	1	0
-	+	1	636
 
 > C:\Users\Administrator\Desktop\winmanager.vmb
 	"	64	0

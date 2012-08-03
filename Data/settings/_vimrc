@@ -20,7 +20,7 @@ endfunction
 set nobackup      " 关闭自动备份
 syntax enable       " 语法高亮
 syntax on
-set display=lastline
+set display=lastline     "避免常代码出现@@@
 filetype plugin indent on " 文件类型检测
 au BufEnter *.txt setlocal ft=txt "txtBrowser 调用
 colorscheme spring  " 配色方案
@@ -200,6 +200,7 @@ Bundle 'EasyMotion'
 Bundle 'Mark'
 Bundle 'matchit.zip'
 Bundle 'The-NERD-Commenter'
+Bundle 'The-NERD-tree'
 Bundle 'project.tar.gz'
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
