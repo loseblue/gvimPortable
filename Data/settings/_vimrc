@@ -3,9 +3,8 @@
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"     HomePage: http://www.google.com
 "      Version: 0.0.1
-"   LastChange: 2012-08-01 10:19:30
+"   LastChange: 2012-08-03 10:45:45
 "      History:
 "=============================================================================
 " Platform
@@ -180,10 +179,6 @@ let g:tagbar_width = 30
 noremap <A-j> <C-f>
 noremap <A-k> <C-b>
 
-" TabBar ≈‰÷√
-"let g:Tb_SplitToEdge = 0
-"let g:Tb_ModSelTarget = 1
-
 "=========================== Vundle≈‰÷√ ================================
 set nocompatible    " be iMproved
 filetype off        " required!
@@ -200,7 +195,7 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 Bundle 'a.vim'
-Bundle 'AuthorInfo'
+Bundle 'https://github.com/loseblue/AuthorInfo.git'
 Bundle 'EasyMotion'
 Bundle 'Mark'
 Bundle 'matchit.zip'
