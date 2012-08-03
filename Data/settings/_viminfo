@@ -14,6 +14,15 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:w
+:BundleInstall
+:BundleInstall!
+:BundleClean
+:q
+:set runtimepath?
+:Author
+:AuthorInfoDetect
+:Project
 :BundleClean
 :w
 :q
@@ -25,15 +34,6 @@ $+ \2 (\1\/\2)
 :A
 :BundleInstall!
 :cd ~\vimfiles\
-:cd ~\vimfiles\doc\
-:so %
-:x
-:wm
-:help taglist.txt
-:help
-:help Porject
-:Project --help
-:Help Project
 
 # Search String History (newest to oldest):
 ?/project
@@ -73,10 +73,21 @@ $+ \2 (\1\/\2)
 "0	LINE	0
 	set rtp+=~/.vim/bundle/vundle/
 "1	LINE	0
-		set rtp+=~/.vim/bundle/vundle/
+	
 "2	LINE	0
-		set rtp+=~/vimfiles/bundle/vundle/
+	
 "3	LINE	0
+	
+"4	CHAR	0
+	
+	" TabBar ≈‰÷√
+	"let g:Tb_SplitToEdge = 0
+	"let g:Tb_ModSelTarget = 1
+"5	LINE	0
+		set rtp+=~/.vim/bundle/vundle/
+"6	LINE	0
+		set rtp+=~/vimfiles/bundle/vundle/
+"7	LINE	0
 	    " Set helplang
 	    set helplang=cn
 	    "Fast reloading of the _vimrc
@@ -85,40 +96,40 @@ $+ \2 (\1\/\2)
 	    map <silent> <leader>ee :call SwitchToBuf("~/_vimrc")<cr>
 	    "When _vimrc is edited, reload it
 	    autocmd! bufwritepost _vimrc source ~/_vimrc
-"4	LINE	0
+"8	LINE	0
 	set rtp+=~/.vim/bundle/vundle/
-"5	LINE	0
+"9	LINE	0
 	    "Fast reloading of the .vimrc
 	    map <silent> <leader>ss :source ~/.vimrc<cr>
 	    "Fast editing of .vimrc
 	    map <silent> <leader>ee :call SwitchToBuf("~/.vimrc")<cr>
 	    "When .vimrc is edited, reload it
 	    "autocmd! bufwritepost .vimrc source ~/.vimrc
-"6	LINE	0
-	734
-<c:\SmartNcode\V9.1\CEVA-X16;c:\SmartNcode\V9.1\license;c:\SmartNcode\V9.1\IDE;C:\Program Files\ARM\ADSv1_2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\PC Connectivity Solution\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\doxygen\bin;C:\Program Files\Visual Leak Detector\bin;C:\Program Files\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files\Microsoft Visual Studio\Common\Tools;C:\Program Files\Microsoft Visual Studio\VC98\bin;C:\Program Files\OpenVPN\bin;C:\Program Files\MacType;D:\software\GitPortable-1.7.7-preview20111014;D:\software\GitPortable-1.7.7-preview20111014\bin
-"7	LINE	0
-	
-"8	LINE	0
-	
-"9	LINE	0
-	
-"-	CHAR	0
-	has("win32")
+""-	CHAR	0
+	https://github.com/loseblue
 
 # File marks:
-'0  7  0  F:\gVimPortable\__Tagbar__
-'1  5  0  F:\gVimPortable\[Vundle] clean
-'2  11  34  F:\gVimPortable\Data\Temp\VIA5852.tmp
-'3  34  0  F:\gVimPortable\[Vundle] Installer
-'4  235  27  ~\.vim\bundle\vundle\doc\vundle.txt
-'5  500  1  e:\TDDOWNLOAD\platform\baseband\stack\mm\src\mmc_wrrc.c
-'6  38  0  F:\gVimPortable\Data\Temp\VIAC91A.tmp
-'7  13  32  ~\_vimrc
-'8  6  0  F:\gVimPortable\[Vundle] clean
-'9  109  0  F:\gVimPortable\[Vundle] Installer
+'0  1  0  ~\_vimrc
+'1  15  42  F:\gVimPortable\README.md
+'2  16  0  F:\gVimPortable\[Vundle] Installer
+'3  10  0  F:\gVimPortable\README.md
+'4  1  0  F:\gVimPortable\README.md
+'5  164  26  ~\_vimrc
+'6  13  39  F:\gVimPortable\README.md
+'7  12  34  F:\gVimPortable\README.md
+'8  7  0  F:\gVimPortable\__Tagbar__
+'9  5  0  F:\gVimPortable\[Vundle] clean
 
 # Jumplist (newest first):
+-'  1  0  ~\_vimrc
+-'  1  0  C:\Users\Administrator\Desktop\1.c
+-'  15  42  F:\gVimPortable\README.md
+-'  12  0  F:\gVimPortable\README.md
+-'  1  0  F:\gVimPortable\README.md
+-'  16  0  F:\gVimPortable\[Vundle] Installer
+-'  10  0  F:\gVimPortable\README.md
+-'  164  26  ~\_vimrc
+-'  13  39  F:\gVimPortable\README.md
 -'  7  0  F:\gVimPortable\__Tagbar__
 -'  1  0  F:\gVimPortable\[Tagbar]
 -'  1  0  e:\TDDOWNLOAD\platform\baseband\stack\api\src\api.c
@@ -204,18 +215,119 @@ $+ \2 (\1\/\2)
 -'  19  0  F:\gVimPortable\[Vundle] Installer
 -'  34  0  F:\gVimPortable\[Vundle] Installer
 -'  235  27  ~\.vim\bundle\vundle\doc\vundle.txt
--'  1  0  ~\.vim\bundle\vundle\doc\vundle.txt
--'  500  1  e:\TDDOWNLOAD\platform\baseband\stack\mm\src\mmc_wrrc.c
--'  1  0  e:\TDDOWNLOAD\platform\baseband\stack\mm\src\mmc_wnkc.c
--'  1  0  e:\TDDOWNLOAD\platform\baseband\stack\mm\src\mmc_wnkc.h
--'  38  0  F:\gVimPortable\Data\Temp\VIAC91A.tmp
--'  1  0  F:\gVimPortable\Data\Temp\VIAC91A.tmp
--'  64  0  F:\gVimPortable\[Vundle] Installer
--'  13  32  ~\_vimrc
--'  224  7  ~\_vimrc
--'  11  0  ~\_vimrc
 
 # History of marks within files (newest to oldest):
+
+> C:\Users\Administrator\Desktop\1.c
+	"	1	0
+	^	1	0
+	.	1	636
+	+	1	0
+	+	1	636
+
+> ~\_vimrc
+	"	1	0
+	^	13	33
+	.	7	0
+	+	126	41
+	+	126	27
+	+	126	30
+	+	23	0
+	+	21	0
+	+	23	0
+	+	126	38
+	+	126	0
+	+	126	0
+	+	126	0
+	+	126	0
+	+	126	0
+	+	126	0
+	+	126	0
+	+	126	27
+	+	126	30
+	+	126	17
+	+	126	7
+	+	126	0
+	+	144	0
+	+	126	0
+	+	126	0
+	+	126	0
+	+	130	0
+	+	126	0
+	+	129	0
+	+	134	0
+	+	144	0
+	+	129	29
+	+	129	30
+	+	132	7
+	+	131	10
+	+	134	10
+	+	129	0
+	+	131	17
+	+	134	17
+	+	127	6
+	+	129	33
+	+	129	35
+	+	127	6
+	+	137	0
+	+	131	10
+	+	132	7
+	+	134	10
+	+	127	9
+	+	131	10
+	+	131	13
+	+	134	13
+	+	131	10
+	+	134	10
+	+	127	24
+	+	129	33
+	+	132	10
+	+	127	24
+	+	131	13
+	+	132	10
+	+	134	13
+	+	129	36
+	+	127	24
+	+	129	33
+	+	132	10
+	+	131	13
+	+	134	13
+	+	129	37
+	+	127	0
+	+	128	0
+	+	127	6
+	+	131	10
+	+	131	0
+	+	127	0
+	+	136	0
+	+	135	0
+	+	127	0
+	+	129	30
+	+	127	27
+	+	132	7
+	+	129	38
+	+	227	8
+	+	11	0
+	+	18	11
+	+	216	0
+	+	215	0
+	+	220	5
+	+	218	0
+	+	222	0
+	+	218	0
+	+	220	0
+	+	220	18
+	+	218	0
+	+	216	15
+	+	220	0
+	+	217	0
+	+	218	0
+	+	220	0
+	+	219	0
+	+	13	33
+	+	182	0
+	+	7	0
+	s	1	0
 
 > F:\gVimPortable\[Tagbar]
 	"	1	0
@@ -375,107 +487,6 @@ $+ \2 (\1\/\2)
 > F:\gVimPortable\Data\Temp\VIAC91A.tmp
 	"	38	0
 
-> ~\_vimrc
-	"	13	32
-	^	13	33
-	.	13	33
-	+	126	41
-	+	126	27
-	+	126	30
-	+	23	0
-	+	21	0
-	+	23	0
-	+	126	38
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	27
-	+	126	30
-	+	126	17
-	+	126	7
-	+	126	0
-	+	144	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	130	0
-	+	126	0
-	+	129	0
-	+	134	0
-	+	144	0
-	+	129	29
-	+	129	30
-	+	132	7
-	+	131	10
-	+	134	10
-	+	129	0
-	+	131	17
-	+	134	17
-	+	127	6
-	+	129	33
-	+	129	35
-	+	127	6
-	+	137	0
-	+	131	10
-	+	132	7
-	+	134	10
-	+	127	9
-	+	131	10
-	+	131	13
-	+	134	13
-	+	131	10
-	+	134	10
-	+	127	24
-	+	129	33
-	+	132	10
-	+	127	24
-	+	131	13
-	+	132	10
-	+	134	13
-	+	129	36
-	+	127	24
-	+	129	33
-	+	132	10
-	+	131	13
-	+	134	13
-	+	129	37
-	+	127	0
-	+	128	0
-	+	127	6
-	+	131	10
-	+	131	0
-	+	127	0
-	+	136	0
-	+	135	0
-	+	127	0
-	+	129	30
-	+	127	27
-	+	132	7
-	+	129	38
-	+	231	8
-	+	11	0
-	+	18	11
-	+	220	0
-	+	219	0
-	+	224	5
-	+	222	0
-	+	226	0
-	+	222	0
-	+	224	0
-	+	224	18
-	+	222	0
-	+	220	15
-	+	224	0
-	+	221	0
-	+	222	0
-	+	224	0
-	+	223	0
-	+	13	33
-
 > C:\Users\Administrator\Desktop\easwy-share-511697f\vim\vimrc\_vimrc
 	"	32	20
 	^	32	21
@@ -506,13 +517,6 @@ $+ \2 (\1\/\2)
 
 > F:\gVimPortable\Data\Temp\VIAD825.tmp
 	"	9	17
-
-> C:\Users\Administrator\Desktop\1.c
-	"	1	30
-	^	1	0
-	.	1	636
-	+	1	0
-	+	1	636
 
 > C:\Users\Administrator\Desktop\winmanager.vmb
 	"	64	0
