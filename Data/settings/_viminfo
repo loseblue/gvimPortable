@@ -14,6 +14,8 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:BundleClean
+:BundleInstall
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1><F1><F1><F1>
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1>
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |
@@ -32,8 +34,6 @@ $+ \2 (\1\/\2)
 :q
 :Project
 :BundleInstall
-:set runtimepath?
-:h vundle
 
 # Search String History (newest to oldest):
 ?/project
@@ -62,6 +62,7 @@ $+ \2 (\1\/\2)
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')  
 
 # Input Line History (newest to oldest):
+@Y
 @Y
 @\<EvtFunc_t\>
 @\<foldenable\>
@@ -109,18 +110,19 @@ $+ \2 (\1\/\2)
 	https://github.com/loseblue
 
 # File marks:
-'0  1  19  C:\Users\Administrator\Desktop\1.c
-'1  15  42  F:\gVimPortable\README.md
-'2  16  0  F:\gVimPortable\[Vundle] Installer
-'3  10  0  F:\gVimPortable\README.md
-'4  1  0  F:\gVimPortable\README.md
-'5  164  26  ~\_vimrc
-'6  13  39  F:\gVimPortable\README.md
-'7  12  34  F:\gVimPortable\README.md
-'8  7  0  F:\gVimPortable\__Tagbar__
-'9  5  0  F:\gVimPortable\[Vundle] clean
+'0  3  0  F:\gVimPortable\[Vundle] clean
+'1  1  19  C:\Users\Administrator\Desktop\1.c
+'2  15  42  F:\gVimPortable\README.md
+'3  16  0  F:\gVimPortable\[Vundle] Installer
+'4  10  0  F:\gVimPortable\README.md
+'5  1  0  F:\gVimPortable\README.md
+'6  164  26  ~\_vimrc
+'7  13  39  F:\gVimPortable\README.md
+'8  12  34  F:\gVimPortable\README.md
+'9  7  0  F:\gVimPortable\__Tagbar__
 
 # Jumplist (newest first):
+-'  3  0  F:\gVimPortable\[Vundle] clean
 -'  1  19  C:\Users\Administrator\Desktop\1.c
 -'  15  42  F:\gVimPortable\README.md
 -'  12  0  F:\gVimPortable\README.md
@@ -216,8 +218,46 @@ $+ \2 (\1\/\2)
 -'  235  27  ~\.vim\bundle\vundle\doc\vundle.txt
 -'  15  42  F:\gVimPortable\README.md
 -'  12  0  F:\gVimPortable\README.md
+-'  1  19  C:\Users\Administrator\Desktop\1.c
+-'  15  42  F:\gVimPortable\README.md
 
 # History of marks within files (newest to oldest):
+
+> F:\gVimPortable\[Vundle] Installer
+	"	17	0
+	.	1	0
+	+	354	0
+	+	335	0
+	+	321	0
+	+	306	0
+	+	291	0
+	+	276	0
+	+	261	0
+	+	246	0
+	+	231	0
+	+	216	0
+	+	201	0
+	+	186	0
+	+	171	0
+	+	156	0
+	+	141	0
+	+	126	0
+	+	108	0
+	+	93	0
+	+	78	0
+	+	63	0
+	+	48	0
+	+	33	0
+	+	17	0
+	+	1	0
+
+> F:\gVimPortable\[Vundle] clean
+	"	3	0
+	.	1	0
+	+	8	0
+	+	4	0
+	+	3	0
+	+	1	0
 
 > C:\Users\Administrator\Desktop\1.c
 	"	1	19
@@ -233,33 +273,6 @@ $+ \2 (\1\/\2)
 	+	1	0
 	+	1	0
 	+	1	0
-	+	1	0
-
-> F:\gVimPortable\[Vundle] Installer
-	"	17	0
-	.	1	0
-	+	338	0
-	+	319	0
-	+	305	0
-	+	290	0
-	+	275	0
-	+	260	0
-	+	245	0
-	+	230	0
-	+	215	0
-	+	200	0
-	+	185	0
-	+	170	0
-	+	155	0
-	+	140	0
-	+	125	0
-	+	110	0
-	+	92	0
-	+	77	0
-	+	62	0
-	+	47	0
-	+	32	0
-	+	17	0
 	+	1	0
 
 > F:\gVimPortable\README.md
@@ -279,13 +292,6 @@ $+ \2 (\1\/\2)
 	+	13	0
 	+	15	43
 	s	1	0
-
-> F:\gVimPortable\[Vundle] clean
-	"	2	0
-	.	1	0
-	+	6	0
-	+	2	0
-	+	1	0
 
 > ~\.vimprojects
 	"	1	0
