@@ -201,7 +201,6 @@ Bundle 'Mark'
 Bundle 'matchit.zip'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
-Bundle 'project.tar.gz'
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
 Bundle 'TeTrIs.vim'
@@ -214,19 +213,12 @@ filetype plugin indent on    " required!
 
 let g:Tagbar_title="[Tagbar]"
 let g:Project_title="[Project]"
-"let g:winManagerWindowLayout="Tagbar|Project"
 let g:winManagerWindowLayout="TagList|FileExplorer"
 
 function! Tagbar_Start()
 	exec 'TagbarToggle'
 endfunction
 function! Tagbar_IsValid()
-	return 1
-endfunction
-function! Project_Start()
-	exec 'Project'
-endfunction
-function! Project_IsValid()
 	return 1
 endfunction
 

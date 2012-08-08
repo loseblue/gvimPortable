@@ -14,6 +14,9 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:<F1>
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1><F1>
 :BundleClean
 :BundleInstall
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1><F1><F1><F1>
@@ -31,9 +34,6 @@ $+ \2 (\1\/\2)
 :Project
 :BundleClean
 :w
-:q
-:Project
-:BundleInstall
 
 # Search String History (newest to oldest):
 ?/project
@@ -110,19 +110,24 @@ $+ \2 (\1\/\2)
 	https://github.com/loseblue
 
 # File marks:
-'0  3  0  F:\gVimPortable\[Vundle] clean
-'1  1  19  C:\Users\Administrator\Desktop\1.c
-'2  15  42  F:\gVimPortable\README.md
-'3  16  0  F:\gVimPortable\[Vundle] Installer
-'4  10  0  F:\gVimPortable\README.md
-'5  1  0  F:\gVimPortable\README.md
-'6  164  26  ~\_vimrc
-'7  13  39  F:\gVimPortable\README.md
-'8  12  34  F:\gVimPortable\README.md
-'9  7  0  F:\gVimPortable\__Tagbar__
+'0  321  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'1  34  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'2  266  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'3  3  0  F:\gVimPortable\[Vundle] clean
+'4  5  0  F:\gVimPortable\[Vundle] clean
+'5  1  19  C:\Users\Administrator\Desktop\1.c
+'6  15  42  F:\gVimPortable\README.md
+'7  16  0  F:\gVimPortable\[Vundle] Installer
+'8  10  0  F:\gVimPortable\README.md
+'9  1  0  F:\gVimPortable\README.md
 
 # Jumplist (newest first):
+-'  321  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  34  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  266  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 -'  3  0  F:\gVimPortable\[Vundle] clean
+-'  5  0  F:\gVimPortable\[Vundle] clean
 -'  1  19  C:\Users\Administrator\Desktop\1.c
 -'  15  42  F:\gVimPortable\README.md
 -'  12  0  F:\gVimPortable\README.md
@@ -214,14 +219,21 @@ $+ \2 (\1\/\2)
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
 -'  11  34  F:\gVimPortable\Data\Temp\VIA5852.tmp
 -'  19  0  F:\gVimPortable\[Vundle] Installer
--'  34  0  F:\gVimPortable\[Vundle] Installer
--'  235  27  ~\.vim\bundle\vundle\doc\vundle.txt
--'  15  42  F:\gVimPortable\README.md
--'  12  0  F:\gVimPortable\README.md
--'  1  19  C:\Users\Administrator\Desktop\1.c
--'  15  42  F:\gVimPortable\README.md
+-'  321  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 
 # History of marks within files (newest to oldest):
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+	"	321	0
+
+> F:\gVimPortable\[Vundle] clean
+	"	3	0
+	.	1	0
+	+	10	0
+	+	6	0
+	+	5	0
+	+	3	0
+	+	1	0
 
 > F:\gVimPortable\[Vundle] Installer
 	"	17	0
@@ -249,14 +261,6 @@ $+ \2 (\1\/\2)
 	+	48	0
 	+	33	0
 	+	17	0
-	+	1	0
-
-> F:\gVimPortable\[Vundle] clean
-	"	3	0
-	.	1	0
-	+	8	0
-	+	4	0
-	+	3	0
 	+	1	0
 
 > C:\Users\Administrator\Desktop\1.c
