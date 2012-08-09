@@ -14,6 +14,8 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1>
+:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1>
 :w
 :BundleInstall
 :BundleInstall!
@@ -32,8 +34,6 @@ $+ \2 (\1\/\2)
 :h vundle
 :q!
 :A
-:BundleInstall!
-:cd ~\vimfiles\
 
 # Search String History (newest to oldest):
 ?/project
@@ -109,18 +109,20 @@ $+ \2 (\1\/\2)
 	https://github.com/loseblue
 
 # File marks:
-'0  15  42  F:\gVimPortable\README.md
-'1  16  0  F:\gVimPortable\[Vundle] Installer
-'2  10  0  F:\gVimPortable\README.md
-'3  1  0  F:\gVimPortable\README.md
-'4  164  26  ~\_vimrc
-'5  13  39  F:\gVimPortable\README.md
-'6  12  34  F:\gVimPortable\README.md
-'7  7  0  F:\gVimPortable\__Tagbar__
-'8  5  0  F:\gVimPortable\[Vundle] clean
-'9  11  34  F:\gVimPortable\Data\Temp\VIA5852.tmp
+'0  1  0  F:\gVimPortable\App\vim\vim73\doc\help.txt
+'1  15  42  F:\gVimPortable\README.md
+'2  16  0  F:\gVimPortable\[Vundle] Installer
+'3  10  0  F:\gVimPortable\README.md
+'4  1  0  F:\gVimPortable\README.md
+'5  164  26  ~\_vimrc
+'6  13  39  F:\gVimPortable\README.md
+'7  12  34  F:\gVimPortable\README.md
+'8  7  0  F:\gVimPortable\__Tagbar__
+'9  5  0  F:\gVimPortable\[Vundle] clean
 
 # Jumplist (newest first):
+-'  1  0  F:\gVimPortable\App\vim\vim73\doc\help.txt
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 -'  15  42  F:\gVimPortable\README.md
 -'  12  0  F:\gVimPortable\README.md
 -'  1  0  F:\gVimPortable\README.md
@@ -215,11 +217,14 @@ $+ \2 (\1\/\2)
 -'  235  27  ~\.vim\bundle\vundle\doc\vundle.txt
 -'  15  42  F:\gVimPortable\README.md
 -'  12  0  F:\gVimPortable\README.md
--'  1  0  F:\gVimPortable\README.md
--'  16  0  F:\gVimPortable\[Vundle] Installer
--'  10  0  F:\gVimPortable\README.md
 
 # History of marks within files (newest to oldest):
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+	"	204	9
+
+> F:\gVimPortable\App\vim\vim73\doc\help.txt
+	"	1	0
 
 > F:\gVimPortable\README.md
 	"	15	42
@@ -595,9 +600,6 @@ $+ \2 (\1\/\2)
 
 > ~\vimfiles\.netrwhist
 	"	1	0
-
-> F:\gVimPortable\App\vim\vim73\doc\help.txt
-	"	21	0
 
 > F:\gVimPortable\--help
 	"	1	0
