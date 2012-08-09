@@ -124,18 +124,24 @@ $\rwww.google
 	txt
 
 # File marks:
-'0  1  0  F:\gVimPortable\Data\settings\_viminfo
-'1  230  0  F:\gVimPortable\Data\settings\_viminfo
-'2  19  0  F:\gVimPortable\Data\settings\_vimrc
-'3  148  20  d:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'4  17  0  C:\Users\Administrator\Desktop\trcBrowser\README
-'5  53  12  F:\gVimPortable\Data\settings\.vim\bundle\trcBrowser\syntax\trc.vim
-'6  1  0  ~\_vimrc
-'7  51  26  F:\gVimPortable\Data\settings\.vim\bundle\trcBrowser\syntax\trc.vim
-'8  5  25  C:\Users\Administrator\Desktop\trcBrowser\syntax\trc.vim
-'9  51  0  F:\gVimPortable\Data\settings\.vim\bundle\TxtBrowser\ftplugin\txt.vim
+'0  138  0  F:\gVimPortable\Data\settings\_vimrc
+'1  85  0  ~\_viminfo
+'2  238  0  F:\gVimPortable\Data\settings\_viminfo
+'3  36  0  F:\gVimPortable\Data\settings\_vimrc
+'4  208  0  F:\gVimPortable\Data\settings\_vimrc
+'5  1  0  F:\gVimPortable\Data\settings\_viminfo
+'6  230  0  F:\gVimPortable\Data\settings\_viminfo
+'7  19  0  F:\gVimPortable\Data\settings\_vimrc
+'8  148  20  d:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'9  17  0  C:\Users\Administrator\Desktop\trcBrowser\README
 
 # Jumplist (newest first):
+-'  138  0  F:\gVimPortable\Data\settings\_vimrc
+-'  85  0  ~\_viminfo
+-'  238  0  F:\gVimPortable\Data\settings\_viminfo
+-'  36  0  F:\gVimPortable\Data\settings\_vimrc
+-'  208  0  F:\gVimPortable\Data\settings\_vimrc
+-'  37  41  F:\gVimPortable\Data\settings\_vimrc
 -'  1  0  F:\gVimPortable\Data\settings\_viminfo
 -'  230  0  F:\gVimPortable\Data\settings\_viminfo
 -'  19  0  F:\gVimPortable\Data\settings\_vimrc
@@ -163,7 +169,6 @@ $\rwww.google
 -'  1  0  C:\Users\Administrator\Desktop\1.c
 -'  169  158  d:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 -'  1  0  ~\vimfiles\syntax\trc.vim1
--'  208  8  F:\gVimPortable\Data\settings\_vimrc
 -'  1  0  F:\gVimPortable\Data\settings\_vimrc
 -'  1  1  D:\work\code\trcBrowser\README.md
 -'  25  0  D:\work\code\trcBrowser\README.md
@@ -228,22 +233,11 @@ $\rwww.google
 -'  104  28  F:\gVimPortable\Data\settings\.vim\bundle\The-NERD-tree\doc\NERD_tree.txt
 -'  204  21  F:\gVimPortable\Data\settings\_vimrc
 -'  23  42  F:\gVimPortable\Data\settings\_vimrc
--'  39  12  F:\gVimPortable\Data\settings\_vimrc
--'  40  0  F:\gVimPortable\Data\settings\_vimrc
--'  26  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\tools\traceOut.bat
--'  3  0  C:\Users\Administrator\Desktop\1.c
--'  142  12  ~\_vimrc
 
 # History of marks within files (newest to oldest):
 
-> F:\gVimPortable\Data\settings\_viminfo
-	"	1	0
-	.	27	0
-	+	17	0
-	+	27	0
-
 > F:\gVimPortable\Data\settings\_vimrc
-	"	19	0
+	"	138	0
 	^	26	38
 	.	26	37
 	+	10	0
@@ -348,6 +342,15 @@ $\rwww.google
 	+	26	37
 	s	6	0
 
+> ~\_viminfo
+	"	85	0
+
+> F:\gVimPortable\Data\settings\_viminfo
+	"	238	0
+	.	27	0
+	+	17	0
+	+	27	0
+
 > ~\vimfiles\ftplugin\trc.vim
 	"	1	0
 
@@ -433,6 +436,3 @@ $\rwww.google
 	.	1	0
 	+	25	0
 	+	1	0
-
-> F:\gVimPortable\Data\settings\.vim\bundle\TxtBrowser\plugin\txtbrowser.vim
-	"	46	0

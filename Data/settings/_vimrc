@@ -20,9 +20,10 @@ endfunction
 set nobackup      " 关闭自动备份
 syntax enable       " 语法高亮
 syntax on
-set display=lastline
+set display=lastline     "避免常代码出现@@@
 filetype plugin indent on " 文件类型检测
 au BufEnter *.txt setlocal ft=txt "txtBrowser 调用
+au BufEnter *.trc setlocal ft=trc "trcBrowser 调用
 colorscheme spring  " 配色方案
 set backspace=2     " 设置退格键可用
 set nu!             " 显示行号
@@ -195,15 +196,17 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 Bundle 'a.vim'
-Bundle 'https://github.com/loseblue/AuthorInfo.git'
+Bundle 'loseblue/AuthorInfo.git'
+Bundle 'cocoa.vim'
 Bundle 'EasyMotion'
 Bundle 'Mark'
 Bundle 'matchit.zip'
 Bundle 'The-NERD-Commenter'
-Bundle 'project.tar.gz'
+Bundle 'The-NERD-tree'
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
 Bundle 'TeTrIs.vim'
+Bundle 'loseblue/trcBrowser.git'
 Bundle 'TxtBrowser'
 Bundle 'winmanager--Fox'
 
@@ -213,19 +216,12 @@ filetype plugin indent on    " required!
 
 let g:Tagbar_title="[Tagbar]"
 let g:Project_title="[Project]"
-"let g:winManagerWindowLayout="Tagbar|Project"
 let g:winManagerWindowLayout="TagList|FileExplorer"
 
 function! Tagbar_Start()
 	exec 'TagbarToggle'
 endfunction
 function! Tagbar_IsValid()
-	return 1
-endfunction
-function! Project_Start()
-	exec 'Project'
-endfunction
-function! Project_IsValid()
 	return 1
 endfunction
 
