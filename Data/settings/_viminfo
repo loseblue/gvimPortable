@@ -14,6 +14,11 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:w
+:BundleInstall!
+:BundleInstall
+:BundleClean
+:q
 :<F1>
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1><F1>
@@ -29,11 +34,6 @@ $+ \2 (\1\/\2)
 :BundleClean
 :q
 :set runtimepath?
-:Author
-:AuthorInfoDetect
-:Project
-:BundleClean
-:w
 
 # Search String History (newest to oldest):
 ?/project
@@ -73,22 +73,49 @@ $+ \2 (\1\/\2)
 # Registers:
 "0	LINE	0
 	set rtp+=~/.vim/bundle/vundle/
-"1	LINE	0
-	
+""1	LINE	0
+	"     HomePage: http://www.google.com
 "2	LINE	0
+	/*=============================================================================
+	#     FileName: README
+	#         Desc: 
+	#       Author: loseblue
+	#        Email: loseblue[a]163.com
 	
+	#      Version: 0.0.1
+	#   LastChange: 2012-08-09 11:03:29
+	#      History:
+	=============================================================================*/
+	
+	trcBrowser is a plugins for highlighting RockChip 2.5G stack traceLog.
+	
+	trcBrowser is modify from TxtBrowser.
+	
+	Thanks alot for him!
+	
+	
+	=======================================================
+	The "TxtBrowser" plugin is a plain text browser plugin for Vim and provides the
+	following features to allow you to efficiently browse through plain text
+	files(for example RFCs). Chinese intruction is available at(÷–ŒƒΩÈ…‹«Î∑√Œ ):
+	
+	http://guoyoooping.blog.163.com/blog/static/1357051832009112910162389/
 "3	LINE	0
 	
-"4	CHAR	0
+"4	LINE	0
+	
+"5	LINE	0
+	
+"6	CHAR	0
 	
 	" TabBar ≈‰÷√
 	"let g:Tb_SplitToEdge = 0
 	"let g:Tb_ModSelTarget = 1
-"5	LINE	0
-		set rtp+=~/.vim/bundle/vundle/
-"6	LINE	0
-		set rtp+=~/vimfiles/bundle/vundle/
 "7	LINE	0
+		set rtp+=~/.vim/bundle/vundle/
+"8	LINE	0
+		set rtp+=~/vimfiles/bundle/vundle/
+"9	LINE	0
 	    " Set helplang
 	    set helplang=cn
 	    "Fast reloading of the _vimrc
@@ -97,31 +124,37 @@ $+ \2 (\1\/\2)
 	    map <silent> <leader>ee :call SwitchToBuf("~/_vimrc")<cr>
 	    "When _vimrc is edited, reload it
 	    autocmd! bufwritepost _vimrc source ~/_vimrc
-"8	LINE	0
-	set rtp+=~/.vim/bundle/vundle/
-"9	LINE	0
-	    "Fast reloading of the .vimrc
-	    map <silent> <leader>ss :source ~/.vimrc<cr>
-	    "Fast editing of .vimrc
-	    map <silent> <leader>ee :call SwitchToBuf("~/.vimrc")<cr>
-	    "When .vimrc is edited, reload it
-	    "autocmd! bufwritepost .vimrc source ~/.vimrc
-""-	CHAR	0
-	https://github.com/loseblue
+"-	CHAR	0
+	@
 
 # File marks:
-'0  321  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'1  34  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'2  266  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'3  3  0  F:\gVimPortable\[Vundle] clean
-'4  5  0  F:\gVimPortable\[Vundle] clean
-'5  1  19  C:\Users\Administrator\Desktop\1.c
-'6  15  42  F:\gVimPortable\README.md
-'7  16  0  F:\gVimPortable\[Vundle] Installer
-'8  10  0  F:\gVimPortable\README.md
-'9  1  0  F:\gVimPortable\README.md
+'0  19  11  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\ftplugin\trc.vim
+'1  165  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'2  15  0  ~\.vim\bundle\trcBrowser\README.md
+'3  11  0  ~\.vim\bundle\trcBrowser\README.md
+'4  1  0  D:\work\code\trcBrowser\README.md
+'5  147  12  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'6  166  30  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'7  146  24  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'8  1  0  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\syntax\trc.vim
+'9  321  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 
 # Jumplist (newest first):
+-'  19  11  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\ftplugin\trc.vim
+-'  19  15  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\syntax\trc.vim
+-'  41  0  D:\work\code\trcBrowser\syntax\trc.vim
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  165  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  109  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  15  0  ~\.vim\bundle\trcBrowser\README.md
+-'  11  0  ~\.vim\bundle\trcBrowser\README.md
+-'  1  0  D:\work\code\trcBrowser\README.md
+-'  30  0  D:\work\code\trcBrowser\README.md
+-'  147  12  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  166  30  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  146  24  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  1  0  C:\Users\Administrator\Desktop\1.c
+-'  1  0  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\syntax\trc.vim
 -'  321  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 -'  34  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
@@ -199,125 +232,162 @@ $+ \2 (\1\/\2)
 -'  58  0  F:\gVimPortable\[File List]
 -'  45  5  F:\gVimPortable\[File List]
 -'  38  0  F:\gVimPortable\[File List]
--'  41  0  F:\gVimPortable\[File List]
--'  39  0  F:\gVimPortable\[File List]
--'  46  0  F:\gVimPortable\[File List]
--'  51  0  F:\gVimPortable\[File List]
--'  125  6  E:\TDDOWNLOAD\winvim\_vimrc
--'  109  6  E:\TDDOWNLOAD\winvim\_vimrc
--'  1  0  E:\TDDOWNLOAD\winvim\_vimrc
--'  131  0  E:\TDDOWNLOAD\winvim\_vimrc
--'  194  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  43  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  58  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  74  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  92  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  116  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  131  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  152  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  171  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
--'  11  34  F:\gVimPortable\Data\Temp\VIA5852.tmp
--'  19  0  F:\gVimPortable\[Vundle] Installer
--'  321  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  15  0  ~\.vim\bundle\trcBrowser\README.md
 
 # History of marks within files (newest to oldest):
 
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-	"	321	0
+	"	1	0
 
-> F:\gVimPortable\[Vundle] clean
-	"	3	0
-	.	1	0
-	+	10	0
+> D:\work\code\trcBrowser\syntax\trc.vim
+	"	41	0
+	^	5	26
+	.	6	0
+	+	5	25
 	+	6	0
-	+	5	0
-	+	3	0
-	+	1	0
+
+> D:\MySoftWare\gVimPortable\Data\settings\vimfiles\syntax\trc.vim
+	"	19	15
+
+> D:\MySoftWare\gVimPortable\Data\settings\vimfiles\ftplugin\trc.vim
+	"	19	11
+
+> F:\gVimPortable\__Tagbar__
+	"	1	0
+	.	15	0
+	+	36	0
+	+	36	0
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	15	0
+	+	15	0
+
+> F:\gVimPortable\__Tag_List__
+	"	10	24
+	.	2185	0
+	+	2357	0
+	+	2316	0
+	+	2315	0
+	+	2314	0
+	+	2297	0
+	+	2296	0
+	+	2313	0
+	+	2279	0
+	+	2278	0
+	+	2295	0
+	+	2253	0
+	+	2221	0
+	+	2277	0
+	+	2236	0
+	+	2252	0
+	+	2188	0
+	+	2214	0
+	+	2220	0
+	+	2220	0
+	+	2187	0
+	+	2186	0
+	+	2	0
+	+	2185	0
 
 > F:\gVimPortable\[Vundle] Installer
-	"	17	0
+	"	18	0
 	.	1	0
-	+	354	0
-	+	335	0
-	+	321	0
-	+	306	0
-	+	291	0
-	+	276	0
-	+	261	0
-	+	246	0
-	+	231	0
-	+	216	0
-	+	201	0
-	+	186	0
-	+	171	0
-	+	156	0
-	+	141	0
-	+	126	0
-	+	108	0
-	+	93	0
-	+	78	0
-	+	63	0
-	+	48	0
-	+	33	0
-	+	17	0
+	+	455	0
+	+	436	0
+	+	422	0
+	+	407	0
+	+	392	0
+	+	377	0
+	+	362	0
+	+	347	0
+	+	332	0
+	+	317	0
+	+	302	0
+	+	287	0
+	+	272	0
+	+	257	0
+	+	242	0
+	+	227	0
+	+	209	0
+	+	194	0
+	+	179	0
+	+	164	0
+	+	149	0
+	+	134	0
+	+	118	0
+	+	102	0
+	+	86	0
+	+	69	0
+	+	52	0
+	+	35	0
+	+	18	0
 	+	1	0
 
-> C:\Users\Administrator\Desktop\1.c
-	"	1	19
-	^	1	0
-	.	1	636
-	+	1	0
-	+	1	636
+> ~\.vim\bundle\trcBrowser\README.md
+	"	15	0
 
-> F:\gVimPortable\NERD_tree_1
-	"	47	0
+> F:\gVimPortable\Data\Temp\VIA7034.tmp
+	"	69	39
+
+> F:\gVimPortable\[Vundle] clean
+	"	2	0
 	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> F:\gVimPortable\README.md
-	"	15	42
-	^	15	43
-	.	15	43
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
 	+	12	0
-	+	13	0
-	+	15	43
+	+	8	0
+	+	7	0
+	+	5	0
+	+	3	0
+	+	2	0
+	+	1	0
+
+> D:\work\code\trcBrowser\README.md
+	"	1	0
+	^	1	1
+	.	8	0
+	+	1	0
+	+	8	0
 	s	1	0
 
-> ~\.vimprojects
-	"	1	0
-	^	1	0
-	.	2027	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2027	0
-	k	2026	0
+> C:\Users\Administrator\Desktop\trcBrowser\README
+	"	29	0
+	^	22	41
+	.	7	20
+	+	18	6
+	+	18	56
+	+	19	46
+	+	18	0
+	+	24	0
+	+	25	0
+	+	22	26
+	+	21	45
+	+	22	40
+	+	7	20
 
 > ~\_vimrc
-	"	164	26
-	^	13	33
+	"	26	13
+	^	26	28
 	.	182	0
 	+	126	41
 	+	126	27
@@ -417,43 +487,66 @@ $+ \2 (\1\/\2)
 	+	13	33
 	+	182	0
 
+> C:\Users\Administrator\Desktop\1.c
+	"	1	0
+	^	1	0
+	.	1	636
+	+	1	0
+	+	1	636
+
+> F:\gVimPortable\Data\Temp\VIAE258.tmp
+	"	1	0
+
+> F:\gVimPortable\NERD_tree_1
+	"	47	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> F:\gVimPortable\README.md
+	"	15	42
+	^	15	43
+	.	15	43
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	12	0
+	+	13	0
+	+	15	43
+	s	1	0
+
+> ~\.vimprojects
+	"	1	0
+	^	1	0
+	.	2027	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2027	0
+	k	2026	0
+
 > ~\.vim\bundle\AuthorInfo\README
 	"	16	0
 
 > F:\gVimPortable\[Tagbar]
 	"	1	0
-
-> F:\gVimPortable\__Tagbar__
-	"	1	0
-	.	15	0
-	+	36	0
-	+	36	0
-	+	28	0
-	+	28	0
-	+	28	0
-	+	28	0
-	+	28	0
-	+	28	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	15	0
-	+	15	0
 
 > F:\gVimPortable\[File List]
 	"	5	1
@@ -487,32 +580,6 @@ $+ \2 (\1\/\2)
 
 > e:\TDDOWNLOAD\platform\baseband\stack\api\src\api.c
 	"	1	0
-
-> F:\gVimPortable\__Tag_List__
-	"	1	1
-	.	1	0
-	+	173	0
-	+	132	0
-	+	131	0
-	+	130	0
-	+	113	0
-	+	112	0
-	+	129	0
-	+	95	0
-	+	94	0
-	+	111	0
-	+	69	0
-	+	37	0
-	+	93	0
-	+	52	0
-	+	68	0
-	+	4	0
-	+	30	0
-	+	36	0
-	+	36	0
-	+	3	0
-	+	2	0
-	+	1	0
 
 > F:\gVimPortable\Data\Temp\VIA5852.tmp
 	"	11	34
