@@ -23,7 +23,7 @@ syntax on
 set display=lastline
 filetype plugin indent on " 文件类型检测
 au BufEnter *.txt setlocal ft=txt "txtBrowser 调用
-colorscheme spring  " 配色方案
+au BufEnter *.trc setlocal ft=trc "trcBrowser 调用
 set backspace=2     " 设置退格键可用
 set nu!             " 显示行号
 set autoread        " Set to auto read when a file is changed from the outside
@@ -195,15 +195,19 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 Bundle 'a.vim'
-Bundle 'https://github.com/loseblue/AuthorInfo.git'
+Bundle 'cocoa.vim'
+Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
 Bundle 'Mark'
 Bundle 'matchit.zip'
 Bundle 'The-NERD-Commenter'
 Bundle 'project.tar.gz'
+Bundle 'loseblue/springColorScheme'
+colorscheme spring  " 配色方案
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
 Bundle 'TeTrIs.vim'
+Bundle 'loseblue/trcBrowser'
 Bundle 'TxtBrowser'
 Bundle 'winmanager--Fox'
 

@@ -16,6 +16,12 @@ $+ \2 (\1\/\2)
 # Command Line History (newest to oldest):
 :w
 :BundleInstall!
+:set runtimepath?
+:BundleInstall
+:BundleClean
+:q
+:w
+:BundleInstall!
 :BundleInstall
 :BundleClean
 :q
@@ -28,12 +34,6 @@ $+ \2 (\1\/\2)
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1>
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |
 :if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1>
-:w
-:BundleInstall
-:BundleInstall!
-:BundleClean
-:q
-:set runtimepath?
 
 # Search String History (newest to oldest):
 ?/project
@@ -62,6 +62,8 @@ $+ \2 (\1\/\2)
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')  
 
 # Input Line History (newest to oldest):
+@Y
+@n
 @Y
 @Y
 @\<EvtFunc_t\>
@@ -128,18 +130,30 @@ $+ \2 (\1\/\2)
 	@
 
 # File marks:
-'0  39  0  ~\_vimrc
-'1  19  11  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\ftplugin\trc.vim
-'2  165  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'3  15  0  ~\.vim\bundle\trcBrowser\README.md
-'4  11  0  ~\.vim\bundle\trcBrowser\README.md
-'5  1  0  D:\work\code\trcBrowser\README.md
-'6  147  12  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'7  166  30  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'8  146  24  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-'9  1  0  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\syntax\trc.vim
+'0  67  0  e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
+'1  19  0  F:\gVimPortable\[Vundle] Installer
+'2  151  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'3  168  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'4  37  0  F:\gVimPortable\[Vundle] Installer
+'5  137  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'6  28  0  C:\Users\Administrator\Desktop\1.trc
+'7  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+'8  39  0  ~\_vimrc
+'9  19  11  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\ftplugin\trc.vim
 
 # Jumplist (newest first):
+-'  67  0  e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
+-'  1  0  e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
+-'  172  0  e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
+-'  19  0  F:\gVimPortable\[Vundle] Installer
+-'  151  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  168  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  37  0  F:\gVimPortable\[Vundle] Installer
+-'  137  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  1  9  C:\Users\Administrator\Desktop\1.trc
+-'  28  0  C:\Users\Administrator\Desktop\1.trc
+-'  140  23  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 -'  39  0  ~\_vimrc
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 -'  19  11  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\ftplugin\trc.vim
@@ -222,52 +236,95 @@ $+ \2 (\1\/\2)
 -'  171  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_fsm.c
 -'  36  0  F:\gVimPortable\__Tag_List__
--'  30  9  F:\gVimPortable\__Tag_List__
--'  5  0  F:\gVimPortable\__Tag_List__
--'  52  5  F:\gVimPortable\[File List]
--'  47  0  F:\gVimPortable\[File List]
--'  48  0  F:\gVimPortable\[File List]
--'  53  0  F:\gVimPortable\[File List]
--'  54  0  F:\gVimPortable\[File List]
--'  55  0  F:\gVimPortable\[File List]
--'  58  0  F:\gVimPortable\[File List]
--'  45  5  F:\gVimPortable\[File List]
--'  38  0  F:\gVimPortable\[File List]
--'  15  0  ~\.vim\bundle\trcBrowser\README.md
--'  342  33  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 
 # History of marks within files (newest to oldest):
 
+> e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
+	"	67	0
+	.	2	0
+	+	2	0
+
+> F:\gVimPortable\[Vundle] Installer
+	"	19	0
+	.	1	0
+	+	358	0
+	+	339	0
+	+	325	0
+	+	310	0
+	+	295	0
+	+	280	0
+	+	265	0
+	+	250	0
+	+	235	0
+	+	220	0
+	+	205	0
+	+	190	0
+	+	175	0
+	+	160	0
+	+	145	0
+	+	130	0
+	+	112	0
+	+	97	0
+	+	82	0
+	+	67	0
+	+	52	0
+	+	37	0
+	+	19	0
+	+	1	0
+
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
-	"	1	0
+	"	151	0
+
+> F:\gVimPortable\[Vundle] clean
+	"	3	0
+	.	1	0
+	+	11	0
+	+	7	0
+	+	6	0
+	+	3	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\1.trc
+	"	1	9
 
 > F:\gVimPortable\__Tag_List__
-	"	3	0
-	.	2185	0
-	+	4541	0
-	+	4500	0
-	+	4499	0
-	+	4498	0
-	+	4481	0
-	+	4480	0
-	+	4497	0
-	+	4463	0
-	+	4462	0
-	+	4479	0
-	+	4437	0
-	+	4405	0
-	+	4461	0
-	+	4420	0
-	+	4436	0
-	+	4372	0
-	+	4398	0
-	+	4404	0
-	+	4404	0
-	+	4371	0
-	+	4370	0
-	+	2186	0
-	+	4369	0
-	+	2185	0
+	"	32	4
+	.	2211	0
+	+	6813	0
+	+	6772	0
+	+	6771	0
+	+	6770	0
+	+	6753	0
+	+	6752	0
+	+	6769	0
+	+	6735	0
+	+	6734	0
+	+	6751	0
+	+	6709	0
+	+	6677	0
+	+	6733	0
+	+	6692	0
+	+	6708	0
+	+	6644	0
+	+	6670	0
+	+	6676	0
+	+	6676	0
+	+	6643	0
+	+	6642	0
+	+	4458	0
+	+	6641	0
+	+	4457	0
+	+	2272	0
+	+	2271	0
+	+	2270	0
+	+	2269	0
+	+	2268	0
+	+	2267	0
+	+	2266	0
+	+	2239	0
+	+	2265	0
+	+	2238	0
+	+	2211	0
 
 > F:\gVimPortable\__Tagbar__
 	"	1	0
@@ -426,39 +483,6 @@ $+ \2 (\1\/\2)
 	+	13	0
 	+	15	43
 	s	1	0
-
-> F:\gVimPortable\[Vundle] clean
-	"	2	0
-	.	1	0
-	+	6	0
-	+	2	0
-	+	1	0
-
-> F:\gVimPortable\[Vundle] Installer
-	"	16	0
-	.	1	0
-	+	322	0
-	+	303	0
-	+	289	0
-	+	274	0
-	+	259	0
-	+	244	0
-	+	229	0
-	+	214	0
-	+	199	0
-	+	184	0
-	+	169	0
-	+	154	0
-	+	139	0
-	+	124	0
-	+	109	0
-	+	94	0
-	+	76	0
-	+	61	0
-	+	46	0
-	+	31	0
-	+	16	0
-	+	1	0
 
 > ~\.vimprojects
 	"	1	0
