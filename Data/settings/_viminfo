@@ -70,6 +70,8 @@ $+ \2 (\1\/\2)
 @\<foldenable\>
 @\<adding\>
 @\<cFunction\>
+@n
+@\<cFunction\>
 
 # Input Line History (newest to oldest):
 
@@ -167,18 +169,21 @@ $+ \2 (\1\/\2)
 	 
 
 # File marks:
-'0  6  32  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'1  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'2  9  159  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'3  27  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'4  28  11  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'5  5  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'6  50  0  ~\.vim\bundle\trcBrowser\syntax\trc.vim
-'7  9  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
-'8  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
-'9  11  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
+'0  36  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
+'1  50  27  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
+'2  6  32  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
+'3  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
+'4  9  159  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
+'5  27  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
+'6  28  11  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
+'7  5  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
+'8  50  0  ~\.vim\bundle\trcBrowser\syntax\trc.vim
+'9  9  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
 
 # Jumplist (newest first):
+-'  36  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
+-'  50  27  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
 -'  6  32  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  20  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  11  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
@@ -272,10 +277,85 @@ $+ \2 (\1\/\2)
 -'  19  15  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\syntax\trc.vim
 -'  41  0  D:\work\code\trcBrowser\syntax\trc.vim
 -'  165  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  109  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  15  0  ~\.vim\bundle\trcBrowser\README.md
 
 # History of marks within files (newest to oldest):
+
+> D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
+	"	36	0
+
+> F:\gVimPortable\__Tag_List__
+	"	13	4
+	.	15	0
+	+	6941	0
+	+	6900	0
+	+	6899	0
+	+	6898	0
+	+	6881	0
+	+	6880	0
+	+	6897	0
+	+	6863	0
+	+	6862	0
+	+	6879	0
+	+	6837	0
+	+	6805	0
+	+	6861	0
+	+	6820	0
+	+	6836	0
+	+	6772	0
+	+	6798	0
+	+	6804	0
+	+	6804	0
+	+	6771	0
+	+	6770	0
+	+	4586	0
+	+	6769	0
+	+	4585	0
+	+	2400	0
+	+	2399	0
+	+	2398	0
+	+	2397	0
+	+	2396	0
+	+	2395	0
+	+	2394	0
+	+	2367	0
+	+	2393	0
+	+	2366	0
+	+	2339	0
+	+	129	0
+	+	123	0
+	+	116	0
+	+	109	0
+	+	102	0
+	+	95	0
+	+	88	0
+	+	81	0
+	+	74	0
+	+	67	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	60	0
+	+	51	0
+	+	39	0
+	+	36	0
+	+	33	0
+	+	30	0
+	+	27	0
+	+	15	0
 
 > D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 	"	6	32
@@ -286,79 +366,6 @@ $+ \2 (\1\/\2)
 	+	28	0
 	+	27	15
 	+	26	30
-
-> F:\gVimPortable\__Tag_List__
-	"	5	4
-	.	13	0
-	+	6927	0
-	+	6886	0
-	+	6885	0
-	+	6884	0
-	+	6867	0
-	+	6866	0
-	+	6883	0
-	+	6849	0
-	+	6848	0
-	+	6865	0
-	+	6823	0
-	+	6791	0
-	+	6847	0
-	+	6806	0
-	+	6822	0
-	+	6758	0
-	+	6784	0
-	+	6790	0
-	+	6790	0
-	+	6757	0
-	+	6756	0
-	+	4572	0
-	+	6755	0
-	+	4571	0
-	+	2386	0
-	+	2385	0
-	+	2384	0
-	+	2383	0
-	+	2382	0
-	+	2381	0
-	+	2380	0
-	+	2353	0
-	+	2379	0
-	+	2352	0
-	+	2325	0
-	+	115	0
-	+	109	0
-	+	102	0
-	+	95	0
-	+	88	0
-	+	81	0
-	+	74	0
-	+	67	0
-	+	60	0
-	+	53	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	46	0
-	+	37	0
-	+	25	0
-	+	22	0
-	+	19	0
-	+	16	0
-	+	13	0
 
 > ~\.vim\bundle\trcBrowser\ftplugin\trc.vim
 	"	41	77
