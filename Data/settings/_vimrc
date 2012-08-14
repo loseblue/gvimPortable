@@ -33,7 +33,7 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 set showcmd "提示nomoal下光标的位置
 set cursorcolumn  " 高亮光标列
 set cursorline    " 高亮光标行
-set linespace=5   " 设置行距
+set linespace=0   " 设置行距
 set lines=20 columns=110 "初始化20行，100列
 set linebreak      "换行不截断单词 
 " set foldmethod=marker
@@ -203,7 +203,6 @@ Bundle 'matchit.zip'
 Bundle 'The-NERD-Commenter'
 Bundle 'project.tar.gz'
 Bundle 'loseblue/springColorScheme'
-colorscheme spring  " 配色方案
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
 Bundle 'TeTrIs.vim'
@@ -212,7 +211,10 @@ Bundle 'TxtBrowser'
 Bundle 'winmanager--Fox'
 
 filetype plugin indent on    " required!
+colorscheme spring  " 配色方案
 "=========================== END Vundle配置 ================================
+
+
 " winManger设置
 
 let g:Tagbar_title="[Tagbar]"
