@@ -213,24 +213,16 @@ let g:tagbar_width = 30
 noremap <A-j> <C-f>
 noremap <A-k> <C-b>
 
-
 " winManger setting
 
 let g:Tagbar_title="[Tagbar]"
 let g:Project_title="[Project]"
-"let g:winManagerWindowLayout="Tagbar|Project"
 let g:winManagerWindowLayout="TagList|FileExplorer"
 
 function! Tagbar_Start()
 	exec 'TagbarToggle'
 endfunction
 function! Tagbar_IsValid()
-	return 1
-endfunction
-function! Project_Start()
-	exec 'Project'
-endfunction
-function! Project_IsValid()
 	return 1
 endfunction
 

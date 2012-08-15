@@ -8,17 +8,23 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/lap_TimerRecovery_RxRrOrRej
+~MSle0~/mate
 
 # Last Substitute String:
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
 :w
-:BundleInstall
-:BundleInstall!
-:version
+:filetype
+:filetype ?
 :q
+:syntax enable
+:syntax on
+:sy on
+:sy clear
+:BundleInstall!
+:BundleInstall
+:version
 :x
 :BundleClean
 :BundleClen
@@ -28,14 +34,16 @@ $+ \2 (\1\/\2)
 :BundleInstall!
 :BundleInstall
 :BundleClean
-:q
-:<F1>
-:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |
-:if &guioptions =~# 'T' |set guioptions-=T |set guioptions-=m |set guioptions-=l |<F1><F1><F1><F1>
-:BundleClean
-:BundleInstall
 
 # Search String History (newest to oldest):
+?/mate
+?/snip
+? \<filetype\>
+?/paste
+?/filetype
+?/filetype plugin on
+?/:filetype plugin on
+?/print
 ?/lap_TimerRecovery_RxRrOrRej
 ?/line
 ?/font
@@ -48,14 +56,6 @@ $+ \2 (\1\/\2)
 ?/s
 ?/'q'
 ?/ToggleWindowsManager
-?/foldenable
-? \<foldenable\>
-? \<adding\>
-?/add
-?/remove
-?/delete
-?/w
-? \<windows\>
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
@@ -77,110 +77,151 @@ $+ \2 (\1\/\2)
 
 # Registers:
 "0	LINE	0
-	LAP :  2 --> <LAP_ESTABLISH_CNq>
-"1	LINE	0
-	LAP :  0 --> <LAP_ESTABLISH_CNF> 
+	Bundle 'Mark'
+""1	LINE	0
+	
 "2	LINE	0
 	
-"3	LINE	0
-	set filetype=trc
+"3	CHAR	0
+	<<<<<<< HEAD
+	=======
+	"=========================== Vundle配置 ================================
+	set nocompatible    " be iMproved
+	filetype off        " required!
+	
+	if MySys() == 'windows'
+		set rtp+=~/.vim/bundle/vundle/
+	else
+		set rtp+=~/.vim/bundle/vundle/
+	endif
+	
+	call vundle#rc()
+	" required!
+	Bundle 'gmarik/vundle'
+	
+	" vim-scripts repos
+	Bundle 'a.vim'
+	Bundle 'loseblue/AuthorInfo.git'
+	Bundle 'cocoa.vim'
+	Bundle 'EasyMotion'
+	Bundle 'Mark'
+	Bundle 'matchit.zip'
+	Bundle 'The-NERD-Commenter'
+	Bundle 'The-NERD-tree'
+	Bundle 'Tagbar'
+	Bundle 'taglist.vim'
+	Bundle 'TeTrIs.vim'
+	Bundle 'loseblue/trcBrowser.git'
+	Bundle 'TxtBrowser'
+	Bundle 'winmanager--Fox'
+	>>>>>>> eb11ce53afa0461918d32b08221e73301e0d5d7a
 "4	LINE	0
-	au BufRead,BufNewFile *.trc
+	<<<<<<< HEAD
 "5	LINE	0
-	let b:current_syntax = 'trc'
-"6	LINE	0
+	
+"6	CHAR	0
+	=======
+	"set backupdir=E:\VIM
+	set nobackup      " 关闭自动备份
+	syntax enable       " 语法高亮
+	syntax on
+	set display=lastline     "避免常代码出现@@@
+	filetype plugin indent on " 文件类型检测
+	au BufEnter *.txt setlocal ft=txt "txtBrowser 调用
+	au BufEnter *.trc setlocal ft=trc "trcBrowser 调用
 	colorscheme spring  " 配色方案
+	set backspace=2     " 设置退格键可用
+	set nu!             " 显示行号
+	>>>>>>> eb11ce53afa0461918d32b08221e73301e0d5d7a
 "7	LINE	0
-	colorscheme spring  " 配色方案
+	"Snipmate 
+	Bundle 'MarcWeber/vim-addon-mw-utils'
+	Bundle 'tomtom/tlib_vim'
+	Bundle 'snipmate-snippets'
+	Bundle 'garbas/vim-snipmate'
 "8	LINE	0
-	养龟
-	
-	856
-<有的龟友说，龟龟进食与以下几个方面有着密切的关系，环境、温度、食欲和其它情况，一般 来 说，（1）、龟龟到家后，新的环境，要有一个适应的过程，龟友到家后不要急于进食，要让龟龟先熟悉环境。（2）、有的龟友又会问，都几天了为什么还不能进 食呢，这就要看一下温度，龟龟在温度26度左右时才有很大的食欲，如果让冬眠的温度让龟进食也是天大的笑话，如果龟龟在15度左右也不大进食的，并不等到 于龟龟进食就是好事，特别是野生龟，要遵循龟的生理规律，如果非要让龟龟开食，很简单，就是加 温， 一根50瓦的加热棒就OK了，加热到26度以上，30度以下就行了。（3）有些龟友又问，龟龟的环境也熟悉了，温度也上去了，还是不进食是为什么呢？其 一、不饿。不饿龟龟是不会进食的，待龟龟活动活动，排排便，很快就是进食。龟友又会问这些都做了，还不进食怎么办？如果上述问题都解决了，这就是第二了原 因，即其它原因，例如龟龟肠胃不好，有炎症之类的，这就要对症下药了，一般用土霉素泡一下消消炎，用马叮啉健下胃等。
-	1、养龟用的水
-	364
-<  要用晾了2天以上的自来水（目的除氯），最好准备2个塑料水桶晾，就可以满足换水所需。换水建议每天部分换，不需要全缸换水，除非水及缸周围很脏才需要全 缸换水。部分换水时用塑料小管利用虹吸原理将底部脏水吸出，再添加同等容量的新水（即晾2天的自来水）入缸即可。这样换水的龟不会有白眼病或烂甲。当然如 果你想省工也可以每天全缸换水或几天换一次水，但是不保证龟可以很健康生长。
-	
-	  2、龟的食物
-	272
-<  水龟一般喂猪肉、牛肉、小虾，小鱼，家禽鱼类的肝脏，这些食物要切碎或撕碎，当然也可以喂鱼饲料或龟饲料。你只须在做菜时留丁点食物就足够龟喂食，无须特 意购买龟食。需要注意的是喂虾、鱼要去虾头及鱼刺，以免虾刺、鱼刺刺穿龟的喉咙。冰冻的食物要解冻，待温度与水温一致才可以喂龟。
-	351
-<  夏天气温高，龟新陈代谢快，可以每天喂一次，但一般建议隔天喂一次，因为龟不需要喂食太频繁，他们是新陈代谢很慢的动物。当然如果你很忙，几天喂一次都没 问题，他们是很耐饿的动物，甚至如果你旅游外出，只要保证充足水份供应，他们半个月不吃东西也没问题的，就是有点委屈你的宝贝龟了。10月份秋天来了龟就 不怎么吃食了，几天才吃一次，直到冬天龟开始冬眠状态而停食。
-	  龟每次喂食量一般是他们头部加颈部大小的份量就足够了，不过龟是很能吃的，由于在野生环境中他们可能要几天才找到食物，所以他们天生一次可以吃很多，以备日后没有食物之需，所以龟的胃口很大，建议你不要迁就，他们吃太饱是对健康无益的，会影响寿命的。
-	
-	  3、养龟环境
-	339
-<  养龟水深一般比龟背稍高的深度即可，无须太深(当然有龟友使用过滤器需要或喜欢高水位另当别论),最好可以提供一块高出水面的石头，让龟爬上去晒背；龟需 要阳光，如果完全室内饲养，要经常让他晒太阳，每天十多分钟。建议饲养在东南面可以晒到阳光大约1-2小时的地方（不需要长时间的阳光直射），并提供遮阳 条件（可以在缸顶放一小块木板部分遮阳），免得中暑。
-	
-	  4、关于冬眠
-	  每年10-11月气温降至13℃以下时，龟便开始要冬眠，直到2-3月气温升高到18度结束。冬眠的龟不吃不动，只睡觉。最简单的冬眠法是把龟移入室内阴 暗安静处，浅水（水刚过背甲）冬眠，每月换水一次。除了换水，尽量不要打搅龟。注意温度不要低于6度，否则危及龟命。
-	
-	  5、最后建议
-	  如有疑问，建议经常使用百度搜索查找解决问题的答案，也可以上龟友论坛寻找答案，网络资源是最丰富的
-	265
-<乌龟俗称草龟，是我国龟类中分布最广，数量最多的一种。它全身是宝，具有较高的食用、药用和观赏价值。李时珍说过这么一句话：“介虫三百六十，而龟为长龟，介虫之灵长者也。”在国际市场上，中华草龟也十分畅销。日本、菲律宾以及欧美各国人民将其视为象征“吉祥，延年益寿”之物。
-	 
-	278
-<　 　乌龟体为长椭圆形，背甲稍隆起，有3条纵棱，脊棱明显。头顶黑橄榄色，前部皮肤光滑，后部其细鳞。腹甲平坦，后端具缺刻。颈部、四肢及裸露皮肤部分为灰 黑色或黑橄榄色。中华草龟对环境的适应性强，水质条件要求比较低，对不良水质有较大的耐受性，高密度养殖时，无互相残杀现象，患病率低。
-	怎样训练草龟【水龟】认识主人并与之互动三步曲
-	  经常到龟友之家浏览一些帖子，介绍饲养和治疗的较多，而涉及日常训练的较少，今日我就从平日的饲养训练中总结一点心得以供众爱龟之人参考。
-	  在说草的训练之前，我先说说人们的宠物狗，大家都知道，饲养狗，训练和没训练的就是有很大的区别。当然狗的智商要比龟高很多，不能拿狗的智商去和龟比较。但是若在日常的饲养中，有意识地训练龟，让他认识你并和饲主能达到良好的互动，还是可以做到的！
-	  在生活中，狗感到害怕时，通常的表现是：低头夹尾；见到主人时往往是往你身上扑，并且不断地摇尾！龟在日常中也有类似的表现。
-	  通过肢体语言了解龟：a、缩头、曲尾，一动不动，说明龟特别害怕。
-	                       b、缩头不曲尾，说明龟已经有点适应了，胆子稍微大了点。
-	                        c、抬头，伸尾，见人时望着你，说你龟已经适应你了，不再害怕了！
-	  下面我就从以下几方面来说明龟日常中的训练问题：
-	  1、【喂食时训练】：a、定时投喂
-	                    b、刚开始时用镊子夹着喂，注意观察有的龟在水面外即可张嘴吃，有的龟须在水中才张嘴。
-	                 c、等过了上述阶段后，先投食半活的小鱼，以便于龟龟容易捕捉，然后投食活鱼。
-	  2、【定时遛龟】：龟一般都是很胆小的，就必须训练他的胆子，每天定时把龟抓出来，到地面上爬爬，主人陪同，不时纠正他的乱爬，在这样的亲密接触中，龟龟也很快会适应你的。
-	  遛龟还有另外一个好处：现在大部分龟友都把龟养在玻璃缸里，这样的话，也可以磨磨龟指甲，有利于龟指甲的美容，可以说是一举两得！
-	  3、【抚摸与对视】：每天抽时间把龟拿在手上，用手指轻抚龟的头，轻挠龟的下颌，并与之对视，这样时间一长，龟也就适应你了！
-	  综上这几个步骤下来，再加以时日，一般龟龟都会认识主人的，并很快和你熟悉起来，达到很好的互动效果。当然，这其中最关键的要素是，养龟之人要有足够的爱心和耐心，要让龟适应你，而不是你适应龟！经过长时间的训练，一只聪明伶俐的龟龟偏诞生了。
-	给爱龟冬眠的好处就不用俺多说了吧。。给准备给龟龟冬眠的朋友提供一些帮助。。
-	感谢小欢提供经验
-	一、冬眠前期准备：
-	  1、9月：25-30℃是给龟喂脑袋的黄金时间，机不可失。。尽可能提供优质蛋白食物。
-	  2、10月：15-20℃龟的食量明显减少或干脆不进食了，这时就该清肠了。停食后，要经常换水，换水时可以用高于室温2-3℃的水，这样可以促进排便，俺想排便的目的就不用俺多说了吧~~~一定要把大便排的干干又净净~~~
-	   提示：清肠时间大概是1-2周时间。
-	  特别提示：冬眠前，一定要将爱龟调至最佳状态！
-	            如果是老弱病残的千万别冬眠！会挂的。。。另外头年龟苗也不建议冬眠！还有，俺说的时间历法可是阳历。。如果安阴历算的话就比较麻烦了。。。
-	  感觉今年北方的秋天特别冷，所以建议冬眠前期准备要根据实际温度而定。。
-	
-	二、冬眠设施：
-	  清肠完毕后就要给龟布置冬眠
-	  方案1、整理箱底铺一层湿润的细沙（塑料容器能对温度起到一定的缓冲作用），让爱龟登陆沙滩后，再用揉成团的干净纸覆盖（不选择报纸是因为报纸细菌多，而且文字中含有重金属铅）。特别提示：沙子一定要干干净净！而且保持湿润~~~
+	Bundle 'garbas/vim-snipmate'
 "9	LINE	0
-	快速修改文件名| Mac疯
-	mac.linsheng.me/archives/161.html分享2009年6月6日 – Mac疯 致力于Mac基础教育. RSS 图标 ... 快捷键: 选中-Enter. 当我们要 ... 但是有时候我们老是掌握不好停顿的时间，经常会变成双击打开了文件。
-	为Mac设置几个重要的自定义全局快捷键(页1) - Mac 进阶使用 - 苹果
-	mac.pcbeta.com ? MacIdea ? Mac 进阶使用
-	30 个帖子 - 29 个作者 - 2010年7月20日
-	MacIdea ? Mac 进阶使用 ? 为Mac设置几个重要的自定义全局快捷键 ... 打开Automator（我的习惯是用Control+Space呼出Spotlight，而后输入au两个字母的 ... [/indent]注：该服务文件保存在“yourusername/library/services”目录中。
-	Apple Mac OS X每日一技巧011:选中文件重命名/选中打开文件/关闭 ...
-	www.cnblogs.com/wormday/archive/2011/04/.../2029445.html2011年4月26日 – Apple Mac OS X每日一技巧011:选中文件重命名/选中打开文件/关闭隐藏程序快捷键. 刚才上网查了一下，选中文件/文件夹重命名的快捷键是“回车”（ ...
-	Mac OS X 改键指南| 老肥博客? 非唠不可
-	261
-<fis.io/mac-os-x-keys.html2009年12月21日 – 本文写给和我一样的快捷键控们，以下一共五类Mac 自定义快捷键的经验总结。 ... 中，用任意文本编辑器打开它，找到<key>70</key>, 其下有三个<integer> ... 的伟大我就不多吹捧了，Mac 和Linux 类似，找到隐藏文件夹~/.mplayer, ...
-	Mac 系统下自定义快捷键的相关文章推荐- 操作系统- ITeye专栏频道
-	272
-<www.iteye.com/wiki/blog/1474692 - 中国2012年4月5日 – Mac 系统下自定义快捷键的相关文章:大家都知道，在mac系统下，快捷键是很好用的。 ... 比如说，打开一个应用程序，想让他最大化，每次都要点击左上角的那个+号，很是 ... 如果您的文件夹下，有两个名字开头部分相同的文件，比如 ...
+	for
+	for ( i = 0; i < len; i++ ) {
+		asdf
+	}
 "-	CHAR	0
 	 
 
 # File marks:
-'0  36  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
-'1  50  27  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
-'2  6  32  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'3  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'4  9  159  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'5  27  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'6  28  11  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'7  5  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
-'8  50  0  ~\.vim\bundle\trcBrowser\syntax\trc.vim
-'9  9  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
+'0  21  12  F:\gVimPortable\Data\settings\_viminfo
+'1  216  0  F:\gVimPortable\Data\settings\_vimrc
+'2  39  16  F:\gVimPortable\Data\settings\_vimrc
+'3  40  0  F:\gVimPortable\Data\settings\_vimrc
+'4  3  0  C:\Users\Administrator\Desktop\1.c
+'5  37  0  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
+'6  1  9  C:\Users\Administrator\Desktop\1.trc
+'7  20  0  C:\Users\Administrator\Desktop\1.trc
+'8  72  37  C:\Users\Administrator\Desktop\1.trc
+'9  43  0  d:\MySoftWare\gVimPortable\__Tag_List__
 
 # Jumplist (newest first):
+-'  21  12  F:\gVimPortable\Data\settings\_viminfo
+-'  216  0  F:\gVimPortable\Data\settings\_vimrc
+-'  39  16  F:\gVimPortable\Data\settings\_vimrc
+-'  40  0  F:\gVimPortable\Data\settings\_vimrc
+-'  35  0  F:\gVimPortable\Data\settings\_vimrc
+-'  3  0  C:\Users\Administrator\Desktop\1.c
+-'  1  0  C:\Users\Administrator\Desktop\1.c
+-'  4  0  C:\Users\Administrator\Desktop\1.c
+-'  37  0  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
+-'  36  18  F:\gVimPortable\Data\settings\_vimrc
+-'  1  9  C:\Users\Administrator\Desktop\1.trc
+-'  20  0  C:\Users\Administrator\Desktop\1.trc
+-'  9  74  F:\gVimPortable\Data\settings\_vimrc
+-'  72  37  C:\Users\Administrator\Desktop\1.trc
+-'  11  0  C:\Users\Administrator\Desktop\1.trc
+-'  43  0  d:\MySoftWare\gVimPortable\__Tag_List__
+-'  21  20  C:\Users\Administrator\Desktop\1.trc
+-'  63  0  F:\gVimPortable\Data\settings\_vimrc
+-'  62  0  F:\gVimPortable\Data\settings\_vimrc
+-'  61  0  F:\gVimPortable\Data\settings\_vimrc
+-'  50  0  F:\gVimPortable\Data\settings\_vimrc
+-'  20  0  F:\gVimPortable\Data\settings\_vimrc
+-'  58  5  F:\gVimPortable\Data\settings\_vimrc
+-'  70  0  F:\gVimPortable\Data\settings\_vimrc
+-'  71  5  F:\gVimPortable\Data\settings\_vimrc
+-'  1  0  F:\gVimPortable\Data\settings\_vimrc
+-'  2  7  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
+-'  111  2  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
+-'  36  77  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
+-'  118  2  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
+-'  116  3  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
+-'  115  1  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
+-'  1  0  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
+-'  16  0  F:\gVimPortable\Data\settings\_vimrc
+-'  153  0  F:\gVimPortable\Data\settings\_vimrc
+-'  155  28  F:\gVimPortable\Data\settings\_vimrc
+-'  66  26  F:\gVimPortable\Data\settings\_vimrc
+-'  51  0  F:\gVimPortable - 副本\Data\settings\vimfiles\plugin\EasyMotion.vim
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\lap\test\src\sce_gen.c
+-'  3460  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\lap\test\src\sce_gen.c
+-'  66  22  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.35.trc
+-'  1  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.35.trc
+-'  36  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.31.trc
+-'  1  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.31.trc
+-'  10  9  F:\gVimPortable\Data\settings\_vimrc
+-'  13  26  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+-'  1  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+-'  1  0  F:\gVimPortable\Data\settings\.vim\bundle\trcBrowser\syntax\
+-'  31  64  F:\gVimPortable\Data\settings\.vim\bundle\trcBrowser\syntax\trc.vim
+-'  14  56  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+-'  1  0  ~\.vim\bundle\trcBrowser\ftplugin\trc.vim
+-'  17  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+-'  68  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+-'  54  0  ~\_vimrc
+-'  217  0  ~\_vimrc
+-'  338  32  F:\gVimPortable - 副本\Data\settings\vimfiles\plugin\txtbrowser.vim
+-'  11  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+-'  16  25  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+-'  16  18  D:\gVimPortable\[Vundle] Installer
+-'  5  0  D:\gVimPortable\[Vundle] Installer
 -'  36  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
 -'  50  27  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
@@ -202,88 +243,368 @@ $+ \2 (\1\/\2)
 -'  11  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
 -'  31  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
 -'  14  52  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
--'  19  0  F:\gVimPortable\[Vundle] Installer
--'  26  0  F:\gVimPortable\Data\Temp\VIA2F13.tmp
--'  37  0  F:\gVimPortable\[Vundle] Installer
--'  4  78  C:\Users\Administrator\Desktop\1.c
--'  1  0  C:\Users\Administrator\Desktop\1.c
--'  219  0  ~\_vimrc
--'  57  59  C:\Users\Administrator\Desktop\1.c
--'  52  5  C:\Users\Administrator\Desktop\1.c
--'  35  15  C:\Users\Administrator\Desktop\1.c
--'  10  0  C:\Users\Administrator\Desktop\1.c
--'  26  18  C:\Users\Administrator\Desktop\1.c
--'  11  46  C:\Users\Administrator\Desktop\1.c
--'  386  0  C:\Users\Administrator\Desktop\1.c
--'  617  0  C:\Users\Administrator\Desktop\1.c
--'  1825  15  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  1800  13  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  1837  3  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  1784  13  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  1994  2  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  221  23  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  11  0  D:\work\code\springColorScheme\syntax\c.vim
--'  1  0  D:\work\code\springColorScheme\syntax\c.vim
--'  36  14  ~\_vimrc
--'  35  10  ~\_vimrc
--'  32  32  ~\_vimrc
--'  23  16  ~\_vimrc
--'  1  0  ~\_vimrc
--'  1934  1  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  26  0  D:\work\code\springColorScheme\syntax\c.vim
--'  1993  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  2515  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  94  28  ~\_vimrc
--'  96  23  ~\_vimrc
--'  26  0  ~\_vimrc
--'  264  24  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap.c
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap.c
--'  331  0  D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
--'  73  0  F:\gVimPortable\[Vundle] Installer
--'  91  0  F:\gVimPortable\[Vundle] Installer
--'  109  0  F:\gVimPortable\[Vundle] Installer
--'  1  0  D:\work\code\springColorScheme\README.md
--'  16  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  1  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  639  29  C:\Users\Administrator\Desktop\1.c
--'  19  0  ~\vimfiles\syntax\c.vim
--'  1  0  ~\vimfiles\syntax\c.vim
--'  55  48  ~\.vim\bundle\springColorScheme\colors\spring.vim
--'  1  0  ~\.vim\bundle\springColorScheme\colors\spring.vim
--'  7  14  D:\work\code\springColorScheme\colors\lap_proc.c
--'  6  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  2  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  3  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  23  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  62  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  112  32  D:\work\code\springColorScheme\colors\lap_proc.c
--'  22  0  D:\work\code\springColorScheme\colors\lap_proc.c
--'  67  0  e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
--'  1  0  e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
--'  172  0  e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
--'  145  0  F:\gVimPortable\[Vundle] Installer
--'  151  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  168  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  163  0  F:\gVimPortable\[Vundle] Installer
--'  137  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  1  9  C:\Users\Administrator\Desktop\1.trc
--'  28  0  C:\Users\Administrator\Desktop\1.trc
--'  140  23  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  39  0  ~\_vimrc
--'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
--'  19  11  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\ftplugin\trc.vim
--'  19  15  D:\MySoftWare\gVimPortable\Data\settings\vimfiles\syntax\trc.vim
--'  41  0  D:\work\code\trcBrowser\syntax\trc.vim
--'  165  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
+-'  37  0  D:\gVimPortable\[Vundle] Installer
+-'  26  0  D:\gVimPortable\Data\Temp\VIA2F13.tmp
+-'  55  0  D:\gVimPortable\[Vundle] Installer
+-'  220  0  ~\_vimrc
+-'  56  59  C:\Users\Administrator\Desktop\1.c
+-'  51  5  C:\Users\Administrator\Desktop\1.c
+-'  34  15  C:\Users\Administrator\Desktop\1.c
+-'  9  0  C:\Users\Administrator\Desktop\1.c
+-'  25  18  C:\Users\Administrator\Desktop\1.c
+-'  10  46  C:\Users\Administrator\Desktop\1.c
+-'  385  0  C:\Users\Administrator\Desktop\1.c
+-'  45  0  F:\gVimPortable\Data\settings\_vimrc
+-'  216  0  F:\gVimPortable\Data\settings\_vimrc
+-'  39  16  F:\gVimPortable\Data\settings\_vimrc
+-'  40  0  F:\gVimPortable\Data\settings\_vimrc
+-'  35  0  F:\gVimPortable\Data\settings\_vimrc
 
 # History of marks within files (newest to oldest):
+
+> F:\gVimPortable\Data\settings\_viminfo
+	"	21	12
+
+> F:\gVimPortable\Data\settings\_vimrc
+	"	216	0
+	^	39	30
+	.	216	0
+	+	19	40
+	+	39	17
+	+	51	34
+	+	52	40
+	+	55	0
+	+	54	0
+	+	57	0
+	+	56	21
+	+	58	43
+	+	63	51
+	+	63	51
+	+	63	42
+	+	64	37
+	+	66	34
+	+	66	52
+	+	66	43
+	+	66	19
+	+	66	41
+	+	66	33
+	+	66	0
+	+	66	33
+	+	66	37
+	+	66	59
+	+	66	22
+	+	66	61
+	+	68	18
+	+	74	25
+	+	79	30
+	+	85	77
+	+	89	22
+	+	98	10
+	+	99	24
+	+	100	37
+	+	102	57
+	+	103	31
+	+	109	43
+	+	112	17
+	+	113	18
+	+	116	18
+	+	117	21
+	+	118	0
+	+	120	2
+	+	128	1
+	+	133	15
+	+	138	69
+	+	155	28
+	+	173	23
+	+	176	13
+	+	182	7
+	+	184	21
+	+	186	14
+	+	189	11
+	+	198	21
+	+	203	18
+	+	58	16
+	+	50	0
+	+	58	0
+	+	58	0
+	+	58	0
+	+	71	0
+	+	63	0
+	+	59	0
+	+	58	9
+	+	60	15
+	+	61	26
+	+	63	0
+	+	216	0
+	+	216	0
+	+	63	0
+	+	216	0
+	+	216	0
+	+	216	37
+	+	216	0
+	+	216	0
+	+	216	0
+	+	216	0
+	+	216	12
+	+	216	12
+	+	40	0
+	+	40	0
+	+	40	8
+	+	39	0
+	+	40	0
+	+	41	0
+	+	40	0
+	+	39	0
+	+	66	0
+	+	19	0
+	+	216	0
+
+> F:\gVimPortable\Data\settings\.vim\bundle\vim-snipmate\README.rst
+	"	141	11
+
+> C:\Users\Administrator\Desktop\1.c
+	"	3	0
+	^	1	1
+	.	3	0
+	+	616	0
+	+	616	636
+	+	616	0
+	+	616	0
+	+	616	0
+	+	616	0
+	+	616	0
+	+	4	0
+	+	308	4
+	+	1	0
+	+	2	0
+	+	3	0
+
+> F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
+	"	37	0
+
+> C:\Users\Administrator\Desktop\1.trc
+	"	1	9
+
+> d:\MySoftWare\gVimPortable\__Tag_List__
+	"	1	0
+	.	27	0
+	+	306	0
+	+	313	0
+	+	61	0
+	+	231	0
+	+	304	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	225	0
+	+	60	0
+	+	225	0
+	+	78	0
+	+	151	0
+	+	224	0
+	+	44	0
+	+	43	0
+	+	43	0
+	+	42	0
+	+	27	0
+
+> F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
+	"	111	2
+
+> d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.31.trc
+	"	36	0
+
+> d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.34.trc
+	"	13	35
+
+> d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.35.trc
+	"	66	22
+
+> D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\lap\test\src\sce_gen.c
+	"	1	0
+	.	3462	0
+	+	3474	17
+	+	3475	2
+	+	3484	0
+	+	3476	0
+	+	3485	0
+	+	3476	0
+	+	3484	0
+	+	3462	0
+
+> F:\gVimPortable - 副本\Data\settings\vimfiles\plugin\EasyMotion.vim
+	"	51	0
+
+> d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
+	"	14	19
+	^	14	4
+	.	14	3
+	+	14	3
+
+> ~\.vim\bundle\trcBrowser\ftplugin\trc.vim
+	"	1	0
+	^	41	78
+	.	41	77
+	+	41	77
+
+> d:\MySoftWare\gVimPortable\__Tagbar__
+	"	1	0
+
+> F:\gVimPortable\Data\settings\.vim\bundle\trcBrowser\syntax\trc.vim
+	"	31	64
+	^	31	65
+	.	31	64
+	+	31	64
+
+> F:\gVimPortable - 副本\Data\settings\vimfiles\plugin\txtbrowser.vim
+	"	338	32
+
+> ~\_vimrc
+	"	54	0
+	^	54	0
+	.	55	0
+	+	162	0
+	+	162	0
+	+	162	0
+	+	162	0
+	+	162	0
+	+	162	0
+	+	162	0
+	+	162	27
+	+	162	30
+	+	162	17
+	+	162	7
+	+	162	0
+	+	180	0
+	+	162	0
+	+	162	0
+	+	162	0
+	+	166	0
+	+	162	0
+	+	165	0
+	+	170	0
+	+	180	0
+	+	165	29
+	+	165	30
+	+	168	7
+	+	167	10
+	+	170	10
+	+	165	0
+	+	167	17
+	+	170	17
+	+	163	6
+	+	165	33
+	+	165	35
+	+	163	6
+	+	173	0
+	+	167	10
+	+	168	7
+	+	170	10
+	+	163	9
+	+	167	10
+	+	167	13
+	+	170	13
+	+	167	10
+	+	170	10
+	+	163	24
+	+	165	33
+	+	168	10
+	+	163	24
+	+	167	13
+	+	168	10
+	+	170	13
+	+	165	36
+	+	163	24
+	+	165	33
+	+	168	10
+	+	167	13
+	+	170	13
+	+	165	37
+	+	163	0
+	+	164	0
+	+	163	6
+	+	167	10
+	+	167	0
+	+	163	0
+	+	172	0
+	+	171	0
+	+	163	0
+	+	165	30
+	+	163	27
+	+	168	7
+	+	165	38
+	+	230	8
+	+	11	0
+	+	18	11
+	+	219	0
+	+	217	0
+	+	223	5
+	+	221	0
+	+	225	0
+	+	221	0
+	+	223	0
+	+	223	18
+	+	221	0
+	+	219	15
+	+	223	0
+	+	220	0
+	+	221	0
+	+	223	0
+	+	222	0
+	+	13	33
+	+	217	0
+	+	72	14
+	+	217	0
+	+	220	0
+	+	220	0
+	+	217	0
+	+	217	0
+	+	221	0
+	+	217	0
+	+	19	0
+	+	55	0
+
+> D:\gVimPortable\[Vundle] Installer
+	"	16	18
+	.	1	0
+	+	520	0
+	+	501	0
+	+	487	0
+	+	472	0
+	+	457	0
+	+	442	0
+	+	427	0
+	+	412	0
+	+	397	0
+	+	382	0
+	+	367	0
+	+	352	0
+	+	337	0
+	+	322	0
+	+	307	0
+	+	292	0
+	+	274	0
+	+	259	0
+	+	244	0
+	+	229	0
+	+	214	0
+	+	199	0
+	+	181	0
+	+	163	0
+	+	145	0
+	+	127	0
+	+	109	0
+	+	91	0
+	+	73	0
+	+	55	0
+	+	37	0
+	+	19	0
+	+	1	0
 
 > D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
 	"	36	0
 
-> F:\gVimPortable\__Tag_List__
+> D:\gVimPortable\__Tag_List__
 	"	13	4
 	.	15	0
 	+	6941	0
@@ -367,12 +688,6 @@ $+ \2 (\1\/\2)
 	+	27	15
 	+	26	30
 
-> ~\.vim\bundle\trcBrowser\ftplugin\trc.vim
-	"	41	77
-	^	41	78
-	.	41	77
-	+	41	77
-
 > D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
 	"	1	0
 
@@ -383,42 +698,6 @@ $+ \2 (\1\/\2)
 	+	37	26
 	+	32	56
 	+	51	0
-
-> F:\gVimPortable\[Vundle] Installer
-	"	17	0
-	.	1	0
-	+	502	0
-	+	483	0
-	+	469	0
-	+	454	0
-	+	439	0
-	+	424	0
-	+	409	0
-	+	394	0
-	+	379	0
-	+	364	0
-	+	349	0
-	+	334	0
-	+	319	0
-	+	304	0
-	+	289	0
-	+	274	0
-	+	256	0
-	+	241	0
-	+	226	0
-	+	211	0
-	+	196	0
-	+	181	0
-	+	163	0
-	+	145	0
-	+	127	0
-	+	109	0
-	+	91	0
-	+	73	0
-	+	55	0
-	+	37	0
-	+	19	0
-	+	1	0
 
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 	"	211	0
@@ -437,130 +716,11 @@ $+ \2 (\1\/\2)
 	+	57	52
 	+	52	26
 
-> F:\gVimPortable\Data\Temp\VIA2F13.tmp
+> D:\gVimPortable\Data\Temp\VIA2F13.tmp
 	"	26	0
 
-> C:\Users\Administrator\Desktop\1.c
-	"	4	78
-	^	309	5
-	.	309	4
-	+	617	0
-	+	617	636
-	+	617	0
-	+	617	0
-	+	617	0
-	+	617	0
-	+	617	0
-	+	1	0
-	+	309	4
-
-> F:\gVimPortable\Data\Temp\VIAD41.tmp
+> D:\gVimPortable\Data\Temp\VIAD41.tmp
 	"	42	0
-
-> ~\_vimrc
-	"	219	0
-	^	219	0
-	.	220	0
-	+	21	0
-	+	23	0
-	+	126	38
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	126	27
-	+	126	30
-	+	126	17
-	+	126	7
-	+	126	0
-	+	144	0
-	+	126	0
-	+	126	0
-	+	126	0
-	+	130	0
-	+	126	0
-	+	129	0
-	+	134	0
-	+	144	0
-	+	129	29
-	+	129	30
-	+	132	7
-	+	131	10
-	+	134	10
-	+	129	0
-	+	131	17
-	+	134	17
-	+	127	6
-	+	129	33
-	+	129	35
-	+	127	6
-	+	137	0
-	+	131	10
-	+	132	7
-	+	134	10
-	+	127	9
-	+	131	10
-	+	131	13
-	+	134	13
-	+	131	10
-	+	134	10
-	+	127	24
-	+	129	33
-	+	132	10
-	+	127	24
-	+	131	13
-	+	132	10
-	+	134	13
-	+	129	36
-	+	127	24
-	+	129	33
-	+	132	10
-	+	131	13
-	+	134	13
-	+	129	37
-	+	127	0
-	+	128	0
-	+	127	6
-	+	131	10
-	+	131	0
-	+	127	0
-	+	136	0
-	+	135	0
-	+	127	0
-	+	129	30
-	+	127	27
-	+	132	7
-	+	129	38
-	+	229	8
-	+	11	0
-	+	18	11
-	+	218	0
-	+	215	0
-	+	222	5
-	+	220	0
-	+	224	0
-	+	220	0
-	+	222	0
-	+	222	18
-	+	220	0
-	+	218	15
-	+	222	0
-	+	219	0
-	+	220	0
-	+	222	0
-	+	221	0
-	+	13	33
-	+	182	0
-	+	36	14
-	+	206	0
-	+	219	0
-	+	219	0
-	+	214	0
-	+	216	0
-	+	220	0
 
 > D:\work\code\springColorScheme\colors\spring.vim
 	"	34	6
@@ -584,13 +744,10 @@ $+ \2 (\1\/\2)
 > D:\MySoftWare\gVimPortable\Data\settings\_vimrc
 	"	77	28
 
-> C:\Users\Administrator\Desktop\1.trc
-	"	1	9
-
 > C:\Users\Administrator\Desktop\hexHighlight.vim
 	"	29	0
 
-> F:\gVimPortable\[Vundle] clean
+> D:\gVimPortable\[Vundle] clean
 	"	2	0
 	.	1	0
 	+	12	0
@@ -646,7 +803,7 @@ $+ \2 (\1\/\2)
 	.	2	0
 	+	2	0
 
-> F:\gVimPortable\__Tagbar__
+> D:\gVimPortable\__Tagbar__
 	"	1	0
 	.	15	0
 	+	36	0
@@ -681,10 +838,10 @@ $+ \2 (\1\/\2)
 > D:\work\code\trcBrowser\syntax\trc.vim
 	"	1	0
 
-> F:\gVimPortable\App\vim\vim73\doc\help.txt
+> D:\gVimPortable\App\vim\vim73\doc\help.txt
 	"	1	0
 
-> F:\gVimPortable\README.md
+> D:\gVimPortable\README.md
 	"	15	42
 	^	15	43
 	.	15	43
@@ -723,10 +880,10 @@ $+ \2 (\1\/\2)
 > ~\.vim\bundle\AuthorInfo\README
 	"	16	0
 
-> F:\gVimPortable\[Tagbar]
+> D:\gVimPortable\[Tagbar]
 	"	1	0
 
-> F:\gVimPortable\[File List]
+> D:\gVimPortable\[File List]
 	"	5	1
 	.	3	0
 	+	73	0
@@ -753,13 +910,13 @@ $+ \2 (\1\/\2)
 	+	3	0
 	t	5	0
 
-> F:\gVimPortable\[Project]
+> D:\gVimPortable\[Project]
 	"	1	0
 
 > e:\TDDOWNLOAD\platform\baseband\stack\api\src\api.c
 	"	1	0
 
-> F:\gVimPortable\Data\Temp\VIA5852.tmp
+> D:\gVimPortable\Data\Temp\VIA5852.tmp
 	"	11	34
 
 > ~\.vim\bundle\vundle\doc\vundle.txt
@@ -775,38 +932,38 @@ $+ \2 (\1\/\2)
 > e:\TDDOWNLOAD\platform\baseband\stack\mm\src\mmc_wrrc.c
 	"	500	1
 
-> F:\gVimPortable\Data\Temp\VIAC91A.tmp
+> D:\gVimPortable\Data\Temp\VIAC91A.tmp
 	"	38	0
 
 > C:\Users\Administrator\Desktop\easwy-share-511697f\vim\vimrc\_vimrc
 	"	32	20
 	^	32	21
 
-> F:\gVimPortable - 副本\Data\settings\vimfiles\autoload\vundle.vim
+> D:\gVimPortable - 副本\Data\settings\vimfiles\autoload\vundle.vim
 	"	42	23
 
-> F:\gVimPortable - 副本\Data\settings\vimfiles\autoload\vundle\config.vim
+> D:\gVimPortable - 副本\Data\settings\vimfiles\autoload\vundle\config.vim
 	"	92	0
 
-> F:\gVimPortable - 副本\Data\settings\vimfiles\autoload\vundle\installer.vim
+> D:\gVimPortable - 副本\Data\settings\vimfiles\autoload\vundle\installer.vim
 	"	204	0
 
-> F:\gVimPortable\Data\Temp\VIA4D56.tmp
+> D:\gVimPortable\Data\Temp\VIA4D56.tmp
 	"	1	0
 
-> F:\gVimPortable\Data\Temp\VIA5AF9.tmp
+> D:\gVimPortable\Data\Temp\VIA5AF9.tmp
 	"	1	0
 
-> F:\gVimPortable\Data\Temp\VIA9702.tmp
+> D:\gVimPortable\Data\Temp\VIA9702.tmp
 	"	1	0
 
-> F:\gVimPortable\Data\Temp\VIAAD51.tmp
+> D:\gVimPortable\Data\Temp\VIAAD51.tmp
 	"	4	137
 
-> F:\gVimPortable\Data\Temp\VIA2B50.tmp
+> D:\gVimPortable\Data\Temp\VIA2B50.tmp
 	"	30	0
 
-> F:\gVimPortable\Data\Temp\VIAD825.tmp
+> D:\gVimPortable\Data\Temp\VIAD825.tmp
 	"	9	17
 
 > C:\Users\Administrator\Desktop\winmanager.vmb
@@ -859,7 +1016,7 @@ $+ \2 (\1\/\2)
 > ~\vimfiles\.netrwhist
 	"	1	0
 
-> F:\gVimPortable\--help
+> D:\gVimPortable\--help
 	"	1	0
 
 > e:\TDDOWNLOAD\platform\tools\development\RPhone_PC\scenario\include\SceEngineerMode.h
@@ -868,11 +1025,11 @@ $+ \2 (\1\/\2)
 > ~\vimfiles\doc\project.txt
 	"	655	54
 
-> F:\gVimPortable\App\vim\vim73\doc\sponsor.txt
+> D:\gVimPortable\App\vim\vim73\doc\sponsor.txt
 	"	61	60
 
 > D:\MySoftWare\gVimPortable\Data\settings\vimfiles\readme.txt
 	"	1	0
 
-> F:\gVimPortable\help.html
+> D:\gVimPortable\help.html
 	"	34	21
