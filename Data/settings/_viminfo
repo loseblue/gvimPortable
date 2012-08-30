@@ -14,6 +14,8 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:BundleInstall!
+:open
 :BundleInstall
 :w
 :filetype
@@ -23,7 +25,6 @@ $+ \2 (\1\/\2)
 :syntax on
 :sy on
 :sy clear
-:BundleInstall!
 :version
 :x
 :BundleClean
@@ -33,7 +34,6 @@ $+ \2 (\1\/\2)
 :w
 :BundleInstall!
 :BundleInstall
-:BundleClean
 
 # Search String History (newest to oldest):
 ?/mate
@@ -79,10 +79,19 @@ $+ \2 (\1\/\2)
 "0	LINE	0
 	Bundle 'Mark'
 ""1	LINE	0
+	委 托 书
 	
+	委托人：张三，女，一九八五年十一月十一日出生，现住******，公民身份号码：******。
+	受托人：李四，男，一九七八年一月十日出生，现住******，公民身份号码：******。
+	委托人张三因在外地，不便前往深圳市办理本人的户口及档案迁移手续，特全权委托李四为我的合法代理人，代为前往相关部门办理本人的户口迁移及本人的档案转移手续并领取相关证明文书。
+	受托人在委托权限内签订的相关文件我均予以承认，并自愿承担一切法律责任。
+	受托人无转委托权。
+	委托期限：自签署之日起至上述事项办完为止。
 "2	LINE	0
 	
-"3	CHAR	0
+"3	LINE	0
+	
+"4	CHAR	0
 	<<<<<<< HEAD
 	=======
 	"=========================== Vundle配置 ================================
@@ -115,11 +124,11 @@ $+ \2 (\1\/\2)
 	Bundle 'TxtBrowser'
 	Bundle 'winmanager--Fox'
 	>>>>>>> eb11ce53afa0461918d32b08221e73301e0d5d7a
-"4	LINE	0
-	<<<<<<< HEAD
 "5	LINE	0
+	<<<<<<< HEAD
+"6	LINE	0
 	
-"6	CHAR	0
+"7	CHAR	0
 	=======
 	"set backupdir=E:\VIM
 	set nobackup      " 关闭自动备份
@@ -133,44 +142,51 @@ $+ \2 (\1\/\2)
 	set backspace=2     " 设置退格键可用
 	set nu!             " 显示行号
 	>>>>>>> eb11ce53afa0461918d32b08221e73301e0d5d7a
-"7	LINE	0
+"8	LINE	0
 	"Snipmate 
 	Bundle 'MarcWeber/vim-addon-mw-utils'
 	Bundle 'tomtom/tlib_vim'
 	Bundle 'snipmate-snippets'
 	Bundle 'garbas/vim-snipmate'
-"8	LINE	0
-	Bundle 'garbas/vim-snipmate'
 "9	LINE	0
-	for
-	for ( i = 0; i < len; i++ ) {
-		asdf
-	}
+	Bundle 'garbas/vim-snipmate'
 "-	CHAR	0
 	 
 
 # File marks:
-'0  20  0  F:\gVimPortable\[Vundle] Installer
-'1  21  12  F:\gVimPortable\Data\settings\_viminfo
-'2  216  0  F:\gVimPortable\Data\settings\_vimrc
-'3  39  16  F:\gVimPortable\Data\settings\_vimrc
-'4  40  0  F:\gVimPortable\Data\settings\_vimrc
-'5  3  0  C:\Users\Administrator\Desktop\1.c
-'6  37  0  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
-'7  1  9  C:\Users\Administrator\Desktop\1.trc
-'8  20  0  C:\Users\Administrator\Desktop\1.trc
-'9  72  37  C:\Users\Administrator\Desktop\1.trc
+'0  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+'1  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+'2  139  0  C:\Users\Administrator\Desktop\1.c
+'3  195  19  C:\Users\Administrator\Desktop\1.c
+'4  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+'5  41  0  F:\gVimPortable\[Vundle] Installer
+'6  60  0  F:\gVimPortable\[Vundle] Installer
+'7  21  12  F:\gVimPortable\Data\settings\_viminfo
+'8  216  0  F:\gVimPortable\Data\settings\_vimrc
+'9  39  16  F:\gVimPortable\Data\settings\_vimrc
 
 # Jumplist (newest first):
--'  20  0  F:\gVimPortable\[Vundle] Installer
+-'  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+-'  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+-'  139  0  C:\Users\Administrator\Desktop\1.c
+-'  239  0  C:\Users\Administrator\Desktop\1.c
+-'  13  0  C:\Users\Administrator\Desktop\ss1.trc
+-'  1  9  C:\Users\Administrator\Desktop\ss1.trc
+-'  1  0  C:\Users\Administrator\Desktop\rec.txt
+-'  1  0  C:\Users\Administrator\Desktop\1.c
+-'  195  19  C:\Users\Administrator\Desktop\1.c
+-'  2516  0  C:\Users\Administrator\Desktop\1.c
+-'  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+-'  248  12  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+-'  41  0  F:\gVimPortable\[Vundle] Installer
+-'  60  0  F:\gVimPortable\[Vundle] Installer
 -'  21  12  F:\gVimPortable\Data\settings\_viminfo
 -'  216  0  F:\gVimPortable\Data\settings\_vimrc
 -'  39  16  F:\gVimPortable\Data\settings\_vimrc
 -'  40  0  F:\gVimPortable\Data\settings\_vimrc
 -'  35  0  F:\gVimPortable\Data\settings\_vimrc
--'  3  0  C:\Users\Administrator\Desktop\1.c
--'  1  0  C:\Users\Administrator\Desktop\1.c
--'  4  0  C:\Users\Administrator\Desktop\1.c
 -'  37  0  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
 -'  36  18  F:\gVimPortable\Data\settings\_vimrc
 -'  1  9  C:\Users\Administrator\Desktop\1.trc
@@ -234,38 +250,61 @@ $+ \2 (\1\/\2)
 -'  27  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  56  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  34  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  5  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  50  0  ~\.vim\bundle\trcBrowser\syntax\trc.vim
--'  51  0  ~\.vim\bundle\trcBrowser\syntax\trc.vim
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
--'  9  45  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
--'  11  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
--'  31  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
--'  14  52  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
--'  37  0  D:\gVimPortable\[Vundle] Installer
--'  26  0  D:\gVimPortable\Data\Temp\VIA2F13.tmp
--'  55  0  D:\gVimPortable\[Vundle] Installer
--'  220  0  ~\_vimrc
--'  56  59  C:\Users\Administrator\Desktop\1.c
--'  51  5  C:\Users\Administrator\Desktop\1.c
--'  34  15  C:\Users\Administrator\Desktop\1.c
--'  9  0  C:\Users\Administrator\Desktop\1.c
--'  25  18  C:\Users\Administrator\Desktop\1.c
--'  10  46  C:\Users\Administrator\Desktop\1.c
--'  385  0  C:\Users\Administrator\Desktop\1.c
--'  45  0  F:\gVimPortable\Data\settings\_vimrc
+-'  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+-'  248  12  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+-'  21  12  F:\gVimPortable\Data\settings\_viminfo
 -'  216  0  F:\gVimPortable\Data\settings\_vimrc
 -'  39  16  F:\gVimPortable\Data\settings\_vimrc
 -'  40  0  F:\gVimPortable\Data\settings\_vimrc
+-'  35  0  F:\gVimPortable\Data\settings\_vimrc
+-'  3  0  C:\Users\Administrator\Desktop\1.c
+-'  4  0  C:\Users\Administrator\Desktop\1.c
+-'  37  0  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
+-'  139  0  C:\Users\Administrator\Desktop\1.c
 
 # History of marks within files (newest to oldest):
 
 > F:\gVimPortable\[Vundle] Installer
-	"	20	0
+	"	3	0
 	.	1	0
+	+	41	0
+	+	21	0
 	+	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+	"	28	0
+	^	18	4
+	.	18	3
+	+	18	3
+
+> C:\Users\Administrator\Desktop\1.c
+	"	139	0
+	^	195	20
+	.	195	0
+	+	3123	0
+	+	3123	636
+	+	3123	0
+	+	3123	0
+	+	3123	0
+	+	3123	0
+	+	3123	0
+	+	2516	0
+	+	2815	4
+	+	2516	0
+	+	2516	0
+	+	2516	0
+	+	1	0
+	+	195	0
+
+> C:\Users\Administrator\Desktop\rec.txt
+	"	1	0
+
+> C:\Users\Administrator\Desktop\ss1.trc
+	"	13	0
+
+> D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+	"	249	118
 
 > F:\gVimPortable\Data\settings\_viminfo
 	"	21	12
@@ -366,23 +405,6 @@ $+ \2 (\1\/\2)
 
 > F:\gVimPortable\Data\settings\.vim\bundle\vim-snipmate\README.rst
 	"	141	11
-
-> C:\Users\Administrator\Desktop\1.c
-	"	3	0
-	^	1	1
-	.	3	0
-	+	616	0
-	+	616	636
-	+	616	0
-	+	616	0
-	+	616	0
-	+	616	0
-	+	616	0
-	+	4	0
-	+	308	4
-	+	1	0
-	+	2	0
-	+	3	0
 
 > F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
 	"	37	0
