@@ -8,16 +8,17 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/mate
+~MSle0~/python
 
 # Last Substitute String:
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
+:w
+:version
 :BundleInstall!
 :open
 :BundleInstall
-:w
 :filetype
 :filetype ?
 :q
@@ -25,7 +26,6 @@ $+ \2 (\1\/\2)
 :syntax on
 :sy on
 :sy clear
-:version
 :x
 :BundleClean
 :BundleClen
@@ -36,6 +36,7 @@ $+ \2 (\1\/\2)
 :BundleInstall
 
 # Search String History (newest to oldest):
+?/python
 ?/mate
 ?/snip
 ? \<filetype\>
@@ -55,7 +56,6 @@ $+ \2 (\1\/\2)
 ?/s api
 ?/s
 ?/'q'
-?/ToggleWindowsManager
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
@@ -77,8 +77,17 @@ $+ \2 (\1\/\2)
 
 # Registers:
 "0	LINE	0
-	Bundle 'Mark'
+	PYTHON3INC=-I $(PYTHON3)/include
 ""1	LINE	0
+	PYTHON=c:/python27
+	PYTHON_VER=27
+"2	LINE	0
+	# PYTHON=c:/python27
+	# PYTHON_VER=27
+"3	LINE	0
+	# PYTHON3=C:/python32
+	# PYTHON3_VER=32
+"4	LINE	0
 	委 托 书
 	
 	委托人：张三，女，一九八五年十一月十一日出生，现住******，公民身份号码：******。
@@ -87,11 +96,11 @@ $+ \2 (\1\/\2)
 	受托人在委托权限内签订的相关文件我均予以承认，并自愿承担一切法律责任。
 	受托人无转委托权。
 	委托期限：自签署之日起至上述事项办完为止。
-"2	LINE	0
+"5	LINE	0
 	
-"3	LINE	0
+"6	LINE	0
 	
-"4	CHAR	0
+"7	CHAR	0
 	<<<<<<< HEAD
 	=======
 	"=========================== Vundle配置 ================================
@@ -124,48 +133,38 @@ $+ \2 (\1\/\2)
 	Bundle 'TxtBrowser'
 	Bundle 'winmanager--Fox'
 	>>>>>>> eb11ce53afa0461918d32b08221e73301e0d5d7a
-"5	LINE	0
-	<<<<<<< HEAD
-"6	LINE	0
-	
-"7	CHAR	0
-	=======
-	"set backupdir=E:\VIM
-	set nobackup      " 关闭自动备份
-	syntax enable       " 语法高亮
-	syntax on
-	set display=lastline     "避免常代码出现@@@
-	filetype plugin indent on " 文件类型检测
-	au BufEnter *.txt setlocal ft=txt "txtBrowser 调用
-	au BufEnter *.trc setlocal ft=trc "trcBrowser 调用
-	colorscheme spring  " 配色方案
-	set backspace=2     " 设置退格键可用
-	set nu!             " 显示行号
-	>>>>>>> eb11ce53afa0461918d32b08221e73301e0d5d7a
 "8	LINE	0
-	"Snipmate 
-	Bundle 'MarcWeber/vim-addon-mw-utils'
-	Bundle 'tomtom/tlib_vim'
-	Bundle 'snipmate-snippets'
-	Bundle 'garbas/vim-snipmate'
+	<<<<<<< HEAD
 "9	LINE	0
-	Bundle 'garbas/vim-snipmate'
+	
 "-	CHAR	0
 	 
 
 # File marks:
-'0  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
-'1  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
-'2  139  0  C:\Users\Administrator\Desktop\1.c
-'3  195  19  C:\Users\Administrator\Desktop\1.c
-'4  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
-'5  41  0  F:\gVimPortable\[Vundle] Installer
-'6  60  0  F:\gVimPortable\[Vundle] Installer
-'7  21  12  F:\gVimPortable\Data\settings\_viminfo
-'8  216  0  F:\gVimPortable\Data\settings\_vimrc
-'9  39  16  F:\gVimPortable\Data\settings\_vimrc
+'0  177  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+'1  19  25  C:\Python27\NEWS.txt
+'2  126  48  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\project\lap\test\src\sce_gen.c
+'3  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+'4  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
+'5  139  0  C:\Users\Administrator\Desktop\1.c
+'6  195  19  C:\Users\Administrator\Desktop\1.c
+'7  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
+'8  41  0  F:\gVimPortable\[Vundle] Installer
+'9  60  0  F:\gVimPortable\[Vundle] Installer
 
 # Jumplist (newest first):
+-'  177  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  176  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  178  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  198  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  220  30  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  199  23  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  218  30  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  1  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  19  25  C:\Python27\NEWS.txt
+-'  1  0  C:\Python27\NEWS.txt
+-'  126  48  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\project\lap\test\src\sce_gen.c
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\project\lap\test\src\sce_gen.c
 -'  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
 -'  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
@@ -247,23 +246,36 @@ $+ \2 (\1\/\2)
 -'  11  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  9  159  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  27  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
--'  248  12  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
--'  21  12  F:\gVimPortable\Data\settings\_viminfo
--'  216  0  F:\gVimPortable\Data\settings\_vimrc
--'  39  16  F:\gVimPortable\Data\settings\_vimrc
--'  40  0  F:\gVimPortable\Data\settings\_vimrc
--'  35  0  F:\gVimPortable\Data\settings\_vimrc
--'  3  0  C:\Users\Administrator\Desktop\1.c
--'  4  0  C:\Users\Administrator\Desktop\1.c
--'  37  0  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
--'  139  0  C:\Users\Administrator\Desktop\1.c
 
 # History of marks within files (newest to oldest):
+
+> E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+	"	177	0
+	^	176	0
+	.	177	0
+	+	180	0
+	+	199	0
+	+	198	0
+	+	218	0
+	+	220	0
+	+	221	0
+	+	199	0
+	+	176	10
+	+	178	11
+	+	180	0
+	+	179	0
+	+	178	0
+	+	178	0
+	+	178	0
+	+	176	0
+	+	177	0
+	+	177	0
+
+> C:\Python27\NEWS.txt
+	"	19	25
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\project\lap\test\src\sce_gen.c
+	"	126	48
 
 > F:\gVimPortable\[Vundle] Installer
 	"	3	0
