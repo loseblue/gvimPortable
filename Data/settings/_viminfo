@@ -14,8 +14,8 @@
 $+ \2 (\1\/\2)
 
 # Command Line History (newest to oldest):
-:w
 :version
+:w
 :BundleInstall!
 :open
 :BundleInstall
@@ -246,6 +246,10 @@ $+ \2 (\1\/\2)
 -'  11  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
 -'  9  159  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
+-'  177  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  176  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  178  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  198  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
 
 # History of marks within files (newest to oldest):
 
