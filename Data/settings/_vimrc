@@ -3,7 +3,7 @@
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 0.0.1
+"      Version: 0.0.2
 "   LastChange: 2012-08-03 10:45:45
 "      History:
 "=============================================================================
@@ -40,14 +40,14 @@ Bundle 'Mark'
 Bundle 'matchit.zip'
 Bundle 'gmarik/snipmate.vim'
 Bundle 'The-NERD-Commenter'
-Bundle 'project.tar.gz'
 Bundle 'loseblue/springColorScheme'
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
 Bundle 'TeTrIs.vim'
 Bundle 'loseblue/trcBrowser'
-Bundle 'TxtBrowser'
-Bundle 'winmanager--Fox'
+Bundle 'loseblue/TxtBrowser'
+Bundle 'genutils'
+Bundle 'lookupfile'
 
 filetype plugin indent on    " required!
 colorscheme spring  " color scheme 
@@ -72,7 +72,7 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 set cursorcolumn  " high light cursor column
 set cursorline    " high light cursor line
 set linespace=0   " set line high space
-set lines=20 columns=110 "init UI size
+set lines=20 columns=120 "init UI size
 set linebreak      "Do not cut words between lines, USELESS!
 " set foldmethod=marker
 " let g:showmarks_marks = 'abcdefghijklmnopqrstuvwxyz'  " set bookMark
@@ -156,6 +156,9 @@ nmap <leader>fu :se ff=unix<cr>
 noremap ,p :let @*=expand("%:p")<CR><Esc>
 noremap ,P :let @*=expand("%:p:h")<CR><Esc>
 
+" 先用/ 搜索字符,然后输入,lv 弹出窗口显示列表
+nmap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
+
 "To hex modle
 let s:hexModle = "N"
 function! ToHexModle()
@@ -194,13 +197,8 @@ map <F2> :MRU<cr>
 let g:vimrc_author='loseblue' 
 let g:vimrc_email='loseblue[a]163.com' 
 let g:vimrc_homepage='http://www.google.com' 
-nmap <F4> :AuthorInfoDetect<cr>
+nmap <F3> :AuthorInfoDetect<cr>
 
-"F5 use python
-map <F5> :!python.exe %<CR>
-"F6 change to Hex mode
-map <F6> :call ToHexModle()<cr>
-"F7 insert time
 imap <F7> <C-R>=strftime("%c")<CR>
 
 " <F9> open Tagbar
@@ -215,21 +213,6 @@ let g:tagbar_width = 30
 " roll screen Alt + jk
 noremap <A-j> <C-f>
 noremap <A-k> <C-b>
-
-" winManger setting
-
-let g:Tagbar_title="[Tagbar]"
-let g:Project_title="[Project]"
-let g:winManagerWindowLayout="TagList|FileExplorer"
-
-function! Tagbar_Start()
-	exec 'TagbarToggle'
-endfunction
-function! Tagbar_IsValid()
-	return 1
-endfunction
-
-nmap wm :WMToggle<cr>
 
 " NERD_comments
 let NERDSpaceDelims = 1 
@@ -259,4 +242,57 @@ au BufEnter,BufRead,BufNewFile *.trc setlocal ft=trc "trcBrowser called
     " i: Find files #including this file 
     map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> 
     map <leader>l :call ToggleLocationList()<CR> 
+
+
+" lookupfile
+" Auto change directory
+set autochdir
+
+let g:LookupFile_MinPatLength= 2 "最少输入2个字符才开始查找 
+let g:LookupFile_PreserveLastPattern = 0 "不保存上次查找的字符串 
+let g:LookupFile_PreservePatternHistory = 1 "保存查找历史
+let g:LookupFile_AlwaysAcceptFirst = 1 "回车打开第一个匹配项目 
+let g:LookupFile_AllowNewFiles = 0 "不允许创建不存在的文件
+
+nmap <silent> <leader>lf :LookupFile<cr>
+nmap <silent> <leader>lb :LUBufs<cr> 
+nmap <silent> <leader>lw :LUWalk<cr> 
+
+
+" lookup file with ignore case
+function! LookupFile_IgnoreCaseFunc(pattern)
+    let _tags = &tags
+    try
+        let &tags = eval(g:LookupFile_TagExpr)
+        let newpattern = '\c' . a:pattern
+        let tags = taglist(newpattern)
+    catch
+        echohl ErrorMsg | echo "Exception: " . v:exception | echohl NONE
+        return ""
+    finally
+        let &tags = _tags
+    endtry
+
+    " Show the matches for what is typed so far.
+    let files = map(tags, 'v:val["filename"]')
+    return files
+endfunction
+let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
+
+
+function! TagsRootSet(path)
+	" exe 'cd '.a:path exe '!gentags'
+	let tagFilePath = genutils#CleanupFileName(a:path.'/tags') 
+	let g:LookupFile_TagExpr='"./tags"' 
+endfunction 
+
+function! SetHRoot() 
+	call TagsRootSet('.') 
+endfunction
+nmap <leader>root :call SetHRoot()<CR>
+
+function! SetSpecifiedPathTheRoot() 
+	call TagsRootSet(input('Please input the root folder path: '))
+endfunction
+nmap <leader>xroot :call SetSpecifiedPathTheRoot()<CR>
 

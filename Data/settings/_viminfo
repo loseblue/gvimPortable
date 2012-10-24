@@ -8,37 +8,47 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/python
+~MSle0~/error
+
+# Last Substitute Search Pattern:
+~MSle0&\r
 
 # Last Substitute String:
-$+ \2 (\1\/\2)
+$
 
 # Command Line History (newest to oldest):
-:version
-:w
-:BundleInstall!
-:open
 :BundleInstall
-:filetype
-:filetype ?
+:BundleInstall!
+:w
 :q
-:syntax enable
-:syntax on
-:sy on
-:sy clear
-:x
-:BundleClean
-:BundleClen
-:BundleClena
-:set runtimepath?
-:w
-:BundleInstall!
-:BundleInstall
+:verbose map
+:cd f:\platform\
+:SetHRoot
+:Ta
+:let g:LookupFile_TagExpr = '"./tags"'
+:pwd
+:ls
+:let g:LookupFile_TagExpr = 
+:let g:LookupFile_TagExpr="tags"
+:let g:LookupFile_TagExpr=' "tags"'
+:LookupFile
+:%s/\r//g
+:.ll
+:VimballList
+:BundleClean!
+:python
 
 # Search String History (newest to oldest):
+?/snip
+?/error
+? \r
+?/sap3
+?/sms|lap
+?/lap
+?/CC_
+?/cc_
 ?/python
 ?/mate
-?/snip
 ? \<filetype\>
 ?/paste
 ?/filetype
@@ -49,13 +59,6 @@ $+ \2 (\1\/\2)
 ?/line
 ?/font
 ?/project
-?/tab
-?/tabbar
-? \<EvtFunc_t\>
-?/api
-?/s api
-?/s
-?/'q'
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
@@ -77,82 +80,87 @@ $+ \2 (\1\/\2)
 
 # Registers:
 "0	LINE	0
-	PYTHON3INC=-I $(PYTHON3)/include
-""1	LINE	0
-	PYTHON=c:/python27
-	PYTHON_VER=27
+	Copy /y ctags.exe %windir%\system32\
+"1	LINE	0
+	" Bundle 'project.tar.gz'
 "2	LINE	0
-	# PYTHON=c:/python27
-	# PYTHON_VER=27
+	" Bundle 'winmanager--Fox'
 "3	LINE	0
-	# PYTHON3=C:/python32
-	# PYTHON3_VER=32
+	
 "4	LINE	0
-	委 托 书
-	
-	委托人：张三，女，一九八五年十一月十一日出生，现住******，公民身份号码：******。
-	受托人：李四，男，一九七八年一月十日出生，现住******，公民身份号码：******。
-	委托人张三因在外地，不便前往深圳市办理本人的户口及档案迁移手续，特全权委托李四为我的合法代理人，代为前往相关部门办理本人的户口迁移及本人的档案转移手续并领取相关证明文书。
-	受托人在委托权限内签订的相关文件我均予以承认，并自愿承担一切法律责任。
-	受托人无转委托权。
-	委托期限：自签署之日起至上述事项办完为止。
+	t
 "5	LINE	0
-	
+	t
 "6	LINE	0
+	t
+"7	LINE	0
 	
-"7	CHAR	0
-	<<<<<<< HEAD
-	=======
-	"=========================== Vundle配置 ================================
-	set nocompatible    " be iMproved
-	filetype off        " required!
-	
-	if MySys() == 'windows'
-		set rtp+=~/.vim/bundle/vundle/
-	else
-		set rtp+=~/.vim/bundle/vundle/
-	endif
-	
-	call vundle#rc()
-	" required!
-	Bundle 'gmarik/vundle'
-	
-	" vim-scripts repos
-	Bundle 'a.vim'
-	Bundle 'loseblue/AuthorInfo.git'
-	Bundle 'cocoa.vim'
-	Bundle 'EasyMotion'
-	Bundle 'Mark'
-	Bundle 'matchit.zip'
-	Bundle 'The-NERD-Commenter'
-	Bundle 'The-NERD-tree'
-	Bundle 'Tagbar'
-	Bundle 'taglist.vim'
-	Bundle 'TeTrIs.vim'
-	Bundle 'loseblue/trcBrowser.git'
-	Bundle 'TxtBrowser'
-	Bundle 'winmanager--Fox'
-	>>>>>>> eb11ce53afa0461918d32b08221e73301e0d5d7a
 "8	LINE	0
-	<<<<<<< HEAD
+	
 "9	LINE	0
 	
-"-	CHAR	0
-	 
+""-	CHAR	0
+	springColorScheme
 
 # File marks:
-'0  177  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
-'1  19  25  C:\Python27\NEWS.txt
-'2  126  48  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\project\lap\test\src\sce_gen.c
-'3  28  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
-'4  16  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
-'5  139  0  C:\Users\Administrator\Desktop\1.c
-'6  195  19  C:\Users\Administrator\Desktop\1.c
-'7  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
-'8  41  0  F:\gVimPortable\[Vundle] Installer
-'9  60  0  F:\gVimPortable\[Vundle] Installer
+'0  21  0  F:\gVimPortable\[Vundle] Installer
+'1  23  0  F:\gVimPortable\[Vundle] Installer
+'2  11  0  D:\work\code\springColorScheme\syntax\c.vim
+'3  101  0  F:\gVimPortable\[Vundle] Installer
+'4  1  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+'5  281  0  ~\_vimrc
+'6  3  17  F:\gVimPortable\soft\copy_ctags.bat
+'7  8  2  F:\platform\[Lookup File]
+'8  12  0  F:\platform\genTags.sh
+'9  121  0  F:\gVimPortable\[Vundle] Installer
 
 # Jumplist (newest first):
+-'  21  0  F:\gVimPortable\[Vundle] Installer
+-'  23  0  F:\gVimPortable\[Vundle] Installer
+-'  11  0  D:\work\code\springColorScheme\syntax\c.vim
+-'  1  0  D:\work\code\springColorScheme\syntax\c.vim
+-'  35  0  D:\work\code\springColorScheme\colors\spring.vim
+-'  101  0  F:\gVimPortable\[Vundle] Installer
+-'  1  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+-'  1  0  F:\platform\tags
+-'  281  0  ~\_vimrc
+-'  18  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+-'  3  17  F:\gVimPortable\soft\copy_ctags.bat
+-'  1  0  F:\gVimPortable\soft\copy_ctags.bat
+-'  1  0  F:\gVimPortable\soft\hosts.bat
+-'  56  16  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+-'  8  2  F:\platform\[Lookup File]
+-'  12  0  F:\platform\genTags.sh
+-'  13  0  F:\platform\genTags.sh
+-'  1  0  F:\gVimPortable\soft\genTags.bat
+-'  1  0  F:\gVimPortable\soft\genTags.sh
+-'  1  0  F:\gVimPortable\soft\create_tags.bat
+-'  14  0  C:\Users\Administrator\Desktop\rec.txt
+-'  121  0  F:\gVimPortable\[Vundle] Installer
+-'  85  0  F:\gVimPortable\Data\Temp\VIA9F26.tmp
+-'  141  0  F:\gVimPortable\[Vundle] Installer
+-'  1  0  E:\TDDOWNLOAD\dfymt.txt
+-'  10916  1  C:\Users\Administrator\Desktop\test_trace\20121015_093804_CMCC_longSMS_MO-MT-SMS-OK_1.trc
+-'  83  0  C:\Users\Administrator\Desktop\test_trace\20121015_093804_CMCC_longSMS_MO-MT-SMS-OK_1.trc
+-'  1361  0  C:\Users\Administrator\Desktop\1.trc
+-'  1  9  C:\Users\Administrator\Desktop\1.trc
+-'  143  0  F:\gVimPortable\[Vundle] Installer
+-'  7397  0  C:\Users\Administrator\Desktop\1.trc
+-'  4  0  C:\Users\Administrator\Desktop\1.trc
+-'  157  26  ~\_vimrc
+-'  158  0  ~\_vimrc
+-'  15  0  C:\Users\Administrator\Desktop\1.trc
+-'  33  44  ~\.vim\bundle\trcBrowser\syntax\trc.vim
+-'  1  0  ~\.vim\bundle\trcBrowser\syntax\trc.vim
+-'  53  0  C:\Users\Administrator\Desktop\test_trace\MicroMMistack_data_abort.trc
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.09.17\cc_unit_test_201209.17_15.24.trc
+-'  1  0  C:\Users\Administrator\Desktop\test_trace\MicroMMistack_data_abort.trc
+-'  21  15  C:\Users\Administrator\Desktop\test_trace\MicroMMistack_data_abort.trc
+-'  11  0  C:\Users\Administrator\Desktop\test_trace\MicroMMistack_data_abort.trc
+-'  177  0  F:\gVimPortable\[Vundle] Installer
+-'  5  0  C:\Users\Administrator\Desktop\1.c
+-'  1  0  C:\Users\Administrator\Desktop\1.c
+-'  1  0  F:\gVimPortable\–startuptime
 -'  177  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
 -'  176  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
 -'  178  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
@@ -173,14 +181,13 @@ $+ \2 (\1\/\2)
 -'  13  0  C:\Users\Administrator\Desktop\ss1.trc
 -'  1  9  C:\Users\Administrator\Desktop\ss1.trc
 -'  1  0  C:\Users\Administrator\Desktop\rec.txt
--'  1  0  C:\Users\Administrator\Desktop\1.c
 -'  195  19  C:\Users\Administrator\Desktop\1.c
 -'  2516  0  C:\Users\Administrator\Desktop\1.c
 -'  249  118  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
 -'  248  12  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\support\sap\src\sap_main.c
--'  41  0  F:\gVimPortable\[Vundle] Installer
--'  60  0  F:\gVimPortable\[Vundle] Installer
+-'  217  0  F:\gVimPortable\[Vundle] Installer
+-'  236  0  F:\gVimPortable\[Vundle] Installer
 -'  21  12  F:\gVimPortable\Data\settings\_viminfo
 -'  216  0  F:\gVimPortable\Data\settings\_vimrc
 -'  39  16  F:\gVimPortable\Data\settings\_vimrc
@@ -188,7 +195,6 @@ $+ \2 (\1\/\2)
 -'  35  0  F:\gVimPortable\Data\settings\_vimrc
 -'  37  0  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
 -'  36  18  F:\gVimPortable\Data\settings\_vimrc
--'  1  9  C:\Users\Administrator\Desktop\1.trc
 -'  20  0  C:\Users\Administrator\Desktop\1.trc
 -'  9  74  F:\gVimPortable\Data\settings\_vimrc
 -'  72  37  C:\Users\Administrator\Desktop\1.trc
@@ -202,56 +208,297 @@ $+ \2 (\1\/\2)
 -'  20  0  F:\gVimPortable\Data\settings\_vimrc
 -'  58  5  F:\gVimPortable\Data\settings\_vimrc
 -'  70  0  F:\gVimPortable\Data\settings\_vimrc
--'  71  5  F:\gVimPortable\Data\settings\_vimrc
--'  1  0  F:\gVimPortable\Data\settings\_vimrc
--'  2  7  F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
--'  111  2  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
--'  36  77  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
--'  118  2  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
--'  116  3  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
--'  115  1  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
--'  1  0  F:\gVimPortable - 副本\Data\settings\vimfiles\snippets\c.snippets
--'  16  0  F:\gVimPortable\Data\settings\_vimrc
--'  153  0  F:\gVimPortable\Data\settings\_vimrc
--'  155  28  F:\gVimPortable\Data\settings\_vimrc
--'  66  26  F:\gVimPortable\Data\settings\_vimrc
--'  51  0  F:\gVimPortable - 副本\Data\settings\vimfiles\plugin\EasyMotion.vim
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\lap\test\src\sce_gen.c
--'  3460  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\vc_project\lap\test\src\sce_gen.c
--'  66  22  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.35.trc
--'  1  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.35.trc
--'  36  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.31.trc
--'  1  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_11.31.trc
--'  10  9  F:\gVimPortable\Data\settings\_vimrc
--'  13  26  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
--'  1  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
--'  1  0  F:\gVimPortable\Data\settings\.vim\bundle\trcBrowser\syntax\
--'  31  64  F:\gVimPortable\Data\settings\.vim\bundle\trcBrowser\syntax\trc.vim
--'  14  56  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
--'  1  0  ~\.vim\bundle\trcBrowser\ftplugin\trc.vim
--'  17  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
--'  68  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
--'  54  0  ~\_vimrc
--'  217  0  ~\_vimrc
--'  338  32  F:\gVimPortable - 副本\Data\settings\vimfiles\plugin\txtbrowser.vim
--'  11  0  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
--'  16  25  d:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.14\lap_unit_test_201208.14_09.27.trc
--'  16  18  D:\gVimPortable\[Vundle] Installer
--'  5  0  D:\gVimPortable\[Vundle] Installer
--'  36  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
--'  50  27  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_18.11.trc
--'  6  32  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  20  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  11  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  1  0  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  9  159  D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_17.35.trc
--'  177  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
--'  176  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
--'  178  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
--'  198  0  E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
+-'  3  17  F:\gVimPortable\soft\copy_ctags.bat
+-'  1  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+-'  1  0  F:\platform\tags
+-'  18  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
 
 # History of marks within files (newest to oldest):
+
+> F:\gVimPortable\[Vundle] Installer
+	"	21	0
+	.	1	0
+	+	217	0
+	+	197	0
+	+	177	0
+	+	159	0
+	+	141	0
+	+	121	0
+	+	101	0
+	+	81	0
+	+	61	0
+	+	41	0
+	+	21	0
+	+	1	0
+
+> F:\gVimPortable\Data\Temp\VIA58BE.tmp
+	"	50	35
+	^	50	36
+
+> ~\_vimrc
+	"	56	0
+	^	43	34
+	.	43	17
+	+	163	27
+	+	163	30
+	+	163	17
+	+	163	7
+	+	163	0
+	+	181	0
+	+	163	0
+	+	163	0
+	+	163	0
+	+	167	0
+	+	163	0
+	+	166	0
+	+	171	0
+	+	181	0
+	+	166	29
+	+	166	30
+	+	169	7
+	+	168	10
+	+	171	10
+	+	166	0
+	+	168	17
+	+	171	17
+	+	164	6
+	+	166	33
+	+	166	35
+	+	164	6
+	+	174	0
+	+	168	10
+	+	169	7
+	+	171	10
+	+	164	9
+	+	168	10
+	+	168	13
+	+	171	13
+	+	168	10
+	+	171	10
+	+	164	24
+	+	166	33
+	+	169	10
+	+	164	24
+	+	168	13
+	+	169	10
+	+	171	13
+	+	166	36
+	+	164	24
+	+	166	33
+	+	169	10
+	+	168	13
+	+	171	13
+	+	166	37
+	+	164	0
+	+	165	0
+	+	164	6
+	+	168	10
+	+	168	0
+	+	164	0
+	+	173	0
+	+	172	0
+	+	164	0
+	+	166	30
+	+	164	27
+	+	169	7
+	+	166	38
+	+	231	8
+	+	11	0
+	+	18	11
+	+	220	0
+	+	218	0
+	+	224	5
+	+	222	0
+	+	226	0
+	+	222	0
+	+	224	0
+	+	224	18
+	+	222	0
+	+	220	15
+	+	224	0
+	+	221	0
+	+	222	0
+	+	224	0
+	+	223	0
+	+	13	33
+	+	218	0
+	+	70	14
+	+	218	0
+	+	221	0
+	+	221	0
+	+	218	0
+	+	218	0
+	+	222	0
+	+	218	0
+	+	19	0
+	+	53	0
+	+	158	0
+	+	157	25
+	+	51	0
+	+	43	0
+	+	257	23
+	+	258	23
+	+	43	17
+
+> D:\work\code\springColorScheme\colors\spring.vim
+	"	34	16
+	^	34	27
+	.	34	0
+	+	50	42
+	+	34	0
+	+	35	0
+	+	34	0
+
+> D:\work\code\springColorScheme\syntax\c.vim
+	"	11	0
+	^	11	0
+	.	11	0
+	+	11	0
+
+> D:\work\code\springColorScheme\syntax\snippet.vim
+	"	1	0
+
+> F:\platform\tags
+	"	1	0
+
+> F:\platform\[Lookup File]
+	"	2	0
+	^	2	43
+	.	1	0
+	+	8	42
+	+	6	0
+	+	10	42
+	+	9	0
+	+	3	0
+	+	7	0
+	+	2	0
+	+	4	4
+	+	5	2
+	+	1	0
+
+> F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+	"	1	0
+
+> F:\gVimPortable\soft\create_tags.bat
+	"	1	0
+
+> F:\gVimPortable\soft\hosts.bat
+	"	1	0
+
+> F:\gVimPortable\soft\copy_ctags.bat
+	"	3	17
+	^	3	21
+	.	3	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	2	8
+	+	3	0
+
+> F:\gVimPortable\soft\right_click.reg
+	"	1	0
+
+> F:\gVimPortable\[Lookup File]
+	"	4	0
+	^	4	0
+	.	4	0
+	+	1	2
+	+	2	2
+	+	3	6
+	+	4	0
+
+> C:\Users\Administrator\Desktop\rec.txt
+	"	14	0
+	^	14	0
+	.	13	0
+	+	13	0
+
+> F:\gVimPortable\soft\genTags.sh
+	"	1	0
+	^	1	2
+	.	1	0
+	+	1	0
+
+> F:\gVimPortable\soft\genTags.bat
+	"	2	8
+	^	1	1
+	.	2	8
+	+	1	0
+	+	2	0
+	+	1	0
+	+	2	8
+
+> F:\platform\genTags.bat
+	"	1	0
+
+> F:\platform\genTags.sh
+	"	12	0
+	^	13	0
+	.	12	0
+	+	5	0
+	+	6	0
+	+	12	0
+
+> F:\gVimPortable\Data\Temp\VIA9F26.tmp
+	"	85	0
+
+> C:\Users\Administrator\Desktop\1.trc
+	"	5716	0
+	.	1	0
+	+	15	0
+	+	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\test_trace\20121015_093804_CMCC_longSMS_MO-MT-SMS-OK_1.trc
+	"	50996	0
+	.	1	0
+	+	1	0
+
+> E:\TDDOWNLOAD\dfymt.txt
+	"	1	0
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\test_trace\MicroMMistack_data_abort.trc
+	"	57	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.09.17\cc_unit_test_201209.17_15.24.trc
+	"	11	0
+
+> ~\.vim\bundle\trcBrowser\syntax\trc.vim
+	"	33	44
+	^	32	57
+	.	51	0
+	+	37	26
+	+	32	56
+	+	51	0
+
+> F:\gVimPortable\[Vundle] clean
+	"	5	0
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\1.c
+	"	5	0
+	^	195	20
+	.	195	0
+	+	3123	0
+	+	3123	636
+	+	3123	0
+	+	3123	0
+	+	3123	0
+	+	3123	0
+	+	3123	0
+	+	2516	0
+	+	2815	4
+	+	2516	0
+	+	2516	0
+	+	2516	0
+	+	1	0
+	+	195	0
+
+> F:\gVimPortable\–startuptime
+	"	1	0
 
 > E:\TDDOWNLOAD\makevim\vim\vim73\src\Make_ming.mak
 	"	177	0
@@ -281,40 +528,11 @@ $+ \2 (\1\/\2)
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\project\lap\test\src\sce_gen.c
 	"	126	48
 
-> F:\gVimPortable\[Vundle] Installer
-	"	3	0
-	.	1	0
-	+	41	0
-	+	21	0
-	+	1	0
-
 > D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.30\lap_unit_test_201208.30_11.08.trc
 	"	28	0
 	^	18	4
 	.	18	3
 	+	18	3
-
-> C:\Users\Administrator\Desktop\1.c
-	"	139	0
-	^	195	20
-	.	195	0
-	+	3123	0
-	+	3123	636
-	+	3123	0
-	+	3123	0
-	+	3123	0
-	+	3123	0
-	+	3123	0
-	+	2516	0
-	+	2815	4
-	+	2516	0
-	+	2516	0
-	+	2516	0
-	+	1	0
-	+	195	0
-
-> C:\Users\Administrator\Desktop\rec.txt
-	"	1	0
 
 > C:\Users\Administrator\Desktop\ss1.trc
 	"	13	0
@@ -425,9 +643,6 @@ $+ \2 (\1\/\2)
 > F:\gVimPortable\Data\settings\.vim\bundle\snipMate\snippets\c.snippets
 	"	37	0
 
-> C:\Users\Administrator\Desktop\1.trc
-	"	1	9
-
 > d:\MySoftWare\gVimPortable\__Tag_List__
 	"	1	0
 	.	27	0
@@ -501,111 +716,6 @@ $+ \2 (\1\/\2)
 
 > F:\gVimPortable - 副本\Data\settings\vimfiles\plugin\txtbrowser.vim
 	"	338	32
-
-> ~\_vimrc
-	"	54	0
-	^	54	0
-	.	55	0
-	+	162	0
-	+	162	0
-	+	162	0
-	+	162	0
-	+	162	0
-	+	162	0
-	+	162	0
-	+	162	27
-	+	162	30
-	+	162	17
-	+	162	7
-	+	162	0
-	+	180	0
-	+	162	0
-	+	162	0
-	+	162	0
-	+	166	0
-	+	162	0
-	+	165	0
-	+	170	0
-	+	180	0
-	+	165	29
-	+	165	30
-	+	168	7
-	+	167	10
-	+	170	10
-	+	165	0
-	+	167	17
-	+	170	17
-	+	163	6
-	+	165	33
-	+	165	35
-	+	163	6
-	+	173	0
-	+	167	10
-	+	168	7
-	+	170	10
-	+	163	9
-	+	167	10
-	+	167	13
-	+	170	13
-	+	167	10
-	+	170	10
-	+	163	24
-	+	165	33
-	+	168	10
-	+	163	24
-	+	167	13
-	+	168	10
-	+	170	13
-	+	165	36
-	+	163	24
-	+	165	33
-	+	168	10
-	+	167	13
-	+	170	13
-	+	165	37
-	+	163	0
-	+	164	0
-	+	163	6
-	+	167	10
-	+	167	0
-	+	163	0
-	+	172	0
-	+	171	0
-	+	163	0
-	+	165	30
-	+	163	27
-	+	168	7
-	+	165	38
-	+	230	8
-	+	11	0
-	+	18	11
-	+	219	0
-	+	217	0
-	+	223	5
-	+	221	0
-	+	225	0
-	+	221	0
-	+	223	0
-	+	223	18
-	+	221	0
-	+	219	15
-	+	223	0
-	+	220	0
-	+	221	0
-	+	223	0
-	+	222	0
-	+	13	33
-	+	217	0
-	+	72	14
-	+	217	0
-	+	220	0
-	+	220	0
-	+	217	0
-	+	217	0
-	+	221	0
-	+	217	0
-	+	19	0
-	+	55	0
 
 > D:\gVimPortable\[Vundle] Installer
 	"	16	18
@@ -734,14 +844,6 @@ $+ \2 (\1\/\2)
 > D:\Projects\modem2.5g\branches\protocol\navi\test\stack\unit_test\trace\lap\2012.08.13\lap_unit_test_201208.13_15.24.trc
 	"	1	0
 
-> ~\.vim\bundle\trcBrowser\syntax\trc.vim
-	"	50	0
-	^	32	57
-	.	51	0
-	+	37	26
-	+	32	56
-	+	51	0
-
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\unit_test\trace\cc\2012.07.17\cc_unit_test_201207.17_15.20.trc
 	"	211	0
 
@@ -765,21 +867,9 @@ $+ \2 (\1\/\2)
 > D:\gVimPortable\Data\Temp\VIAD41.tmp
 	"	42	0
 
-> D:\work\code\springColorScheme\colors\spring.vim
-	"	34	6
-	^	34	27
-	.	34	0
-	+	50	42
-	+	34	0
-	+	35	0
-	+	34	0
-
 > D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_proc.c
 	"	1825	15
 	^	1795	15
-
-> D:\work\code\springColorScheme\syntax\c.vim
-	"	11	0
 
 > D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap.c
 	"	264	24
@@ -837,9 +927,6 @@ $+ \2 (\1\/\2)
 	+	7	0
 	+	6	26
 	+	7	0
-
-> D:\work\code\springColorScheme\syntax\snippet.vim
-	"	19	0
 
 > e:\TDDOWNLOAD\platform\baseband\stack\l1\src\l1a_task.c
 	"	67	0
@@ -1023,56 +1110,3 @@ $+ \2 (\1\/\2)
 
 > e:\TDDOWNLOAD\platform\baseband\stack\api\src\api_fsm.c
 	"	63	17
-
-> ~\gVimPortableSettings.ini
-	"	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_evt.c
-	"	11	13
-
-> ~\vimfiles\doc\winmanager.txt
-	"	21	43
-	^	21	44
-
-> ~\vimfiles\plugin\winmanager.vim
-	"	1065	6
-	^	1065	7
-	.	1065	0
-	+	1065	0
-
-> e:\TDDOWNLOAD\platform\baseband\stack\api\src\api_util.c
-	"	13	0
-
-> D:\Projects\modem2.5g\branches\protocol\navi\baseband\stack\lap\src\lap_frm.c
-	"	63	18
-	^	61	0
-	.	61	0
-	+	61	0
-
-> e:\TDDOWNLOAD\platform\baseband\stack\lap\src\lap.c
-	"	134	2
-	a	170	0
-
-> ~\vimfiles\doc\taglist.txt
-	"	1	0
-
-> ~\vimfiles\.netrwhist
-	"	1	0
-
-> D:\gVimPortable\--help
-	"	1	0
-
-> e:\TDDOWNLOAD\platform\tools\development\RPhone_PC\scenario\include\SceEngineerMode.h
-	"	32	0
-
-> ~\vimfiles\doc\project.txt
-	"	655	54
-
-> D:\gVimPortable\App\vim\vim73\doc\sponsor.txt
-	"	61	60
-
-> D:\MySoftWare\gVimPortable\Data\settings\vimfiles\readme.txt
-	"	1	0
-
-> D:\gVimPortable\help.html
-	"	34	21
