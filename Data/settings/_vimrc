@@ -9,11 +9,11 @@
 "=============================================================================
 " Platform
 function! MySys()
-  if has('win32') || has('win64')
-    return "windows"
-  else
-    return "linux"
-  endif
+	if has('win32') || has('win64')
+		return "windows"
+	else
+		return "linux"
+	endif
 endfunction
 
 "=========================== Vundle start ================================
@@ -105,12 +105,7 @@ let loaded_matchit = 1
 
 " file encoding setting
 set fileencodings=utf-8,chinese,latin-1
-if has("win32")
-"set fileencoding=chinese
 set fileencoding=utf-8
-else
-set fileencoding=utf-8
-endif
 
 " C setting
 set sm              " OMG
@@ -127,12 +122,11 @@ set ignorecase smartcase "search cease smart
 
 
 " VIM font setting
-" 17~19£¨or more£©
-set guifont=yaheiInconsolata:h10.5:cANSI
-"set gfw=Yahei_Mono:h10.5:cGB2312
-" 12£¨or less£©~14
-"set gfw=Yahei_Mono:h9:cGB2312
-"set gfw=Yahei_Mono:h10:cGB231
+if MySys() == 'windows'
+	set guifont=yaheiInconsolata:h10.5:cANSI
+else
+	set guifont=Monaco:h14
+endif
 
 " Ctrl+S
 imap <C-s> <Esc>:wa!<cr>i<Right>
@@ -162,13 +156,13 @@ nmap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 "To hex modle
 let s:hexModle = "N"
 function! ToHexModle()
-  if s:hexModle == "Y"
-    %!xxd -r
-    let s:hexModle = "N"
-  else
-    %!xxd
-    let s:hexModle = "Y"
-  endif
+	if s:hexModle == "Y"
+		%!xxd -r
+		let s:hexModle = "N"
+	else
+		%!xxd
+		let s:hexModle = "Y"
+	endif
 endfunction
 
 
@@ -176,19 +170,13 @@ endfunction
 " F1 Toggle Menu and Toolbar
 set guioptions-=m
 set guioptions-=T
-set guioptions-=l
-"set guioptions-=r
 map <silent> <F1> :if &guioptions =~# 'T' <Bar>
-		\set guioptions-=T <Bar>
-        \set guioptions-=m <bar>
-        \set guioptions-=l <bar>
-        "\set guioptions-=r <bar>
-    \else <Bar>
-		\set guioptions+=T <Bar>
-        \set guioptions+=m <Bar>
-        \set guioptions+=l <Bar>
-        "\set guioptions+=r <Bar>
-    \endif<CR>
+			\set guioptions-=T <Bar>
+			\set guioptions-=m <bar>
+			\else <Bar>
+			\set guioptions+=T <Bar>
+			\set guioptions+=m <Bar>
+			\endif<CR>
 
 "F2 show files used open
 map <F2> :MRU<cr>
@@ -224,24 +212,24 @@ au BufEnter,BufRead,BufNewFile *.trc setlocal ft=trc "trcBrowser called
 
 
 " in case your cscope execute is not in system path. 
-    " let g:cscope_cmd = 'D:/tools/vim/cscope.exe' 
-    " s: Find this C symbol 
-    map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> 
-    " g: Find this definition 
-    map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> 
-    " d: Find functions called by this function 
-    map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> 
-    " c: Find functions calling this function 
-    map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> 
-    " t: Find this text string 
-    map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> 
-    " e: Find this egrep pattern 
-    map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> 
-    " f: Find this file 
-    map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> 
-    " i: Find files #including this file 
-    map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> 
-    map <leader>l :call ToggleLocationList()<CR> 
+" let g:cscope_cmd = 'D:/tools/vim/cscope.exe' 
+" s: Find this C symbol 
+map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> 
+" g: Find this definition 
+map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> 
+" d: Find functions called by this function 
+map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> 
+" c: Find functions calling this function 
+map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> 
+" t: Find this text string 
+map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> 
+" e: Find this egrep pattern 
+map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> 
+" f: Find this file 
+map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> 
+" i: Find files #including this file 
+map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> 
+map <leader>l :call ToggleLocationList()<CR> 
 
 
 " lookupfile
@@ -261,21 +249,21 @@ nmap <silent> <leader>lw :LUWalk<cr>
 
 " lookup file with ignore case
 function! LookupFile_IgnoreCaseFunc(pattern)
-    let _tags = &tags
-    try
-        let &tags = eval(g:LookupFile_TagExpr)
-        let newpattern = '\c' . a:pattern
-        let tags = taglist(newpattern)
-    catch
-        echohl ErrorMsg | echo "Exception: " . v:exception | echohl NONE
-        return ""
-    finally
-        let &tags = _tags
-    endtry
+	let _tags = &tags
+	try
+		let &tags = eval(g:LookupFile_TagExpr)
+		let newpattern = '\c' . a:pattern
+		let tags = taglist(newpattern)
+	catch
+		echohl ErrorMsg | echo "Exception: " . v:exception | echohl NONE
+		return ""
+	finally
+		let &tags = _tags
+	endtry
 
-    " Show the matches for what is typed so far.
-    let files = map(tags, 'v:val["filename"]')
-    return files
+	" Show the matches for what is typed so far.
+	let files = map(tags, 'v:val["filename"]')
+	return files
 endfunction
 let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
 

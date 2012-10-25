@@ -103,18 +103,21 @@ $
 	springColorScheme
 
 # File marks:
-'0  21  0  F:\gVimPortable\[Vundle] Installer
-'1  23  0  F:\gVimPortable\[Vundle] Installer
-'2  11  0  D:\work\code\springColorScheme\syntax\c.vim
-'3  101  0  F:\gVimPortable\[Vundle] Installer
-'4  1  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
-'5  281  0  ~\_vimrc
-'6  3  17  F:\gVimPortable\soft\copy_ctags.bat
-'7  8  2  F:\platform\[Lookup File]
-'8  12  0  F:\platform\genTags.sh
-'9  121  0  F:\gVimPortable\[Vundle] Installer
+'0  11  0  D:\work\code\AuthorInfo\plugin\authorinfo.vim
+'1  31  0  D:\work\code\AuthorInfo\plugin\authorinfo.vim
+'2  21  0  F:\gVimPortable\[Vundle] Installer
+'3  23  0  F:\gVimPortable\[Vundle] Installer
+'4  11  0  D:\work\code\springColorScheme\syntax\c.vim
+'5  101  0  F:\gVimPortable\[Vundle] Installer
+'6  1  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+'7  281  0  ~\_vimrc
+'8  3  17  F:\gVimPortable\soft\copy_ctags.bat
+'9  8  2  F:\platform\[Lookup File]
 
 # Jumplist (newest first):
+-'  11  0  D:\work\code\AuthorInfo\plugin\authorinfo.vim
+-'  1  0  D:\work\code\AuthorInfo\plugin\authorinfo.vim
+-'  31  0  D:\work\code\AuthorInfo\plugin\authorinfo.vim
 -'  21  0  F:\gVimPortable\[Vundle] Installer
 -'  23  0  F:\gVimPortable\[Vundle] Installer
 -'  11  0  D:\work\code\springColorScheme\syntax\c.vim
@@ -208,12 +211,11 @@ $
 -'  20  0  F:\gVimPortable\Data\settings\_vimrc
 -'  58  5  F:\gVimPortable\Data\settings\_vimrc
 -'  70  0  F:\gVimPortable\Data\settings\_vimrc
--'  3  17  F:\gVimPortable\soft\copy_ctags.bat
--'  1  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
--'  1  0  F:\platform\tags
--'  18  0  F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
 
 # History of marks within files (newest to oldest):
+
+> D:\work\code\AuthorInfo\plugin\authorinfo.vim
+	"	11	0
 
 > F:\gVimPortable\[Vundle] Installer
 	"	21	0
@@ -1107,6 +1109,3 @@ $
 
 > E:\TDDOWNLOAD\winvim\_vimrc
 	"	125	6
-
-> e:\TDDOWNLOAD\platform\baseband\stack\api\src\api_fsm.c
-	"	63	17
