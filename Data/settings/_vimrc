@@ -11,10 +11,14 @@
 function! MySys()
 	if has('win32') || has('win64')
 		return "windows"
+	elseif has("unix")
+		return "unix"
 	else
-		return "linux"
+		return "mac"
 	endif
 endfunction
+
+
 
 "=========================== Vundle start ================================
 set nocompatible    " be iMproved
@@ -38,16 +42,19 @@ Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
 Bundle 'Mark'
 Bundle 'matchit.zip'
-Bundle 'gmarik/snipmate.vim'
+Bundle 'loseblue/snipmate.vim'
 Bundle 'The-NERD-Commenter'
+Bundle 'DoxygenToolkit.vim'
 Bundle 'loseblue/springColorScheme'
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
 Bundle 'TeTrIs.vim'
+Bundle 'Conque-Shell'
 Bundle 'loseblue/trcBrowser'
 Bundle 'loseblue/TxtBrowser'
 Bundle 'genutils'
 Bundle 'lookupfile'
+Bundle 'bootleq/LargeFile'
 
 filetype plugin indent on    " required!
 colorscheme spring  " color scheme 
@@ -67,6 +74,8 @@ set nu!             " show line number
 set autoread        " Set to auto read when a file is changed from the outside
 set foldenable
 set fdm=indent      " floader lines
+" set foldmethod=expr
+" set foldexpr=getline(v:lnum)=~'^\\s*!'?1:getline(v:lnum)=~'^[cC]'?1:0
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 "set showcmd "shwo cursor poistion in nomoal mode 
 set cursorcolumn  " high light cursor column
@@ -74,8 +83,6 @@ set cursorline    " high light cursor line
 set linespace=0   " set line high space
 set lines=20 columns=120 "init UI size
 set linebreak      "Do not cut words between lines, USELESS!
-" set foldmethod=marker
-" let g:showmarks_marks = 'abcdefghijklmnopqrstuvwxyz'  " set bookMark
 
 "assigned line setting 
 set list
@@ -192,7 +199,6 @@ imap <F7> <C-R>=strftime("%c")<CR>
 " <F9> open Tagbar
 nmap <silent> <F9> :TagbarToggle<CR>
 nmap <silent> <C-F9> :Tlist<CR>
-let tags=$VIM . "\\soft\\ctags.exe"
 let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
 let g:tagbar_ctags_bin = 'ctags'
@@ -214,22 +220,14 @@ au BufEnter,BufRead,BufNewFile *.trc setlocal ft=trc "trcBrowser called
 " in case your cscope execute is not in system path. 
 " let g:cscope_cmd = 'D:/tools/vim/cscope.exe' 
 " s: Find this C symbol 
-map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> 
-" g: Find this definition 
-map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> 
-" d: Find functions called by this function 
-map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> 
-" c: Find functions calling this function 
-map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> 
-" t: Find this text string 
-map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> 
-" e: Find this egrep pattern 
-map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> 
-" f: Find this file 
-map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> 
-" i: Find files #including this file 
-map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> 
-map <leader>l :call ToggleLocationList()<CR> 
+map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> " g: Find this definition 
+map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> " d: Find functions called by this function 
+map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> " c: Find functions calling this function 
+map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> " t: Find this text string 
+map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> " e: Find this egrep pattern 
+map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> " f: Find this file 
+map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> " i: Find files #including this file 
+map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> 
 
 
 " lookupfile
@@ -267,11 +265,14 @@ function! LookupFile_IgnoreCaseFunc(pattern)
 endfunction
 let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
 
-
 function! TagsRootSet(path)
 	" exe 'cd '.a:path exe '!gentags'
-	let tagFilePath = genutils#CleanupFileName(a:path.'/tags') 
-	let g:LookupFile_TagExpr='"./tags"' 
+	let tagFilePath = genutils#CleanupFileName(a:path.'/lookupfiletags') 
+	let g:LookupFile_TagExpr='"./lookupfiletags"' 
+    let csprg = a:path
+	if filereadable("cscope.out")
+		cs add cscope.out
+	endif
 endfunction 
 
 function! SetHRoot() 
@@ -284,3 +285,16 @@ function! SetSpecifiedPathTheRoot()
 endfunction
 nmap <leader>xroot :call SetSpecifiedPathTheRoot()<CR>
 
+" doxygen useage
+map fg : Dox<cr>
+let g:DoxygenToolkit_authorName="loseblue"
+let g:DoxygenToolkit_licenseTag="My own license\<enter>"
+let g:DoxygenToolkit_undocTag="DOXIGEN_SKIP_BLOCK"
+let g:DoxygenToolkit_briefTag_pre = "@brief\t"
+let g:DoxygenToolkit_paramTag_pre = "@param\t"
+let g:DoxygenToolkit_returnTag = "@return\t"
+let g:DoxygenToolkit_briefTag_funcName = "no"
+let g:DoxygenToolkit_maxFunctionProtoLines = 30
+
+" a.vim 
+let g:alternateNoDefaultAlternate = 1

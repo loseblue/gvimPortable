@@ -1,0 +1,3 @@
+F:\platform\test\stack\micro_mmi\proto\src\mmi_call.c
+F:\platform\lookupfiletags
+F:\platform\tags
