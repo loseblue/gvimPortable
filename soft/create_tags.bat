@@ -5,5 +5,11 @@ echo "ctags create"
 ctags --languages=c --langmap=c:+.h --extra=+q -R
 
 echo "cscope create"
-dir /s /b *.c *.h > cscope.files
+vim_find . -name "*.h" -o -name "*.c" -o -name "*.cc" > cscope.files
 cscope -bCkR -i cscope.files
+
+@echo off
+bash lookupfile_genTags_windows.sh
+
+pause
+

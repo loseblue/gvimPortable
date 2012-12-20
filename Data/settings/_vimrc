@@ -41,19 +41,24 @@ Bundle 'brookhong/cscope.vim'
 Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
 Bundle 'Mark'
+Bundle 'ShowMarks7'
+Bundle 'Yggdroot/indentLine'
+Bundle 'Marks-Browser'
 Bundle 'matchit.zip'
 Bundle 'loseblue/snipmate.vim'
 Bundle 'The-NERD-Commenter'
-Bundle 'DoxygenToolkit.vim'
+Bundle 'The-NERD-tree'
 Bundle 'loseblue/springColorScheme'
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
+Bundle 'genutils'
+Bundle 'lookupfile'
+Bundle 'minibufexplorerpp'
+Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
 Bundle 'Conque-Shell'
 Bundle 'loseblue/trcBrowser'
 Bundle 'loseblue/TxtBrowser'
-Bundle 'genutils'
-Bundle 'lookupfile'
 Bundle 'bootleq/LargeFile'
 
 filetype plugin indent on    " required!
@@ -74,8 +79,7 @@ set nu!             " show line number
 set autoread        " Set to auto read when a file is changed from the outside
 set foldenable
 set fdm=indent      " floader lines
-" set foldmethod=expr
-" set foldexpr=getline(v:lnum)=~'^\\s*!'?1:getline(v:lnum)=~'^[cC]'?1:0
+set laststatus=2
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 "set showcmd "shwo cursor poistion in nomoal mode 
 set cursorcolumn  " high light cursor column
@@ -105,7 +109,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " status line setting [including OS,filecoding, course position,present, time]
-"set statusline=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+highlight StatusLine guifg=White guibg=Grey           
+highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
+set statusline=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 " matchIt plug
 let loaded_matchit = 1
@@ -185,8 +191,7 @@ map <silent> <F1> :if &guioptions =~# 'T' <Bar>
 			\set guioptions+=m <Bar>
 			\endif<CR>
 
-"F2 show files used open
-map <F2> :MRU<cr>
+map <F2> :%s/\r//g<cr>:w<cr>gg
 
 "F4 file infor
 let g:vimrc_author='loseblue' 
@@ -216,22 +221,23 @@ let NERDSpaceDelims = 1
 au BufEnter,BufRead,BufNewFile *.txt setlocal ft=txt "txtBrowser called
 au BufEnter,BufRead,BufNewFile *.trc setlocal ft=trc "trcBrowser called
 
+" showmarks setting
+let showmarks_enable = 1
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let showmarks_ignore_type = "hqm"
+let showmarks_hlline_lower = 1
+let showmarks_hlline_upper = 1 
+
+" markbrowser setting
+nmap <silent> <leader>mk :MarksBrowser<cr>
+
 
 " in case your cscope execute is not in system path. 
 " let g:cscope_cmd = 'D:/tools/vim/cscope.exe' 
 " s: Find this C symbol 
-map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> " g: Find this definition 
-map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> " d: Find functions called by this function 
-map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> " c: Find functions calling this function 
-map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> " t: Find this text string 
-map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> " e: Find this egrep pattern 
-map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> " f: Find this file 
-map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> " i: Find files #including this file 
-map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> 
 
 
-" lookupfile
-" Auto change directory
+" lookupfile {
 set autochdir
 
 let g:LookupFile_MinPatLength= 2 "最少输入2个字符才开始查找 
@@ -284,17 +290,44 @@ function! SetSpecifiedPathTheRoot()
 	call TagsRootSet(input('Please input the root folder path: '))
 endfunction
 nmap <leader>xroot :call SetSpecifiedPathTheRoot()<CR>
-
-" doxygen useage
-map fg : Dox<cr>
-let g:DoxygenToolkit_authorName="loseblue"
-let g:DoxygenToolkit_licenseTag="My own license\<enter>"
-let g:DoxygenToolkit_undocTag="DOXIGEN_SKIP_BLOCK"
-let g:DoxygenToolkit_briefTag_pre = "@brief\t"
-let g:DoxygenToolkit_paramTag_pre = "@param\t"
-let g:DoxygenToolkit_returnTag = "@return\t"
-let g:DoxygenToolkit_briefTag_funcName = "no"
-let g:DoxygenToolkit_maxFunctionProtoLines = 30
+"}
 
 " a.vim 
 let g:alternateNoDefaultAlternate = 1
+
+" minibufexplorer++ {
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+"}
+
+"vim project{
+let g:MP_Bufread_AutoLoad = 1
+let g:MP_Source_File_Ext_Name = 'htm,js,c,h,cpp,vim,php,py,asp'
+" map <leader>ps:MPSearchInProject =expand("")
+" map <leader>pl:MPLoad
+" map <leader>pu:MPUpdateTags
+
+if has("cscope")
+	set cscopequickfix=s-,c-,d-,i-,t-,e-
+	set cscopetagorder=0
+	set cscopetag
+	set nocscopeverbose
+
+	map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> "g: Find this definition 
+	map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> "d: Find functions called by this function 
+	map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> "c: Find functions calling this function 
+	map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> "t: Find this text string 
+	map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> "e: Find this egrep pattern 
+	map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> "f: Find this file 
+	map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> "i: Find files #including this file 
+	map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> 
+endif
+"}
+
+"NERDTree{  
+let NERDTreeWinPos ="right"
+" let NERDTreeShowBookmarks=1
+"}  
+
