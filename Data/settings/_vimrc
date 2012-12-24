@@ -18,8 +18,6 @@ function! MySys()
 	endif
 endfunction
 
-
-
 "=========================== Vundle start ================================
 set nocompatible    " be iMproved
 filetype off        " required!
@@ -49,11 +47,12 @@ Bundle 'loseblue/snipmate.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'loseblue/springColorScheme'
+Bundle 'molokai'
 Bundle 'Tagbar'
 Bundle 'taglist.vim'
 Bundle 'genutils'
+Bundle 'TabBar'
 Bundle 'lookupfile'
-Bundle 'minibufexplorerpp'
 Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
 Bundle 'Conque-Shell'
@@ -62,9 +61,11 @@ Bundle 'loseblue/TxtBrowser'
 Bundle 'bootleq/LargeFile'
 
 filetype plugin indent on    " required!
-colorscheme spring  " color scheme 
-"=========================== END Vundle ================================
+"colorscheme spring  " color scheme
+let g:molokai_original = 1 
+colorscheme molokai  " color scheme
 
+"=========================== END Vundle ================================
 
 set nobackup      " cloese backup
 syntax enable       " 
@@ -163,24 +164,9 @@ nmap <leader>fu :se ff=unix<cr>
 noremap ,p :let @*=expand("%:p")<CR><Esc>
 noremap ,P :let @*=expand("%:p:h")<CR><Esc>
 
-" 先用/ 搜索字符,然后输入,lv 弹出窗口显示列表
-nmap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
-
-"To hex modle
-let s:hexModle = "N"
-function! ToHexModle()
-	if s:hexModle == "Y"
-		%!xxd -r
-		let s:hexModle = "N"
-	else
-		%!xxd
-		let s:hexModle = "Y"
-	endif
-endfunction
-
 
 " """"""""""""""""""" F1-F12"""""""""""""""""""""""""
-" F1 Toggle Menu and Toolbar
+" F1 Toggle Menu and Toolbar {
 set guioptions-=m
 set guioptions-=T
 map <silent> <F1> :if &guioptions =~# 'T' <Bar>
@@ -190,6 +176,7 @@ map <silent> <F1> :if &guioptions =~# 'T' <Bar>
 			\set guioptions+=T <Bar>
 			\set guioptions+=m <Bar>
 			\endif<CR>
+"}
 
 map <F2> :%s/\r//g<cr>:w<cr>gg
 
@@ -209,9 +196,10 @@ let g:tagbar_singleclick = 0
 let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_width = 30
 
-" roll screen Alt + jk
+" roll screen Alt + jk{
 noremap <A-j> <C-f>
 noremap <A-k> <C-b>
+"}
 
 " NERD_comments
 let NERDSpaceDelims = 1 
@@ -221,86 +209,34 @@ let NERDSpaceDelims = 1
 au BufEnter,BufRead,BufNewFile *.txt setlocal ft=txt "txtBrowser called
 au BufEnter,BufRead,BufNewFile *.trc setlocal ft=trc "trcBrowser called
 
-" showmarks setting
+" showmarks setting{
 let showmarks_enable = 1
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let showmarks_ignore_type = "hqm"
 let showmarks_hlline_lower = 1
 let showmarks_hlline_upper = 1 
+"}
 
 " markbrowser setting
 nmap <silent> <leader>mk :MarksBrowser<cr>
 
-
-" in case your cscope execute is not in system path. 
-" let g:cscope_cmd = 'D:/tools/vim/cscope.exe' 
-" s: Find this C symbol 
-
-
 " lookupfile {
 set autochdir
-
-let g:LookupFile_MinPatLength= 2 "最少输入2个字符才开始查找 
-let g:LookupFile_PreserveLastPattern = 0 "不保存上次查找的字符串 
-let g:LookupFile_PreservePatternHistory = 1 "保存查找历史
-let g:LookupFile_AlwaysAcceptFirst = 1 "回车打开第一个匹配项目 
-let g:LookupFile_AllowNewFiles = 0 "不允许创建不存在的文件
+let g:LookupFile_MinPatLength= 2
+let g:LookupFile_PreserveLastPattern = 0
+let g:LookupFile_PreservePatternHistory = 1
+let g:LookupFile_AlwaysAcceptFirst = 1
+let g:LookupFile_AllowNewFiles = 0
 
 nmap <silent> <leader>lf :LookupFile<cr>
 nmap <silent> <leader>lb :LUBufs<cr> 
 nmap <silent> <leader>lw :LUWalk<cr> 
-
-
-" lookup file with ignore case
-function! LookupFile_IgnoreCaseFunc(pattern)
-	let _tags = &tags
-	try
-		let &tags = eval(g:LookupFile_TagExpr)
-		let newpattern = '\c' . a:pattern
-		let tags = taglist(newpattern)
-	catch
-		echohl ErrorMsg | echo "Exception: " . v:exception | echohl NONE
-		return ""
-	finally
-		let &tags = _tags
-	endtry
-
-	" Show the matches for what is typed so far.
-	let files = map(tags, 'v:val["filename"]')
-	return files
-endfunction
-let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
-
-function! TagsRootSet(path)
-	" exe 'cd '.a:path exe '!gentags'
-	let tagFilePath = genutils#CleanupFileName(a:path.'/lookupfiletags') 
-	let g:LookupFile_TagExpr='"./lookupfiletags"' 
-    let csprg = a:path
-	if filereadable("cscope.out")
-		cs add cscope.out
-	endif
-endfunction 
-
-function! SetHRoot() 
-	call TagsRootSet('.') 
-endfunction
-nmap <leader>root :call SetHRoot()<CR>
-
-function! SetSpecifiedPathTheRoot() 
-	call TagsRootSet(input('Please input the root folder path: '))
-endfunction
-nmap <leader>xroot :call SetSpecifiedPathTheRoot()<CR>
 "}
 
-" a.vim 
+" a.vim {
 let g:alternateNoDefaultAlternate = 1
-
-" minibufexplorer++ {
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
 "}
+
 
 "vim project{
 let g:MP_Bufread_AutoLoad = 1
@@ -331,3 +267,9 @@ let NERDTreeWinPos ="right"
 " let NERDTreeShowBookmarks=1
 "}  
 
+"tab swith{
+map <A-Left> :Tbbn<CR>
+map <A-Right> :Tbbp<CR>
+map <S-Left> :tabp<CR>
+map <S-Right> :tabn<CR>
+""}
