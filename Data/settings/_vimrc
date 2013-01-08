@@ -39,7 +39,7 @@ Bundle 'brookhong/cscope.vim'
 Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
 Bundle 'Mark'
-Bundle 'ShowMarks7'
+" Bundle 'ShowMarks7'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Marks-Browser'
 Bundle 'matchit.zip'
@@ -49,9 +49,10 @@ Bundle 'The-NERD-tree'
 Bundle 'loseblue/springColorScheme'
 Bundle 'molokai'
 Bundle 'Tagbar'
+Bundle 'wesleyche/SrcExpl'
 Bundle 'taglist.vim'
 Bundle 'genutils'
-Bundle 'TabBar'
+Bundle 'humiaozuzu/TabBar'
 Bundle 'lookupfile'
 Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
@@ -61,9 +62,9 @@ Bundle 'loseblue/TxtBrowser'
 Bundle 'bootleq/LargeFile'
 
 filetype plugin indent on    " required!
-"colorscheme spring  " color scheme
-let g:molokai_original = 1 
-colorscheme molokai  " color scheme
+colorscheme spring  " color scheme
+" let g:molokai_original = 1 
+" colorscheme molokai  " color scheme
 
 "=========================== END Vundle ================================
 
@@ -164,7 +165,6 @@ nmap <leader>fu :se ff=unix<cr>
 noremap ,p :let @*=expand("%:p")<CR><Esc>
 noremap ,P :let @*=expand("%:p:h")<CR><Esc>
 
-
 " """"""""""""""""""" F1-F12"""""""""""""""""""""""""
 " F1 Toggle Menu and Toolbar {
 set guioptions-=m
@@ -227,6 +227,7 @@ let g:LookupFile_PreserveLastPattern = 0
 let g:LookupFile_PreservePatternHistory = 1
 let g:LookupFile_AlwaysAcceptFirst = 1
 let g:LookupFile_AllowNewFiles = 0
+let g:LookupFile_TagExpr = string('./lookupfiletags')
 
 nmap <silent> <leader>lf :LookupFile<cr>
 nmap <silent> <leader>lb :LUBufs<cr> 
@@ -236,7 +237,6 @@ nmap <silent> <leader>lw :LUWalk<cr>
 " a.vim {
 let g:alternateNoDefaultAlternate = 1
 "}
-
 
 "vim project{
 let g:MP_Bufread_AutoLoad = 1
@@ -264,12 +264,37 @@ endif
 
 "NERDTree{  
 let NERDTreeWinPos ="right"
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
 " let NERDTreeShowBookmarks=1
 "}  
 
-"tab swith{
+"tabbar & tab swith{
+let g:Tb_UseSingleClick = 1
+let g:Tb_ModSelTarget = 1
 map <A-Left> :Tbbn<CR>
 map <A-Right> :Tbbp<CR>
 map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
 ""}
+
+
+"SrcExpl{
+nmap <F8> :SrcExplToggle<CR> 
+let g:SrcExpl_winHeight = 8 
+let g:SrcExpl_refreshTime = 100 
+let g:SrcExpl_jumpKey = "<ENTER>" 
+let g:SrcExpl_gobackKey = "<SPACE>" 
+let g:SrcExpl_pluginList = [ 
+        \ "__Tagbar__", 
+        \ "_NERD_tree_", 
+        \ "-TagBar-",
+        \ "Source_Explorer" 
+    \ ] 
+let g:SrcExpl_searchLocalDef = 1 
+let g:SrcExpl_isUpdateTags = 0 
+let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ." 
+let g:SrcExpl_updateTagsKey = "<F12>" 
+"}
+
+" :nmap <F4> :exec 'lvimgrep /' . input('/', expand('<cword>')) . '/j % <bar> lopen'<CR>
+:nmap <F4> :exec 'lvimgrep /' . input('/') . '/j % <bar> lopen'<CR>

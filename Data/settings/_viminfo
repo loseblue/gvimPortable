@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/tabprevious
+~MSle0~/cc_ 
 
 # Last Substitute Search Pattern:
 ~MSle0&\r
@@ -17,632 +17,958 @@
 $
 
 # Command Line History (newest to oldest):
-:BundleClean
-:q
-:MPNERDTREE
-:MPLoadSession
-:x
 :w
-:BundleInstall
-:MPLoadSession project_session.vim
-:MPSaveSession
-:MPLoad cscope.out
-:MPLoad cscope.files
-:MPLoad tags
-:MPBuildTags
+:.ll
 :MPLoad project.vim
 :q!
-:bn!
-:let g:miniBufExplorerDebugMode  = 0
-:let g:miniBufExplorerDebugLevel = 10
-:help bufname
-:help getbufvar
+:q
+:s:SrcExpl_isDebug = 1
+:BundleInstall
+:BundleInstall!
+:BundleClean
+:x
+:%s/0x//g
+:%s/ / 0x/g
+:%s/”/"/g
+:%s/
+:$
+:%s/“/"/g
+:%
+:MPNERDTREE
+:MPBuildTags
+:Tbbp
 
 # Search String History (newest to oldest):
-?/tabprevious
-?/tabnext
-?/<A
-?/tab
-? \<origBuf\>
-? \<debugIndex\>
-?/!!1
-?/!!
-?/!
-? \<MBESelectBuffer\>
-? \<MBEClick\>
-? \<MBENeedNextWindow\>
-?/bufname
-?/getbufname
-? \<modifiable\>
-?/next
-? \<miniBufExplMapCTabSwitchWindows\>
-? \<miniBufExplMapCTabSwitchBufs\>
-?/buf
-?/buffer
+?/cc_ 
+? \r
+?/cc
+?/facility
+?/4337
+?/DISCONNECT_MO
+?/setup
+?/rrd_f
+?/rrd
+?/rri_f
+?/136
+?/13
+? SrcExpl_isDebug = 1
+? 0x
+?/hold
+? ^\CDefExtern cc_Data_t\* gp_ccCurData;$
+? ^\Cu8 cc_apiCallHoldReq_U10(void)$
+? ^\CInEvtDsc_t cc_HoldAck        = IEVT_DESCR(CC_HOLD_ACK, 0, 0);$
+? ^\Cu8 cc_HoldAck_U10(void)$
+?/held
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')  
 
 # Input Line History (newest to oldest):
+@CC_
+@u8
+@cc_ 
+@CC_ 
+@rri_C
+@rrd_FSM
+@TSP<F5>
+@D:\Projects\modem2.5g\branches\protocol\integration\navi
 @Y
+@\<asn_DEF_Rectangle\>
+@\<rectangle\>
+@F:\ss_asn1\
+@===================================================================
+@D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\include
+@D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src
 @\<miniBufExplMapCTabSwitchWindows\>
 @\<winbufnr\>
 @\<CycleBuffer\>
 @\<split\>
 @\<MBESelectBuffer\>
-@\<prjpath\>
-@\<MP_Cur_Prj\>
-@\<MP_Project_AutoLoad_Override\>
-@\<miniBufExplModSelTarget\>
-@\<miniBufExplMapCTabSwitchBufs\>
-@\<miniBufExplMapWindowNavVim\>
-@\<miniBufExplMapWindowNavArrows\>
-@\<foldmethod\>
-@\<showmarks_ignore_type\>
-@\<Fill\>
-@\<win_title\>
-@\<setupSyntax\>
-@\<messages\>
-@\<createFromPdu\>
 
 # Input Line History (newest to oldest):
 
 # Registers:
 "0	LINE	0
-	map <S-Left> :tabp<CR>
-	map <S-Right> :tabn<CR>
+	:nmap <F4> :exec 'lvimgrep /' . input('/', expand('<cword>')) . '/j % <bar> lopen'<CR>
 "1	LINE	0
 	
-"2	LINE	0
-	
 "3	LINE	0
-	let g:miniBufExplorerDebugLevel = 10
+	TSP 00 : Fn 682552 T1 514 T2 0 T3 19
 "4	LINE	0
-	" minibufexplorer++ {
-	let g:miniBufExplModSelTarget = 1
-	let g:miniBufExplMapCTabSwitchBufs = 1
-	let g:miniBufExplMapWindowNavVim = 1
-	let g:miniBufExplMapWindowNavArrows = 1
-	"}
-"5	LINE	0
-	" Bundle 'loseblue/minibufexplorerpp'
+	30 05 81 01 41 8E 00 1E 02 E0 88 
+"5	CHAR	0
+	 
+	说到这里，刘管事轻轻叹了口气，有些酸楚地道：“以后，怕是阿郎也不会管得这么严了。”
+	
+	他意兴索然地挥挥手道：“你去吧，好生在侧院儿里待着，不要胡乱走动。”
+	
+	“是，那刘管事忙着，小的回去了。”
+	
+	杨帆很尊敬地笑笑，转身行去。
+	
+	“周兴？”
+	
+	杨帆一路走，一路想着这个人，略作一番分析，他就摇了摇头，否定了周兴可能与己有关的可能。
+	
+	永淳二年，韶州血案的时候，周兴还只是北方地区的一个县令，直到近几年，武后权柄越来越重，有望革李唐之命，改天换日之后，才开始重用酷吏，替她剪除夺权的障碍，周兴因为酷厉狠绝的办案作风，得到武后青睐，这才青云直上，成为刑部大员。
+	
+	当年发生的那件事情，不可能与周兴有所牵连，周兴现在是刑部侍郎，事实上的一把手，不管是从关心下属的角度，还是从神都出现这样一桩重大案件的角度，他亲自过问一下下属的事情也正常。(医道教父最新章节)
+	
+		他已经打听到，今日之蔡东成虽是左奉宸卫中郎将，赫赫将领，手握大权，但他当年是龙武卫的一个旅帅，此人十有**就是韶州血案的具体实施者。伤了一个杨明笙，引出一个蔡东成，但蔡东成也是一个马前卒。(巨星人生全文阅读)幕后元凶，依然不曾现身。
+	
+		看来，想要他现身，就得先吃掉蔡东成和他手下的四大金刚，才能迫使幕后首脑现身了！
+	
+		杨帆一路思索着，回到了侧院。
+	
+		那天，杨明笙脱口说出了一个名字：贺兰敏之。
+	
+		杨帆业已打听过了，这个贺兰敏之是武则天的外甥，他的母亲是武则天的姐姐，也曾经受到过高宗李治的宠幸，受封为韩国夫人，他的姐姐贺兰氏也曾受到过李治的宠幸，受封魏国夫人。
+	
+		而贺兰敏之本人，则在武则天将两个兄长流放之后，改其姓为武，入继为武则天的父亲武士彟的后嗣，受封周国公，可谓富贵已极。
+	
+		然而后来武则天却以贺兰敏与外祖母杨氏媾和、贪墨公款中饱私囊、**太子李贤已选聘的太子妃杨氏等诸多罪名，令其改回原姓，发配岭南，途中贺兰敏之以马缰自缢而死。这就是贺兰敏之传奇的一生。
+	
+		杨帆想不出这个贺兰敏之与韶州小村有何关联。
+	
+		贺兰敏之此人据说放荡不羁，风流好色，然而此人俊俏英朗，一表人才，而且博学多才，再加上他显赫的家世和身份，所以在朝野中他都有许多朋友，这些人后来都受了他的牵连，纷纷被贬官发配。
+	
+		杨帆怀疑，突兀建起的桃源村，很可能就是用来安置那些受贺兰敏之牵连而被贬谪的官员的所在，而村中十一姓家族，就是当年那些受牵累的官员。
+	
+		然则小村建于贺兰敏之自尽之后一年，而屠村血案却发生在十一年后，这就有些古怪了。
+	
+		如果这个突然冒出来的小山村的村民就是当初受贺兰敏之牵连的那些官员及其家眷，如果朝廷有意把这些人铲除，根本无需等待这么多年，更不需要用瘟疫这样的借口来掩饰。
+	
+	更何况，韶州血案时，贺兰敏之早就变成了一坯黄土，朝野间也早就淡忘了这么一个人，怎么可能会在十多年后，才突然对受其牵连者再施毒手？从他们诡秘的举动和所动用的人员竭尽所能掩饰身份和行踪这一点上来看，也不可能是朝廷所为。(幻世之刺客传说啃文)
+	
+		杨明笙是韶州血案的具体实施者，从杨明笙脱口而出的一句话，可以证明，屠村血案的发生肯定与贺兰敏之这个人有重大关系，这一点确定无疑。问题是：山村里到底有什么？这些“村民”到底有什么秘密，以至于有人要用屠村这种灭绝人性的杀戮行为来解决。
+	
+		也许，只有弄清楚这个问题，才能找出真正的幕后元凶，杨帆思索良久，实无他策可想，看来只能以杀为饵，惊动那个幕后元凶现身了。
+	
+		蔡东成手下四大金刚已去其一，剩下三人即便联手，也很难再发挥他们合手联击的本领，杨帆打算把四大金刚逐一铲除，最后再杀蔡东成，到那时候，如惊弓之鸟的杨明笙一定会向他真正的幕后主使求救。
+	
+		灵堂摆了三天，蔡东成手下三大悍将在灵堂里守了三天，整个杨府严阵以待地挺了三天，拖得人困马乏，筋疲力尽，可是那个神秘的刺客一直都没有再出现。
 "6	LINE	0
-	品牌：TIFFANY
-	
-	SHAPE:
-	
-	切工(Cut):brilliant
-	presence:excellent
-	polish:excellent
-	symmetry:excellent
-	
-	Clarlty
-	Color
-	
+	30 05 81 01 41 8E 00 1E 02 E0 88 
 "7	LINE	0
+	30 05 81 01 41 8E 00 1E 02 E0 88 
+"8	CHAR	0
+	 
+	说到这里，刘管事轻轻叹了口气，有些酸楚地道：“以后，怕是阿郎也不会管得这么严了。”
 	
-"8	LINE	0
-	  call <SID>DEBUG('!!2 Entering CycleBuffer origBuf:' .bufname(l:origBuf),10)
-	  call <SID>DEBUG('!!2 Entering CycleBuffer 'origBuf':' .bufname('l:origBuf'),10)
-	  call <SID>DEBUG('!!2 Entering CycleBuffer %:' .bufname('%'),10)
+	他意兴索然地挥挥手道：“你去吧，好生在侧院儿里待着，不要胡乱走动。”
 	
-"9	LINE	0
-	  call <SID>DEBUG('!!1 Entering CycleBuffer 'origBuf':' .bufname('l:origBuf'),10)
+	“是，那刘管事忙着，小的回去了。”
+	
+	杨帆很尊敬地笑笑，转身行去。
+	
+	“周兴？”
+	
+	杨帆一路走，一路想着这个人，略作一番分析，他就摇了摇头，否定了周兴可能与己有关的可能。
+	
+	永淳二年，韶州血案的时候，周兴还只是北方地区的一个县令，直到近几年，武后权柄越来越重，有望革李唐之命，改天换日之后，才开始重用酷吏，替她剪除夺权的障碍，周兴因为酷厉狠绝的办案作风，得到武后青睐，这才青云直上，成为刑部大员。
+	
+	当年发生的那件事情，不可能与周兴有所牵连，周兴现在是刑部侍郎，事实上的一把手，不管是从关心下属的角度，还是从神都出现这样一桩重大案件的角度，他亲自过问一下下属的事情也正常。(医道教父最新章节)
+	
+		他已经打听到，今日之蔡东成虽是左奉宸卫中郎将，赫赫将领，手握大权，但他当年是龙武卫的一个旅帅，此人十有**就是韶州血案的具体实施者。伤了一个杨明笙，引出一个蔡东成，但蔡东成也是一个马前卒。(巨星人生全文阅读)幕后元凶，依然不曾现身。
+	
+		看来，想要他现身，就得先吃掉蔡东成和他手下的四大金刚，才能迫使幕后首脑现身了！
+	
+		杨帆一路思索着，回到了侧院。
+	
+		那天，杨明笙脱口说出了一个名字：贺兰敏之。
+	
+		杨帆业已打听过了，这个贺兰敏之是武则天的外甥，他的母亲是武则天的姐姐，也曾经受到过高宗李治的宠幸，受封为韩国夫人，他的姐姐贺兰氏也曾受到过李治的宠幸，受封魏国夫人。
+	
+		而贺兰敏之本人，则在武则天将两个兄长流放之后，改其姓为武，入继为武则天的父亲武士彟的后嗣，受封周国公，可谓富贵已极。
+	
+		然而后来武则天却以贺兰敏与外祖母杨氏媾和、贪墨公款中饱私囊、**太子李贤已选聘的太子妃杨氏等诸多罪名，令其改回原姓，发配岭南，途中贺兰敏之以马缰自缢而死。这就是贺兰敏之传奇的一生。
+	
+		杨帆想不出这个贺兰敏之与韶州小村有何关联。
+	
+		贺兰敏之此人据说放荡不羁，风流好色，然而此人俊俏英朗，一表人才，而且博学多才，再加上他显赫的家世和身份，所以在朝野中他都有许多朋友，这些人后来都受了他的牵连，纷纷被贬官发配。
+	
+		杨帆怀疑，突兀建起的桃源村，很可能就是用来安置那些受贺兰敏之牵连而被贬谪的官员的所在，而村中十一姓家族，就是当年那些受牵累的官员。
+	
+		然则小村建于贺兰敏之自尽之后一年，而屠村血案却发生在十一年后，这就有些古怪了。
+	
+		如果这个突然冒出来的小山村的村民就是当初受贺兰敏之牵连的那些官员及其家眷，如果朝廷有意把这些人铲除，根本无需等待这么多年，更不需要用瘟疫这样的借口来掩饰。
+	
+	更何况，韶州血案时，贺兰敏之早就变成了一坯黄土，朝野间也早就淡忘了这么一个人，怎么可能会在十多年后，才突然对受其牵连者再施毒手？从他们诡秘的举动和所动用的人员竭尽所能掩饰身份和行踪这一点上来看，也不可能是朝廷所为。(幻世之刺客传说啃文)
+	
+		杨明笙是韶州血案的具体实施者，从杨明笙脱口而出的一句话，可以证明，屠村血案的发生肯定与贺兰敏之这个人有重大关系，这一点确定无疑。问题是：山村里到底有什么？这些“村民”到底有什么秘密，以至于有人要用屠村这种灭绝人性的杀戮行为来解决。
+	
+		也许，只有弄清楚这个问题，才能找出真正的幕后元凶，杨帆思索良久，实无他策可想，看来只能以杀为饵，惊动那个幕后元凶现身了。
+	
+		蔡东成手下四大金刚已去其一，剩下三人即便联手，也很难再发挥他们合手联击的本领，杨帆打算把四大金刚逐一铲除，最后再杀蔡东成，到那时候，如惊弓之鸟的杨明笙一定会向他真正的幕后主使求救。
+	
+		灵堂摆了三天，蔡东成手下三大悍将在灵堂里守了三天，整个杨府严阵以待地挺了三天，拖得人困马乏，筋疲力尽，可是那个神秘的刺客一直都没有再出现。
+"9	CHAR	0
+	 
+	说到这里，刘管事轻轻叹了口气，有些酸楚地道：“以后，怕是阿郎也不会管得这么严了。”
+	
+	他意兴索然地挥挥手道：“你去吧，好生在侧院儿里待着，不要胡乱走动。”
+	
+	“是，那刘管事忙着，小的回去了。”
+	
+	杨帆很尊敬地笑笑，转身行去。
+	
+	“周兴？”
+	
+	杨帆一路走，一路想着这个人，略作一番分析，他就摇了摇头，否定了周兴可能与己有关的可能。
+	
+	永淳二年，韶州血案的时候，周兴还只是北方地区的一个县令，直到近几年，武后权柄越来越重，有望革李唐之命，改天换日之后，才开始重用酷吏，替她剪除夺权的障碍，周兴因为酷厉狠绝的办案作风，得到武后青睐，这才青云直上，成为刑部大员。
+	
+	当年发生的那件事情，不可能与周兴有所牵连，周兴现在是刑部侍郎，事实上的一把手，不管是从关心下属的角度，还是从神都出现这样一桩重大案件的角度，他亲自过问一下下属的事情也正常。(医道教父最新章节)
+	
+		他已经打听到，今日之蔡东成虽是左奉宸卫中郎将，赫赫将领，手握大权，但他当年是龙武卫的一个旅帅，此人十有**就是韶州血案的具体实施者。伤了一个杨明笙，引出一个蔡东成，但蔡东成也是一个马前卒。(巨星人生全文阅读)幕后元凶，依然不曾现身。
+	
+		看来，想要他现身，就得先吃掉蔡东成和他手下的四大金刚，才能迫使幕后首脑现身了！
+	
+		杨帆一路思索着，回到了侧院。
+	
+		那天，杨明笙脱口说出了一个名字：贺兰敏之。
+	
+		杨帆业已打听过了，这个贺兰敏之是武则天的外甥，他的母亲是武则天的姐姐，也曾经受到过高宗李治的宠幸，受封为韩国夫人，他的姐姐贺兰氏也曾受到过李治的宠幸，受封魏国夫人。
+	
+		而贺兰敏之本人，则在武则天将两个兄长流放之后，改其姓为武，入继为武则天的父亲武士彟的后嗣，受封周国公，可谓富贵已极。
+	
+		然而后来武则天却以贺兰敏与外祖母杨氏媾和、贪墨公款中饱私囊、**太子李贤已选聘的太子妃杨氏等诸多罪名，令其改回原姓，发配岭南，途中贺兰敏之以马缰自缢而死。这就是贺兰敏之传奇的一生。
+	
+		杨帆想不出这个贺兰敏之与韶州小村有何关联。
+	
+		贺兰敏之此人据说放荡不羁，风流好色，然而此人俊俏英朗，一表人才，而且博学多才，再加上他显赫的家世和身份，所以在朝野中他都有许多朋友，这些人后来都受了他的牵连，纷纷被贬官发配。
+	
+		杨帆怀疑，突兀建起的桃源村，很可能就是用来安置那些受贺兰敏之牵连而被贬谪的官员的所在，而村中十一姓家族，就是当年那些受牵累的官员。
+	
+		然则小村建于贺兰敏之自尽之后一年，而屠村血案却发生在十一年后，这就有些古怪了。
+	
+		如果这个突然冒出来的小山村的村民就是当初受贺兰敏之牵连的那些官员及其家眷，如果朝廷有意把这些人铲除，根本无需等待这么多年，更不需要用瘟疫这样的借口来掩饰。
+	
+	更何况，韶州血案时，贺兰敏之早就变成了一坯黄土，朝野间也早就淡忘了这么一个人，怎么可能会在十多年后，才突然对受其牵连者再施毒手？从他们诡秘的举动和所动用的人员竭尽所能掩饰身份和行踪这一点上来看，也不可能是朝廷所为。(幻世之刺客传说啃文)
+	
+		杨明笙是韶州血案的具体实施者，从杨明笙脱口而出的一句话，可以证明，屠村血案的发生肯定与贺兰敏之这个人有重大关系，这一点确定无疑。问题是：山村里到底有什么？这些“村民”到底有什么秘密，以至于有人要用屠村这种灭绝人性的杀戮行为来解决。
+	
+		也许，只有弄清楚这个问题，才能找出真正的幕后元凶，杨帆思索良久，实无他策可想，看来只能以杀为饵，惊动那个幕后元凶现身了。
+	
+		蔡东成手下四大金刚已去其一，剩下三人即便联手，也很难再发挥他们合手联击的本领，杨帆打算把四大金刚逐一铲除，最后再杀蔡东成，到那时候，如惊弓之鸟的杨明笙一定会向他真正的幕后主使求救。
+	
+		灵堂摆了三天，蔡东成手下三大悍将在灵堂里守了三天，整个杨府严阵以待地挺了三天，拖得人困马乏，筋疲力尽，可是那个神秘的刺客一直都没有再出现。
 "a	CHAR	0
-	ddn
+	jf/d$
 ""-	CHAR	0
 	 
 
+# global variables:
+!ST_WIN_CMD	NUM	0
+!ST_UNIX	NUM	2
+!ST_WIN_SH	NUM	1
+
 # File marks:
-'0  3  0  ~\.vim\bundle\TabBar\plugin\[Vundle] clean
-'1  1  0  F:\platform\project.vim
-'2  144  19  ~\.vim\bundle\TabBar\plugin\tabbar.vim
-'3  26  21  ~\vimfiles\plugin\tabaltswitch.vim
-'4  1  0  F:\platform\project_session.vim
-'5  269  0  ~\_vimrc
-'6  27  0  f:\platform\baseband\stack\cc\include\cc_dtmf.h
-'7  11  0  ~\_vimrc
-'8  1  0  ~\_viminfo
-'9  31  0  ~\[Vundle] Installer
+'0  300  41  ~\_vimrc
+'1  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
+'2  728  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+'3  1  17  C:\Users\Administrator\Desktop\temp.txt
+'4  30  0  D:\MySoftWare\gVimPortable\[Vundle] Installer
+'5  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
+'6  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_crss.c
+'7  1  0  C:\Users\Administrator\Desktop\24388\醉枕江山.txt
+'8  282  28  ~\_vimrc
+'9  30  0  ~\[Vundle] Installer
 
 # Jumplist (newest first):
--'  3  0  ~\.vim\bundle\TabBar\plugin\[Vundle] clean
--'  6  70  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  1  0  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  1  0  F:\platform\project.vim
--'  144  19  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  123  0  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  107  12  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  121  0  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  83  12  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  210  4  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  219  4  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  21  0  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  86  62  f:\platform\baseband\stack\cc\include\cc_def.h
--'  90  4  f:\platform\baseband\stack\cc\include\cc_def.h
--'  30  0  f:\platform\baseband\stack\cc\include\cc_dtmf.h
--'  276  0  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  91  0  f:\platform\baseband\stack\cc\include\cc_def.h
--'  271  5  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  1  0  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  26  21  ~\vimfiles\plugin\tabaltswitch.vim
--'  1  0  ~\vimfiles\plugin\tabaltswitch.vim
--'  102  0  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  81  9  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  136  6  ~\.vim\bundle\TabBar\plugin\tabbar.vim
--'  28  18  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  1  0  F:\platform\project_session.vim
--'  269  0  ~\_vimrc
--'  127  8  ~\_vimrc
--'  126  35  ~\_vimrc
--'  96  8  ~\_vimrc
--'  95  4  ~\_vimrc
--'  94  14  ~\_vimrc
--'  54  8  ~\_vimrc
--'  240  21  ~\_vimrc
--'  70  32  ~\_vimrc
--'  1  0  ~\_vimrc
--'  27  0  f:\platform\baseband\stack\cc\include\cc_dtmf.h
--'  40  0  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  4  0  F:\platform\baseband\stack\cc\include\NERD_tree_2
--'  17  0  F:\platform\baseband\stack\cc\include\NERD_tree_2
--'  1  0  F:\platform\baseband\stack\cc\include\NERD_tree_2
--'  22  16  f:\platform\baseband\stack\cc\include\cc_dtmf.h
--'  5  0  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  11  0  ~\_vimrc
--'  1  0  ~\_viminfo
--'  7  0  ~\_vimrc
--'  6  18  ~\_vimrc
--'  5  0  ~\_vimrc
--'  31  0  ~\[Vundle] Installer
--'  56  32  ~\_vimrc
--'  31  19  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  9  0  F:\platform\project.vim
--'  265  0  f:\platform\baseband\stack\cc\src\cc_dtmf.c
--'  1  0  C:\Users\Administrator\Desktop\temp.txt
--'  72  46  D:\software\mupdf-0.9-windows\docs\mupdf.txt
--'  1  0  D:\software\mupdf-0.9-windows\docs\mupdf.txt
--'  1595  49  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1223  4  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  9  0  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1  0  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1216  0  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1220  50  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1593  2  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1217  0  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1608  2  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  536  0  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  375  0  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1581  1  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1614  0  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1504  13  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1498  14  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1598  19  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1597  19  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1596  19  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  1583  10  ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
--'  86  62  f:\platform\baseband\stack\cc\include\cc_def.h
--'  90  4  f:\platform\baseband\stack\cc\include\cc_def.h
--'  30  0  f:\platform\baseband\stack\cc\include\cc_dtmf.h
--'  91  0  f:\platform\baseband\stack\cc\include\cc_def.h
--'  26  21  ~\vimfiles\plugin\tabaltswitch.vim
--'  1  0  F:\platform\project.vim
+-'  300  41  ~\_vimrc
+-'  42  0  ~\_vimrc
+-'  1  9  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+-'  4467  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+-'  2176  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+-'  736  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+-'  1291  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+-'  11  37  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+-'  61  0  D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
+-'  4908  9  D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
+-'  1  0  D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
+-'  34  22  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
+-'  1  0  C:\Users\Administrator\Desktop\CFB .trc
+-'  6416  0  C:\Users\Administrator\Desktop\CFB .trc
+-'  1  0  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
+-'  2145  0  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
+-'  576  37  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
+-'  168  33  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
+-'  20  0  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
+-'  217  11  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+-'  221  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+-'  19  27  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+-'  1  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+-'  728  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+-'  1034  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+-'  2123  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+-'  818  0  C:\Users\Administrator\Desktop\tmp.trc
+-'  663  0  C:\Users\Administrator\Desktop\tmp.trc
+-'  21  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  1  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  1  17  C:\Users\Administrator\Desktop\temp.txt
+-'  2  0  C:\Users\Administrator\Desktop\temp.txt
+-'  991  26  C:\Users\Administrator\Desktop\CFU.trc
+-'  717  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  703  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  707  15  C:\Users\Administrator\Desktop\CFU.trc
+-'  737  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  710  29  C:\Users\Administrator\Desktop\CFU.trc
+-'  702  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  993  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  994  28  C:\Users\Administrator\Desktop\CFU.trc
+-'  1481  24  C:\Users\Administrator\Desktop\CFU.trc
+-'  11  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  2353  0  C:\Users\Administrator\Desktop\CFU.trc
+-'  18  57  C:\Users\Administrator\Desktop\CFU.trc
+-'  12  15  C:\Users\Administrator\Desktop\CFU.trc
+-'  177  32  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
+-'  184  26  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
+-'  119  29  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  122  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  117  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  88  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  59  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  30  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  13  2  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  12  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  102  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+-'  144  26  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+-'  145  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+-'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+-'  146  21  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+-'  30  0  D:\MySoftWare\gVimPortable\[Vundle] Installer
+-'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
+-'  2  0  D:\work\mine\121206_2.5G_CRSS\CW_MT.trc
+-'  3  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
+-'  6442  0  D:\work\mine\121206_2.5G_CRSS\CW_MT.trc
+-'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\-TabBar-
+-'  11  0  D:\work\mine\121206_2.5G_CRSS\CW_MT.trc
+-'  130  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+-'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\-TabBar-
 
 # History of marks within files (newest to oldest):
 
-> ~\.vim\bundle\TabBar\plugin\tabbar.vim
-	"	6	70
-	^	6	71
-	.	6	0
-	+	6	0
-
-> ~\.vim\bundle\TabBar\plugin\[Vundle] clean
-	"	3	0
-	.	1	0
-	+	1	0
-
-> ~\.vim\bundle\TabBar\plugin\-TabBar-
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
 	"	1	0
-	.	2	0
-	+	2	0
+	^	2	20
+	.	2	19
+	+	2	19
 
-> F:\platform\project.vim
-	"	1	0
-	^	7	63
-	.	9	0
-	+	1	0
-	+	41	0
-	+	40	0
-	+	41	0
-	+	16	0
-	+	39	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	1	0
-	+	1	0
-	+	13	0
-	+	8	62
-	+	6	0
-	+	9	0
-	+	3	33
-	+	2	29
-	+	8	0
-	+	7	22
-	+	1	0
-	+	40	0
-	+	7	23
-	+	9	0
-
-> f:\platform\baseband\stack\cc\src\cc_dtmf.c
-	"	121	0
-
-> F:\platform\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> F:\platform\baseband\stack\cc\src\__Tagbar__
-	"	1	0
-	.	4	0
-	+	63	0
-	+	63	0
-	+	63	0
-	+	63	0
-	+	53	0
-	+	53	0
-	+	53	0
-	+	53	0
-	+	53	0
-	+	53	0
-	+	53	0
-	+	50	0
-	+	19	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-
-> F:\platform\baseband\stack\cc\src\NERD_tree_1
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\[Lookup File]
 	"	4	0
+	^	4	83
+	.	3	0
+	+	15	90
+	+	14	90
+	+	13	90
+	+	12	90
+	+	11	87
+	+	10	86
+	+	5	86
+	+	2	0
+	+	7	98
+	+	6	0
+	+	9	97
+	+	8	0
+	+	1	0
+	+	4	82
+	+	3	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+	"	34	22
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\include\cc_fsm.h
+	"	51	0
+
+> C:\Users\Administrator\Desktop\CFB .trc
+	"	4102	27
 	.	1	0
 	+	1	0
+
+> C:\Users\Administrator\Desktop\CFB2 .trc
+	"	12	52
+	.	1	0
 	+	1	0
+
+> D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
+	"	2904	0
+	^	61	0
+	.	61	0
 	+	1	0
+	+	61	0
+
+> C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+	"	3846	0
+	.	1	0
 	+	1	0
 
-> F:\platform\baseband\stack\cc\include\cc_tool.h
-	"	35	0
+> C:\Users\Administrator\Desktop\tmp.trc
+	"	302	0
+	.	1	0
+	+	1	0
 
-> F:\platform\baseband\stack\cc\src\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc.c
+	"	111	29
 
-> F:\platform\__Tagbar__
-	"	37	4
-	.	97	0
-	+	333	0
-	+	333	0
-	+	333	0
-	+	322	0
-	+	322	0
-	+	322	0
-	+	322	0
-	+	227	0
-	+	227	0
-	+	227	0
-	+	193	0
-	+	193	0
-	+	193	0
-	+	193	0
-	+	193	0
-	+	159	0
-	+	159	0
-	+	123	0
-	+	121	0
-	+	120	0
-	+	120	0
-	+	118	0
-	+	118	0
-	+	118	0
-	+	118	0
-	+	116	0
-	+	114	0
-	+	112	0
-	+	110	0
-	+	108	0
-	+	106	0
-	+	104	0
-	+	102	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-
-> f:\platform\baseband\stack\cc\include\cc_dtmf.h
-	"	30	0
-
-> f:\platform\baseband\stack\cc\include\cc_def.h
-	"	86	62
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\__Tagbar__
+	"	16	4
+	.	17	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	17	0
 
 > ~\_vimrc
-	"	272	18
-	^	272	19
-	.	272	18
-	+	312	0
-	+	319	0
-	+	333	0
-	+	312	0
-	+	240	0
-	+	240	0
-	+	240	61
-	+	240	61
-	+	240	61
-	+	240	61
-	+	240	61
-	+	240	61
-	+	240	0
-	+	323	0
-	+	324	0
-	+	324	0
-	+	314	14
-	+	315	5
-	+	316	5
-	+	315	14
-	+	316	14
-	+	314	4
-	+	315	4
-	+	316	4
-	+	169	44
-	+	316	0
-	+	332	0
-	+	89	120
-	+	88	15
-	+	89	120
-	+	89	0
-	+	89	0
-	+	89	0
-	+	89	0
-	+	89	0
-	+	89	0
-	+	89	0
-	+	89	0
-	+	89	0
-	+	89	55
-	+	89	59
-	+	89	44
+	"	300	41
+	^	282	29
+	.	300	41
+	+	90	0
+	+	90	0
+	+	90	0
+	+	90	55
+	+	90	59
+	+	90	44
+	+	122	0
+	+	90	0
+	+	119	42
+	+	122	0
 	+	121	0
-	+	89	0
-	+	118	42
 	+	121	0
-	+	120	0
-	+	120	0
-	+	118	0
-	+	120	0
-	+	118	31
-	+	310	0
+	+	119	0
+	+	121	0
+	+	119	31
+	+	335	0
 	+	169	0
 	+	170	0
 	+	50	8
-	+	335	0
-	+	336	26
-	+	337	0
-	+	335	9
-	+	305	0
+	+	360	0
+	+	361	26
+	+	362	0
+	+	360	9
+	+	330	0
 	+	45	8
-	+	52	8
-	+	75	0
-	+	70	0
+	+	53	8
+	+	76	0
 	+	71	0
-	+	73	0
-	+	73	0
+	+	72	0
 	+	74	0
-	+	73	0
-	+	72	20
-	+	71	0
-	+	72	18
-	+	56	16
+	+	74	0
+	+	75	0
+	+	74	0
+	+	73	20
+	+	72	0
+	+	73	18
+	+	57	16
 	+	28	31
-	+	56	8
+	+	57	8
+	+	57	0
+	+	302	0
+	+	231	38
+	+	231	0
+	+	231	0
+	+	241	0
+	+	231	0
+	+	241	0
+	+	241	0
+	+	301	0
 	+	56	0
-	+	277	0
-	+	230	38
-	+	230	0
-	+	230	0
-	+	240	0
-	+	230	0
-	+	240	0
-	+	240	0
+	+	55	14
+	+	57	0
+	+	241	0
+	+	301	0
+	+	278	0
 	+	276	0
-	+	55	0
-	+	54	14
-	+	56	0
-	+	240	0
-	+	276	0
-	+	275	0
-	+	273	0
-	+	275	0
-	+	273	5
+	+	278	0
+	+	276	5
+	+	277	5
+	+	276	5
 	+	274	5
-	+	273	5
-	+	271	5
-	+	272	5
-	+	271	14
-	+	272	18
+	+	275	5
+	+	274	14
+	+	275	18
+	+	230	37
+	+	65	0
+	+	67	0
+	+	52	18
+	+	297	1
+	+	282	0
+	+	283	0
+	+	284	0
+	+	285	0
+	+	286	0
+	+	287	0
+	+	293	0
+	+	294	0
+	+	295	0
+	+	296	0
+	+	297	0
+	+	281	1
+	+	288	18
+	+	6	0
+	+	271	9
+	+	272	0
+	+	292	0
+	+	290	15
+	+	275	17
+	+	273	0
+	+	168	0
+	+	299	0
+	+	241	0
+	+	168	0
+	+	42	0
+	+	299	10
+	+	55	19
+	+	267	0
+	+	300	0
+	+	299	0
+	+	300	41
+
+> C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+	"	217	9
+	.	1	0
+	+	728	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\__Tag_List__
+	"	1099	4
+	.	1364	0
+	+	7253	0
+	+	7008	0
+	+	7007	0
+	+	6044	0
+	+	5289	0
+	+	5291	0
+	+	4537	0
+	+	4537	0
+	+	4536	0
+	+	4091	0
+	+	4091	0
+	+	4091	0
+	+	3224	0
+	+	4091	0
+	+	4091	0
+	+	3663	0
+	+	4090	0
+	+	2727	0
+	+	1365	0
+	+	1364	0
+
+> C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
+	"	1265	56
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\CFU_Calling mobile subscriber side.trc
+	"	723	0
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\CFU.trc
+	"	583	12
+	.	1	0
+	+	1	0
+	s	12	15
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\Source_Explorer
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+	"	119	29
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_evt.c
+	"	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\include\cc_ctxt.h
+	"	230	21
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
+	"	177	32
+	^	184	22
+	.	184	26
+	+	184	26
+
+> C:\Users\Administrator\Desktop\temp.txt
+	"	1	17
+	^	1	1
+	.	1	0
+	+	48	0
+	+	48	0
+	+	209	0
+	+	208	0
+	+	48	0
+	+	48	7
+	+	48	7
+	+	48	1
+	+	48	6
+	+	48	1
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	5
+	+	48	4
+	+	48	7
+	+	48	0
+	+	48	8
+	+	48	31
+	+	48	14
+	+	48	10
+	+	48	7
+	+	48	7
+	+	48	21
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	97
+	+	48	145
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	3
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	17
+	+	48	0
+	+	48	0
+	+	48	0
+	+	2	0
+	+	30	0
+	+	29	0
+	+	29	0
+	+	29	57
+	+	30	0
+	+	22	8
+	+	24	0
+	+	28	11
+	+	25	12
+	+	21	0
+	+	21	0
+	+	22	0
+	+	42	6
+	+	43	6
+	+	44	5
+	+	45	7
+	+	46	6
+	+	47	5
+	+	48	5
+	+	49	8
+	+	2	0
+	+	2	3
+	+	2	7
+	+	2	23
+	+	2	28
+	+	2	35
+	+	2	24
+	+	2	7
+	+	2	10
+	+	2	13
+	+	2	16
+	+	2	19
+	+	2	22
+	+	2	24
+	+	2	28
+	+	2	31
+	+	2	0
+	+	2	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\__Tagbar__
+	"	1	0
+
+> D:\MySoftWare\gVimPortable\[Vundle] Installer
+	"	30	0
+	.	1	0
+	+	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\work\mine\121206_2.5G_CRSS\CW_MT.trc
+	"	2	0
+
+> D:\work\mine\121206_2.5G_CRSS\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\crss.txt
+	"	28	65
+	^	36	1
+	.	36	0
+	+	36	0
+	+	44	8
+	+	45	10
+	+	46	5
+	+	47	5
+	+	50	0
+	+	44	18
+	+	45	13
+	+	46	13
+	+	44	15
+	+	47	9
+	+	45	8
+	+	44	7
+	+	49	13
+	+	50	9
+	+	51	16
+	+	53	4
+	+	59	0
+	+	54	0
+	+	53	0
+	+	58	12
+	+	57	21
+	+	58	19
+	+	44	14
+	+	46	15
+	+	51	14
+	+	57	30
+	+	58	30
+	+	20	5
+	+	21	0
+	+	15	0
+	+	36	0
+
+> D:\work\mine\121206_2.5G_CRSS\CW_MO.trc
+	"	563	17
+
+> C:\Users\Administrator\Desktop\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_crss.c
+	"	2	0
 
 > ~\-TabBar-
 	"	1	0
@@ -676,1095 +1002,192 @@ $
 	+	2	0
 	+	2	0
 	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> ~\.vim\bundle\TabBar\plugin\__Tagbar__
-	"	63	4
-	.	98	0
-	+	98	0
-	+	98	0
-	+	98	0
-	+	98	0
-	+	98	0
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\include\itf_api.h
+	"	1237	1
 
-> ~\vimfiles\plugin\tabaltswitch.vim
-	"	26	21
-
-> F:\platform\project_session.vim
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\Source_Explorer
 	"	1	0
+	.	2	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> F:\platform\baseband\stack\cc\include\NERD_tree_2
-	"	4	0
-	.	1	0
-	+	1	0
-
-> ~\_viminfo
-	"	4	0
-
-> ~\__Tagbar__
-	"	6	8
-	.	9	0
-	+	9	0
-	+	9	0
-
-> ~\NERD_tree_1
-	"	4	0
+> C:\Users\Administrator\Desktop\24388\醉枕江山.txt
+	"	1	0
 	.	1	0
 	+	1	0
 
 > ~\[Vundle] Installer
-	"	31	0
-	.	1	0
-	+	382	0
-	+	358	0
-	+	333	0
-	+	307	0
-	+	281	0
-	+	255	0
-	+	229	0
-	+	202	0
-	+	174	0
-	+	146	0
-	+	118	0
-	+	89	0
-	+	60	0
-	+	31	0
-	+	1	0
-
-> ~\-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> F:\platform\-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> f:\platform\[Lookup File]
-	"	2	0
-	^	2	43
-	.	1	0
-	+	37	0
-	+	47	1
-	+	36	0
-	+	39	27
-	+	38	0
-	+	41	32
-	+	40	0
-	+	43	32
-	+	42	0
-	+	45	32
-	+	44	0
-	+	33	46
-	+	32	0
-	+	35	32
-	+	34	0
-	+	31	42
-	+	30	42
-	+	29	26
-	+	28	31
-	+	26	46
-	+	20	0
-	+	27	3
-	+	20	7
-	+	23	7
-	+	24	7
-	+	25	7
-	+	20	35
-	+	22	31
-	+	21	0
-	+	19	31
-	+	16	31
-	+	15	0
-	+	18	40
-	+	17	0
-	+	15	46
-	+	14	31
-	+	13	31
-	+	8	2
-	+	10	41
-	+	9	0
-	+	12	56
-	+	11	0
-	+	7	37
-	+	6	37
-	+	5	43
-	+	4	36
-	+	3	42
-	+	2	42
-	+	1	0
-
-> f:\platform\baseband\stack\cc\src\-MiniBufExplorer-
-	"	1	15
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> F:\platform\tags
-	"	1	0
-	^	1	0
-
-> C:\Users\Administrator\Desktop\temp.txt
-	"	1	0
-	^	25	0
-	.	25	0
-	+	40	0
-	+	40	0
-	+	200	0
-	+	199	0
-	+	40	0
-	+	40	7
-	+	40	7
-	+	40	1
-	+	40	6
-	+	40	1
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	5
-	+	40	4
-	+	40	7
-	+	40	0
-	+	40	8
-	+	40	31
-	+	40	14
-	+	40	10
-	+	40	7
-	+	40	7
-	+	40	21
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	97
-	+	40	145
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	3
-	+	40	0
-	+	40	0
-	+	40	0
-	+	40	17
-	+	40	0
-	+	40	0
-	+	40	0
-	+	1	0
-	+	25	0
-
-> D:\software\mupdf-0.9-windows\docs\mupdf.txt
-	"	72	46
-
-> ~\.vim\bundle\minibufexplorerpp\plugin\minibufexplpp.vim
-	"	1595	49
-	^	1220	19
-	.	1597	42
-	+	477	0
-	+	469	0
-	+	523	0
-	+	848	0
-	+	1607	33
-	+	1234	45
-	+	1234	6
-	+	1234	39
-	+	1234	45
-	+	1236	6
-	+	1236	34
-	+	1237	0
-	+	1599	118
-	+	1599	8
-	+	1600	0
-	+	1595	0
-	+	1595	8
-	+	1599	1
-	+	1595	0
-	+	1599	99
-	+	1599	109
-	+	1599	0
-	+	1595	0
-	+	1596	12
-	+	1597	14
-	+	1596	49
-	+	1596	44
-	+	1597	39
-	+	1598	37
-	+	1596	17
-	+	1597	17
-	+	1598	17
-	+	1595	0
-	+	1593	0
-	+	1594	0
-	+	1593	0
-	+	1593	31
-	+	1594	31
-	+	1593	83
-	+	1596	19
-	+	1597	19
-	+	1598	19
-	+	1593	44
-	+	1594	43
-	+	1593	43
-	+	1594	43
-	+	1607	0
-	+	1593	73
-	+	1594	61
-	+	1607	73
-	+	1607	61
-	+	1593	21
-	+	1594	21
-	+	1607	21
-	+	1607	21
-	+	1594	75
-	+	1593	75
-	+	1594	79
-	+	1594	63
-	+	1607	0
-	+	1607	0
-	+	1607	21
-	+	1607	21
-	+	1607	0
-	+	1594	0
-	+	1220	19
-	+	1597	42
-
-> ~\.vim\bundle\minibufexplorerpp\plugin\__Tagbar__
-	"	8	4
-	.	38	0
-	+	597	0
-	+	597	0
-	+	597	0
-	+	597	0
-	+	597	0
-	+	530	0
-	+	530	0
-	+	499	0
-	+	499	0
-	+	499	0
-	+	499	0
-	+	444	0
-	+	444	0
-	+	408	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	387	0
-	+	386	0
-	+	386	0
-	+	386	0
-	+	386	0
-	+	386	0
-	+	386	0
-	+	382	0
-	+	382	0
-	+	382	0
-	+	382	0
-	+	325	0
-	+	325	0
-	+	292	0
-	+	292	0
-	+	292	0
-	+	292	0
-	+	259	0
-	+	259	0
-	+	259	0
-	+	225	0
-	+	225	0
-	+	225	0
-	+	191	0
-	+	191	0
-	+	191	0
-	+	156	0
-	+	156	0
-	+	125	0
-	+	125	0
-	+	125	0
-	+	125	0
-	+	125	0
-	+	38	0
-	+	38	0
-
-> F:\platform\MiniBufExplorer.DBG
-	"	161	0
-	.	161	0
-	+	62	0
-	+	63	0
-	+	64	0
-	+	65	0
-	+	66	0
-	+	67	0
-	+	68	0
-	+	69	0
-	+	70	0
-	+	71	0
-	+	72	0
-	+	73	0
-	+	74	0
-	+	75	0
-	+	76	0
-	+	77	0
-	+	78	0
-	+	79	0
-	+	80	0
-	+	81	0
-	+	82	0
-	+	83	0
-	+	84	0
-	+	85	0
-	+	86	0
-	+	87	0
-	+	88	0
-	+	89	0
-	+	90	0
-	+	91	0
-	+	92	0
-	+	93	0
-	+	94	0
-	+	95	0
-	+	96	0
-	+	97	0
-	+	98	0
-	+	99	0
-	+	100	0
-	+	101	0
-	+	102	0
-	+	103	0
-	+	104	0
-	+	105	0
-	+	106	0
-	+	107	0
-	+	108	0
-	+	109	0
-	+	110	0
-	+	111	0
-	+	112	0
-	+	113	0
-	+	114	0
-	+	115	0
-	+	116	0
-	+	117	0
-	+	118	0
-	+	119	0
-	+	120	0
-	+	121	0
-	+	122	0
-	+	123	0
-	+	124	0
-	+	125	0
-	+	126	0
-	+	127	0
-	+	128	0
-	+	129	0
-	+	130	0
-	+	131	0
-	+	132	0
-	+	133	0
-	+	134	0
-	+	135	0
-	+	136	0
-	+	137	0
-	+	138	0
-	+	139	0
-	+	140	0
-	+	141	0
-	+	142	0
-	+	143	0
-	+	144	0
-	+	145	0
-	+	146	0
-	+	147	0
-	+	148	0
-	+	149	0
-	+	150	0
-	+	151	0
-	+	152	0
-	+	153	0
-	+	154	0
-	+	155	0
-	+	156	0
-	+	157	0
-	+	158	0
-	+	159	0
-	+	160	0
-	+	161	0
-
-> ~\.vim\bundle\minibufexplorerpp\plugin\MiniBufExplorer.DBG
-	"	146	0
-	.	146	0
-	+	47	0
-	+	48	0
-	+	49	0
-	+	50	0
-	+	51	0
-	+	52	0
-	+	53	0
-	+	54	0
-	+	55	0
-	+	56	0
-	+	57	0
-	+	58	0
-	+	59	0
-	+	60	0
-	+	61	0
-	+	62	0
-	+	63	0
-	+	64	0
-	+	65	0
-	+	66	0
-	+	67	0
-	+	68	0
-	+	69	0
-	+	70	0
-	+	71	0
-	+	72	0
-	+	73	0
-	+	74	0
-	+	75	0
-	+	76	0
-	+	77	0
-	+	78	0
-	+	79	0
-	+	80	0
-	+	81	0
-	+	82	0
-	+	83	0
-	+	84	0
-	+	85	0
-	+	86	0
-	+	87	0
-	+	88	0
-	+	89	0
-	+	90	0
-	+	91	0
-	+	92	0
-	+	93	0
-	+	94	0
-	+	95	0
-	+	96	0
-	+	97	0
-	+	98	0
-	+	99	0
-	+	100	0
-	+	101	0
-	+	102	0
-	+	103	0
-	+	104	0
-	+	105	0
-	+	106	0
-	+	107	0
-	+	108	0
-	+	109	0
-	+	110	0
-	+	111	0
-	+	112	0
-	+	113	0
-	+	114	0
-	+	115	0
-	+	116	0
-	+	117	0
-	+	118	0
-	+	119	0
-	+	120	0
-	+	121	0
-	+	122	0
-	+	123	0
-	+	124	0
-	+	125	0
-	+	126	0
-	+	127	0
-	+	128	0
-	+	129	0
-	+	130	0
-	+	131	0
-	+	132	0
-	+	133	0
-	+	134	0
-	+	135	0
-	+	136	0
-	+	137	0
-	+	138	0
-	+	139	0
-	+	140	0
-	+	141	0
-	+	142	0
-	+	143	0
-	+	144	0
-	+	145	0
-	+	146	0
-
-> ~\.vim\bundle\minibufexplorerpp\plugin\-MiniBufExplorer-
-	"	1	49
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~\MiniBufExplorer.DBG
-	"	17	0
-	.	17	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	18	0
-	+	19	0
-	+	20	0
-	+	21	0
-	+	22	0
-	+	23	0
-	+	24	0
-	+	25	0
-	+	48	0
-	+	49	0
-	+	50	0
-	+	51	0
-	+	52	0
-	+	53	0
-	+	54	0
-	+	55	0
-	+	56	0
-	+	57	0
-	+	58	0
-	+	59	0
-	+	60	0
-	+	61	0
-	+	62	0
-	+	63	0
-	+	64	0
-	+	65	0
-	+	66	0
-	+	67	0
-	+	68	0
-	+	69	0
-	+	70	0
-	+	71	0
-	+	72	0
-	+	73	0
-	+	74	0
-	+	75	0
-	+	76	0
-	+	77	0
-	+	78	0
-	+	79	0
-	+	80	0
-	+	81	0
-	+	82	0
-	+	83	0
-	+	84	0
-	+	85	0
-	+	2	0
-	+	3	0
-	+	4	0
-	+	5	0
-	+	6	0
-	+	7	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	17	0
-
-> F:\platform\cscope.files
-	"	1	0
-
-> d:\MySoftWare\gVimPortable\App\vim\vim73\doc\eval.txt
-	"	2155	24
-
-> D:\MySoftWare\gVimPortable\App\vim\vim73\doc\-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> ~\[Vundle] clean
-	"	3	0
-	.	1	0
-	+	8	0
-	+	7	0
-	+	5	0
-	+	4	0
-	+	3	0
-	+	1	0
-
-> ~\.vim\bundle\minibufexpl.vim\plugin\minibufexpl.vim
-	"	1	0
-	^	1327	1
-	.	277	0
-	+	1327	0
-	+	277	0
-
-> ~\.vim\bundle\minibufexpl.vim\plugin\__Tagbar__
-	"	3	0
-	.	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-
-> F:\platform\cscope.out
-	"	1	0
-
-> d:\MySoftWare\gVimPortable\App\vim\vim73\doc\repeat.txt
-	"	193	30
-
-> ~\.vim\bundle\minibufexplorerpp\plugin\[Lookup File]
-	"	1	2
-	^	1	3
-	.	1	2
-	+	1	2
-
-> F:\platform\baseband\mdrv\mm\src\mm.c
-	"	4543	13
-
-> F:\platform\baseband\mdrv\mm\src\-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> F:\platform\baseband\mdrv\mm\src\__Tagbar__
-	"	1	0
-	.	16	0
-	+	16	0
-
-> F:\platform\baseband\mdrv\mm\src\__Tag_List__
-	"	17	0
-	.	29	0
-	+	29	0
-
-> F:\platform\baseband\stack\api\src\api_evt.c
-	"	1	0
-
-> F:\platform\baseband\stack\api\src\-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> F:\platform\baseband\stack\api\src\__Tagbar__
-	"	1	0
-	.	312	0
-	+	312	0
-
-> D:\work\code\minibufexplorerpp\plugin\minibufexplpp.vim
-	"	1389	4
-	^	1389	1
-	.	1389	0
-	+	1388	4
-	+	1388	8
-	+	1388	76
-	+	1388	8
-	+	1388	8
-	+	1388	8
-	+	1388	8
-	+	1388	8
-	+	1388	8
-	+	1338	0
-	+	1346	22
-	+	1348	46
-	+	1348	0
-	+	1388	4
-	+	1389	0
-
-> F:\platform\__Tag_List__
-	"	56	18
-	.	76	0
-	+	76	0
-
-> F:\platform\baseband\stack\cc\src\cc.c
-	"	1	0
-
-> F:\platform\[Vundle] Installer
 	"	30	0
 	.	1	0
+	+	470	0
+	+	446	0
+	+	421	0
+	+	395	0
+	+	369	0
+	+	343	0
+	+	317	0
+	+	290	0
+	+	262	0
+	+	234	0
+	+	206	0
+	+	177	0
+	+	148	0
+	+	119	0
+	+	89	0
+	+	59	0
 	+	30	0
 	+	1	0
 
-> D:\MySoftWare\gVimPortable\soft\create_tags.bat
-	"	3	0
-	^	14	5
-	.	14	4
-	+	12	0
-	+	8	3
-	+	11	0
-	+	14	4
-
-> D:\MySoftWare\gVimPortable\soft\-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> d:\MySoftWare\gVimPortable\Data\Temp\VIABF57.tmp
-	"	76	39
-
-> ~\.vim\bundle\Tagbar\autoload\tagbar.vim
-	"	1	0
-
-> D:\work\code\minibufexplorerpp\README
-	"	30	0
-
-> C:\Users\Administrator\Desktop\22.c
-	"	2	1
-	^	2	1
-	.	2	0
-	+	2	0
-
-> C:\Users\Administrator\Desktop\11.c
-	"	2	1
-	^	2	1
-	.	2	0
-	+	2	0
-
-> d:\MySoftWare\gVimPortable\App\vim\vim73\doc\help.txt
-	"	1	0
-
-> F:\platform\baseband\stack\cc\src\cc_fsm.c
-	"	122	21
-
-> F:\platform\test\stack\micro_mmi\proto\include\mmi_call.h
-	"	1	0
-	^	20	31
-	.	1	0
-	+	1	0
-
-> f:\platform\baseband\stack\cc\src\cc_tool.c
-	"	540	0
-
-> ~\[Lookup File]
-	"	1	2
-	.	1	1
-	+	1	1
-
-> F:\gVimPortable - 副本\Data\settings\_vimrc
-	"	111	0
-
-> F:\platform\baseband\stack\cc\src\__Tag_List__
-	"	17	0
-	.	33	0
-	+	33	0
-
-> f:\platform\baseband\stack\cc\include\cc_fsm.h
-	"	160	0
-
-> f:\platform\baseband\stack\cc\src\cc_reest.c
-	"	42	1
-
-> f:\platform\baseband\stack\cc\include\cc_out.h
-	"	24	0
-
-> F:\platform\NERD_tree_1
+> ~\[Vundle] clean
 	"	4	0
 	.	1	0
 	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 
-> f:\platform\test\stack\micro_mmi\proto\include\-MiniBufExplorer-
+> D:\work\mine\121206_2.5G_CRSS\__Tagbar__
+	"	1	0
+
+> D:\work\mine\121206_2.5G_CRSS\asn1\ASN1编码查看工具\a.txt
+	"	1	10
+	^	1	11
+	.	1	10
+	+	1	10
+
+> D:\work\mine\121206_2.5G_CRSS\asn1\ASN1编码查看工具\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\asn1\temp.dat
+	"	6	0
+	^	5	7
+	.	4	23
+	+	1	3
+	+	2	8
+	+	3	8
+	+	4	15
+	+	6	8
+	+	7	8
+	+	1	12
+	+	2	16
+	+	3	9
+	+	4	9
+	+	4	10
+	+	5	0
+	+	4	23
+
+> C:\Users\Administrator\Desktop\asn1\temp.txt
+	"	1	63
+	^	1	57
+	.	2	0
+	+	1	5
+	+	1	8
+	+	1	14
+	+	1	17
+	+	1	20
+	+	1	29
+	+	1	35
+	+	1	44
+	+	1	47
+	+	1	51
+	+	1	59
+	+	1	62
+	+	1	68
+	+	1	50
+	+	1	9
+	+	1	12
+	+	1	15
+	+	1	18
+	+	1	21
+	+	1	27
+	+	1	30
+	+	1	33
+	+	1	36
+	+	1	42
+	+	1	45
+	+	1	48
+	+	1	51
+	+	1	57
+	+	1	60
+	+	1	63
+	+	2	0
+
+> C:\Users\Administrator\Desktop\asn1\test.dat
+	"	1	0
+
+> C:\Users\Administrator\Desktop\asn1\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+
+> C:\Program Files\asn1c\main.c
+	"	38	0
+	^	38	29
+	.	42	21
+	+	1	0
+	+	6	0
+	+	4	0
+	+	3	10
+	+	7	20
+	+	34	13
+	+	42	40
+	+	14	0
+	+	33	23
+	+	42	21
+
+> C:\Program Files\asn1c\NotifySS.h
+	"	190	0
+
+> C:\Program Files\asn1c\-TabBar-
 	"	1	0
 	.	2	0
 	+	2	0
@@ -1773,283 +1196,553 @@ $
 	+	2	0
 	+	2	0
 	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> F:\platform\baseband\stack\cc\src\test\stack\micro_mmi\proto\src\mmi_ss.c
+> C:\Users\Administrator\Desktop\test.asn1
+	"	4	15
+	^	1	1
+	.	4	0
+	+	354	0
+	+	1	0
+	+	1	0
+	+	4	0
+
+> C:\Users\Administrator\Desktop\notify.ans1
+	"	31	20
+	^	1	1
+	.	1	0
+	+	1	0
+
+> C:\Program Files\asn1c\test.asn1
+	"	1	13
+	^	1	14
+	.	1	13
+	+	4	14
+	+	1	20
+	+	1	0
+	+	1	0
+	+	1	0
+	+	61	0
+	+	4	18
+	+	60	2
+	+	4	6
+	+	1	13
+
+> F:\ss_asn1\project.vim
+	"	5	28
+
+> F:\ss_asn1\module.asn1-1\Makefile
+	"	1	0
+	^	50	2
+	.	50	1
+	+	50	1
+
+> F:\ss_asn1\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> F:\ss_asn1\[Lookup File]
+	"	2	0
+	^	2	43
+	.	1	0
+	+	1	0
+
+> F:\ss_asn1\module.asn1-1\converter-sample.c
+	"	695	4
+	^	27	15
+	.	18	0
+	+	24	0
+	+	24	23
+	+	30	0
+	+	26	0
+	+	30	0
+	+	29	0
+	+	28	0
+	+	26	17
+	+	28	0
+	+	25	0
+	+	28	0
+	+	25	16
+	+	26	16
+	+	27	0
+	+	25	8
+	+	26	8
+	+	26	8
+	+	27	8
+	+	26	0
+	+	25	15
+	+	27	14
+	+	18	0
+
+> F:\ss_asn1\Source_Explorer
+	"	1	19
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> F:\ss_asn1\module.asn1-1\__Tagbar__
+	"	6	4
+	.	8	0
+	+	8	0
+	+	8	0
+
+> F:\ss_asn1\module.asn1-1\NERD_tree_1
+	"	13	13
+	.	1	0
+	+	1	0
+
+> F:\ss_asn1\module.asn1-1\ber_decoder.c
+	"	247	22
+
+> F:\ss_asn1\module.asn1-1\OCTET_STRING.c
+	"	127	0
+
+> F:\ss_asn1\module.asn1-1\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> F:\ss_asn1\module.asn1-1\module.asn1
+	"	25	11
+
+> C:\Users\Administrator\Desktop\ss_asn1\project.vim
+	"	9	24
+	^	2	19
+	.	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\ss_asn1\NERD_tree_1
+	"	25	10
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\ss_asn1\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\ss_asn1\module.asn1-1\Makefile.am.sample
+	"	72	0
+
+> C:\Users\Administrator\Desktop\ss_asn1\module.asn1-1\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\ss_asn1\module.asn1-1\converter-sample.c
+	"	196	0
+
+> E:\TDDOWNLOAD\29002 7f0 ASN1\MAP-CallHandlingOperations.EXP
+	"	5	158
+
+> E:\TDDOWNLOAD\29002 7f0 ASN1\MAP-SupplementaryServiceOperations.EXP
+	"	595	0
+
+> E:\TDDOWNLOAD\29002 7f0 ASN1\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\1.trc
+	"	2571	20
+	^	911	1
+	.	1	0
+	+	1	0
+	a	287	0
+	b	289	22
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\tags
 	"	1	0
 
-> F:\platform\baseband\stack\cc\include\cc_evt.h
-	"	56	0
+> ~\.vim\bundle\TabBar\plugin\tabbar.vim
+	"	1593	37
+	^	1593	37
+	.	6	0
+	+	6	0
 
-> F:\platform\baseband\stack\cc\src\cc_evt.c
-	"	264	2
+> ~\.vim\bundle\TabBar\plugin\__Tagbar__
+	"	16	4
+	.	41	0
+	+	316	0
+	+	316	0
+	+	316	0
+	+	316	0
+	+	316	0
+	+	222	0
+	+	222	0
+	+	102	0
+	+	102	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	41	0
+
+> ~\.vim\bundle\TabBar\plugin\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\mmi.c
+	"	58	0
+	^	99	5
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\__Tagbar__
+	"	3	0
+	.	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	4	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\Source_Explorer
+	"	1	0
+	.	2	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	4	0
+	+	4	0
+	+	4	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\mmi_call.c
+	"	605	0
+	^	623	5
+	.	624	45
+	+	613	49
+	+	624	0
+	+	624	0
+	+	622	0
+	+	621	22
+	+	624	0
+	+	622	0
+	+	623	4
+	+	622	0
+	+	623	0
+	+	624	45
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\mmi_plmn.c
+	"	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\include\mmi_data.h
+	"	43	0
 
 > ~\.vim\bundle\myproject\plugin\myproject.vim
-	"	304	31
-	^	137	16
-	.	137	5
-	+	1	0
-	+	155	0
-	+	141	20
-	+	144	0
-	+	140	0
-	+	144	16
-	+	141	0
-	+	15	0
-	+	125	0
-	+	127	0
-	+	15	0
-	+	144	0
-	+	155	4
-	+	154	0
-	+	155	0
-	+	154	13
-	+	132	7
-	+	138	6
-	+	152	49
-	+	152	0
-	+	152	0
-	+	152	18
-	+	170	5
-	+	151	17
-	+	170	0
-	+	137	5
-
-> ~\.vim\bundle\myproject\plugin\-MiniBufExplorer-
-	"	1	27
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
+	"	51	14
 
 > ~\.vim\bundle\myproject\plugin\__Tagbar__
-	"	3	10
-	.	4	0
-	+	209	0
-	+	209	0
-	+	188	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	136	0
-	+	98	0
-	+	98	0
-	+	98	0
-	+	98	0
-	+	98	0
-	+	98	0
-	+	98	0
-	+	58	0
-	+	58	0
-	+	58	0
-	+	58	0
-	+	42	0
-	+	42	0
-	+	42	0
-	+	42	0
-	+	42	0
-	+	24	0
-	+	24	0
-	+	24	0
-	+	4	0
-	+	4	0
-	+	4	0
+	"	3	0
+	.	23	0
+	+	23	0
+	+	23	0
+	+	23	0
+	+	23	0
 
-> F:\platform\create_tags.bat
+> ~\.vim\bundle\myproject\plugin\NERD_tree_1
+	"	5	14
+	.	1	0
+	+	1	0
+
+> ~\.vim\bundle\myproject\plugin\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+
+> ~\.vim\bundle\myproject\plugin\Source_Explorer
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\NERD_tree_1
 	"	6	0
-	^	3	25
-	.	3	24
-	+	1	0
-	+	4	0
-	+	3	24
-
-> ~\.vim\bundle\lookupfile\plugin\lookupfile.vim
-	"	19	9
-
-> ~\.vim\bundle\The-NERD-tree\plugin\NERD_tree.vim
-	"	21	4
-
-> ~\.vim\bundle\lookupfile\plugin\-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> ~\.vim\bundle\The-NERD-tree\plugin\-MiniBufExplorer-
-	"	1	18
-	.	2	0
-	+	2	0
-
-> ~\.vim\bundle\cscope.vim\plugin\cscope.vim
-	"	61	0
-	^	77	0
-
-> ~\.vim\bundle\cscope.vim\plugin\-MiniBufExplorer-
-	"	1	33
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> d:\MySoftWare\gVimPortable\App\vim\vim73\doc\if_pyth.txt
-	"	1	0
-
-> ~\.vim\bundle\The-NERD-Commenter\plugin\NERD_commenter.vim
-	"	1392	20
-
-> ~\.vim\bundle\Conque-Shell\plugin\conque_term.vim
-	"	203	75
-
-> ~\.vim\bundle\EasyMotion\plugin\EasyMotion.vim
-	"	55	38
-
-> ~\.vim\bundle\The-NERD-tree\nerdtree_plugin\fs_menu.vim
-	"	86	0
-
-> ~\.vim\bundle\The-NERD-Commenter\plugin\-MiniBufExplorer-
-	"	1	79
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~\.vim\bundle\indentLine\indentLine.vim
-	"	8	50
-
-> ~\.vim\bundle\cscope.vim\plugin\__Tagbar__
-	"	19	4
-	.	29	0
-	+	29	0
-
-> F:\platform\NERD_tree_2
-	"	13	0
 	.	1	0
 	+	1	0
-
-> D:\MySoftWare\gVimPortable\soft\right_click.reg
-	"	1	0
-
-> ~\.vim\bundle\myproject\plugin\[Lookup File]
-	"	1	0
-	^	1	0
-	.	1	0
-	+	2	56
 	+	1	0
 
-> D:\MySoftWare\gVimPortable\soft\right_click_tab.reg
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\ros\io\src\sxs_io.c
+	"	169	5
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\ros\sbx\src\sxr_sbx.c
 	"	1	0
-	^	12	37
-	.	12	36
-	+	14	0
-	+	8	0
-	+	10	23
-	+	13	61
-	+	3	31
-	+	6	33
-	+	9	36
-	+	12	36
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\include\itf_msg.h
+	"	40	1
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\__Tagbar__
+	"	1	0
+	.	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+	+	1827	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\include\mmi_call.h
+	"	25	0
+
+> ~\.vim\bundle\Marks-Browser\plugin\marksbrowser.vim
+	"	102	0
+
+> ~\.vim\bundle\Marks-Browser\plugin\__Tagbar__
+	"	7	4
+	.	19	0
+	+	19	0
+	+	19	0
+
+> ~\.vim\bundle\Marks-Browser\plugin\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
