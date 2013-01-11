@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/cc_ 
+~MSle0~/et
 
 # Last Substitute Search Pattern:
 ~MSle0&\r
@@ -17,63 +17,64 @@
 $
 
 # Command Line History (newest to oldest):
-:w
-:.ll
-:MPLoad project.vim
-:q!
-:q
-:s:SrcExpl_isDebug = 1
-:BundleInstall
-:BundleInstall!
 :BundleClean
+:w
+:BundleInstall
+:MPLoad project.vim
+:BundleInstall!
 :x
-:%s/0x//g
-:%s/ / 0x/g
-:%s/”/"/g
-:%s/
-:$
-:%s/“/"/g
-:%
+:MPLoadSession
+:MPSaveSession
 :MPNERDTREE
+:TbStop
+:MPLoad lookupfiletags
+:MPLoad 
+:Bundle
+:Tbbd
+:Tb
+:tabnew
+:q
+:TagbarToggle
+:TagbarOpen
 :MPBuildTags
-:Tbbp
 
 # Search String History (newest to oldest):
-?/cc_ 
+? \Vfor\%#
+?/et
+? \Vmain\%#
+?/AT_CommandLineProcess
+? \<Tb_Stop\>
+?/tabb
+?/tabbar
+?/tagb
+?/tagbar
+? \<SrcExpl_AdaptPlugins\>
+?/taglist
+?/setup
+?/disc
 ? \r
+?/cc_ 
 ?/cc
 ?/facility
 ?/4337
 ?/DISCONNECT_MO
-?/setup
 ?/rrd_f
-?/rrd
-?/rri_f
-?/136
-?/13
-? SrcExpl_isDebug = 1
-? 0x
-?/hold
-? ^\CDefExtern cc_Data_t\* gp_ccCurData;$
-? ^\Cu8 cc_apiCallHoldReq_U10(void)$
-? ^\CInEvtDsc_t cc_HoldAck        = IEVT_DESCR(CC_HOLD_ACK, 0, 0);$
-? ^\Cu8 cc_HoldAck_U10(void)$
-?/held
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')  
 
 # Input Line History (newest to oldest):
+@Y
+@D:\work\code\l4
+@cc_ 
 @CC_
 @u8
-@cc_ 
 @CC_ 
 @rri_C
 @rrd_FSM
 @TSP<F5>
 @D:\Projects\modem2.5g\branches\protocol\integration\navi
-@Y
 @\<asn_DEF_Rectangle\>
 @\<rectangle\>
 @F:\ss_asn1\
@@ -84,532 +85,276 @@ $
 @\<winbufnr\>
 @\<CycleBuffer\>
 @\<split\>
-@\<MBESelectBuffer\>
 
 # Input Line History (newest to oldest):
 
 # Registers:
 "0	LINE	0
-	:nmap <F4> :exec 'lvimgrep /' . input('/', expand('<cword>')) . '/j % <bar> lopen'<CR>
-"1	LINE	0
-	
+	Bundle 'molokai'
+""1	LINE	0
+	let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+"2	LINE	0
+	Bundle 'honza/snipmate-snippets'
 "3	LINE	0
-	TSP 00 : Fn 682552 T1 514 T2 0 T3 19
+	for (<{1:sdf}> = 0; <|1|> < <`2`>; <|1|>++) {
+		<`0:TARGET`>
+	}
+	for (<{1:hello}> = 0; <|1|> < <`2`>; <|1|>++) {
+		<`0:TARGET`>
+	}
+	while (a<b) {
+		
+	}
 "4	LINE	0
-	30 05 81 01 41 8E 00 1E 02 E0 88 
-"5	CHAR	0
-	 
-	说到这里，刘管事轻轻叹了口气，有些酸楚地道：“以后，怕是阿郎也不会管得这么严了。”
-	
-	他意兴索然地挥挥手道：“你去吧，好生在侧院儿里待着，不要胡乱走动。”
-	
-	“是，那刘管事忙着，小的回去了。”
-	
-	杨帆很尊敬地笑笑，转身行去。
-	
-	“周兴？”
-	
-	杨帆一路走，一路想着这个人，略作一番分析，他就摇了摇头，否定了周兴可能与己有关的可能。
-	
-	永淳二年，韶州血案的时候，周兴还只是北方地区的一个县令，直到近几年，武后权柄越来越重，有望革李唐之命，改天换日之后，才开始重用酷吏，替她剪除夺权的障碍，周兴因为酷厉狠绝的办案作风，得到武后青睐，这才青云直上，成为刑部大员。
-	
-	当年发生的那件事情，不可能与周兴有所牵连，周兴现在是刑部侍郎，事实上的一把手，不管是从关心下属的角度，还是从神都出现这样一桩重大案件的角度，他亲自过问一下下属的事情也正常。(医道教父最新章节)
-	
-		他已经打听到，今日之蔡东成虽是左奉宸卫中郎将，赫赫将领，手握大权，但他当年是龙武卫的一个旅帅，此人十有**就是韶州血案的具体实施者。伤了一个杨明笙，引出一个蔡东成，但蔡东成也是一个马前卒。(巨星人生全文阅读)幕后元凶，依然不曾现身。
-	
-		看来，想要他现身，就得先吃掉蔡东成和他手下的四大金刚，才能迫使幕后首脑现身了！
-	
-		杨帆一路思索着，回到了侧院。
-	
-		那天，杨明笙脱口说出了一个名字：贺兰敏之。
-	
-		杨帆业已打听过了，这个贺兰敏之是武则天的外甥，他的母亲是武则天的姐姐，也曾经受到过高宗李治的宠幸，受封为韩国夫人，他的姐姐贺兰氏也曾受到过李治的宠幸，受封魏国夫人。
-	
-		而贺兰敏之本人，则在武则天将两个兄长流放之后，改其姓为武，入继为武则天的父亲武士彟的后嗣，受封周国公，可谓富贵已极。
-	
-		然而后来武则天却以贺兰敏与外祖母杨氏媾和、贪墨公款中饱私囊、**太子李贤已选聘的太子妃杨氏等诸多罪名，令其改回原姓，发配岭南，途中贺兰敏之以马缰自缢而死。这就是贺兰敏之传奇的一生。
-	
-		杨帆想不出这个贺兰敏之与韶州小村有何关联。
-	
-		贺兰敏之此人据说放荡不羁，风流好色，然而此人俊俏英朗，一表人才，而且博学多才，再加上他显赫的家世和身份，所以在朝野中他都有许多朋友，这些人后来都受了他的牵连，纷纷被贬官发配。
-	
-		杨帆怀疑，突兀建起的桃源村，很可能就是用来安置那些受贺兰敏之牵连而被贬谪的官员的所在，而村中十一姓家族，就是当年那些受牵累的官员。
-	
-		然则小村建于贺兰敏之自尽之后一年，而屠村血案却发生在十一年后，这就有些古怪了。
-	
-		如果这个突然冒出来的小山村的村民就是当初受贺兰敏之牵连的那些官员及其家眷，如果朝廷有意把这些人铲除，根本无需等待这么多年，更不需要用瘟疫这样的借口来掩饰。
-	
-	更何况，韶州血案时，贺兰敏之早就变成了一坯黄土，朝野间也早就淡忘了这么一个人，怎么可能会在十多年后，才突然对受其牵连者再施毒手？从他们诡秘的举动和所动用的人员竭尽所能掩饰身份和行踪这一点上来看，也不可能是朝廷所为。(幻世之刺客传说啃文)
-	
-		杨明笙是韶州血案的具体实施者，从杨明笙脱口而出的一句话，可以证明，屠村血案的发生肯定与贺兰敏之这个人有重大关系，这一点确定无疑。问题是：山村里到底有什么？这些“村民”到底有什么秘密，以至于有人要用屠村这种灭绝人性的杀戮行为来解决。
-	
-		也许，只有弄清楚这个问题，才能找出真正的幕后元凶，杨帆思索良久，实无他策可想，看来只能以杀为饵，惊动那个幕后元凶现身了。
-	
-		蔡东成手下四大金刚已去其一，剩下三人即便联手，也很难再发挥他们合手联击的本领，杨帆打算把四大金刚逐一铲除，最后再杀蔡东成，到那时候，如惊弓之鸟的杨明笙一定会向他真正的幕后主使求救。
-	
-		灵堂摆了三天，蔡东成手下三大悍将在灵堂里守了三天，整个杨府严阵以待地挺了三天，拖得人困马乏，筋疲力尽，可是那个神秘的刺客一直都没有再出现。
+	for (#:var : <`2:#:container`>) {
+		<`0:TARGET`>
+	}
+"5	LINE	0
+	for (<{1:}> = 0; <|1|> < <`2`>; <|1|>++) {
+		<`0:TARGET`>
+	}
 "6	LINE	0
-	30 05 81 01 41 8E 00 1E 02 E0 88 
+	" SuperTab like snippets behavior.
+	"imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+	
 "7	LINE	0
-	30 05 81 01 41 8E 00 1E 02 E0 88 
-"8	CHAR	0
-	 
-	说到这里，刘管事轻轻叹了口气，有些酸楚地道：“以后，怕是阿郎也不会管得这么严了。”
-	
-	他意兴索然地挥挥手道：“你去吧，好生在侧院儿里待着，不要胡乱走动。”
-	
-	“是，那刘管事忙着，小的回去了。”
-	
-	杨帆很尊敬地笑笑，转身行去。
-	
-	“周兴？”
-	
-	杨帆一路走，一路想着这个人，略作一番分析，他就摇了摇头，否定了周兴可能与己有关的可能。
-	
-	永淳二年，韶州血案的时候，周兴还只是北方地区的一个县令，直到近几年，武后权柄越来越重，有望革李唐之命，改天换日之后，才开始重用酷吏，替她剪除夺权的障碍，周兴因为酷厉狠绝的办案作风，得到武后青睐，这才青云直上，成为刑部大员。
-	
-	当年发生的那件事情，不可能与周兴有所牵连，周兴现在是刑部侍郎，事实上的一把手，不管是从关心下属的角度，还是从神都出现这样一桩重大案件的角度，他亲自过问一下下属的事情也正常。(医道教父最新章节)
-	
-		他已经打听到，今日之蔡东成虽是左奉宸卫中郎将，赫赫将领，手握大权，但他当年是龙武卫的一个旅帅，此人十有**就是韶州血案的具体实施者。伤了一个杨明笙，引出一个蔡东成，但蔡东成也是一个马前卒。(巨星人生全文阅读)幕后元凶，依然不曾现身。
-	
-		看来，想要他现身，就得先吃掉蔡东成和他手下的四大金刚，才能迫使幕后首脑现身了！
-	
-		杨帆一路思索着，回到了侧院。
-	
-		那天，杨明笙脱口说出了一个名字：贺兰敏之。
-	
-		杨帆业已打听过了，这个贺兰敏之是武则天的外甥，他的母亲是武则天的姐姐，也曾经受到过高宗李治的宠幸，受封为韩国夫人，他的姐姐贺兰氏也曾受到过李治的宠幸，受封魏国夫人。
-	
-		而贺兰敏之本人，则在武则天将两个兄长流放之后，改其姓为武，入继为武则天的父亲武士彟的后嗣，受封周国公，可谓富贵已极。
-	
-		然而后来武则天却以贺兰敏与外祖母杨氏媾和、贪墨公款中饱私囊、**太子李贤已选聘的太子妃杨氏等诸多罪名，令其改回原姓，发配岭南，途中贺兰敏之以马缰自缢而死。这就是贺兰敏之传奇的一生。
-	
-		杨帆想不出这个贺兰敏之与韶州小村有何关联。
-	
-		贺兰敏之此人据说放荡不羁，风流好色，然而此人俊俏英朗，一表人才，而且博学多才，再加上他显赫的家世和身份，所以在朝野中他都有许多朋友，这些人后来都受了他的牵连，纷纷被贬官发配。
-	
-		杨帆怀疑，突兀建起的桃源村，很可能就是用来安置那些受贺兰敏之牵连而被贬谪的官员的所在，而村中十一姓家族，就是当年那些受牵累的官员。
-	
-		然则小村建于贺兰敏之自尽之后一年，而屠村血案却发生在十一年后，这就有些古怪了。
-	
-		如果这个突然冒出来的小山村的村民就是当初受贺兰敏之牵连的那些官员及其家眷，如果朝廷有意把这些人铲除，根本无需等待这么多年，更不需要用瘟疫这样的借口来掩饰。
-	
-	更何况，韶州血案时，贺兰敏之早就变成了一坯黄土，朝野间也早就淡忘了这么一个人，怎么可能会在十多年后，才突然对受其牵连者再施毒手？从他们诡秘的举动和所动用的人员竭尽所能掩饰身份和行踪这一点上来看，也不可能是朝廷所为。(幻世之刺客传说啃文)
-	
-		杨明笙是韶州血案的具体实施者，从杨明笙脱口而出的一句话，可以证明，屠村血案的发生肯定与贺兰敏之这个人有重大关系，这一点确定无疑。问题是：山村里到底有什么？这些“村民”到底有什么秘密，以至于有人要用屠村这种灭绝人性的杀戮行为来解决。
-	
-		也许，只有弄清楚这个问题，才能找出真正的幕后元凶，杨帆思索良久，实无他策可想，看来只能以杀为饵，惊动那个幕后元凶现身了。
-	
-		蔡东成手下四大金刚已去其一，剩下三人即便联手，也很难再发挥他们合手联击的本领，杨帆打算把四大金刚逐一铲除，最后再杀蔡东成，到那时候，如惊弓之鸟的杨明笙一定会向他真正的幕后主使求救。
-	
-		灵堂摆了三天，蔡东成手下三大悍将在灵堂里守了三天，整个杨府严阵以待地挺了三天，拖得人困马乏，筋疲力尽，可是那个神秘的刺客一直都没有再出现。
-"9	CHAR	0
-	 
-	说到这里，刘管事轻轻叹了口气，有些酸楚地道：“以后，怕是阿郎也不会管得这么严了。”
-	
-	他意兴索然地挥挥手道：“你去吧，好生在侧院儿里待着，不要胡乱走动。”
-	
-	“是，那刘管事忙着，小的回去了。”
-	
-	杨帆很尊敬地笑笑，转身行去。
-	
-	“周兴？”
-	
-	杨帆一路走，一路想着这个人，略作一番分析，他就摇了摇头，否定了周兴可能与己有关的可能。
-	
-	永淳二年，韶州血案的时候，周兴还只是北方地区的一个县令，直到近几年，武后权柄越来越重，有望革李唐之命，改天换日之后，才开始重用酷吏，替她剪除夺权的障碍，周兴因为酷厉狠绝的办案作风，得到武后青睐，这才青云直上，成为刑部大员。
-	
-	当年发生的那件事情，不可能与周兴有所牵连，周兴现在是刑部侍郎，事实上的一把手，不管是从关心下属的角度，还是从神都出现这样一桩重大案件的角度，他亲自过问一下下属的事情也正常。(医道教父最新章节)
-	
-		他已经打听到，今日之蔡东成虽是左奉宸卫中郎将，赫赫将领，手握大权，但他当年是龙武卫的一个旅帅，此人十有**就是韶州血案的具体实施者。伤了一个杨明笙，引出一个蔡东成，但蔡东成也是一个马前卒。(巨星人生全文阅读)幕后元凶，依然不曾现身。
-	
-		看来，想要他现身，就得先吃掉蔡东成和他手下的四大金刚，才能迫使幕后首脑现身了！
-	
-		杨帆一路思索着，回到了侧院。
-	
-		那天，杨明笙脱口说出了一个名字：贺兰敏之。
-	
-		杨帆业已打听过了，这个贺兰敏之是武则天的外甥，他的母亲是武则天的姐姐，也曾经受到过高宗李治的宠幸，受封为韩国夫人，他的姐姐贺兰氏也曾受到过李治的宠幸，受封魏国夫人。
-	
-		而贺兰敏之本人，则在武则天将两个兄长流放之后，改其姓为武，入继为武则天的父亲武士彟的后嗣，受封周国公，可谓富贵已极。
-	
-		然而后来武则天却以贺兰敏与外祖母杨氏媾和、贪墨公款中饱私囊、**太子李贤已选聘的太子妃杨氏等诸多罪名，令其改回原姓，发配岭南，途中贺兰敏之以马缰自缢而死。这就是贺兰敏之传奇的一生。
-	
-		杨帆想不出这个贺兰敏之与韶州小村有何关联。
-	
-		贺兰敏之此人据说放荡不羁，风流好色，然而此人俊俏英朗，一表人才，而且博学多才，再加上他显赫的家世和身份，所以在朝野中他都有许多朋友，这些人后来都受了他的牵连，纷纷被贬官发配。
-	
-		杨帆怀疑，突兀建起的桃源村，很可能就是用来安置那些受贺兰敏之牵连而被贬谪的官员的所在，而村中十一姓家族，就是当年那些受牵累的官员。
-	
-		然则小村建于贺兰敏之自尽之后一年，而屠村血案却发生在十一年后，这就有些古怪了。
-	
-		如果这个突然冒出来的小山村的村民就是当初受贺兰敏之牵连的那些官员及其家眷，如果朝廷有意把这些人铲除，根本无需等待这么多年，更不需要用瘟疫这样的借口来掩饰。
-	
-	更何况，韶州血案时，贺兰敏之早就变成了一坯黄土，朝野间也早就淡忘了这么一个人，怎么可能会在十多年后，才突然对受其牵连者再施毒手？从他们诡秘的举动和所动用的人员竭尽所能掩饰身份和行踪这一点上来看，也不可能是朝廷所为。(幻世之刺客传说啃文)
-	
-		杨明笙是韶州血案的具体实施者，从杨明笙脱口而出的一句话，可以证明，屠村血案的发生肯定与贺兰敏之这个人有重大关系，这一点确定无疑。问题是：山村里到底有什么？这些“村民”到底有什么秘密，以至于有人要用屠村这种灭绝人性的杀戮行为来解决。
-	
-		也许，只有弄清楚这个问题，才能找出真正的幕后元凶，杨帆思索良久，实无他策可想，看来只能以杀为饵，惊动那个幕后元凶现身了。
-	
-		蔡东成手下四大金刚已去其一，剩下三人即便联手，也很难再发挥他们合手联击的本领，杨帆打算把四大金刚逐一铲除，最后再杀蔡东成，到那时候，如惊弓之鸟的杨明笙一定会向他真正的幕后主使求救。
-	
-		灵堂摆了三天，蔡东成手下三大悍将在灵堂里守了三天，整个杨府严阵以待地挺了三天，拖得人困马乏，筋疲力尽，可是那个神秘的刺客一直都没有再出现。
+	" buffer file name pattern that locks neocomplcache. e.g. ku.vim or fuzzyfinder 
+"8	LINE	0
+	" Sets minimum char length of syntax keyword.
+"9	LINE	0
+	" Use underscore completion.
 "a	CHAR	0
 	jf/d$
-""-	CHAR	0
-	 
-
-# global variables:
-!ST_WIN_CMD	NUM	0
-!ST_UNIX	NUM	2
-!ST_WIN_SH	NUM	1
+"-	CHAR	0
+	/* condition */
 
 # File marks:
-'0  300  41  ~\_vimrc
-'1  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
-'2  728  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
-'3  1  17  C:\Users\Administrator\Desktop\temp.txt
-'4  30  0  D:\MySoftWare\gVimPortable\[Vundle] Installer
-'5  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
-'6  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_crss.c
-'7  1  0  C:\Users\Administrator\Desktop\24388\醉枕江山.txt
-'8  282  28  ~\_vimrc
-'9  30  0  ~\[Vundle] Installer
+'0  4  0  ~\[Vundle] clean
+'1  394  0  ~\_vimrc
+'2  729  9  d:\work\code\l4\at\ate\src\at_main.c
+'3  32  0  ~\[Vundle] Installer
+'4  1  0  D:\work\code\l4\project.vim
+'5  62  0  ~\[Vundle] Installer
+'6  353  14  ~\_vimrc
+'7  12  8  D:\work\code\l4\[Vundle] Installer
+'8  314  1  ~\_vimrc
+'9  802  18  d:\work\code\l4\at\ate\src\at_main.c
 
 # Jumplist (newest first):
--'  300  41  ~\_vimrc
--'  42  0  ~\_vimrc
--'  1  9  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
--'  4467  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
--'  2176  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
--'  736  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
--'  1291  0  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
--'  11  37  C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
--'  61  0  D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
--'  4908  9  D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
--'  1  0  D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
--'  34  22  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+-'  4  0  ~\[Vundle] clean
+-'  1  0  ~\_vimrc
+-'  394  0  ~\_vimrc
+-'  48  0  ~\_vimrc
+-'  729  9  d:\work\code\l4\at\ate\src\at_main.c
+-'  731  26  d:\work\code\l4\at\ate\src\at_main.c
+-'  1  0  d:\work\code\l4\at\ate\src\at_main.c
+-'  32  0  ~\[Vundle] Installer
+-'  52  0  ~\_vimrc
+-'  733  11  d:\work\code\l4\at\ate\src\at_main.c
+-'  341  0  ~\_vimrc
+-'  1  0  D:\work\code\l4\project.vim
+-'  2  42  D:\work\code\l4\at\ate\src\-TabBar-
+-'  339  48  ~\_vimrc
+-'  69  0  d:\work\code\l4\at\ate\src\at_main.c
+-'  344  0  ~\_vimrc
+-'  348  0  ~\_vimrc
+-'  62  0  ~\[Vundle] Installer
+-'  2  0  ~\-TabBar-
+-'  6  0  ~\[Vundle] clean
+-'  353  14  ~\_vimrc
+-'  12  8  D:\work\code\l4\[Vundle] Installer
+-'  314  1  ~\_vimrc
+-'  802  18  d:\work\code\l4\at\ate\src\at_main.c
+-'  801  3  d:\work\code\l4\at\ate\src\at_main.c
+-'  22  1  ~\_vimrc
+-'  17  3  ~\_vimrc
+-'  15  3  ~\_vimrc
+-'  13  3  ~\_vimrc
+-'  379  0  ~\_vimrc
+-'  62  27  ~\_vimrc
+-'  49  39  d:\work\code\l4\at\ate\src\at_main.c
+-'  36  0  d:\work\code\l4\at\ate\src\at_main.c
+-'  113  0  d:\work\code\l4\at\ate\src\at_main.c
+-'  1  0  D:\work\code\l4\at_main.c
+-'  310  0  ~\_vimrc
+-'  537  0  d:\work\code\l4\at\ate\src\at_main.c
+-'  305  28  ~\_vimrc
+-'  302  0  ~\_vimrc
+-'  1065  0  D:\work\code\l4\at\ats\cc\src\at_cmd_cc.c
+-'  1  0  D:\work\code\l4\at\ats\cc\src\at_cmd_cc.c
+-'  279  79  D:\work\code\l4\at\ate\src\at_command_table.c
+-'  1  0  D:\work\code\l4\at\ate\src\at_command_table.c
+-'  1  1  D:\Projects\modem2.5g\branches\protocol\integration\navi\[Lookup File]
 -'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
--'  1  0  C:\Users\Administrator\Desktop\CFB .trc
--'  6416  0  C:\Users\Administrator\Desktop\CFB .trc
--'  1  0  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
--'  2145  0  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
--'  576  37  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
--'  168  33  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
--'  20  0  C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
--'  217  11  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
--'  221  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
--'  19  27  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
--'  1  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
--'  728  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
--'  1034  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
--'  2123  0  C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
--'  818  0  C:\Users\Administrator\Desktop\tmp.trc
--'  663  0  C:\Users\Administrator\Desktop\tmp.trc
--'  21  0  C:\Users\Administrator\Desktop\CFU.trc
--'  1  0  C:\Users\Administrator\Desktop\CFU.trc
--'  1  17  C:\Users\Administrator\Desktop\temp.txt
--'  2  0  C:\Users\Administrator\Desktop\temp.txt
--'  991  26  C:\Users\Administrator\Desktop\CFU.trc
--'  717  0  C:\Users\Administrator\Desktop\CFU.trc
--'  703  0  C:\Users\Administrator\Desktop\CFU.trc
--'  707  15  C:\Users\Administrator\Desktop\CFU.trc
--'  737  0  C:\Users\Administrator\Desktop\CFU.trc
--'  710  29  C:\Users\Administrator\Desktop\CFU.trc
--'  702  0  C:\Users\Administrator\Desktop\CFU.trc
--'  993  0  C:\Users\Administrator\Desktop\CFU.trc
--'  994  28  C:\Users\Administrator\Desktop\CFU.trc
--'  1481  24  C:\Users\Administrator\Desktop\CFU.trc
--'  11  0  C:\Users\Administrator\Desktop\CFU.trc
--'  2353  0  C:\Users\Administrator\Desktop\CFU.trc
--'  18  57  C:\Users\Administrator\Desktop\CFU.trc
--'  12  15  C:\Users\Administrator\Desktop\CFU.trc
--'  177  32  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
--'  184  26  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
--'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
--'  119  29  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  122  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  117  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  88  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  59  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  30  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  13  2  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  12  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  102  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
--'  144  26  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
--'  145  4  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
--'  1  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
--'  146  21  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
--'  30  0  D:\MySoftWare\gVimPortable\[Vundle] Installer
--'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
--'  2  0  D:\work\mine\121206_2.5G_CRSS\CW_MT.trc
--'  3  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
--'  6442  0  D:\work\mine\121206_2.5G_CRSS\CW_MT.trc
--'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\-TabBar-
--'  11  0  D:\work\mine\121206_2.5G_CRSS\CW_MT.trc
--'  130  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
--'  2  0  D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\-TabBar-
+-'  8  0  ~\[Vundle] clean
+-'  92  0  ~\[Vundle] Installer
+-'  47  15  ~\_vimrc
+-'  244  12  ~\_vimrc
+-'  190  0  ~\_vimrc
+-'  245  0  D:\work\code\l4\at\ate\src\at_command_table.c
+-'  48  0  D:\work\code\l4\at\ate\src\at_command_table.c
+-'  112  0  ~\[Vundle] Installer
+-'  151  0  ~\[Vundle] Installer
+-'  8  28  D:\work\code\l4\project.vim
+-'  4  0  D:\work\code\l4\NERD_tree_1
+-'  9  0  D:\work\code\l4\project.vim
+-'  252  0  ~\_vimrc
+-'  16  0  D:\work\code\l4\NERD_tree_1
+-'  1  0  D:\work\code\l4\NERD_tree_1
+-'  31  0  D:\work\code\l4\at\ats\cc\src\at_cmd_cc.c
+-'  9  0  D:\work\code\l4\at\ate\include\at_module.h
+-'  1  0  ~\.vim\bundle\TabBar\plugin\tabbar.vim
+-'  21  0  D:\work\code\l4\at\ate\include\at_module.h
+-'  125  0  D:\work\code\l4\toolpool\t_flash_programmer\sap_usr.c
+-'  410  8  D:\work\code\l4\platform\base\sap\include\sap_cfg.h
+-'  395  0  D:\work\code\l4\platform\base\sap\include\sap_cfg.h
+-'  323  40  D:\work\code\l4\platform\base\sap\src\sap_main.c
+-'  406  1  D:\work\code\l4\platform\base\sap\src\sap_main.c
+-'  2  0  D:\work\code\l4\-TabBar-
+-'  2  0  D:\work\code\l4\platform\base\sap\src\-TabBar-
+-'  1  0  D:\work\code\l4\platform\base\sap\src\sap_main.c
+-'  2  2  D:\work\code\l4\at\ate\src\[Lookup File]
+-'  1  0  D:\work\code\l4\at\ate\src\[Lookup File]
+-'  4  22  D:\work\code\l4\project.vim
+-'  117  0  d:\work\code\l4\at\ate\src\at_main.c
+-'  115  0  d:\work\code\l4\at\ate\src\at_main.c
+-'  175  20  ~\[Vundle] Installer
+-'  10  0  ~\[Vundle] clean
+-'  56  8  ~\_vimrc
+-'  1  0  C:\Users\Administrator\Desktop\tmp.trc
+-'  1  0  C:\Users\Administrator\Desktop\temp.txt
+-'  30  0  C:\Users\Administrator\Desktop\[Vundle] Installer
+-'  55  10  ~\_vimrc
+-'  3  0  C:\Users\Administrator\Desktop\[Vundle] clean
+-'  209  0  ~\[Vundle] Installer
+-'  238  0  ~\[Vundle] Installer
+-'  14  0  ~\[Vundle] clean
+-'  46  0  C:\Users\Administrator\Desktop\[Vundle] Installer
+-'  5  0  C:\Users\Administrator\Desktop\tmp.trc
+-'  68  0  ~\_vimrc
+-'  276  1  ~\_vimrc
+-'  200  12  ~\_vimrc
+-'  293  12  ~\_vimrc
+-'  1  0  D:\work\code\l4\project.vim
 
 # History of marks within files (newest to oldest):
 
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
-	"	1	0
-	^	2	20
-	.	2	19
-	+	2	19
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\[Lookup File]
-	"	4	0
-	^	4	83
-	.	3	0
-	+	15	90
-	+	14	90
-	+	13	90
-	+	12	90
-	+	11	87
-	+	10	86
-	+	5	86
-	+	2	0
-	+	7	98
-	+	6	0
-	+	9	97
-	+	8	0
-	+	1	0
-	+	4	82
-	+	3	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
-	"	34	22
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\include\cc_fsm.h
-	"	51	0
-
-> C:\Users\Administrator\Desktop\CFB .trc
-	"	4102	27
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\CFB2 .trc
-	"	12	52
-	.	1	0
-	+	1	0
-
-> D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
-	"	2904	0
-	^	61	0
-	.	61	0
-	+	1	0
-	+	61	0
-
-> C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
-	"	3846	0
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\tmp.trc
-	"	302	0
-	.	1	0
-	+	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc.c
-	"	111	29
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\__Tagbar__
-	"	16	4
-	.	17	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	17	0
-
 > ~\_vimrc
-	"	300	41
-	^	282	29
-	.	300	41
-	+	90	0
-	+	90	0
-	+	90	0
-	+	90	55
-	+	90	59
-	+	90	44
-	+	122	0
-	+	90	0
-	+	119	42
-	+	122	0
-	+	121	0
-	+	121	0
-	+	119	0
-	+	121	0
-	+	119	31
-	+	335	0
-	+	169	0
-	+	170	0
-	+	50	8
-	+	360	0
-	+	361	26
-	+	362	0
-	+	360	9
-	+	330	0
-	+	45	8
-	+	53	8
-	+	76	0
-	+	71	0
-	+	72	0
-	+	74	0
-	+	74	0
-	+	75	0
-	+	74	0
-	+	73	20
-	+	72	0
-	+	73	18
-	+	57	16
-	+	28	31
-	+	57	8
-	+	57	0
-	+	302	0
-	+	231	38
-	+	231	0
-	+	231	0
-	+	241	0
-	+	231	0
-	+	241	0
-	+	241	0
-	+	301	0
-	+	56	0
-	+	55	14
-	+	57	0
-	+	241	0
-	+	301	0
-	+	278	0
-	+	276	0
-	+	278	0
-	+	276	5
-	+	277	5
-	+	276	5
-	+	274	5
-	+	275	5
-	+	274	14
-	+	275	18
-	+	230	37
-	+	65	0
-	+	67	0
-	+	52	18
-	+	297	1
-	+	282	0
-	+	283	0
-	+	284	0
-	+	285	0
-	+	286	0
+	"	1	0
+	.	394	0
 	+	287	0
-	+	293	0
-	+	294	0
-	+	295	0
+	+	288	0
+	+	289	0
+	+	290	0
 	+	296	0
 	+	297	0
-	+	281	1
-	+	288	18
-	+	6	0
-	+	271	9
-	+	272	0
-	+	292	0
-	+	290	15
-	+	275	17
-	+	273	0
-	+	168	0
+	+	298	0
 	+	299	0
-	+	241	0
-	+	168	0
-	+	42	0
-	+	299	10
-	+	55	19
-	+	267	0
 	+	300	0
-	+	299	0
-	+	300	41
+	+	284	1
+	+	291	18
+	+	6	0
+	+	274	9
+	+	275	0
+	+	295	0
+	+	293	15
+	+	278	17
+	+	276	0
+	+	169	0
+	+	395	0
+	+	244	0
+	+	169	0
+	+	42	0
+	+	395	10
+	+	56	19
+	+	270	0
+	+	395	0
+	+	395	0
+	+	395	41
+	+	66	0
+	+	68	0
+	+	200	0
+	+	276	0
+	+	66	0
+	+	68	0
+	+	56	0
+	+	55	0
+	+	56	8
+	+	287	28
+	+	48	0
+	+	47	8
+	+	395	0
+	+	190	0
+	+	302	0
+	+	47	15
+	+	302	17
+	+	306	0
+	+	305	0
+	+	308	0
+	+	303	0
+	+	303	0
+	+	304	0
+	+	304	0
+	+	308	0
+	+	308	0
+	+	307	0
+	+	308	13
+	+	309	0
+	+	308	10
+	+	379	1
+	+	314	0
+	+	314	0
+	+	310	0
+	+	309	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	379	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	308	0
+	+	314	0
+	+	314	0
+	+	314	0
+	+	47	9
+	+	46	15
+	+	314	0
+	+	315	0
+	+	314	0
+	+	316	0
+	+	317	0
+	+	318	0
+	+	319	0
+	+	320	0
+	+	348	17
+	+	349	46
+	+	341	0
+	+	394	1
+	+	382	0
+	+	52	0
+	+	48	14
+	+	394	0
+	+	48	0
+	+	394	0
 
-> C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
-	"	217	9
+> ~\[Vundle] clean
+	"	4	0
 	.	1	0
-	+	728	0
+	+	14	0
+	+	12	0
+	+	10	0
+	+	8	0
+	+	6	0
+	+	4	0
 	+	1	0
 
-> C:\Users\Administrator\Desktop\__Tag_List__
-	"	1099	4
-	.	1364	0
-	+	7253	0
-	+	7008	0
-	+	7007	0
-	+	6044	0
-	+	5289	0
-	+	5291	0
-	+	4537	0
-	+	4537	0
-	+	4536	0
-	+	4091	0
-	+	4091	0
-	+	4091	0
-	+	3224	0
-	+	4091	0
-	+	4091	0
-	+	3663	0
-	+	4090	0
-	+	2727	0
-	+	1365	0
-	+	1364	0
-
-> C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
-	"	1265	56
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\CFU_Calling mobile subscriber side.trc
-	"	723	0
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\CFU.trc
-	"	583	12
-	.	1	0
-	+	1	0
-	s	12	15
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\Source_Explorer
+> ~\-TabBar-
 	"	1	0
 	.	2	0
 	+	2	0
@@ -626,119 +371,277 @@ $
 	+	2	0
 	+	2	0
 	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
-	"	119	29
+> d:\work\code\l4\at\ate\src\at_main.c
+	"	729	9
+	^	730	13
+	.	730	13
+	+	33	0
+	+	537	0
+	+	537	0
+	+	538	0
+	+	113	0
+	+	113	0
+	+	113	0
+	+	113	24
+	+	113	0
+	+	113	20
+	+	113	13
+	+	113	0
+	+	113	0
+	+	113	0
+	+	113	0
+	+	112	19
+	+	61	21
+	+	803	0
+	+	802	18
+	+	70	0
+	+	69	3
+	+	69	2
+	+	731	0
+	+	731	9
+	+	731	0
+	+	731	0
+	+	731	10
+	+	731	0
+	+	731	12
+	+	731	0
+	+	733	12
+	+	731	0
+	+	731	0
+	+	730	13
 
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_evt.c
-	"	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\include\cc_ctxt.h
-	"	230	21
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
-	"	177	32
-	^	184	22
-	.	184	26
-	+	184	26
-
-> C:\Users\Administrator\Desktop\temp.txt
-	"	1	17
-	^	1	1
+> ~\[Vundle] Installer
+	"	32	0
 	.	1	0
-	+	48	0
-	+	48	0
+	+	707	0
+	+	683	0
+	+	658	0
+	+	632	0
+	+	606	0
+	+	580	0
+	+	554	0
+	+	527	0
+	+	499	0
+	+	471	0
+	+	443	0
+	+	414	0
+	+	385	0
+	+	356	0
+	+	326	0
+	+	296	0
+	+	267	0
+	+	238	0
 	+	209	0
-	+	208	0
-	+	48	0
-	+	48	7
-	+	48	7
-	+	48	1
-	+	48	6
-	+	48	1
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	5
-	+	48	4
-	+	48	7
-	+	48	0
-	+	48	8
-	+	48	31
-	+	48	14
-	+	48	10
-	+	48	7
-	+	48	7
-	+	48	21
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	97
-	+	48	145
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	3
-	+	48	0
-	+	48	0
-	+	48	0
-	+	48	17
-	+	48	0
-	+	48	0
-	+	48	0
-	+	2	0
-	+	30	0
-	+	29	0
-	+	29	0
-	+	29	57
-	+	30	0
-	+	22	8
-	+	24	0
-	+	28	11
-	+	25	12
-	+	21	0
-	+	21	0
-	+	22	0
-	+	42	6
-	+	43	6
-	+	44	5
-	+	45	7
-	+	46	6
-	+	47	5
-	+	48	5
-	+	49	8
-	+	2	0
-	+	2	3
-	+	2	7
-	+	2	23
-	+	2	28
-	+	2	35
-	+	2	24
-	+	2	7
-	+	2	10
-	+	2	13
-	+	2	16
-	+	2	19
-	+	2	22
-	+	2	24
-	+	2	28
-	+	2	31
-	+	2	0
-	+	2	0
+	+	180	0
+	+	151	0
+	+	122	0
+	+	92	0
+	+	62	0
+	+	32	0
 	+	1	0
 
-> C:\Users\Administrator\Desktop\__Tagbar__
+> D:\work\code\l4\project.vim
 	"	1	0
+	.	9	0
+	+	9	0
+	+	9	0
 
-> D:\MySoftWare\gVimPortable\[Vundle] Installer
-	"	30	0
+> D:\work\code\l4\[Lookup File]
+	"	2	0
+	^	2	36
+	.	1	0
+	+	16	0
+	+	21	47
+	+	20	0
+	+	23	40
+	+	22	0
+	+	25	40
+	+	24	0
+	+	15	0
+	+	18	35
+	+	17	0
+	+	12	44
+	+	11	0
+	+	14	40
+	+	13	0
+	+	8	8
+	+	6	0
+	+	10	35
+	+	9	0
+	+	3	0
+	+	7	0
+	+	2	0
+	+	5	42
+	+	4	0
+	+	1	0
+
+> D:\work\code\l4\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\work\code\l4\at\ate\src\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\work\code\l4\[Vundle] Installer
+	"	12	8
 	.	1	0
 	+	1	0
+
+> D:\work\code\l4\at\ate\src\__Tagbar__
+	"	48	4
+	.	55	0
+	+	374	0
+	+	374	0
+	+	374	0
+	+	374	0
+	+	374	0
+	+	309	0
+	+	136	0
+	+	136	0
+	+	101	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	55	0
+
+> D:\work\code\l4\at_main.c
+	"	1	0
+
+> D:\work\code\l4\at\ate\src\at_command_table.c
+	"	279	79
+
+> D:\work\code\l4\at\ats\cc\src\at_cmd_cc.c
+	"	1065	0
+	.	1065	0
+	+	1065	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\project.vim
+	"	1	0
+	^	2	20
+	.	2	19
+	+	2	19
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\[Lookup File]
+	"	1	1
+	^	1	2
+	.	1	1
+	+	15	90
+	+	14	90
+	+	13	90
+	+	12	90
+	+	11	87
+	+	10	86
+	+	5	86
+	+	2	0
+	+	7	98
+	+	6	0
+	+	9	97
+	+	8	0
+	+	1	0
+	+	4	82
+	+	3	0
+	+	1	1
 
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\-TabBar-
 	"	1	0
@@ -844,6 +747,532 @@ $
 	+	2	0
 	+	2	0
 
+> D:\work\code\l4\NERD_tree_1
+	"	5	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> D:\work\code\l4\at\ats\cc\src\__Tagbar__
+	"	13	4
+	.	27	0
+	+	27	0
+	+	27	0
+	+	27	0
+	+	27	0
+	+	27	0
+	+	27	0
+	+	27	0
+	+	27	0
+	+	27	0
+
+> D:\work\code\l4\at\ate\src\at_common.c
+	"	1087	2
+
+> D:\work\code\l4\at\utility\src\at_utility.c
+	"	384	2
+	.	395	0
+	+	395	0
+
+> D:\work\code\l4\platform\base\sap\src\sap_main.c
+	"	323	40
+
+> D:\work\code\l4\platform\base\sap\src\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\work\code\l4\platform\base\sap\src\NERD_tree_1
+	"	7	9
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> D:\work\code\l4\platform\base\sap\src\__Tagbar__
+	"	1	0
+	.	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+	+	37	0
+
+> D:\work\code\l4\at\ate\include\at_module.h
+	"	9	0
+
+> D:\work\code\l4\platform\base\sap\include\sap_cfg.h
+	"	410	8
+
+> D:\work\code\l4\toolpool\t_flash_programmer\sap_cfg.h
+	"	38	0
+
+> D:\work\code\l4\toolpool\t_flash_programmer\sap_usr.c
+	"	125	0
+
+> ~\.vim\bundle\TabBar\plugin\tabbar.vim
+	"	130	0
+	^	1593	37
+	.	6	0
+	+	6	0
+
+> ~\.vim\bundle\TabBar\plugin\__Tagbar__
+	"	35	8
+	.	41	0
+	+	349	0
+	+	349	0
+	+	349	0
+	+	349	0
+	+	349	0
+	+	255	0
+	+	255	0
+	+	135	0
+	+	135	0
+	+	74	0
+	+	74	0
+	+	74	0
+	+	74	0
+	+	74	0
+	+	74	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	41	0
+	+	41	0
+
+> ~\.vim\bundle\TabBar\plugin\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\work\code\l4\__Tagbar__
+	"	3	0
+	.	4	0
+	+	4	0
+	+	4	0
+
+> D:\work\code\l4\at\ate\src\[Lookup File]
+	"	2	2
+	^	2	3
+	.	2	2
+	+	1	3
+	+	2	2
+	i	1	0
+
+> C:\Users\Administrator\Desktop\temp.txt
+	"	1	0
+	^	1	1
+	.	1	0
+	+	48	0
+	+	48	0
+	+	209	0
+	+	208	0
+	+	48	0
+	+	48	7
+	+	48	7
+	+	48	1
+	+	48	6
+	+	48	1
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	5
+	+	48	4
+	+	48	7
+	+	48	0
+	+	48	8
+	+	48	31
+	+	48	14
+	+	48	10
+	+	48	7
+	+	48	7
+	+	48	21
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	97
+	+	48	145
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	3
+	+	48	0
+	+	48	0
+	+	48	0
+	+	48	17
+	+	48	0
+	+	48	0
+	+	48	0
+	+	2	0
+	+	30	0
+	+	29	0
+	+	29	0
+	+	29	57
+	+	30	0
+	+	22	8
+	+	24	0
+	+	28	11
+	+	25	12
+	+	21	0
+	+	21	0
+	+	22	0
+	+	42	6
+	+	43	6
+	+	44	5
+	+	45	7
+	+	46	6
+	+	47	5
+	+	48	5
+	+	49	8
+	+	2	0
+	+	2	3
+	+	2	7
+	+	2	23
+	+	2	28
+	+	2	35
+	+	2	24
+	+	2	7
+	+	2	10
+	+	2	13
+	+	2	16
+	+	2	19
+	+	2	22
+	+	2	24
+	+	2	28
+	+	2	31
+	+	2	0
+	+	2	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\tmp.trc
+	"	1	0
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\[Vundle] Installer
+	"	30	0
+	.	1	0
+	+	59	0
+	+	30	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\[Vundle] clean
+	"	3	0
+	.	1	0
+	+	1	0
+
+> d:\MySoftWare\gVimPortable\Data\Temp\VIA7BFF.tmp
+	"	106	0
+
+> D:\work\code\trcBrowser\syntax\trc.vim
+	"	8	0
+	.	8	0
+	+	8	0
+	s	8	34
+
+> D:\work\code\l4\platform\csw\base\bal\src\bal_init.c
+	"	68	10
+
+> D:\work\code\l4\platform\csw\base\cos\src\cos_mem.c
+	"	18	0
+
+> D:\work\code\l4\platform\csw\base\bal\src\__Tagbar__
+	"	16	4
+	.	18	0
+	+	18	0
+
+> D:\work\code\l4\platform\csw\include\base_prv.h
+	"	111	66
+
+> d:\work\code\l4\at\ate\src\at_sa.c
+	"	1	0
+
+> D:\work\code\l4\at\ate\src\at_mux.c
+	"	1	0
+
+> D:\work\code\l4\at\ate\src\at_module.c
+	"	1	0
+
+> ~\.vim\bundle\SrcExpl\plugin\srcexpl.vim
+	"	709	34
+
+> D:\MySoftWare\gVimPortable\soft\lookupfile_genTags_windows.bat
+	"	1	0
+
+> D:\MySoftWare\gVimPortable\soft\lookupfile_genTags_windows.sh
+	"	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_fsm.c
+	"	34	22
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\include\cc_fsm.h
+	"	51	0
+
+> C:\Users\Administrator\Desktop\CFB .trc
+	"	4102	27
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\CFB2 .trc
+	"	12	52
+	.	1	0
+	+	1	0
+
+> D:\work\mine\121206_2.5G_CRSS\CFB_Served mobile subscriber side.trc
+	"	2904	0
+	^	61	0
+	.	61	0
+	+	1	0
+	+	61	0
+
+> C:\Users\Administrator\Desktop\CFB_Served mobile subscriber side.trc
+	"	3846	0
+	.	1	0
+	+	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc.c
+	"	111	29
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\__Tagbar__
+	"	16	4
+	.	17	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	17	0
+
+> C:\Users\Administrator\Desktop\CFU_Forwarded-to mobile subscriber side.trc
+	"	217	9
+	.	1	0
+	+	728	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\__Tag_List__
+	"	1099	4
+	.	1364	0
+	+	7253	0
+	+	7008	0
+	+	7007	0
+	+	6044	0
+	+	5289	0
+	+	5291	0
+	+	4537	0
+	+	4537	0
+	+	4536	0
+	+	4091	0
+	+	4091	0
+	+	4091	0
+	+	3224	0
+	+	4091	0
+	+	4091	0
+	+	3663	0
+	+	4090	0
+	+	2727	0
+	+	1365	0
+	+	1364	0
+
+> C:\Users\Administrator\Desktop\CFU_Served mobile subscriber side .trc
+	"	1265	56
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\CFU_Calling mobile subscriber side.trc
+	"	723	0
+	.	1	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\CFU.trc
+	"	583	12
+	.	1	0
+	+	1	0
+	s	12	15
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\Source_Explorer
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_u10.c
+	"	119	29
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_evt.c
+	"	1	0
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\include\cc_ctxt.h
+	"	230	21
+
+> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\rphone_agent\sap\src\sap_main.c
+	"	177	32
+	^	184	22
+	.	184	26
+	+	184	26
+
+> C:\Users\Administrator\Desktop\__Tagbar__
+	"	1	0
+
+> D:\MySoftWare\gVimPortable\[Vundle] Installer
+	"	30	0
+	.	1	0
+	+	1	0
+
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\-TabBar-
 	"	1	0
 	.	2	0
@@ -921,109 +1350,8 @@ $
 > D:\work\mine\121206_2.5G_CRSS\CW_MO.trc
 	"	563	17
 
-> C:\Users\Administrator\Desktop\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\cc\src\cc_crss.c
 	"	2	0
-
-> ~\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
 
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\include\itf_api.h
 	"	1237	1
@@ -1061,33 +1389,6 @@ $
 
 > C:\Users\Administrator\Desktop\24388\醉枕江山.txt
 	"	1	0
-	.	1	0
-	+	1	0
-
-> ~\[Vundle] Installer
-	"	30	0
-	.	1	0
-	+	470	0
-	+	446	0
-	+	421	0
-	+	395	0
-	+	369	0
-	+	343	0
-	+	317	0
-	+	290	0
-	+	262	0
-	+	234	0
-	+	206	0
-	+	177	0
-	+	148	0
-	+	119	0
-	+	89	0
-	+	59	0
-	+	30	0
-	+	1	0
-
-> ~\[Vundle] clean
-	"	4	0
 	.	1	0
 	+	1	0
 
@@ -1330,419 +1631,3 @@ $
 	.	8	0
 	+	8	0
 	+	8	0
-
-> F:\ss_asn1\module.asn1-1\NERD_tree_1
-	"	13	13
-	.	1	0
-	+	1	0
-
-> F:\ss_asn1\module.asn1-1\ber_decoder.c
-	"	247	22
-
-> F:\ss_asn1\module.asn1-1\OCTET_STRING.c
-	"	127	0
-
-> F:\ss_asn1\module.asn1-1\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> F:\ss_asn1\module.asn1-1\module.asn1
-	"	25	11
-
-> C:\Users\Administrator\Desktop\ss_asn1\project.vim
-	"	9	24
-	^	2	19
-	.	2	0
-	+	2	0
-
-> C:\Users\Administrator\Desktop\ss_asn1\NERD_tree_1
-	"	25	10
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\ss_asn1\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-
-> C:\Users\Administrator\Desktop\ss_asn1\module.asn1-1\Makefile.am.sample
-	"	72	0
-
-> C:\Users\Administrator\Desktop\ss_asn1\module.asn1-1\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> C:\Users\Administrator\Desktop\ss_asn1\module.asn1-1\converter-sample.c
-	"	196	0
-
-> E:\TDDOWNLOAD\29002 7f0 ASN1\MAP-CallHandlingOperations.EXP
-	"	5	158
-
-> E:\TDDOWNLOAD\29002 7f0 ASN1\MAP-SupplementaryServiceOperations.EXP
-	"	595	0
-
-> E:\TDDOWNLOAD\29002 7f0 ASN1\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> C:\Users\Administrator\Desktop\1.trc
-	"	2571	20
-	^	911	1
-	.	1	0
-	+	1	0
-	a	287	0
-	b	289	22
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\tags
-	"	1	0
-
-> ~\.vim\bundle\TabBar\plugin\tabbar.vim
-	"	1593	37
-	^	1593	37
-	.	6	0
-	+	6	0
-
-> ~\.vim\bundle\TabBar\plugin\__Tagbar__
-	"	16	4
-	.	41	0
-	+	316	0
-	+	316	0
-	+	316	0
-	+	316	0
-	+	316	0
-	+	222	0
-	+	222	0
-	+	102	0
-	+	102	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-	+	41	0
-
-> ~\.vim\bundle\TabBar\plugin\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\mmi.c
-	"	58	0
-	^	99	5
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\__Tagbar__
-	"	3	0
-	.	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\Source_Explorer
-	"	1	0
-	.	2	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	8	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\mmi_call.c
-	"	605	0
-	^	623	5
-	.	624	45
-	+	613	49
-	+	624	0
-	+	624	0
-	+	622	0
-	+	621	22
-	+	624	0
-	+	622	0
-	+	623	4
-	+	622	0
-	+	623	0
-	+	624	45
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\mmi_plmn.c
-	"	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\include\mmi_data.h
-	"	43	0
-
-> ~\.vim\bundle\myproject\plugin\myproject.vim
-	"	51	14
-
-> ~\.vim\bundle\myproject\plugin\__Tagbar__
-	"	3	0
-	.	23	0
-	+	23	0
-	+	23	0
-	+	23	0
-	+	23	0
-
-> ~\.vim\bundle\myproject\plugin\NERD_tree_1
-	"	5	14
-	.	1	0
-	+	1	0
-
-> ~\.vim\bundle\myproject\plugin\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> ~\.vim\bundle\myproject\plugin\Source_Explorer
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\src\NERD_tree_1
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\NERD_tree_1
-	"	6	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\ros\io\src\sxs_io.c
-	"	169	5
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\ros\sbx\src\sxr_sbx.c
-	"	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\include\itf_msg.h
-	"	40	1
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\__Tagbar__
-	"	1	0
-	.	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-	+	1827	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\test\stack\micro_mmi\mmi\include\mmi_call.h
-	"	25	0
-
-> ~\.vim\bundle\Marks-Browser\plugin\marksbrowser.vim
-	"	102	0
-
-> ~\.vim\bundle\Marks-Browser\plugin\__Tagbar__
-	"	7	4
-	.	19	0
-	+	19	0
-	+	19	0
-
-> ~\.vim\bundle\Marks-Browser\plugin\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
