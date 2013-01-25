@@ -3,8 +3,8 @@
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 0.0.2
-"   LastChange: 2012-08-03 10:45:45
+"      Version: 0.0.3
+"   LastChange: 2013-01-25 11:17:26
 "      History:
 "=============================================================================
 " Platform
@@ -39,12 +39,11 @@ Bundle 'brookhong/cscope.vim'
 Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
 Bundle 'Mark'
-" Bundle 'ShowMarks7'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Marks-Browser'
 Bundle 'matchit.zip'
-Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'loseblue/springColorScheme'
@@ -53,7 +52,7 @@ Bundle 'Tagbar'
 Bundle 'wesleyche/SrcExpl'
 Bundle 'taglist.vim'
 Bundle 'genutils'
-Bundle 'TabBar'
+Bundle 'loseblue/TabBar'
 Bundle 'lookupfile'
 Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
@@ -68,6 +67,10 @@ colorscheme spring  " color scheme
 " colorscheme molokai  " color scheme
 
 "=========================== END Vundle ================================
+
+" "source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
 
 set nobackup      " cloese backup
 syntax enable       " 
@@ -101,9 +104,9 @@ set paste
 nmap <silent> <A-q> :q<CR>
 
 " shut down error ringBell
+set vb t_vb=
 set noerrorbells
 set novisualbell
-set t_vb=
 
 "window jump in VIM Ctrl + hjkl
 nnoremap <C-h> <C-w>h
@@ -148,11 +151,6 @@ endif
 imap <C-s> <Esc>:wa!<cr>i<Right>
 nmap <C-s> :wa!<cr>
 set nocompatible
-"source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
-
-"ctrl+c ctrl+v ctrl+x
 :map <C-V> "+pa
 :map <C-C> "+y
 :map <C-X> "+x
@@ -163,8 +161,8 @@ nmap <leader>fd :se ff=dos<cr>
 nmap <leader>fu :se ff=unix<cr>
 
 " copy current file/path to clipboard ,p:file name & path ,P:only path
-noremap ,p :let @*=expand("%:p")<CR><Esc>
-noremap ,P :let @*=expand("%:p:h")<CR><Esc>
+" noremap ,p :let @*=expand("%:p")<CR><Esc>
+" noremap ,P :let @*=expand("%:p:h")<CR><Esc>
 
 " """"""""""""""""""" F1-F12"""""""""""""""""""""""""
 " F1 Toggle Menu and Toolbar {
@@ -247,6 +245,7 @@ let g:MP_Source_File_Ext_Name = 'htm,js,c,h,cpp,vim,php,py,asp'
 " map <leader>ps:MPSearchInProject =expand("")
 " map <leader>pl:MPLoad
 " map <leader>pu:MPUpdateTags
+" map <leader>pn:MPNERDTREE
 
 if has("cscope")
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -273,7 +272,7 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
 
 "tabbar & tab swith{
 let g:Tb_UseSingleClick = 1
-" let g:Tb_ModSelTarget = 1
+let g:Tb_ModSelTarget = 1
 map <A-Left> :Tbbn<CR>
 map <A-Right> :Tbbp<CR>
 map <S-Left> :tabp<CR>
@@ -288,29 +287,18 @@ let g:SrcExpl_refreshTime = 500
 let g:SrcExpl_jumpKey = "<ENTER>" 
 let g:SrcExpl_gobackKey = "<SPACE>" 
 let g:SrcExpl_pluginList = [ 
-        \ "__Tagbar__", 
-        \ "_NERD_tree_", 
-        \ "-TagBar-",
-        \ "Source_Explorer" 
-    \ ] 
+		\ "__Tagbar__", 
+		\ "_NERD_tree_", 
+		\ "-TagBar-",
+		\ "Source_Explorer" 
+	\ ] 
 let g:SrcExpl_searchLocalDef = 1 
 let g:SrcExpl_isUpdateTags = 0 
 let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ." 
 let g:SrcExpl_updateTagsKey = "<F12>" 
 "}
 
-"NeoComplcache  {
-" let g:NeoComplCache_Disable_Auto_complete = 1 
-
-" let g:acp_enableAtStartup = 0
-" let g:neocomplcache_enable_at_startup = 1
-
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>" 
-" inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
-
-"}
-
-"{
+"neocomplcache{
 let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
@@ -321,10 +309,10 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " Define file-type dependent dictionaries.
 let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
+	\ 'default' : '',
+	\ 'vimshell' : $HOME.'/.vimshell_hist',
+	\ 'scheme' : $HOME.'/.gosh_completions'
+	\ }
 
 " Define keyword, for minor languages
 if !exists('g:neocomplcache_keyword_patterns')
@@ -348,16 +336,6 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" AutoComplPop like behavior.
-"let g:neocomplcache_enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplcache_enable_auto_select = 1
-"let g:neocomplcache_disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
-"inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 
 " Enable omni completion. Not required if they are already set elsewhere in .vimrc
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -392,3 +370,4 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 "}
+
