@@ -1,0 +1,681 @@
+cscope 15 D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src"               0000004288
+	@D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\main.c
+
+27 
+	~"cmn_defs.h
+"
+
+28 
+	~"ros.h
+"
+
+29 
+	~"sxr_tksd.h
+"
+
+31 
+	#__SAP_CFG_VAR__
+
+
+	)
+
+32 
+	~"ßp_cfg.h
+"
+
+33 #unde‡
+__SAP_CFG_VAR__
+
+
+35 
+	#__SAP_CUST_VAR__
+
+
+	)
+
+36 
+	~"ßp_cu°.h
+"
+
+37 #unde‡
+__SAP_CUST_VAR__
+
+
+39 
+	~"l1c.h
+"
+
+40 
+	~"d•_åa˚_agít.h
+"
+
+42 
+u32
+ 
+	tMsgBody_t
+;
+
+44 
+	~"ôf_msg.h
+"
+
+46 
+ßp_InôU§
+ ( );
+
+47 
+sxs_TimîDñivîy
+ (
+u32
+ *
+Id
+);
+
+58 
+	$sxs_Task
+ (
+sxs_TaskP¨£_t
+ *
+TaskP¨£
+)
+
+60 
+Msg_t
+ *
+Msg
+;
+
+61 
+u32
+ 
+Evt
+ [
+SXR_EVT_MBX_SIZE
+];
+
+63 i‡(
+TaskP¨£
+ -> 
+TaskInô
+ !
+NIL
+)
+
+64 
+TaskP¨£
+ -> 
+	`TaskInô
+ ();
+
+66 
+TRUE
+)
+
+68 
+Msg
+ = (
+Msg_t
+ *)
+	`sxr_Waô
+ (
+Evt
+, 
+TaskP¨£
+ -> 
+MaûBox
+);
+
+70 i‡(
+Msg
+)
+
+71 
+TaskP¨£
+ -> 
+	`MsgP¨£
+ (
+Msg
+);
+
+74 i‡(
+Evt
+ [0] & 
+SXS_TIMER_EVT_ID
+)
+
+75 
+TaskP¨£
+ -> 
+	`TimîP¨£
+ (
+Evt
+);
+
+77 (((*)(*))
+Evt
+ [0]) ((*)Evt [1]);
+
+80 
+	}
+}
+
+93 
+	$sxs_TimîDñivîy
+ (
+u32
+ *
+Id
+)
+
+95 
+	`sxs_Rai£
+ (
+_SXR
+|
+	`TNB_ARG
+(1),"TimîÇŸ h™dÀd %x\n", 
+Id
+);
+
+96 
+	}
+}
+
+107 
+	$sxs_SèπAŒ
+ ()
+
+109 
+u32
+ 
+i
+;
+
+111 
+	`sxr_TkSdInô
+ ();
+
+112 
+	`sxr_JbSdInô
+ ();
+
+114 
+	`sxr_SbxInô
+ ();
+
+116 
+i
+=0; i<
+CMN_LAST
+; i++)
+
+117 
+	`sxr_NewMaûBox
+ ();
+
+119 
+	`sxr_SëRmtMbx
+ (
+STTPC_MBX
+, 
+TRUE
+ ) ;
+
+121 #ifde‡
+__TARGET__
+
+
+122 
+	`hÆ_TickO≥n
+(((*)(
+uöt32
+, 
+u8
+))
+sxr_Tam∑x
+);
+
+123 
+	`sxr_InôTimî
+(
+sxs_TimîDñivîy
+, ((*)(
+u32
+))
+hÆ_TickSëExpú©i⁄Time
+, (
+	`u32
+ (*)())
+hÆ_TickGëRemödîTime
+, 
+SXR_REGULAR_TIMER
+);
+
+124 
+	`sxs_InôSîül
+(
+	`SXS_SET_RATE
+(
+SXS_R1500000
+), 
+HAL_TRACE_PORT_IDX
+, 
+SXS_RMT_DBG_CPU_IDX
+);
+
+126 
+	`sxr_InôTimî
+ (
+sxs_TimîDñivîy
+, 0, 0, 0);
+
+128 
+	`sxr_InôQueue
+ ();
+
+130 
+	`sxs_IoInô
+ ();
+
+132 #ifde‡
+__PROTO_REMOTE__
+
+
+133 
+i
+=
+CMN_RR
+; i< 
+CMN_LAST
+; i++)
+
+134 
+	`sxr_SëRmtMbx
+ (
+i
+, 
+TRUE
+);
+
+137 #ifde‡
+__L1_REMOTE__
+
+
+138 
+i
+=0; i< 
+CMN_RR
+; i++)
+
+139 
+	`sxr_SëRmtMbx
+ (
+i
+, 
+TRUE
+);
+
+144 
+	`sxr_SèπTask
+ (
+	`sxr_NewTask
+ (&
+sxs_TaskIdÀDesc
+), 
+NIL
+);
+
+146 
+i
+=0; i<
+sxs_NbSèticTasksDesc
+; i++)
+
+148 
+u8
+ 
+TaskId
+ = 
+	`sxr_NewTask
+ (&
+sxs_TaskCfg
+ [
+i
+].
+TaskDesc
+);
+
+149 
+	`sxr_SèπTask
+ (
+TaskId
+, (*)
+sxs_TaskCfg
+ [
+i
+].
+TaskP¨£
+);
+
+152 
+	}
+}
+
+165 
+	$sxs_TaskIdÀ
+ ()
+
+168 
+TRUE
+)
+
+170 #ifde‡
+__TARGET__
+
+
+171 
+	`sxs_SîülFlush
+ ());
+
+172 
+	`hÆ_WDogC¡R°
+ ();
+
+174 
+	`sxr_E¡îScScheduÀ
+( );
+
+175 
+	`sxr_Tam∑x
+ (1, 
+SXR_REGULAR_TIMER
+);
+
+176 
+	`sxr_ExôScScheduÀ
+( );
+
+180 
+	`sxs_RmtIdÀHook
+ ();
+
+183 
+	}
+}
+
+196 
+	$maö
+ (
+¨gc
+, *
+¨gv
+[])
+
+198 
+u32
+ 
+i
+;
+
+203 
+	`rfd_SëSl›e
+(0x645, 103);
+
+204 
+	`d•_Tø˚Inô
+();
+
+205 
+	`hÆ_O≥n
+();
+
+206 
+	`l1c_O≥n
+();
+
+208 ()
+	`hÆ_TimîSëCou¡
+(
+HAL_TIMER_ID1
+, ()0xFFFFFFFF);
+
+209 ()
+	`hÆ_TimîSèπ
+(
+HAL_TIMER_ID1
+);
+
+211 
+i
+=0; i<
+HAL_NB_RAM_AREA
+; i++)
+
+213 i‡(
+i
+ == 0)
+
+214 
+	`_sxr_NewHóp
+ ((*)
+	`HAL_HEAP_START
+(0), 
+	`HAL_HEAP_SIZE
+(0Ë-  (
+sxs_BoŸ_t
+), 0);
+
+216 
+	`_sxr_NewHóp
+ ((*)
+	`HAL_HEAP_START
+(
+i
+), 
+	`HAL_HEAP_SIZE
+(i), i);
+
+219 
+	`sxs_SëFnSèmp
+–(
+u32
+*)(((u32)
+_sxs_SëFnSèmp
+) & ~3) );
+
+221 
+	`sxs_SèπAŒ
+ ();
+
+223 #ifde‡
+__TARGET__
+
+
+224 
+	`sxr_NewClu°î
+ (60, 175);
+
+225 
+	`sxr_NewClu°î
+ (220, 255);
+
+226 
+	`sxr_NewClu°î
+ (640, 90);
+
+227 
+	`sxr_NewClu°î
+ (1600, 8);
+
+228 
+	`sxr_NewClu°î
+ (7000, 8);
+
+232 
+	`ßp_InôU§
+ ();
+
+234 
+	`sxs_RmcCtxInô
+ ();
+
+236 
+	`sxr_SèπSchedulög
+ ();
+
+240 
+	}
+}
+
+	@D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\sap_usr.c
+
+32 
+	~"cmn_defs.h
+"
+
+33 
+	~"ros.h
+"
+
+35 
+	~"ßp_cfg.h
+"
+
+37 
+	~"hÆ_sim.h
+"
+
+38 
+	~"hÆ_debug.h
+"
+
+39 
+	~"hÆ_Âga.h
+"
+
+41 
+	~"vî_mgmt.h
+"
+
+42 
+	~"°k_vî.h
+"
+
+44 
+	~"phy_vî.h
+"
+
+56 
+	$ßp_InôU§
+()
+
+58 
+	`sxs_SëTø˚Levñ
+(
+_API
+, 1 | (1 << 2) | (1 << 4));
+
+59 
+	`sxs_SëTø˚Levñ
+(
+_MMI
+, 1 | (1 << 2) | (1 << 4));
+
+60 
+	`sxs_SëTø˚Levñ
+(
+_CC
+, 1 | (1 << 2) | (1 << 4));
+
+61 
+	`sxs_SëTø˚Levñ
+(
+_MM
+, 0xFFFF);
+
+62 
+	`sxs_SëTø˚Levñ
+(
+_RRI
+, 0xFFFF);
+
+63 
+	`sxs_SëTø˚Levñ
+(
+_RRD
+, 1 | (1 << 2) | (1 << 4));
+
+64 
+	`sxs_SëTø˚Levñ
+(
+_LAP
+, 0xFFFF);
+
+65 
+	`sxs_SëTø˚Levñ
+(
+_L1S
+, 1 | (1 << 2) | (1 << 4));
+
+66 
+	`sxs_SëTø˚Levñ
+(
+_L1A
+, 1 | (1 << 2) | (1 << 4));
+
+67 
+	`sxs_SëTø˚Levñ
+(
+_DS
+, 0xFFFF);
+
+68 
+	`sxs_SëTø˚Levñ
+(
+_AT
+, 0xFFFF);
+
+69 
+	`sxs_SëTø˚Levñ
+(
+_SPL
+, 0xFFFF);
+
+70 
+	`sxs_SëTø˚Levñ
+(
+_PPP
+, 0xFFFF);
+
+71 
+	`vî_Inô
+();
+
+73 
+	`∂©f‹m_RegVîsi⁄
+();
+
+74 
+	`°ack_RegVîsi⁄
+();
+
+76 
+	`phy_RegVîsi⁄
+();
+
+77 
+	`vî_PrötAŒModuÀInfo
+();
+
+79 
+	}
+}
+
+	@
+1
+.
+0
+2
+129
+D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\main.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\sap_usr.c
