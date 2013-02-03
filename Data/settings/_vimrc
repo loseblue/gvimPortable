@@ -34,7 +34,6 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 Bundle 'a.vim'
-Bundle 'cocoa.vim'
 Bundle 'brookhong/cscope.vim'
 Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
@@ -56,9 +55,9 @@ Bundle 'loseblue/TabBar'
 Bundle 'lookupfile'
 Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
-Bundle 'Conque-Shell'
 Bundle 'loseblue/trcBrowser'
 Bundle 'loseblue/TxtBrowser'
+Bundle 'godlygeek/tabular'
 Bundle 'bootleq/LargeFile'
 
 filetype plugin indent on    " required!
@@ -75,9 +74,7 @@ behave mswin
 set nobackup      " cloese backup
 syntax enable       " 
 set display=lastline
-filetype on " detect file type
-filetype plugin on " detect file type
-filetype indent on " detect file type
+filetype plugin indent on " detect file type
 set iskeyword+=_,$,@,%,#,-
 
 set backspace=2     " backspace can be used
@@ -108,7 +105,6 @@ set vb t_vb=
 set noerrorbells
 set novisualbell
 
-"window jump in VIM Ctrl + hjkl
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -125,14 +121,6 @@ let loaded_matchit = 1
 " file encoding setting
 set fileencodings=utf-8,chinese,latin-1
 set fileencoding=utf-8
-
-" C setting
-set sm              " OMG
-set tabstop=4       " set width of tab
-set softtabstop=4
-set shiftwidth=4    " set with of assignment blank num = 4
-set autoindent      "auto indent
-set cindent         
 
 "Set mapleader
 let mapleader = ","
@@ -151,9 +139,9 @@ endif
 imap <C-s> <Esc>:wa!<cr>i<Right>
 nmap <C-s> :wa!<cr>
 set nocompatible
-:map <C-V> "+pa
-:map <C-C> "+y
-:map <C-X> "+x
+" map <C-v> "+pa
+" map <C-c> "+y
+" map <C-x> "+x
 
 " file code type
 set ffs=dos,unix
@@ -163,6 +151,14 @@ nmap <leader>fu :se ff=unix<cr>
 " copy current file/path to clipboard ,p:file name & path ,P:only path
 " noremap ,p :let @*=expand("%:p")<CR><Esc>
 " noremap ,P :let @*=expand("%:p:h")<CR><Esc>
+
+" C setting
+set tabstop=4       " set width of tab
+set shiftwidth=4    " set with of assignment blank num = 4
+set et              " set exchange tab to 4 blanks
+set sm        " bracket mactch
+set cindent   " c style cindent
+" set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 
 " """"""""""""""""""" F1-F12"""""""""""""""""""""""""
 " F1 Toggle Menu and Toolbar {
@@ -196,6 +192,7 @@ let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
 let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_width = 30
+let g:tagbar_sort = 0
 
 " roll screen Alt + jk{
 noremap <A-j> <C-f>
@@ -242,10 +239,12 @@ let g:alternateNoDefaultAlternate = 1
 "vim project{
 let g:MP_Bufread_AutoLoad = 1
 let g:MP_Source_File_Ext_Name = 'htm,js,c,h,cpp,vim,php,py,asp'
-" map <leader>ps:MPSearchInProject =expand("")
+map <leader>ps :MPSearchInProject =expand("")
 " map <leader>pl:MPLoad
-" map <leader>pu:MPUpdateTags
-" map <leader>pn:MPNERDTREE
+map <leader>pu :MPUpdateTags<cr>
+map <leader>pn :MPNERDTREE<cr>
+nmap <silent> <leader>pf :LookupFile<cr>
+nmap <silent> <leader>pt :TagbarToggle<CR>
 
 if has("cscope")
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -275,6 +274,7 @@ let g:Tb_UseSingleClick = 1
 let g:Tb_ModSelTarget = 1
 map <A-Left> :Tbbn<CR>
 map <A-Right> :Tbbp<CR>
+map <A--> :Tbbd<CR>
 map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
 ""}
@@ -371,3 +371,12 @@ if has('conceal')
 endif
 "}
 
+" Tabular{
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
+" }
