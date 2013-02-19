@@ -44,26 +44,36 @@ Bundle 'matchit.zip'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'The-NERD-Commenter'
-Bundle 'The-NERD-tree'
+" Bundle 'The-NERD-tree'
 Bundle 'loseblue/springColorScheme'
-Bundle 'molokai'
+Bundle 'Wombat'
+Bundle 'dsolstad/vim-wombat256i'
 Bundle 'Tagbar'
 Bundle 'wesleyche/SrcExpl'
 Bundle 'taglist.vim'
 Bundle 'genutils'
 Bundle 'loseblue/TabBar'
-Bundle 'lookupfile'
+" Bundle 'lookupfile'
 Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
-Bundle 'loseblue/trcBrowser'
+Bundle 'kien/ctrlp.vim'
+" Bundle 'loseblue/trcBrowser'
 Bundle 'loseblue/TxtBrowser'
 Bundle 'godlygeek/tabular'
-Bundle 'bootleq/LargeFile'
+" Bundle 'bootleq/LargeFile'
 
 filetype plugin indent on    " required!
-colorscheme spring  " color scheme
-" let g:molokai_original = 1 
-" colorscheme molokai  " color scheme
+
+" {{{colorscheme
+" colorscheme spring  " color scheme
+if has('gui_running')
+    colorscheme Wombat
+else
+    colorscheme wombat256
+endif
+
+"}}}
+
 
 "=========================== END Vundle ================================
 
@@ -142,6 +152,13 @@ set nocompatible
 " map <C-v> "+pa
 " map <C-c> "+y
 " map <C-x> "+x
+" vnoremap <C-X> "+x
+" vnoremap <C-C> "+y
+" map <C-V> "+gP
+" cmap <C-V> <C-R>+
+vnoremap <c-c> "+y
+" inoremap <c-v> <esc>"+p<CR>i
+nmap n nzz
 
 " file code type
 set ffs=dos,unix
@@ -380,3 +397,30 @@ if exists(":Tabularize")
 endif
 
 " }
+
+" ctrlp{
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+noremap <C-W><C-U> :CtrlPMRU<CR>
+nnoremap <C-W>u :CtrlPMRU<CR>
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
+
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=5
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
+" }
+
