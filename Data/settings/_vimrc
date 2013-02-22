@@ -1,21 +1,21 @@
-"=============================================================================
+"let g:ctrlp_by_filename = 0=============================================================================
 "     FileName: _vimrc
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 0.0.3
+"      Version: 0.0.4
 "   LastChange: 2013-01-25 11:17:26
 "      History:
 "=============================================================================
 " Platform
 function! MySys()
-	if has('win32') || has('win64')
-		return "windows"
-	elseif has("unix")
-		return "unix"
-	else
-		return "mac"
-	endif
+    if has('win32') || has('win64')
+        return "windows"
+    elseif has("unix")
+        return "unix"
+    else
+        return "mac"
+    endif
 endfunction
 
 "=========================== Vundle start ================================
@@ -23,9 +23,9 @@ set nocompatible    " be iMproved
 filetype off        " required!
 
 if MySys() == 'windows'
-	set rtp+=~/.vim/bundle/vundle/
+    set rtp+=~/.vim/bundle/vundle/
 else
-	set rtp+=~/.vim/bundle/vundle/
+    set rtp+=~/.vim/bundle/vundle/
 endif
 
 call vundle#rc()
@@ -44,7 +44,7 @@ Bundle 'matchit.zip'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'The-NERD-Commenter'
-" Bundle 'The-NERD-tree'
+Bundle 'The-NERD-tree'
 Bundle 'loseblue/springColorScheme'
 Bundle 'Wombat'
 Bundle 'dsolstad/vim-wombat256i'
@@ -59,7 +59,7 @@ Bundle 'TeTrIs.vim'
 Bundle 'kien/ctrlp.vim'
 " Bundle 'loseblue/trcBrowser'
 Bundle 'loseblue/TxtBrowser'
-Bundle 'godlygeek/tabular'
+" Bundle 'godlygeek/tabular'
 " Bundle 'bootleq/LargeFile'
 
 filetype plugin indent on    " required!
@@ -98,7 +98,7 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 set cursorcolumn  " high light cursor column
 set cursorline    " high light cursor line
 set linespace=0   " set line high space
-set lines=20 columns=120 "init UI size
+set lines=25 columns=120 "init UI size
 set linebreak      "Do not cut words between lines, USELESS!
 
 "assigned line setting 
@@ -108,25 +108,16 @@ set tabpagemax=15
 set showtabline=2
 
 set paste
-nmap <silent> <A-q> :q<CR>
 
 " shut down error ringBell
 set vb t_vb=
 set noerrorbells
 set novisualbell
 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
 " status line setting [including OS,filecoding, course position,present, time]
 highlight StatusLine guifg=White guibg=Grey           
 highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
 set statusline=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-
-" matchIt plug
-let loaded_matchit = 1
 
 " file encoding setting
 set fileencodings=utf-8,chinese,latin-1
@@ -137,33 +128,12 @@ let mapleader = ","
 let g:mapleader = ","
 set ignorecase smartcase "search cease smart
 
-
 " VIM font setting
 if MySys() == 'windows'
-	set guifont=yaheiInconsolata:h10.5:cANSI
+    set guifont=yaheiInconsolata:h11:cANSI
 else
-	set guifont=Monaco:h14
+    set guifont=Monaco:h14
 endif
-
-" Ctrl+S
-imap <C-s> <Esc>:wa!<cr>i<Right>
-nmap <C-s> :wa!<cr>
-set nocompatible
-" map <C-v> "+pa
-" map <C-c> "+y
-" map <C-x> "+x
-" vnoremap <C-X> "+x
-" vnoremap <C-C> "+y
-" map <C-V> "+gP
-" cmap <C-V> <C-R>+
-vnoremap <c-c> "+y
-" inoremap <c-v> <esc>"+p<CR>i
-nmap n nzz
-
-" file code type
-set ffs=dos,unix
-nmap <leader>fd :se ff=dos<cr>
-nmap <leader>fu :se ff=unix<cr>
 
 " copy current file/path to clipboard ,p:file name & path ,P:only path
 " noremap ,p :let @*=expand("%:p")<CR><Esc>
@@ -175,19 +145,45 @@ set shiftwidth=4    " set with of assignment blank num = 4
 set et              " set exchange tab to 4 blanks
 set sm        " bracket mactch
 set cindent   " c style cindent
-" set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
+set cino=l1   " case brace indent
+let b:verilog_indent_modules = 1
+
+
+nmap <silent> <A-q> :q<CR>
+"window jump in VIM Ctrl + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Ctrl+S
+imap <C-s> <Esc>:wa!<cr>i<Right>
+nmap <C-s> :wa!<cr>
+set nocompatible
+" map <C-v> "+pa
+" map <C-c> "+y
+" map <C-x> "+x
+
+" file code type
+set ffs=dos,unix
+nmap <leader>fd :se ff=dos<cr>
+nmap <leader>fu :se ff=unix<cr>
+
+
+" matchIt plug
+let loaded_matchit = 1
 
 " """"""""""""""""""" F1-F12"""""""""""""""""""""""""
 " F1 Toggle Menu and Toolbar {
 set guioptions-=m
 set guioptions-=T
 map <silent> <F1> :if &guioptions =~# 'T' <Bar>
-			\set guioptions-=T <Bar>
-			\set guioptions-=m <bar>
-			\else <Bar>
-			\set guioptions+=T <Bar>
-			\set guioptions+=m <Bar>
-			\endif<CR>
+            \set guioptions-=T <Bar>
+            \set guioptions-=m <bar>
+            \else <Bar>
+            \set guioptions+=T <Bar>
+            \set guioptions+=m <Bar>
+            \endif<CR>
 "}
 
 map <F2> :%s/\r//g<cr>:w<cr>gg
@@ -207,13 +203,22 @@ nmap <silent> <F9> :TagbarToggle<CR>
 nmap <silent> <C-F9> :Tlist<CR>
 let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
-let g:tagbar_ctags_bin = 'ctags'
+if MySys() == 'windows'
+    let g:tagbar_ctags_bin = 'ctags'
+else
+    let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
+endif
 let g:tagbar_width = 30
 let g:tagbar_sort = 0
 
-" roll screen Alt + jk{
-noremap <A-j> <C-f>
-noremap <A-k> <C-b>
+" roll half screen Alt + jk{
+if MySys() == 'windows'
+    noremap <A-j> <C-d>
+    noremap <A-k> <C-u>
+else
+    noremap <D-j> <C-d>
+    noremap <D-k> <C-u>
+endif
 "}
 
 " NERD_comments
@@ -235,56 +240,36 @@ let showmarks_hlline_upper = 1
 " markbrowser setting
 nmap <silent> <leader>mk :MarksBrowser<cr>
 
-" lookupfile {
-set autochdir
-let g:LookupFile_MinPatLength= 2
-let g:LookupFile_PreserveLastPattern = 0
-let g:LookupFile_PreservePatternHistory = 1
-let g:LookupFile_AlwaysAcceptFirst = 1
-let g:LookupFile_AllowNewFiles = 0
-let g:LookupFile_TagExpr = string('./lookupfiletags')
-
-nmap <silent> <leader>lf :LookupFile<cr>
-nmap <silent> <leader>lb :LUBufs<cr> 
-nmap <silent> <leader>lw :LUWalk<cr> 
-"}
-
 " a.vim {
 let g:alternateNoDefaultAlternate = 1
 "}
 
 "vim project{
 let g:MP_Bufread_AutoLoad = 1
-let g:MP_Source_File_Ext_Name = 'htm,js,c,h,cpp,vim,php,py,asp'
+let g:MP_Source_File_Ext_Name = 'c,h,cpp,vim,py'
 map <leader>ps :MPSearchInProject =expand("")
 " map <leader>pl:MPLoad
 map <leader>pu :MPUpdateTags<cr>
-map <leader>pn :MPNERDTREE<cr>
-nmap <silent> <leader>pf :LookupFile<cr>
 nmap <silent> <leader>pt :TagbarToggle<CR>
+map <leader>pn :MPNERDTREE<cr>
+
 
 if has("cscope")
-	set cscopequickfix=s-,c-,d-,i-,t-,e-
-	set cscopetagorder=0
-	set cscopetag
-	set nocscopeverbose
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+    set cscopetagorder=0
+    set cscopetag
+    set nocscopeverbose
 
-	map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> "g: Find this definition 
-	map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> "d: Find functions called by this function 
-	map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> "c: Find functions calling this function 
-	map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> "t: Find this text string 
-	map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> "e: Find this egrep pattern 
-	map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> "f: Find this file 
-	map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> "i: Find files #including this file 
-	map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> 
+    map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> "g: Find this definition 
+    map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> "d: Find functions called by this function 
+    map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> "c: Find functions calling this function 
+    map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> "t: Find this text string 
+    map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> "e: Find this egrep pattern 
+    map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> "f: Find this file 
+    map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> "i: Find files #including this file 
+    map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> 
 endif
 "}
-
-"NERDTree{  
-let NERDTreeWinPos ="right"
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
-" let NERDTreeShowBookmarks=1
-"}  
 
 "tabbar & tab swith{
 let g:Tb_UseSingleClick = 1
@@ -304,11 +289,11 @@ let g:SrcExpl_refreshTime = 500
 let g:SrcExpl_jumpKey = "<ENTER>" 
 let g:SrcExpl_gobackKey = "<SPACE>" 
 let g:SrcExpl_pluginList = [ 
-		\ "__Tagbar__", 
-		\ "_NERD_tree_", 
-		\ "-TagBar-",
-		\ "Source_Explorer" 
-	\ ] 
+            \ "__Tagbar__", 
+            \ "_NERD_tree_", 
+            \ "-TagBar-",
+            \ "Source_Explorer" 
+            \ ] 
 let g:SrcExpl_searchLocalDef = 1 
 let g:SrcExpl_isUpdateTags = 0 
 let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ." 
@@ -326,14 +311,14 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " Define file-type dependent dictionaries.
 let g:neocomplcache_dictionary_filetype_lists = {
-	\ 'default' : '',
-	\ 'vimshell' : $HOME.'/.vimshell_hist',
-	\ 'scheme' : $HOME.'/.gosh_completions'
-	\ }
+            \ 'default' : '',
+            \ 'vimshell' : $HOME.'/.vimshell_hist',
+            \ 'scheme' : $HOME.'/.gosh_completions'
+            \ }
 
 " Define keyword, for minor languages
 if !exists('g:neocomplcache_keyword_patterns')
-  let g:neocomplcache_keyword_patterns = {}
+    let g:neocomplcache_keyword_patterns = {}
 endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
@@ -363,7 +348,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion, which require computational power and may stall the vim. 
 if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
+    let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 "autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
@@ -384,43 +369,32 @@ smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" 
 
 " For snippet_complete marker.
 if has('conceal')
-  set conceallevel=2 concealcursor=i
+    set conceallevel=2 concealcursor=i
 endif
 "}
 
-" Tabular{
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
-
-" }
+"NERDTree{  
+let NERDTreeWinPos ="right"
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
+" let NERDTreeShowBookmarks=1
+"}  
 
 " ctrlp{
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-noremap <C-W><C-U> :CtrlPMRU<CR>
-nnoremap <C-W>u :CtrlPMRU<CR>
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll|o|a)$',
+            \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+            \ }
 
-let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
-let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
-
+let g:ctrlp_reuse_window = 'netrw\|help\|quickfix\|tagbar\|taglist'
+let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_match_window_bottom=1
-let g:ctrlp_max_height=5
+let g:ctrlp_max_height=9
 let g:ctrlp_match_window_reversed=0
-let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
+let g:ctrlp_lazy_update = 1
 " }
 

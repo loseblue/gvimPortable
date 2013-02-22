@@ -1,12 +1,4 @@
-d:\MySoftWare\gVimPortable\Data\settings\_vimrc
-D:\MySoftWare\gVimPortable\Data\settings\_vimrc
-d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
-d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_common.c
-d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\include\at_common.h
-d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
-d:\Projects\modem2.5g\branches\l4\project.vim
-D:\Projects\modem2.5g\branches\l4\project.vim
-d:\Projects\modem2.5g\branches\l4\create_tags.bat
-D:\Projects\modem2.5g\branches\l4\create_tags.bat
-D:\Projects\modem2.5g\branches\l4\lookupfile_genTags_windows.sh
-D:\Projects\modem2.5g\branches\l4\lookupfiletags
+d:\MySoftWare\gVimPortable\soft\create_tag.sh
+d:\MySoftWare\gVimPortable\soft\create_tags.bat
+D:\MySoftWare\gVimPortable\soft\create_tags.bat
+D:\MySoftWare\gVimPortable\soft\create_tag.sh
