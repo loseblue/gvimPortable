@@ -8,254 +8,566 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/linesp
+~MSle0~/API_CC_ERROR_IND
 
 # Last Substitute Search Pattern:
-~MSle0&^$
+~MSle0&\r
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
 :w
-:q!
-:g/^$/d
-:MPLoad project.vim
-:se linespace=0
-:se linespace=-2
-:se linespace=-1
-:se linespace=-3
-:se linespace=1
-:se linespace=12
-:set linespace 12
-:set linespace= 12
-:MPLoad cscope.out
-:MPLoad cscope.files
-:MPLoad cscope.*
-:x
-:.ll
-:at_c
+:UpdateTags
+:let g:easytags_dynamic_files = 1
+:set tags=.\tags
+:set tags = "tags"
+:HighlightTags
+:BundleInstall
+:Updat
+:open 1.c
 :q
-:'<,'>w
+:copen
+:copen 1.c
+:sp 1.c
+:open sce_l4_cc.c
+:open create_tag.bat
+:python
+:Py
+:help clang_complete.txt
+:BundleInstall!
+:BundleClean
 
 # Search String History (newest to oldest):
-? \<lookupfiletags\>
-?/linesp
-? ^$
-?/cscope
-?/A-j
-?/font
-?/case
-?/project
-?/tree
-? \<nSrvId\>
-?/command
-? \<uStat\>
-?/cin
-?/cimn
-? \<cindent\>
-? \<sm\>
-? \<et\>
-? \<shiftwidth\>
-? \<tabstop\>
-?/match
+?/API_CC_ERROR_IND
+? \<fcs\>
+? \<nDataLen\>
+?/set_library_path
+?/create
+? \<initClangComplete\>
+?/dll
+?/lib
+? \<set_library_path\>
+?/fail
+? \<set_compatibility_check\>
+? \<library_path\>
+?/loading libcl
+?/loading libclang fail
+?/tabbar
+? \r
+?/scan
+?/=====
+?/setup
+?/API_CC_SETUP_REQ
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')  
 
 # Input Line History (newest to oldest):
-@\<lookupfiletags\>
-@\<nSrvId\>
-@D:\MySoftWare\gVimPortable\Data\settings
-@\<uStat\>
+@\<fcs\>
+@\<nDataLen\>
+@\<library_path\>
 @Y
-@\<ctrlp_working_path_mode\>
-@\<ifndef\>
-@\<CFW_MULTI_SIM\>
-@\<HANDLE\>
-@\<return\>
-@\<nRet\>
+@\<SPL_AT_CALL_START_REQ\>
+@<F4><F4><F4>
+@SPL 
+@SPL_AT_CALL_START_REQ
+@spl 
 @D:\Projects\modem2.5g\branches\l4\
-@\<prjpath\>
-@\<prjncscope\>
-@\<get_myproject_path\>
-@\<prjcscope\>
-@\<uReturnValue\>
-@\<CallInfo\>
-@\<ERR_CFW_INVALID_PARAMETER\>
-@\<iLen\>
+@\<mux_GetMuxMessageParamDLCI\>
+@\<CSW_FreeDbg\>
+@\<CSW_MallocDbg\>
+@at_ 
+@CSW_FreeDbg
+@\<nDLC\>
+@cc_fsm
+@cc_ 
+@\<g_AtModuleMux\>
+@D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsmmux-alpha-2
 
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	echo "ctags create"
-	ctags --languages=c --langmap=c:+.h --extra=+q -R
-"1	CHAR	0
-	del cscope.out cscope.files
-	echo del "cscope.out cscope.files tags" successful!
-	
-	echo "ctags create"
-	ctags --languages=c --langmap=c:+.h --extra=+q -R
-	
-	echo "cscope create"
-	vim_find . -name "*.h" -o -name "*.c" > cscope.files
-	cscope -bCkR -i cscope.files
-	
-	pause
+"0	LINE	0
+	Bundle 'xolox/vim-misc'
+""1	LINE	0
 	
 "2	LINE	0
-	echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase/" > lookupfiletags
-	gfind `$pwd` -type f \( -name "*.[ch]"  -o -name "*.[ch]pp" \) -printf "%f\t%p\t1\n"|sort -f >>lookupfiletags
+	buf->readp
 "3	LINE	0
-	REM  @echo off
-	REM  bash lookupfile_genTags_windows.sh
-	
-"4	LINE	0
-	 
-"5	LINE	0
-	 
+	    INC_BUF_POINTER()
+"4	CHAR	0
+	vim-misc
+"5	CHAR	0
+	vim-easytags
 "6	LINE	0
-	 
+	
 "7	LINE	0
-	
+	[url=mux.html]mux[/url]
 "8	LINE	0
-	
+	dd
 "9	LINE	0
-	
+	<h3>
 "a	CHAR	0
-	%d%Ndd
+	wd$u€ýc€ýb€ý,€ý.
 "d	CHAR	0
 	k
 "i	CHAR	0
 	
 "-	CHAR	0
-	 lookupfiletags
+	vim-misc
 
 # File marks:
-'0  7  0  D:\MySoftWare\gVimPortable\soft\create_tag.sh
-'1  101  11  ~\_vimrc
-'2  1  0  D:\MySoftWare\gVimPortable\soft\create_tags.bat
-'3  1  0  D:\MySoftWare\gVimPortable\soft\create_tags.bat
-'4  4  0  D:\Projects\modem2.5g\branches\l4\create_tags.bat
-'5  242  35  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
-'6  100  14  ~\_vimrc
-'7  67  3  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\include\cfw_cc_data.h
-'8  2090  16  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
-'9  3292  21  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
+'0  1  0  D:\Projects\modem2.5g\branches\l4\create_tag.bat
+'1  116  31  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+'2  61  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+'3  33  0  d:\MySoftWare\gVimPortable\[Vundle] Installer
+'4  136  18  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+'5  496  51  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
+'6  469  32  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+'7  52  67  C:\Users\Administrator\Desktop\gsmmux-alpha-2\README
+'8  11  0  E:\my\web\index.html
+'9  14  0  E:\my\web\index.html
 
 # Jumplist (newest first):
--'  7  0  D:\MySoftWare\gVimPortable\soft\create_tag.sh
--'  8  0  D:\MySoftWare\gVimPortable\soft\create_tag.sh
--'  3  23  D:\MySoftWare\gVimPortable\soft\create_tag.sh
--'  101  11  ~\_vimrc
+-'  1  0  D:\Projects\modem2.5g\branches\l4\create_tag.bat
+-'  92  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  41  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.h
+-'  74  10  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  12  1  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  1  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  116  31  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  3  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\tags
+-'  3  0  ~\_vimtags
+-'  115  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  1  0  ~\_vimtags
+-'  4  1  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  1  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\tags
+-'  148  37  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  11  1  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  61  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  33  0  d:\MySoftWare\gVimPortable\[Vundle] Installer
+-'  11  4  d:\MySoftWare\gVimPortable\__Tagbar__
+-'  13  0  d:\MySoftWare\gVimPortable\__Tagbar__
+-'  136  18  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  52  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.h
+-'  211  4  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  135  5  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  89  0  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  140  4  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  111  17  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  7  1  C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+-'  496  51  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
+-'  454  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
+-'  38  4  d:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\hal_simu.c
+-'  1  0  d:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\hal_simu.c
+-'  469  32  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  476  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  473  36  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  71  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  83  65  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  79  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  73  18  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+-'  52  67  C:\Users\Administrator\Desktop\gsmmux-alpha-2\README
+-'  12  0  E:\my\web\index.html
+-'  18  0  E:\my\web\index.html
+-'  429  57  ~\_vimrc
 -'  1  0  ~\_vimrc
--'  13  0  D:\MySoftWare\gVimPortable\soft\create_tags.bat
--'  1  0  D:\MySoftWare\gVimPortable\soft\create_tags.bat
--'  4  0  D:\Projects\modem2.5g\branches\l4\create_tags.bat
--'  2829  26  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2824  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  257  8  ~\_vimrc
--'  37  18  ~\_vimrc
--'  270  25  ~\_vimrc
--'  269  25  ~\_vimrc
--'  268  25  ~\_vimrc
--'  267  25  ~\_vimrc
--'  266  25  ~\_vimrc
--'  265  25  ~\_vimrc
--'  264  25  ~\_vimrc
--'  263  25  ~\_vimrc
--'  261  10  ~\_vimrc
--'  260  8  ~\_vimrc
--'  259  8  ~\_vimrc
--'  258  8  ~\_vimrc
--'  220  0  ~\_vimrc
--'  2817  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  904  12  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1351  16  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1291  68  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1199  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1145  12  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1146  12  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1349  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1144  41  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2745  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2720  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
+-'  25  0  D:\Projects\modem2.5g\branches\l4\1.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\1.c
 -'  1  0  D:\Projects\modem2.5g\branches\l4\project.vim
--'  242  35  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  100  14  ~\_vimrc
--'  160  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  67  3  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\include\cfw_cc_data.h
--'  198  19  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1709  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_ss_main.c
--'  2243  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_ss_main.c
--'  2050  36  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_ss_main.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_ss_main.c
--'  2090  16  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2093  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  3292  21  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  3253  25  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3250  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3252  24  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3254  23  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3248  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3255  3  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3241  34  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  57  0  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
--'  55  14  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
--'  69  0  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
--'  1  0  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
--'  3200  55  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3235  14  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3239  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3258  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3223  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  14  23  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  1732  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_ss_main.c
--'  1950  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  3707  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  133  35  ~\_vimrc
--'  96  2  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
--'  1  0  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
--'  2923  18  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2979  85  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2957  73  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2952  69  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2951  15  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  248  21  ~\_vimrc
--'  255  0  ~\_vimrc
--'  57  22  ~\_vimrc
--'  3336  48  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  3541  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  86  11  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
--'  90  8  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
--'  78  0  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
--'  166  15  d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
--'  2810  61  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  1974  16  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  1970  20  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  1939  16  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
--'  4  0  D:\Projects\modem2.5g\branches\l4\create_tags.bat
--'  2829  26  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
--'  2824  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
+-'  266  0  D:\Projects\modem2.5g\branches\l4\1.c
+-'  34  0  D:\Projects\modem2.5g\branches\l4\1.c
+-'  66  25  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  3098  8  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  1878  0  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  61  27  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  2  0  D:\Projects\modem2.5g\branches\l4\1.c
+-'  1300  14  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  1271  10  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  896  52  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  444  11  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  42  25  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  54  4  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  50  0  ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+-'  80  4  ~\_vimrc
+-'  123  4  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  63  9  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  1  0  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  78  45  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  72  53  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  68  4  ~\.vim\bundle\clang_complete\plugin\libclang.py
+-'  17  1  D:\Projects\modem2.5g\branches\l4\1.c
+-'  61  16  ~\_vimrc
+-'  19  10  ~\_vimrc
+-'  289  73  ~\.vim\bundle\clang_complete\doc\clang_complete.txt
+-'  428  0  ~\_vimrc
+-'  427  5  ~\_vimrc
+-'  98  0  ~\.vim\bundle\clang_complete\doc\clang_complete.txt
+-'  89  32  ~\.vim\bundle\clang_complete\doc\clang_complete.txt
+-'  1  0  ~\.vim\bundle\clang_complete\README
+-'  16  0  D:\Projects\modem2.5g\branches\l4\1.c
+-'  1  0  d:\MySoftWare\gVimPortable\1.c
+-'  294  0  ~\_vimrc
+-'  62  17  ~\_vimrc
+-'  302  1  ~\_vimrc
+-'  1  0  D:\Projects\modem2.5g\branches\l4\sce_l4_cc.c
+-'  13  0  D:\Projects\modem2.5g\branches\l4\project.vim
+-'  116  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_tools.c
+-'  523  10  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
+-'  526  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
+-'  79  13  D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\test_l4\src\sce_l4_cc.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\test_l4\src\sce_l4_cc.c
+-'  4  0  ~\_vimrc
+-'  1  0  d:\MySoftWare\gVimPortable\App\vim\vim73\syntax\aspperl.vim
+-'  440  0  ~\_vimrc
 
 # History of marks within files (newest to oldest):
 
-> D:\MySoftWare\gVimPortable\soft\create_tag.sh
-	"	7	0
-	.	8	0
-	+	3	10
-	+	7	0
-	+	8	0
+> C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
+	"	92	0
+	.	74	0
+	+	32	0
+	+	115	0
+	+	74	0
+	l	2	1
+	p	1	0
 
-> D:\MySoftWare\gVimPortable\soft\create_tags.bat
+> C:\Users\Administrator\Desktop\gsmmux-alpha-2\__Tagbar__
 	"	1	0
+	.	2	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	9	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.h
+	"	41	0
+	l	2	0
+	p	1	0
+
+> C:\Users\Administrator\Desktop\gsmmux-alpha-2\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\create_tag.bat
+	"	1	0
+	.	12	0
+	+	8	0
+	+	9	0
+	+	8	0
+	+	9	11
+	+	8	0
+	+	12	0
+	+	12	0
+	+	12	0
+	l	2	0
+	p	1	0
+
+> C:\Users\Administrator\Desktop\gsmmux-alpha-2\tags
+	"	3	0
+	l	2	0
+	p	1	0
+
+> ~\_vimtags
+	"	3	0
+	l	2	0
+	p	1	0
+
+> ~\_vimrc
+	"	438	32
+	^	438	32
+	.	438	0
+	+	153	0
+	+	152	32
+	+	153	0
+	+	396	0
+	+	396	0
+	+	391	0
+	+	396	26
+	+	396	0
+	+	396	57
+	+	396	65
+	+	54	0
+	+	382	0
+	+	260	0
+	+	261	0
+	+	255	33
+	+	137	35
+	+	104	14
+	+	105	10
+	+	222	21
+	+	223	21
+	+	220	11
+	+	225	21
+	+	226	21
+	+	105	11
+	+	137	37
+	+	163	0
+	+	88	0
+	+	168	0
+	+	169	0
+	+	168	1
+	+	8	0
+	+	20	0
+	+	8	0
+	+	137	31
+	+	394	45
+	+	70	0
+	+	71	0
+	+	70	8
+	+	174	0
+	+	168	0
+	+	416	0
+	+	417	0
+	+	396	0
+	+	202	2
+	+	175	0
+	+	176	0
+	+	175	14
+	+	176	10
+	+	175	12
+	+	176	8
+	+	44	0
+	+	45	0
+	+	46	0
+	+	53	0
+	+	46	8
+	+	395	0
+	+	20	0
+	+	440	0
+	+	425	1
+	+	440	0
+	+	428	0
+	+	428	0
+	+	428	24
+	+	429	39
+	+	428	0
+	+	429	57
+	+	428	0
+	+	440	0
+	+	429	52
+	+	302	0
+	+	302	0
+	+	429	52
+	+	426	24
+	+	1	0
+	+	428	0
+	+	427	6
+	+	428	0
+	+	429	34
+	+	429	0
+	+	429	54
+	+	429	0
+	+	48	0
+	+	46	0
+	+	48	26
+	+	53	0
+	+	49	0
+	+	53	0
+	+	47	20
+	+	52	0
+	+	51	0
+	+	49	14
+	+	50	14
+	+	433	0
+	+	434	0
+	+	433	15
+	+	432	2
+	+	435	40
+	+	436	33
+	+	437	34
+	+	438	0
+	p	430	0
+	s	200	19
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+	"	61	4
+	^	474	0
+	.	137	0
+	+	51	61
+	+	278	0
+	+	310	0
+	+	316	0
+	+	252	44
+	+	253	4
+	+	277	0
+	+	256	17
+	+	257	0
+	+	258	0
+	+	262	0
+	+	266	0
+	+	270	0
+	+	274	0
+	+	255	27
+	+	256	0
+	+	259	17
+	+	263	17
+	+	267	19
+	+	270	0
+	+	271	18
+	+	184	0
+	+	191	0
+	+	243	0
+	+	184	0
+	+	185	16
+	+	191	26
+	+	192	1
+	+	191	0
+	+	192	1
+	+	184	0
+	+	194	0
+	+	216	0
+	+	205	0
+	+	195	0
+	+	194	0
+	+	201	0
+	+	200	26
+	+	77	0
+	+	194	46
+	+	196	0
+	+	200	0
+	+	223	0
+	+	220	0
+	+	222	0
+	+	237	0
+	+	237	0
+	+	229	7
+	+	207	19
+	+	229	34
+	+	223	51
+	+	229	25
+	+	232	0
+	+	231	0
+	+	237	0
+	+	233	7
+	+	233	8
+	+	234	0
+	+	233	26
+	+	236	0
+	+	235	21
+	+	237	0
+	+	281	38
+	+	281	38
+	+	281	0
+	+	347	0
+	+	429	0
+	+	430	0
+	+	349	0
+	+	492	33
+	+	492	20
+	+	494	0
+	+	492	47
+	+	492	65
+	+	493	22
+	+	493	33
+	+	493	44
+	+	493	55
+	+	494	0
+	+	73	0
+	+	67	23
+	+	73	0
+	+	74	13
+	+	81	21
+	+	82	5
+	+	85	0
+	+	88	0
+	+	84	20
+	+	83	61
+	+	74	0
+	+	467	33
+	+	467	28
+	+	467	0
+	+	463	0
+	+	467	0
+	+	468	0
+	+	473	57
+	+	472	0
+	+	474	0
+	+	137	0
+	l	68	0
+	p	67	3
+
+> d:\MySoftWare\gVimPortable\__Tagbar__
+	"	11	4
+	.	13	0
+	+	392	0
+	+	391	0
+	+	391	0
+	+	346	0
+	+	346	0
+	+	317	0
+	+	168	0
+	+	119	0
+	+	119	0
+	+	119	0
+	+	119	0
+	+	119	0
+	+	66	0
+	+	13	0
+	l	2	0
+	p	1	0
+
+> d:\MySoftWare\gVimPortable\[Vundle] Installer
+	"	33	0
 	.	1	0
+	+	65	0
+	+	33	0
 	+	1	0
-	+	1	0
+	p	33	0
 
 > d:\MySoftWare\gVimPortable\-TabBar-
 	"	1	0
@@ -273,112 +585,285 @@ $
 	+	2	0
 	+	2	0
 	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> ~\_vimrc
-	"	101	11
-	^	101	12
-	.	101	11
-	+	393	3
-	+	393	0
-	+	382	0
-	+	382	0
-	+	382	0
-	+	382	36
-	+	385	0
-	+	391	0
-	+	382	0
-	+	391	0
-	+	391	23
-	+	382	0
-	+	47	0
-	+	56	0
-	+	60	0
-	+	63	0
-	+	234	0
-	+	244	0
-	+	264	0
-	+	27	28
-	+	27	4
-	+	28	0
-	+	28	0
-	+	210	4
-	+	12	0
-	+	6	20
-	+	391	42
-	+	391	47
-	+	391	46
-	+	391	47
-	+	391	55
-	+	62	0
-	+	382	0
+> C:\Users\Administrator\Desktop\Stt201306.20_10.27.trc
+	"	5084	29
+	.	1	0
+	+	1	0
+
+> ~\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> d:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\hal_simu.c
+	"	38	4
+	.	45	0
+	+	45	0
+	l	39	4
+	p	38	4
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
+	"	496	51
+	^	154	8
+	.	496	51
+	+	58	0
+	+	189	0
+	+	205	0
+	+	204	0
+	+	212	18
+	+	206	16
+	+	221	0
+	+	235	0
+	+	212	11
+	+	206	20
+	+	212	39
+	+	213	0
+	+	214	17
+	+	217	17
+	+	563	0
 	+	166	0
-	+	165	0
+	+	188	0
+	+	172	35
+	+	150	0
+	+	166	33
+	+	170	0
+	+	174	22
+	+	175	46
+	+	188	0
 	+	166	0
-	+	258	0
-	+	1	1
-	+	393	0
-	+	395	32
-	+	395	23
-	+	391	0
-	+	386	0
-	+	386	52
-	+	387	0
-	+	388	0
-	+	389	0
-	+	390	0
-	+	391	0
-	+	391	0
-	+	391	0
-	+	391	0
-	+	391	0
-	+	391	0
-	+	386	0
-	+	387	0
-	+	391	0
-	+	386	0
-	+	388	41
-	+	397	0
-	+	398	26
-	+	395	0
+	+	176	3
+	+	723	31
+	+	131	0
+	+	125	0
+	+	132	0
+	+	202	0
+	+	166	0
+	+	87	0
+	+	438	0
+	+	153	125
+	+	153	34
+	+	153	127
+	+	166	0
+	+	159	0
+	+	160	0
+	+	161	0
+	+	162	0
+	+	163	0
+	+	164	0
 	+	165	0
-	+	111	0
-	+	152	0
-	+	158	0
-	+	116	0
-	+	122	0
-	+	173	0
-	+	172	0
-	+	138	0
-	+	152	0
-	+	130	0
-	+	148	0
-	+	148	9
-	+	148	11
-	+	149	0
-	+	148	32
-	+	149	0
-	+	393	0
-	+	393	0
-	+	385	0
-	+	393	26
-	+	395	0
-	+	392	57
-	+	392	65
-	+	47	0
-	+	376	0
-	+	254	0
-	+	255	0
-	+	249	33
-	+	133	35
-	+	100	14
-	+	101	10
-	+	216	21
-	+	217	21
-	+	214	11
-	+	219	21
-	+	220	21
-	+	101	11
-	s	194	19
+	+	153	47
+	+	153	64
+	+	153	75
+	+	153	85
+	+	153	95
+	+	153	105
+	+	153	115
+	+	153	124
+	+	156	0
+	+	153	76
+	+	154	0
+	+	471	0
+	+	466	0
+	+	497	0
+	+	496	51
+	l	455	0
+	p	454	4
+
+> E:\my\web\mux.html
+	"	83	0
+	.	1	0
+	+	1	0
+	l	84	1
+	p	83	0
+
+> E:\my\web\index.html
+	"	11	0
+	^	11	17
+	.	11	0
+	+	14	0
+	+	1	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	9	31
+	+	6	38
+	+	11	6
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	l	10	0
+	p	9	0
+
+> D:\Projects\modem2.5g\branches\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\gsmmux-alpha-2\README
+	"	52	67
 
 > D:\Projects\modem2.5g\branches\l4\project.vim
 	"	1	0
@@ -389,215 +874,15 @@ $
 	+	1	0
 	+	2	18
 	+	1	0
+	+	12	0
+	+	1	0
+	l	2	0
 	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\ControlP
-	"	1	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_main.c
-	"	2829	26
-	.	2839	0
-	+	3566	0
-	+	3567	0
-	+	3628	0
-	+	3630	0
-	+	3653	0
-	+	3671	0
-	+	3678	0
-	+	3679	0
-	+	3707	0
-	+	3708	0
-	+	3747	0
-	+	3765	0
-	+	3767	0
-	+	3768	0
-	+	3779	0
-	+	3780	0
-	+	3790	0
-	+	3791	0
-	+	3806	0
-	+	3807	0
-	+	3831	0
-	+	3849	0
-	+	470	0
-	+	3678	0
-	+	2526	0
-	+	2832	0
-	+	2837	0
-	+	2839	0
-	+	2952	0
-	+	3027	0
-	+	3150	11
-	+	3149	15
-	+	3222	15
-	+	3257	0
-	+	3259	0
-	+	3263	0
-	+	3268	0
-	+	3271	0
-	+	2933	0
-	+	2932	0
-	+	2935	0
-	+	3287	0
-	+	3289	0
-	+	3293	0
-	+	3301	0
-	+	3302	4
-	+	3316	4
-	+	3323	0
-	+	2080	0
-	+	3278	23
-	+	3310	0
-	+	3315	0
-	+	3320	0
-	+	3325	0
-	+	3332	0
-	+	3343	0
-	+	3376	0
-	+	3381	0
-	+	3373	25
-	+	3705	1
-	+	3707	0
-	+	3302	0
-	+	3292	22
-	+	2083	0
-	+	2085	0
-	+	2073	23
-	+	2088	0
-	+	383	0
-	+	386	0
-	+	593	0
-	+	828	0
-	+	386	0
-	+	593	0
-	+	432	133
-	+	591	0
-	+	826	0
-	+	905	0
-	+	969	0
-	+	972	0
-	+	1143	0
-	+	1144	41
-	+	1349	0
-	+	1346	0
-	+	1200	0
-	+	1348	0
-	+	1346	0
-	+	1349	0
-	+	1347	0
-	+	1346	0
-	+	1205	0
-	+	1233	0
-	+	1291	42
-	+	1292	0
-	+	1307	0
-	+	1205	0
-	+	1349	0
-	+	1350	0
-	+	2047	0
-	+	828	0
-	+	2839	0
+> D:\Projects\modem2.5g\branches\l4\1.c
+	"	25	0
+	l	2	0
+	p	1	0
 
 > D:\Projects\modem2.5g\branches\l4\-TabBar-
 	"	1	0
@@ -679,2401 +964,1346 @@ $
 	+	2	0
 	+	2	0
 	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~\.vim\bundle\clang_complete\plugin\libclang.py
+	"	66	25
+	.	79	0
+	+	79	0
+	l	62	0
+	p	61	4
+
+> ~\.vim\bundle\clang_complete\plugin\clang\cindex.py
+	"	3098	8
+	l	2	0
+	p	1	0
 
 > D:\Projects\modem2.5g\branches\l4\__Tagbar__
-	"	22	4
-	.	30	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	207	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	173	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	141	0
-	+	73	0
-	+	73	0
-	+	73	0
-	+	73	0
-	+	73	0
-	+	73	0
-	+	73	0
-	+	47	0
-	+	47	0
-	+	47	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-
-> D:\Projects\modem2.5g\branches\l4\create_tags.bat
-	"	4	0
-	^	11	0
-	.	5	0
-	+	12	0
-	+	12	0
-	+	2	0
-	+	5	0
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_ss_main.c
-	"	1709	4
-	^	2338	85
-	.	1728	0
-	+	3740	128
-	+	3740	148
-	+	3725	0
-	+	3741	0
-	+	3780	0
-	+	3753	0
-	+	3749	0
-	+	3874	0
-	+	3910	102
-	+	3910	121
-	+	3910	121
-	+	3911	0
-	+	3927	0
-	+	3961	0
-	+	4245	0
-	+	4536	0
-	+	4953	0
-	+	4954	0
-	+	4953	0
-	+	4948	0
-	+	4953	0
-	+	5087	0
-	+	5105	0
-	+	5108	0
-	+	5105	0
-	+	5198	0
-	+	5220	0
-	+	5223	0
-	+	5220	0
-	+	5259	0
-	+	5274	0
-	+	5277	0
-	+	5346	0
-	+	5396	0
-	+	5413	0
-	+	5409	0
-	+	5415	0
-	+	5578	0
-	+	5598	0
-	+	5595	0
-	+	5600	0
-	+	5627	0
-	+	5644	0
-	+	5670	0
-	+	5666	0
-	+	5672	0
-	+	5678	0
-	+	5719	0
-	+	5751	0
-	+	5746	0
-	+	5753	0
-	+	5756	0
-	+	5767	0
-	+	5774	0
-	+	5785	0
-	+	5792	0
-	+	5803	0
-	+	5818	0
-	+	5833	0
-	+	5859	0
-	+	5893	0
-	+	5915	0
-	+	5912	0
-	+	5917	0
-	+	5935	0
-	+	5943	0
-	+	1715	0
-	+	1729	0
-	+	1732	0
-	+	1763	0
-	+	1827	0
-	+	1889	0
-	+	1896	0
-	+	2024	55
-	+	2024	57
-	+	2024	56
-	+	2025	0
-	+	2049	62
-	+	2049	64
-	+	2050	0
-	+	2049	63
-	+	2050	0
-	+	2076	0
-	+	2161	74
-	+	2162	0
-	+	2322	62
-	+	2323	0
-	+	2322	62
-	+	2323	0
-	+	2339	0
-	+	2338	84
-	+	2393	0
-	+	2392	118
-	+	2393	0
-	+	2392	77
-	+	2469	0
-	+	2596	0
-	+	2641	0
-	+	2650	0
-	+	1728	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\include\cfw_cc_data.h
-	"	67	3
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_sche.c
-	"	3253	25
-	^	3253	26
-	.	3253	25
-	+	2175	0
-	+	2184	0
-	+	2242	0
-	+	2428	0
-	+	2440	0
-	+	2649	0
-	+	2730	0
-	+	2797	0
-	+	2798	0
-	+	2977	0
-	+	2103	0
-	+	3024	0
-	+	3028	0
-	+	3258	0
-	+	3258	0
-	+	3258	0
-	+	3258	8
-	+	3258	0
-	+	3258	0
-	+	3228	0
-	+	3235	0
-	+	3257	0
-	+	3239	8
-	+	3258	6
-	+	3239	8
-	+	3258	0
-	+	3224	0
-	+	3226	0
-	+	3227	0
-	+	3239	0
-	+	3232	0
-	+	3229	0
-	+	3231	0
-	+	3234	0
-	+	3239	0
-	+	3230	6
-	+	3233	7
-	+	3227	10
-	+	3229	10
-	+	3227	9
-	+	3229	9
-	+	3230	8
-	+	3233	9
-	+	3235	9
-	+	3239	9
-	+	3230	11
-	+	3233	12
-	+	3239	12
-	+	3236	0
-	+	3235	0
-	+	3236	29
-	+	3237	0
-	+	3238	0
-	+	3237	20
-	+	3238	6
-	+	3240	0
-	+	3241	35
-	+	3245	26
-	+	3256	0
-	+	3255	4
-	+	3227	10
-	+	3230	10
-	+	3233	11
-	+	3236	9
-	+	3237	9
-	+	3238	9
-	+	3236	24
-	+	3239	11
-	+	3241	30
-	+	3236	19
-	+	3237	23
-	+	3236	19
-	+	3237	23
-	+	3238	25
-	+	3237	20
-	+	3236	20
-	+	3238	8
-	+	3239	5
-	+	3241	21
-	+	3247	0
-	+	3248	0
-	+	3249	0
-	+	3247	8
-	+	3248	25
-	+	3254	0
-	+	3250	48
-	+	3254	0
-	+	3245	17
-	+	3242	17
-	+	3241	10
-	+	3242	33
-	+	3250	0
-	+	3250	18
-	+	3254	0
-	+	3254	0
-	+	3251	19
-	+	3252	0
-	+	3253	0
-	+	3252	23
-	+	3253	25
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\__Tagbar__
-	"	110	4
-	.	111	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	119	0
-	+	117	0
-	+	117	0
-	+	117	0
-	+	117	0
-	+	117	0
-	+	117	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\ControlP
-	"	1	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
-	"	57	0
-	.	55	0
-	+	29	0
-	+	50	0
+	"	18	1
+	.	64	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	106	0
+	+	96	0
+	+	96	0
+	+	96	0
+	+	96	0
+	+	96	0
+	+	96	0
+	+	84	0
+	+	84	0
+	+	84	0
+	+	84	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
+	+	83	0
 	+	68	0
-	+	57	0
-	+	52	0
-	+	53	0
-	+	55	0
-	+	57	0
-	+	55	0
-	+	57	0
-	+	55	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	64	0
+	+	64	0
 
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\cfw_cc_parse.c
-	"	96	2
-	^	85	25
-	.	85	24
-	+	86	0
-	+	92	0
+> ~\.vim\bundle\clang_complete\doc\clang_complete.txt
+	"	289	73
+	^	98	41
+	l	90	0
+	p	89	12
+
+> ~\.vim\bundle\clang_complete\README
+	"	1	0
+
+> d:\MySoftWare\gVimPortable\1.c
+	"	1	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\sce_l4_cc.c
+	"	1	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\ControlP
+	"	2	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
+	"	116	0
+	^	523	11
+	.	523	10
+	+	230	0
+	+	212	0
+	+	212	80
+	+	212	79
+	+	228	0
+	+	212	79
+	+	228	29
+	+	205	14
+	+	228	19
+	+	205	24
+	+	228	17
+	+	205	23
+	+	228	17
+	+	205	23
+	+	228	0
+	+	205	25
+	+	206	0
+	+	205	23
+	+	213	45
+	+	213	45
+	+	214	0
+	+	216	0
+	+	215	16
+	+	217	76
+	+	145	0
+	+	369	0
+	+	365	0
+	+	366	56
+	+	368	62
+	+	362	0
+	+	371	0
+	+	369	0
+	+	371	0
+	+	362	0
+	+	369	0
+	+	370	0
+	+	372	0
+	+	97	0
+	+	98	0
+	+	99	0
 	+	100	0
-	+	155	0
-	+	198	0
-	+	215	0
-	+	221	0
-	+	223	0
-	+	221	0
-	+	220	33
-	+	20	0
-	+	95	0
-	+	85	24
+	+	96	0
+	+	236	16
+	+	267	0
+	+	237	37
+	+	265	0
+	+	263	23
+	+	199	0
+	+	238	26
+	+	263	48
+	+	264	13
+	+	238	35
+	+	263	58
+	+	238	37
+	+	262	0
+	+	240	71
+	+	262	0
+	+	240	0
+	+	238	36
+	+	242	50
+	+	243	17
+	+	245	0
+	+	245	32
+	+	245	50
+	+	241	26
+	+	242	50
+	+	243	0
+	+	245	34
+	+	245	0
+	+	250	43
+	+	251	17
+	+	255	0
+	+	253	32
+	+	242	21
+	+	261	0
+	+	262	0
+	+	244	68
+	+	245	0
+	+	247	16
+	+	247	0
+	+	253	20
+	+	253	0
+	+	259	20
+	+	259	28
+	+	248	0
+	+	250	0
+	+	249	42
+	+	247	45
+	+	209	0
+	+	130	0
+	+	79	0
+	+	93	0
+	+	505	0
+	+	494	0
+	+	43	0
+	+	43	0
+	+	494	0
+	+	43	0
+	+	526	0
+	+	523	10
+	l	2	0
+	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
-	"	1299	0
-	^	1	80
-	.	1326	13
-	+	219	78
-	+	219	81
-	+	219	84
-	+	220	0
-	+	221	0
-	+	282	0
-	+	269	0
-	+	252	0
-	+	289	0
-	+	327	0
-	+	518	0
-	+	1299	0
-	+	1061	0
-	+	1064	2
-	+	1028	51
-	+	1028	0
-	+	1285	0
-	+	1289	0
-	+	1285	0
-	+	1286	0
-	+	1061	11
-	+	1069	0
-	+	1072	0
-	+	1071	0
-	+	1063	0
-	+	1065	0
-	+	132	46
-	+	132	78
-	+	132	45
-	+	132	63
-	+	132	77
-	+	133	0
-	+	148	0
-	+	1042	0
-	+	1061	11
-	+	1061	0
-	+	1059	46
-	+	1060	4
-	+	1058	12
-	+	1061	27
-	+	1061	5
-	+	1292	0
-	+	1062	0
-	+	1061	5
-	+	1061	5
-	+	1061	0
-	+	56	0
-	+	1064	0
-	+	1065	0
-	+	1065	0
-	+	1062	0
-	+	1061	0
-	+	1087	0
-	+	1087	0
-	+	1088	0
-	+	1099	4
-	+	1263	5
-	+	1265	12
-	+	1283	12
-	+	1265	0
-	+	1275	4
-	+	1282	5
-	+	1277	0
-	+	1265	0
-	+	1265	0
-	+	1065	0
-	+	1099	4
-	+	1089	41
-	+	1087	0
-	+	1089	0
-	+	1099	4
-	+	1084	17
-	+	1265	0
-	+	46	0
-	+	46	0
-	+	43	11
-	+	147	0
-	+	480	0
-	+	194	0
-	+	198	0
-	+	444	0
-	+	724	0
-	+	738	0
-	+	810	0
-	+	1028	0
-	+	1048	0
-	+	1055	0
-	+	1065	0
-	+	1128	0
-	+	1237	0
-	+	1244	0
-	+	1251	0
-	+	1263	0
-	+	1346	0
-	+	1564	0
-	+	1587	0
-	+	1710	0
-	+	1963	0
-	+	2038	0
-	+	1326	13
+> D:\Projects\modem2.5g\branches\ControlP
+	"	2	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_main.c
-	"	32	12
-	.	271	0
-	+	28	0
-	+	56	0
-	+	271	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\sim\src\at_cmd_sim.c
-	"	1672	4
-	.	2542	0
-	+	19	0
-	+	214	0
-	+	215	0
-	+	504	0
-	+	597	0
-	+	598	0
-	+	781	0
-	+	854	0
-	+	1045	0
-	+	1124	0
-	+	1358	0
-	+	1366	0
-	+	1629	0
-	+	1746	0
-	+	1871	0
-	+	1872	0
-	+	2069	0
-	+	2070	0
-	+	2103	0
-	+	2104	0
-	+	2123	0
-	+	2124	0
-	+	2164	0
-	+	2165	0
-	+	2180	0
-	+	2181	0
-	+	2192	0
-	+	2193	0
-	+	2216	0
-	+	2217	0
-	+	2265	0
-	+	2266	0
-	+	2311	0
-	+	2312	0
-	+	2476	0
-	+	2542	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\include\rk_types.h
-	"	28	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\include\at_common.h
-	"	258	0
-	.	266	0
-	+	146	0
-	+	22	0
-	+	30	0
-	+	213	0
-	+	214	0
-	+	266	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_common.c
-	"	815	0
-	.	815	0
-	+	33	0
-	+	794	0
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_tools.c
+	"	1	0
+	^	221	0
+	.	220	0
+	+	795	55
+	+	1204	20
+	+	1204	0
+	+	1204	54
+	+	25	0
+	+	1205	0
+	+	1204	0
+	+	1204	0
+	+	1204	0
+	+	1204	0
+	+	825	0
+	+	824	0
+	+	922	0
+	+	862	37
+	+	858	21
+	+	857	33
+	+	858	72
+	+	1	0
+	+	862	18
+	+	856	32
+	+	857	38
+	+	284	0
+	+	1234	0
+	+	867	5
+	+	868	0
+	+	868	0
+	+	864	0
+	+	866	0
+	+	864	20
+	+	866	24
+	+	870	0
+	+	869	0
+	+	871	37
+	+	887	33
+	+	888	44
 	+	815	0
+	+	815	0
+	+	816	0
+	+	816	0
+	+	815	24
+	+	816	58
+	+	817	73
+	+	818	68
+	+	819	61
+	+	818	57
+	+	817	62
+	+	815	23
+	+	220	0
+	+	222	0
+	+	220	0
+	l	2	0
+	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\sms\src\at_cmd_sms.c
-	"	1032	2
-	.	2538	0
-	+	5052	0
-	+	5092	0
-	+	5093	0
-	+	5095	0
-	+	5096	0
-	+	5105	0
-	+	5109	0
-	+	5130	0
-	+	5275	0
-	+	5281	0
-	+	5288	0
-	+	5305	0
-	+	5313	0
-	+	5413	0
-	+	5419	0
-	+	5426	0
-	+	5442	0
-	+	5450	0
-	+	5469	0
-	+	5480	0
-	+	5491	0
-	+	5493	0
-	+	5500	0
-	+	5509	0
-	+	5515	0
-	+	5531	0
-	+	5558	0
-	+	5559	0
-	+	5560	0
-	+	5561	0
-	+	5565	0
-	+	5573	0
-	+	5581	0
-	+	5599	0
-	+	5601	0
-	+	5608	0
-	+	5610	0
-	+	5617	0
-	+	5626	0
-	+	5632	0
-	+	5637	0
-	+	5660	0
-	+	5661	0
-	+	5663	0
-	+	5664	0
-	+	5693	0
-	+	5717	17
-	+	5717	0
-	+	5734	0
-	+	5745	0
-	+	5749	0
-	+	5782	0
-	+	5783	0
-	+	5785	0
-	+	5786	0
-	+	5798	0
-	+	5806	0
-	+	5816	0
-	+	5820	0
-	+	5856	0
-	+	5890	0
-	+	5903	0
-	+	5916	0
-	+	5929	0
-	+	5936	0
-	+	5943	0
-	+	5976	0
-	+	6008	0
-	+	6029	0
-	+	6045	0
-	+	6165	0
-	+	6174	0
-	+	6181	0
-	+	6199	0
-	+	6208	0
-	+	6232	0
-	+	6253	0
-	+	6282	0
-	+	6355	0
-	+	6363	0
-	+	6364	0
-	+	6405	0
-	+	6410	0
-	+	6411	0
-	+	7207	0
-	+	7270	0
-	+	7289	0
-	+	7309	0
-	+	7315	0
-	+	7383	0
-	+	7397	0
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\test_l4\src\sce_l4_cc.c
+	"	79	13
+
+> d:\MySoftWare\gVimPortable\ControlP
+	"	9	33
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 	+	2	0
-	+	2538	24
-	+	2538	0
-	+	2540	0
-	+	2426	0
-	+	2540	0
-	+	2538	24
-	+	2540	0
-	+	2538	0
 
-> C:\Users\Administrator\Desktop\1.c
-	"	233	24
-	^	260	0
-	.	10	0
-	+	261	0
-	+	261	131
-	+	261	4
-	+	261	0
-	+	261	0
-	+	261	39
-	+	261	28
-	+	261	0
-	+	260	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	55
-	+	261	0
-	+	261	0
-	+	261	60
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	261	0
-	+	1	0
-	+	10	0
-	+	7	0
-	+	9	0
-	+	10	0
-
-> d:\MySoftWare\gVimPortable\__Tagbar__
-	"	4	4
-	.	5	0
-	+	5	0
-
-> C:\Users\Administrator\Desktop\1.c.html
-	"	285	30
-	^	2	0
-	.	35	0
-	+	35	0
-
-> C:\Users\Administrator\Desktop\asu1dark.html
-	"	280	45
-	^	296	0
-	.	1	0
-	+	296	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\rec.txt
-	"	82	10
-	.	82	0
-	+	380	0
-	+	380	12
-	+	380	0
-	+	380	174
-	+	380	0
-	+	380	0
-	+	380	0
-	+	380	0
-	+	380	0
-	+	380	0
-	+	1	0
-	+	380	0
-	+	68	0
-	+	63	0
-	+	70	0
-	+	64	0
-	+	63	0
-	+	64	1
-	+	63	7
-	+	64	0
-	+	65	0
-	+	82	0
-
-> C:\Users\Administrator\Desktop\asu1dark.vim
-	"	7	15
-	.	4	0
-	+	16	0
-	+	4	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\at_uart.c
+> d:\MySoftWare\gVimPortable\App\vim\vim73\syntax\aspperl.vim
 	"	1	0
-	.	88	0
-	+	88	0
+	l	2	0
+	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
-	"	112	0
-	.	16	0
-	+	2	0
-	+	18	0
-	+	16	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\at_mux.c
-	"	1166	1
-	^	1166	2
-	.	1166	0
-	+	38	0
-	+	1166	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_module.c
-	"	70	0
-	.	30	0
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\test_l4\src\sce_l4_all.c
+	"	35	50
+	^	34	54
+	.	34	53
+	+	1	0
+	+	31	41
+	+	32	0
 	+	31	0
-	+	48	0
-	+	30	0
+	+	36	37
+	+	49	0
+	+	32	53
+	+	33	53
+	+	34	53
+	l	32	1
+	p	31	1
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\include\at_uart.h
-	"	124	0
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\test_l4\src\l4_hal_simu.c
+	"	38	4
+	.	43	0
+	+	37	0
+	+	43	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\tools\release\Usb2SerialDriver\An232B\install\Install method2(inf file)\ftdiport.cat
-	"	1	0
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\vc_project\trace\2013.06.17\Stt201306.17_17.16.trc
+	"	97	0
+	.	1	0
+	+	2	0
+	+	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\nw\src\cfw_nw_main.c
-	"	963	29
-	^	963	30
-	.	963	29
-	+	2672	0
-	+	2697	0
-	+	2698	0
-	+	2719	0
-	+	2720	0
-	+	2725	0
-	+	2726	0
-	+	2732	0
-	+	2733	0
-	+	2741	0
-	+	2742	0
-	+	2754	0
-	+	2771	0
-	+	2777	0
-	+	2791	0
-	+	2812	0
-	+	2813	0
-	+	2818	0
-	+	2820	0
-	+	2825	0
-	+	2827	0
-	+	2837	0
-	+	2838	0
-	+	2847	0
-	+	2852	0
-	+	2866	0
-	+	2861	0
-	+	2871	0
-	+	2872	0
-	+	2884	0
-	+	2889	0
-	+	2897	0
-	+	2908	0
-	+	2922	0
-	+	2924	0
-	+	2929	0
-	+	2931	0
-	+	2946	55
-	+	2946	74
-	+	2946	74
-	+	2947	0
-	+	2953	0
-	+	2962	0
-	+	2975	0
-	+	2976	0
-	+	2989	0
-	+	2990	0
-	+	2993	0
-	+	2994	0
-	+	3015	45
-	+	3015	64
-	+	3015	64
-	+	3016	0
-	+	3037	0
-	+	3047	0
-	+	3062	0
-	+	3063	0
-	+	3080	0
-	+	3081	0
-	+	3105	0
-	+	3106	0
-	+	3119	41
-	+	3119	60
-	+	3119	60
-	+	3120	0
-	+	3127	0
-	+	3137	0
-	+	3146	0
-	+	3147	0
-	+	3165	54
-	+	3165	73
-	+	3165	73
-	+	3166	0
-	+	3174	0
-	+	3183	0
-	+	3192	0
-	+	3193	0
-	+	3214	44
-	+	3214	63
-	+	3214	63
-	+	3215	0
-	+	3224	0
-	+	3233	0
-	+	3240	0
-	+	3241	0
-	+	3243	0
-	+	3244	0
-	+	3266	26
-	+	3266	43
-	+	3266	43
-	+	3267	0
-	+	3275	0
-	+	3276	0
-	+	3280	0
-	+	3281	0
-	+	2115	0
-	+	223	0
-	+	226	0
-	+	970	0
-	+	963	29
+> C:\Users\Administrator\Desktop\Stt201306.17_11.48.trc
+	"	4686	0
+
+> C:\Users\Administrator\Desktop\MT.trc
+	"	622	13
+	l	2	0
+	p	1	0
 
 > C:\Users\Administrator\Desktop\-TabBar-
 	"	1	0
 	.	2	0
 	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> ~\-TabBar-
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_agent\vc_project\trace\2013.06.17\Stt201306.17_16.09.trc
+	"	4589	44
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\vc_project\trace\2013.06.17\Stt201306.17_16.42.trc
+	"	3586	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\vc_project\trace\2013.06.17\Stt201306.17_17.12.trc
+	"	3575	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\.clang_complete
 	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
+	^	2	7
+	.	2	6
+	+	4	0
+	+	3	6
+	+	2	6
+	p	3	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_agent\vc_project\trace\2013.06.17\Stt201306.17_11.48.trc
+	"	4678	12
+	l	4679	0
+	p	4678	0
+
+> D:\MySoftWare\gVimPortable\soft\.clang_complete
+	"	5	0
+	.	6	0
+	+	1	0
+	+	2	0
+	+	6	0
+	p	5	0
 
 > ~\[Vundle] clean
 	"	4	0
 	.	1	0
-	+	7	0
-	+	4	0
 	+	1	0
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\ControlP
-	"	1	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\lookupfile_genTags_windows.sh
-	"	1	0
-
-> D:\Projects\modem2.5g\branches\l4\lookupfiletags
-	"	1	0
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\ControlP
-	"	1	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\__Tagbar__
-	"	1	0
-	.	15	0
-	+	107	0
-	+	84	0
-	+	84	0
-	+	84	0
-	+	84	0
-	+	84	0
-	+	81	0
-	+	81	0
-	+	81	0
-	+	75	0
-	+	70	0
-	+	70	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	15	0
+	p	4	0
 
 > ~\[Vundle] Installer
-	"	32	0
+	"	31	0
 	.	1	0
-	+	1125	0
-	+	1101	0
-	+	1076	0
-	+	1050	0
-	+	1024	0
-	+	998	0
-	+	972	0
-	+	945	0
-	+	917	0
-	+	889	0
-	+	861	0
-	+	832	0
-	+	803	0
-	+	774	0
-	+	744	0
-	+	714	0
-	+	685	0
-	+	656	0
-	+	627	0
-	+	598	0
-	+	569	0
-	+	540	0
-	+	510	0
-	+	480	0
-	+	450	0
-	+	419	0
-	+	389	0
-	+	359	0
-	+	329	0
-	+	300	0
-	+	271	0
-	+	241	0
-	+	212	0
-	+	182	0
-	+	152	0
-	+	123	0
-	+	93	0
-	+	63	0
-	+	32	0
+	+	31	0
 	+	1	0
+	p	31	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ppp\src\aps_main.c
-	"	351	0
-	.	351	0
-	+	71	0
-	+	211	0
-	+	211	0
-	+	257	0
-	+	271	0
-	+	278	0
-	+	324	0
-	+	71	0
-	+	212	0
-	+	212	0
-	+	211	0
-	+	270	0
-	+	287	0
-	+	296	0
-	+	351	0
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at.c
+	"	89	0
+	^	89	10
+	.	91	9
+	+	86	0
+	+	92	20
+	+	95	8
+	+	92	9
+	+	94	0
+	+	83	8
+	+	85	4
+	+	87	5
+	+	83	30
+	+	91	9
+	l	2	0
+	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\nw\include\cfw_gprs_tool.h
-	"	189	0
-	.	189	0
-	+	189	0
+> ~\.vim\bundle\Wombat\colors\wombat.vim
+	"	23	0
+	^	23	2
+	.	23	0
+	+	23	0
+	l	24	0
+	p	23	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\nw\src\at_cmd_nw.c
-	"	975	0
-	.	975	0
-	+	59	0
-	+	53	0
-	+	448	0
-	+	466	0
-	+	470	0
-	+	479	0
-	+	481	0
-	+	501	0
-	+	520	0
-	+	528	0
-	+	531	0
-	+	595	0
-	+	634	0
-	+	646	0
-	+	653	0
-	+	658	0
-	+	732	0
-	+	747	0
-	+	752	0
-	+	777	0
-	+	782	0
-	+	822	0
-	+	834	0
-	+	840	0
-	+	909	0
-	+	908	0
-	+	978	0
-	+	1038	0
-	+	1294	0
-	+	1371	0
-	+	1399	0
-	+	1432	0
-	+	1450	0
-	+	1548	0
-	+	1773	0
-	+	1812	0
-	+	1822	0
-	+	1911	0
-	+	1936	0
-	+	2118	0
-	+	2445	0
-	+	2973	0
-	+	2976	0
-	+	2977	0
-	+	3031	0
-	+	3044	0
-	+	3051	0
-	+	3058	0
-	+	3072	0
-	+	3077	0
-	+	59	0
-	+	975	0
+> C:\Users\Administrator\Desktop\vim.ahk
+	"	1	0
+	.	2	0
+	+	1	0
+	+	2	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sim\src\cfw_sim_pbk_api.c
-	"	48	0
-	.	48	0
-	+	52	0
-	+	67	0
-	+	48	0
-	+	48	0
-	+	60	0
-	+	59	0
-	+	66	0
-	+	65	0
-	+	91	0
-	+	79	0
-	+	225	0
-	+	224	0
-	+	250	0
-	+	249	0
-	+	267	0
-	+	256	0
-	+	343	0
-	+	342	0
-	+	359	0
-	+	358	0
-	+	378	0
-	+	366	0
-	+	464	0
-	+	463	0
-	+	480	0
-	+	479	0
-	+	499	0
-	+	487	0
-	+	603	0
-	+	602	0
-	+	614	0
-	+	613	0
-	+	633	0
-	+	621	0
-	+	745	0
-	+	744	0
-	+	763	0
-	+	762	0
-	+	780	0
-	+	770	0
-	+	826	0
-	+	825	0
-	+	833	0
-	+	832	0
-	+	849	0
-	+	839	0
-	+	898	0
-	+	897	0
-	+	48	0
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\sce_ds_all.c
+	"	9	0
+	.	9	0
+	+	19	0
+	+	18	0
+	+	10	75
+	+	11	75
+	+	12	75
+	+	17	75
+	+	18	75
+	+	18	75
+	+	6	0
+	+	1	0
+	+	10	88
+	+	9	0
+	l	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\include\at_define.h
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\at_simu.c
 	"	1	0
 	^	47	2
-	.	40	0
-	+	22	1
-	+	31	1
-	+	25	1
-	+	37	1
-	+	47	1
-	+	56	1
-	+	59	1
-	+	40	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ppp\src\aps_tcpip_main.c
-	"	1370	12
-	.	1370	0
-	+	56	0
-	+	855	0
-	+	912	0
-	+	1022	0
-	+	1030	0
-	+	1352	0
-	+	1370	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ppp\src\csw_ppp.c
-	"	1264	4
-	.	1264	0
-	+	84	0
-	+	777	0
-	+	795	0
-	+	795	0
-	+	806	0
-	+	827	0
-	+	1046	0
-	+	1054	0
-	+	1064	0
-	+	1264	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\tcpip\src\at_cmd_tcpip.c
-	"	2745	7
-	.	3191	0
-	+	20	0
-	+	112	0
-	+	113	0
-	+	116	0
-	+	117	0
-	+	174	0
-	+	213	0
-	+	227	0
-	+	228	0
-	+	237	0
-	+	238	0
-	+	245	0
-	+	246	0
-	+	262	0
-	+	514	0
-	+	537	0
-	+	555	0
-	+	575	0
-	+	725	0
-	+	1065	0
-	+	1184	0
-	+	1199	0
-	+	1212	0
-	+	2620	0
-	+	2643	0
-	+	2658	0
-	+	2678	0
-	+	3191	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
-	"	2973	4
-	.	2973	0
-	+	84	0
-	+	250	0
-	+	251	0
-	+	1107	0
-	+	1122	0
-	+	1446	0
-	+	1479	0
-	+	1647	0
-	+	1809	0
-	+	1965	0
-	+	2080	0
-	+	2312	0
-	+	2931	0
-	+	2932	0
-	+	2972	0
-	+	2973	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\sms\include\at_cmd_sms.h
-	"	147	0
-	.	147	0
-	+	2	0
-	+	98	0
-	+	147	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\sms\src\__Tagbar__
-	"	39	4
 	.	59	0
-	+	59	0
-	+	59	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\event.h
-	"	301	0
-	.	301	0
-	+	165	0
-	+	301	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\nw\include\cfw_nw_data.h
-	"	63	0
-	^	63	0
-	.	63	0
-	+	33	0
-	+	60	0
-	+	64	0
-	+	63	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\nw\src\cfw_gprs_tool.c
-	"	172	4
-	.	172	0
-	+	45	0
-	+	163	0
-	+	172	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\sat\src\at_cmd_sat.c
-	"	1056	20
-	.	1056	0
-	+	20	0
-	+	48	0
-	+	49	0
-	+	50	0
-	+	51	0
-	+	161	0
-	+	241	0
-	+	427	0
-	+	498	0
-	+	547	0
-	+	649	0
-	+	1056	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\tcpip\src\tcpip.c
-	"	403	8
-	.	403	0
-	+	34	0
-	+	403	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\cfw.h
-	"	32	10
-	.	3614	0
-	+	459	0
-	+	562	39
-	+	562	57
-	+	562	0
-	+	562	39
-	+	562	57
-	+	562	0
-	+	562	40
-	+	562	58
-	+	562	0
-	+	562	46
-	+	562	64
-	+	562	0
-	+	562	47
-	+	562	65
-	+	562	0
-	+	562	59
-	+	562	0
-	+	562	59
-	+	562	0
-	+	562	0
-	+	51	0
-	+	80	0
-	+	81	0
-	+	283	0
-	+	386	0
-	+	386	0
-	+	386	0
-	+	386	0
-	+	305	0
-	+	305	0
-	+	305	0
-	+	305	0
-	+	283	0
-	+	381	0
-	+	431	0
-	+	565	0
-	+	562	0
-	+	591	0
-	+	774	0
-	+	761	0
-	+	821	0
-	+	886	0
-	+	887	0
-	+	937	0
-	+	1166	0
-	+	1256	0
-	+	718	0
-	+	1538	0
-	+	1550	0
-	+	1555	0
-	+	1585	0
-	+	1591	0
-	+	1593	0
-	+	1603	0
-	+	1621	0
-	+	2160	0
-	+	2375	0
-	+	2482	0
-	+	2484	94
-	+	2484	113
-	+	2484	113
-	+	2485	0
-	+	2651	0
-	+	2844	0
-	+	2846	0
-	+	2928	0
-	+	2937	0
-	+	51	0
-	+	80	0
-	+	84	0
-	+	309	0
-	+	431	0
-	+	429	0
-	+	485	0
-	+	647	0
-	+	718	0
-	+	950	0
-	+	937	0
-	+	937	0
-	+	937	0
-	+	918	0
-	+	874	0
-	+	1026	0
-	+	1070	0
-	+	1124	0
-	+	1518	0
-	+	1659	0
-	+	2065	0
-	+	2799	0
-	+	3158	0
-	+	3160	94
-	+	3160	113
-	+	3160	113
-	+	3161	0
-	+	3327	0
-	+	3521	0
-	+	3523	0
-	+	3605	0
-	+	3614	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gprs\src\at_cmd_gprs.c
-	"	3874	8
-	.	3874	0
+	+	1	0
+	+	11	0
+	+	12	0
+	+	22	0
 	+	2	0
-	+	153	0
-	+	476	0
-	+	484	0
-	+	492	0
-	+	498	0
-	+	812	0
-	+	1278	0
-	+	1318	0
-	+	1681	0
-	+	1722	0
-	+	1971	0
-	+	2016	0
-	+	2123	0
-	+	2202	0
-	+	2342	0
-	+	2408	0
-	+	2493	0
-	+	2560	0
-	+	2624	0
-	+	2794	0
-	+	2872	0
-	+	3286	0
-	+	3321	0
-	+	3523	0
-	+	3534	0
-	+	3674	0
-	+	3724	0
-	+	3735	0
-	+	3874	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\nw\src\cfw_gprs_main.c
-	"	647	12
-	^	173	1
-	.	42	0
-	+	883	0
-	+	898	0
-	+	932	0
-	+	949	0
-	+	953	0
-	+	1004	0
-	+	1033	0
-	+	1050	0
-	+	1087	0
-	+	1107	0
-	+	1124	0
-	+	1138	0
-	+	1172	0
-	+	1189	0
-	+	1204	0
-	+	1271	0
-	+	1272	0
-	+	1279	0
-	+	1310	0
-	+	1319	0
-	+	1323	0
-	+	1344	0
-	+	1370	0
-	+	1352	0
-	+	1376	0
-	+	1374	0
-	+	1385	0
-	+	1388	0
-	+	1404	0
-	+	1432	0
-	+	1445	0
-	+	1438	0
-	+	1452	0
-	+	1455	0
-	+	1458	0
-	+	1484	0
-	+	1486	0
-	+	1498	0
-	+	1499	0
-	+	1517	0
-	+	1562	0
-	+	1579	0
-	+	1582	0
-	+	1654	0
-	+	1670	0
-	+	1676	0
-	+	1688	0
-	+	1710	0
-	+	1725	0
-	+	1740	0
-	+	1744	0
-	+	1772	0
-	+	1787	0
-	+	1794	0
-	+	1787	0
-	+	1778	0
-	+	1795	0
-	+	1798	0
-	+	1831	0
-	+	1839	0
-	+	1862	0
-	+	1867	0
-	+	1869	0
-	+	1872	0
-	+	1894	0
-	+	1909	0
-	+	1900	0
-	+	1916	0
-	+	1917	0
-	+	1920	0
-	+	1939	0
-	+	1954	0
-	+	1945	0
-	+	1961	0
-	+	1962	0
-	+	1965	0
-	+	1980	0
-	+	1989	0
-	+	1999	0
-	+	1998	0
-	+	1999	0
-	+	2006	0
-	+	2021	0
-	+	2027	0
-	+	2030	0
-	+	2034	0
-	+	2046	0
-	+	2086	0
-	+	2088	0
-	+	2089	0
-	+	2106	0
-	+	2094	0
-	+	2093	0
-	+	2092	0
-	+	2113	0
-	+	2150	0
-	+	2213	0
-	+	2769	0
-	+	2769	0
-	+	42	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\pbk\src\at_cmd_pbk.c
-	"	1447	0
-	.	1447	0
-	+	2	0
-	+	124	0
-	+	957	0
-	+	1038	0
-	+	1386	0
-	+	1392	0
-	+	1447	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\id\src\at_cmd_id.c
-	"	303	16
-	.	303	0
-	+	28	0
-	+	37	0
-	+	38	0
-	+	190	0
-	+	303	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gc\src\at_cmd_gc.c
-	"	1037	0
-	.	887	6
-	+	2	0
-	+	182	0
-	+	183	0
-	+	861	0
-	+	874	0
-	+	884	0
-	+	893	0
-	+	901	0
-	+	919	0
-	+	930	0
-	+	945	0
-	+	960	0
-	+	968	0
-	+	971	0
-	+	976	0
-	+	984	0
-	+	993	0
-	+	999	0
-	+	1007	0
-	+	1015	0
-	+	1023	0
-	+	1037	0
-	+	1043	0
-	+	1394	0
-	+	1408	0
-	+	1425	0
-	+	1447	0
-	+	1455	0
-	+	1466	0
-	+	1485	0
-	+	1492	0
-	+	1503	0
-	+	1522	0
-	+	1529	0
-	+	1536	0
-	+	1561	0
-	+	1572	0
-	+	1599	0
-	+	1615	0
-	+	1630	0
-	+	1641	0
-	+	1652	0
-	+	1678	0
-	+	1695	0
-	+	1706	0
-	+	1718	0
-	+	1724	0
-	+	1732	0
-	+	1757	0
-	+	1811	0
-	+	1810	0
-	+	1823	0
-	+	1835	0
-	+	1843	0
-	+	2575	0
-	+	2576	0
-	+	2583	0
-	+	2902	0
-	+	852	0
-	+	853	0
-	+	887	6
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gc\src\__Tagbar__
-	"	30	4
-	.	58	0
-	+	58	0
-	+	58	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\emod\src\cfw_emod_tsm_proc.c
-	"	188	28
-	.	188	0
+	+	25	4
+	+	25	0
+	+	32	0
+	+	25	1
 	+	26	0
-	+	38	0
-	+	40	0
+	+	116	0
+	+	98	0
+	+	105	0
+	+	99	0
+	+	78	0
+	+	71	1
 	+	72	0
-	+	77	0
-	+	83	0
-	+	100	0
-	+	107	0
-	+	123	0
-	+	174	0
-	+	188	0
+	+	47	0
+	+	54	0
+	+	48	0
+	+	34	0
+	+	1	0
+	+	59	0
+	l	2	0
+	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\emod\src\cfw_emod_tsm_api.c
-	"	178	8
-	.	178	0
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\at_stub.c
+	"	1	0
+	^	32	2
+	.	63	0
+	+	1	0
+	+	12	0
+	+	2	0
+	+	12	1
+	+	22	0
+	+	12	0
+	+	11	0
+	+	32	0
+	+	40	0
+	+	33	0
+	+	42	0
+	+	43	0
+	+	63	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\include\at_stub.h
+	"	33	7
+	^	33	8
+	.	33	7
+	+	1	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	23	0
+	+	2	0
+	+	22	0
+	+	32	3
+	+	33	7
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\sce_ds_mux.c
+	"	24	0
+	^	24	0
+	.	24	0
+	+	18	0
+	+	4	17
+	+	8	19
+	+	12	21
+	+	16	21
+	+	20	19
+	+	24	0
+	p	24	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\ds\test_ds\src\sce_ds_non_mux.c
+	"	13	22
+	.	13	22
+	+	13	0
+	+	4	24
+	+	9	24
+	+	13	22
+
+> C:\Users\Administrator\Desktop\1.trc
+	"	6	0
+	^	6	0
+	.	1	0
+	+	19248	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	7
+	+	6	9
+	+	6	9
+	+	6	2
+	+	6	2
+	+	6	0
+	+	6	0
+	+	6	19
+	+	6	19
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	1
+	+	6	0
+	+	6	0
+	+	7	0
+	+	6	0
+	+	6	25
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	6	0
+	+	7	0
+	+	6	0
+	+	7	0
+	+	6	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	6	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	6	0
+	+	1	0
+	p	6	0
+
+> C:\Program Files\Visual Assist X\VA_X.reg
+	"	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\include\ds_mux_tools.h
+	"	55	0
+	^	62	12
+	.	62	11
+	+	1	0
+	+	101	0
+	+	102	0
+	+	92	0
+	+	101	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	80	0
+	+	55	0
+	+	63	0
+	+	54	38
+	+	55	37
+	+	56	38
+	+	57	37
+	+	58	36
+	+	59	35
+	+	60	34
+	+	61	33
+	+	62	32
+	+	54	9
+	+	55	0
+	+	54	14
+	+	55	16
+	+	56	19
+	+	57	12
+	+	58	12
+	+	59	12
+	+	60	12
+	+	61	12
+	+	62	11
+	l	56	4
+	p	55	4
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.08\Stt201306.08_10.20.trc
+	"	4591	69
+	l	4592	0
+	p	4591	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.08\Stt201306.08_09.20.trc
+	"	4568	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.08\Stt201306.08_09.29.trc
+	"	4604	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.08\Stt201306.08_10.00.trc
+	"	4505	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.08\Stt201306.08_10.03.trc
+	"	304	32
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+	"	147	5
+	.	204	0
+	+	2	0
 	+	18	0
 	+	16	0
-	+	23	0
-	+	65	0
-	+	106	0
-	+	112	0
-	+	122	0
-	+	144	0
-	+	157	0
-	+	172	0
-	+	178	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\emod\src\cfw_emod_loct.c
-	"	240	4
-	.	240	0
-	+	33	0
-	+	169	0
-	+	227	0
-	+	231	0
-	+	236	0
-	+	240	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\src\-TabBar-
-	"	1	0
-	.	2	0
 	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cm\include\cfw_cc_tools.h
-	"	48	0
-	.	48	0
-	+	26	0
-	+	48	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_sms.c
-	"	1212	24
-	.	1212	0
-	+	30	0
-	+	24	0
-	+	28	0
-	+	1121	0
-	+	1122	0
-	+	1129	0
-	+	1131	0
-	+	1138	0
-	+	1166	0
-	+	1170	0
-	+	1190	0
-	+	1206	0
-	+	1212	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_sim.c
-	"	42	0
-	.	42	0
-	+	45	0
-	+	27	0
-	+	34	0
-	+	42	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_pbk.c
-	"	73	0
-	.	73	0
-	+	15	0
-	+	25	0
-	+	28	0
-	+	33	0
-	+	39	0
-	+	47	0
-	+	68	0
-	+	72	0
-	+	73	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_main.c
-	"	88	0
-	.	88	0
-	+	51	0
-	+	88	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_init.c
-	"	63	0
-	.	64	0
-	+	25	0
-	+	21	0
-	+	31	0
-	+	52	0
-	+	64	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_general.c
-	"	849	0
-	.	849	0
-	+	26	0
-	+	261	0
-	+	849	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_cm.c
-	"	334	8
-	^	327	13
-	.	334	0
-	+	18	0
-	+	217	0
-	+	340	0
-	+	334	0
-	+	328	0
-	+	334	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\cfw_cfg_nw.c
-	"	17	21
-	.	25	0
-	+	25	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\include\cfw_cfg.h
-	"	193	0
-	.	193	0
-	+	17	0
+	+	252	0
+	+	253	0
+	+	245	0
 	+	130	0
-	+	190	0
-	+	193	0
-	+	199	0
-	+	200	0
-	+	201	0
-	+	193	0
+	+	136	0
+	+	223	0
+	+	174	0
+	+	204	0
+	l	122	8
+	p	121	4
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cfg\src\-TabBar-
+> C:\Users\Administrator\Desktop\1.c
+	"	137	0
+	^	137	13
+	.	1	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	20
+	+	137	20
+	+	137	29
+	+	137	29
+	+	137	30
+	+	137	53
+	+	137	0
+	+	137	33
+	+	137	3
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	13
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	24
+	+	137	33
+	+	137	34
+	+	137	33
+	+	137	4
+	+	137	5
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	3
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	7
+	+	137	28
+	+	137	7
+	+	137	10
+	+	137	18
+	+	137	20
+	+	137	15
+	+	137	15
+	+	137	17
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	0
+	+	137	14
+	+	137	15
+	+	137	20
+	+	137	0
+	+	137	0
+	+	137	0
+	+	138	0
+	+	137	0
+	+	137	0
+	+	194	0
+	+	137	10
+	+	185	11
+	+	138	0
+	+	194	0
+	+	137	0
+	+	194	0
+	+	137	10
+	+	185	11
+	+	138	0
+	+	137	13
+	+	138	0
+	+	137	12
+	+	138	0
+	+	137	0
+	+	1	0
+	p	137	0
+
+> C:\Users\Administrator\Desktop\2.c
+	"	128	0
+	.	1	0
+	+	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.07\Stt201306.07_17.32.trc
+	"	4562	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.07\Stt201306.07_17.26.trc
+	"	4717	69
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_main.c
+	"	1	0
+	.	122	0
+	+	103	0
+	+	101	0
+	+	103	0
+	+	122	0
+	l	2	0
+	p	1	0
+
+> D:\MySoftWare\Dvorak\Dvorak_lefthand.ahk
+	"	36	1
+	^	36	2
+	.	36	1
+	+	36	1
+	+	14	3
+	+	36	1
+	l	37	0
+	p	36	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.07\Stt201306.07_10.03.trc
+	"	4393	0
+	l	2	0
+	p	1	0
+
+> d:\MySoftWare\gVimPortable\App\vim\vim73\doc\quickfix.txt
+	"	615	68
+	l	2	0
+	p	1	0
+
+> C:\Users\Administrator\Desktop\a_wang.trc
+	"	48	35
+	l	52	0
+	p	51	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.06\Stt201306.06_16.22.trc
+	"	3064	26
+
+> C:\Users\Administrator\Desktop\a.trc
+	"	1	0
+	.	26	0
+	+	26	0
+	l	183	0
+	p	182	0
+
+> D:\Projects\modem2.5g\branches\l4\Source_Explorer
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\-TabBar-
 	"	1	0
 	.	2	0
 	+	2	0
 	+	2	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\bal\src\cfw_bal_init.c
-	"	427	12
-	^	77	9
-	.	427	0
-	+	58	22
-	+	61	21
-	+	63	10
-	+	66	4
-	+	65	24
-	+	66	13
-	+	57	0
-	+	58	0
-	+	57	0
-	+	38	0
-	+	54	0
-	+	61	0
-	+	74	0
-	+	79	0
-	+	93	0
-	+	96	0
-	+	135	0
-	+	142	0
-	+	149	0
-	+	155	0
-	+	158	0
-	+	164	0
-	+	186	0
-	+	206	0
-	+	226	0
-	+	231	0
-	+	232	0
-	+	241	0
-	+	249	0
-	+	262	0
-	+	268	0
-	+	269	0
-	+	271	0
-	+	284	0
-	+	295	0
-	+	303	0
-	+	308	0
-	+	340	0
-	+	403	0
-	+	419	0
-	+	498	0
-	+	427	0
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\Source_Explorer
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\bal\src\bal_init.c
-	"	7	31
-	.	35	0
-	+	35	0
+> C:\Users\Administrator\Desktop\memLeak.trc
+	"	1	0
+	l	2	0
+	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\aom\src\cfw_aom_util.c
-	"	441	4
-	.	441	0
-	+	8	0
-	+	88	0
-	+	329	0
-	+	441	0
+> C:\Users\Administrator\Desktop\__Tagbar__
+	"	9	4
+	.	12	0
+	+	12	0
+	+	12	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\tcpip\src\tcpip_sockets.c
-	"	448	12
-	.	448	0
-	+	51	0
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
+	"	289	14
+	^	1943	6
+	.	287	0
+	+	1034	0
+	+	1035	0
+	+	1039	0
+	+	275	0
+	+	275	0
+	+	286	0
+	+	297	80
+	+	301	0
+	+	299	0
+	+	304	0
+	+	305	0
+	+	310	0
+	+	315	0
 	+	320	0
-	+	400	94
-	+	400	113
-	+	400	113
-	+	401	0
-	+	448	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sms\src\cfw_sms_tool.c
-	"	1	0
-	.	2064	0
-	+	202	0
-	+	203	0
-	+	218	0
-	+	219	0
-	+	248	0
-	+	249	0
-	+	468	0
-	+	471	0
-	+	484	0
-	+	485	0
-	+	484	0
-	+	523	0
-	+	526	0
-	+	577	0
-	+	580	0
-	+	1106	0
-	+	1109	0
-	+	1123	0
-	+	1124	0
-	+	1363	0
-	+	1364	0
-	+	1406	0
-	+	1407	0
-	+	1422	0
-	+	1423	0
-	+	1570	0
-	+	1571	0
-	+	1576	0
-	+	1577	0
-	+	1594	0
-	+	1595	0
-	+	1599	0
-	+	1600	0
-	+	1665	0
-	+	1666	0
-	+	1677	0
-	+	1678	0
-	+	1807	0
-	+	1810	0
-	+	1821	0
-	+	1822	0
-	+	1839	0
-	+	1841	0
-	+	1845	0
-	+	1897	0
-	+	1898	0
-	+	1912	0
-	+	1913	0
-	+	1922	0
-	+	1926	0
-	+	1935	0
-	+	1936	0
-	+	1945	0
-	+	1946	0
-	+	1972	0
-	+	1973	0
-	+	1978	4
-	+	2064	0
-	+	1978	0
-	+	2082	61
-	+	2083	0
-	+	2086	0
-	+	2096	0
-	+	2097	0
-	+	2120	0
-	+	2132	0
-	+	2138	0
-	+	2149	0
-	+	2155	0
-	+	2172	0
-	+	2173	0
-	+	2658	0
-	+	2690	0
-	+	2743	0
-	+	2744	0
-	+	2752	0
-	+	2752	0
-	+	2753	0
-	+	2769	0
-	+	2770	0
-	+	2775	0
-	+	2776	0
-	+	2841	0
-	+	2842	0
-	+	2968	0
-	+	2969	0
-	+	3249	0
-	+	3250	0
-	+	3333	0
-	+	3334	0
-	+	6740	0
-	+	6741	0
-	+	6760	0
-	+	6767	0
-	+	6775	0
-	+	6776	0
-	+	1922	0
-	+	2252	0
-	+	3192	0
-	+	2064	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\tcpip\src\tcpip_resolv.c
-	"	749	0
-	.	749	0
-	+	20	0
-	+	56	0
-	+	501	0
-	+	749	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\base_prv.h
-	"	19	10
-	.	215	0
-	+	58	0
-	+	113	0
-	+	215	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sms\src\cfw_sms_mmi.c
-	"	1286	4
-	.	1286	0
-	+	33	0
-	+	11	0
-	+	30	0
-	+	1203	0
-	+	1224	0
-	+	1241	0
-	+	1242	0
-	+	1244	0
-	+	1247	0
-	+	1255	0
-	+	1261	0
-	+	1273	0
-	+	1283	0
-	+	1286	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sms\src\cfw_sms_main.c
-	"	4616	33
-	.	4455	0
-	+	4143	0
-	+	4147	0
-	+	4173	0
-	+	4175	0
-	+	4201	0
-	+	4203	0
-	+	4208	0
-	+	4209	0
-	+	4224	0
-	+	4230	0
-	+	4238	0
-	+	4247	0
-	+	4251	0
-	+	4254	0
-	+	4296	0
-	+	4297	0
-	+	4305	0
-	+	4306	0
-	+	4312	0
-	+	4313	0
-	+	4317	0
-	+	4318	0
-	+	4327	0
-	+	4328	0
-	+	4335	0
-	+	4343	0
-	+	4350	0
-	+	4351	0
-	+	4359	0
-	+	4360	0
-	+	4366	0
-	+	4368	0
-	+	4383	0
-	+	4384	0
-	+	2054	0
-	+	4383	0
-	+	4391	0
-	+	4393	0
-	+	4412	0
-	+	4413	0
-	+	4459	0
-	+	4466	0
-	+	4467	0
-	+	4472	0
-	+	4474	0
-	+	4478	0
-	+	4479	0
-	+	4490	0
-	+	4491	0
-	+	4499	0
-	+	4500	0
-	+	4512	0
-	+	4513	0
-	+	4521	0
-	+	4522	0
-	+	4527	0
-	+	4528	0
-	+	4532	0
-	+	4561	0
-	+	4564	0
-	+	4561	0
-	+	4569	0
-	+	4570	0
-	+	4575	0
-	+	4578	0
-	+	4585	0
-	+	4586	0
-	+	4600	0
-	+	4601	0
-	+	4613	0
-	+	4614	0
-	+	4628	0
-	+	4629	0
-	+	4645	0
-	+	4646	0
-	+	4679	0
-	+	4680	0
-	+	4679	0
-	+	4667	0
-	+	4687	0
-	+	4690	0
-	+	4714	0
-	+	4738	0
-	+	4767	0
-	+	4771	0
-	+	4800	0
-	+	4801	0
-	+	4812	0
-	+	4836	0
-	+	4826	0
-	+	4838	0
-	+	4842	0
-	+	4846	0
-	+	4853	0
-	+	4715	0
-	+	51	0
-	+	52	0
-	+	2012	0
-	+	4435	0
-	+	4455	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sms\src\__Tagbar__
-	"	42	4
-	.	63	0
-	+	124	0
-	+	124	0
-	+	96	0
-	+	96	0
-	+	96	0
-	+	96	0
-	+	96	0
-	+	96	0
-	+	96	0
-	+	63	0
-	+	63	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sms\include\cfw_sms_prv.h
-	"	1	0
-	.	300	0
-	+	36	0
-	+	273	0
-	+	288	0
-	+	300	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sms\src\cfw_sms_db.c
-	"	21	0
-	.	124	0
-	+	28	23
-	+	28	42
-	+	28	42
-	+	28	62
-	+	28	78
-	+	29	0
-	+	71	56
-	+	71	55
-	+	71	33
-	+	71	0
-	+	71	56
-	+	71	55
-	+	71	73
-	+	72	0
-	+	79	0
-	+	109	34
-	+	109	34
-	+	109	53
-	+	109	68
-	+	109	83
-	+	109	99
-	+	110	0
-	+	118	0
-	+	119	0
-	+	118	0
-	+	119	0
-	+	124	0
-	+	215	64
-	+	215	81
-	+	215	96
-	+	216	0
-	+	219	0
-	+	222	0
-	+	233	25
-	+	233	43
-	+	234	0
-	+	238	0
-	+	323	77
-	+	323	94
-	+	323	109
-	+	323	124
-	+	323	139
-	+	323	63
-	+	338	0
+	+	325	0
+	+	337	0
+	+	349	0
+	+	361	0
+	+	306	0
+	+	307	0
+	+	311	0
+	+	312	0
+	+	316	0
+	+	317	0
+	+	321	0
+	+	322	0
+	+	330	0
+	+	334	0
+	+	342	0
+	+	346	0
+	+	354	0
+	+	358	0
+	+	366	0
+	+	370	0
+	+	378	0
+	+	416	4
+	+	1	0
+	+	275	0
+	+	378	0
 	+	379	0
-	+	397	0
-	+	406	0
-	+	422	0
-	+	441	0
-	+	467	0
-	+	492	27
-	+	504	0
-	+	504	0
-	+	511	0
-	+	537	0
-	+	576	31
-	+	576	48
-	+	576	63
-	+	576	78
-	+	577	0
-	+	590	0
-	+	591	0
-	+	209	0
-	+	328	0
-	+	511	0
-	+	492	27
-	+	492	46
-	+	492	45
-	+	492	61
-	+	492	76
-	+	492	90
-	+	492	106
-	+	493	0
-	+	506	0
-	+	508	0
-	+	323	47
-	+	323	62
-	+	323	77
-	+	323	92
-	+	324	0
-	+	323	28
-	+	124	0
+	+	376	0
+	+	301	0
+	+	302	28
+	+	275	0
+	+	376	0
+	+	302	0
+	+	300	5
+	+	375	5
+	+	301	5
+	+	1544	0
+	+	21	0
+	+	429	0
+	+	420	0
+	+	960	0
+	+	1025	0
+	+	1162	0
+	+	1153	0
+	+	1153	0
+	+	1153	0
+	+	1153	0
+	+	1170	0
+	+	1187	0
+	+	1188	0
+	+	1299	0
+	+	1339	0
+	+	1377	0
+	+	1440	0
+	+	1528	0
+	+	1694	0
+	+	2076	0
+	+	2145	0
+	+	1529	0
+	+	1660	0
+	+	1529	28
+	+	1530	29
+	+	1646	13
+	+	1530	0
+	+	1544	0
+	+	1645	0
+	+	1661	0
+	+	1527	0
+	+	1660	0
+	+	1444	28
+	+	1445	0
+	+	1478	0
+	+	1444	28
+	+	1457	28
+	+	1361	0
+	+	1406	0
+	+	1466	0
+	+	1471	0
+	+	334	0
+	+	1712	4
+	+	1927	0
+	+	1943	5
+	+	1778	0
+	+	1943	0
+	+	1778	0
+	+	1288	0
+	+	287	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sms\src\-TabBar-
+> D:\Projects\modem2.5g\branches\__Tagbar__
+	"	5	4
+	.	11	0
+	+	430	0
+	+	430	0
+	+	430	0
+	+	373	0
+	+	373	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	371	0
+	+	324	0
+	+	324	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	184	0
+	+	124	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+	+	11	0
+
+> E:\Vmware\sharedFolder\gsmmux-alpha-2\gsm0710.c
+	"	533	0
+	l	2	1
+	p	1	0
+
+> E:\Vmware\sharedFolder\gsmmux-alpha-2\__Tagbar__
+	"	26	4
+	.	43	0
+	+	43	0
+	+	43	0
+	+	43	0
+	+	43	0
+	+	43	0
+	+	43	0
+	+	43	0
+
+> E:\Vmware\sharedFolder\gsmmux-alpha-2\buffer.c
+	"	99	29
+	l	2	1
+	p	1	0
+
+> E:\Vmware\sharedFolder\gsmmux-alpha-2\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> E:\Vmware\sharedFolder\mux0710-0.0.2\src\mux0710.c
+	"	192	0
+	l	193	1
+	p	192	0
+
+> E:\Vmware\sharedFolder\mux0710-0.0.2\src\__Tagbar__
+	"	35	10
+	.	71	0
+	+	71	0
+	l	47	4
+	p	46	4
+
+> E:\Vmware\sharedFolder\mux0710-0.0.2\src\-TabBar-
 	"	1	0
 	.	2	0
 	+	2	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\sim\include\cfw_sim_cb.h
-	"	55	0
-	.	55	0
-	+	8	0
-	+	53	0
+> D:\MySoftWare\TotalCommanderPortable\Data\Plugins\wfx\wfx_devman\pluginst.inf
+	"	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\include\ds_mux.h
+	"	1	0
+	.	1	0
+	+	353	0
+	+	345	20
+	+	346	20
+	+	347	20
+	+	348	0
+	+	345	0
+	+	353	0
 	+	55	0
+	+	1	0
+	l	2	0
+	p	1	0
+
+> C:\Users\Administrator\.gitconfig
+	"	6	0
+	^	10	30
+	.	6	0
+	+	6	0
+	+	6	29
+	+	6	0
+	+	7	0
+	+	6	0
+	+	7	1
+	+	8	0
+	+	10	0
+	+	11	0
+	+	8	0
+	+	8	0
+	+	7	0
+	+	8	0
+	+	10	0
+	+	11	0
+	+	7	29
+	+	10	29
+	+	6	0
+	+	10	0
+	+	10	0
+	+	6	0
+	+	11	0
+	+	6	0
+	l	7	0
+
+> D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\src\gsm0710muxd.c
+	"	1034	20
+	.	1460	0
+	+	1460	0
+	l	1035	20
+	p	1034	20
+
+> D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsmmux-alpha-2\gsm0710.c
+	"	1471	24
+	.	1273	0
+	+	1273	0
+
+> C:\Users\Administrator\Desktop\mux0710-0.0.2\src\mux0710.c
+	"	585	5
+	.	41	0
+	+	41	0

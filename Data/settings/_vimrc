@@ -41,8 +41,15 @@ Bundle 'Mark'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Marks-Browser'
 Bundle 'matchit.zip'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
+" Bundle 'Shougo/neocomplcache'
+" Bundle 'Shougo/neosnippet'
+" Bundle 'Rip-Rip/clang_complete'
+" ======easytags=====
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-shell'
+" ======easytags=====
+
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'loseblue/springColorScheme'
@@ -53,14 +60,14 @@ Bundle 'wesleyche/SrcExpl'
 Bundle 'taglist.vim'
 Bundle 'genutils'
 Bundle 'loseblue/TabBar'
-" Bundle 'lookupfile'
+Bundle 'surround.vim'
 Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
 Bundle 'kien/ctrlp.vim'
-" Bundle 'loseblue/trcBrowser'
+Bundle 'drmingdrmer/xptemplate'
 Bundle 'loseblue/TxtBrowser'
-" Bundle 'godlygeek/tabular'
-" Bundle 'bootleq/LargeFile'
+Bundle 'godlygeek/tabular'
+Bundle 'DrawIt'
 
 filetype plugin indent on    " required!
 
@@ -76,10 +83,6 @@ endif
 
 
 "=========================== END Vundle ================================
-
-" "source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
 
 set nobackup      " cloese backup
 syntax enable       " 
@@ -97,7 +100,7 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 "set showcmd "shwo cursor poistion in nomoal mode 
 set cursorcolumn  " high light cursor column
 set cursorline    " high light cursor line
-set linespace=0   " set line high space
+set linespace=-2   " set line high space
 set lines=25 columns=120 "init UI size
 set linebreak      "Do not cut words between lines, USELESS!
 
@@ -106,7 +109,6 @@ set list
 set listchars=tab:\|-
 set tabpagemax=15 
 set showtabline=2
-
 set paste
 
 " shut down error ringBell
@@ -120,8 +122,13 @@ highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey
 set statusline=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 " file encoding setting
-set fileencodings=utf-8,chinese,latin-1
-set fileencoding=utf-8
+" set fileencodings=utf-8,chinese,latin-1
+set fileencodings=utf-8,cp936 "redad file orders 
+set fileencoding=utf-8  "inside encoding
+set fenc=utf-8 "create new file encoding 
+set nobomb
+" set ambiwidth=double
+
 
 "Set mapleader
 let mapleader = ","
@@ -130,7 +137,9 @@ set ignorecase smartcase "search cease smart
 
 " VIM font setting
 if MySys() == 'windows'
-    set guifont=yaheiInconsolata:h11:cANSI
+    " set guifont=Envy_Code_R:h10:cANSI
+    " set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+    set guifont=yaheiInconsolata:h11
 else
     set guifont=Monaco:h14
 endif
@@ -156,13 +165,15 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Ctrl+S
-imap <C-s> <Esc>:wa!<cr>i<Right>
-nmap <C-s> :wa!<cr>
-set nocompatible
-" map <C-v> "+pa
-" map <C-c> "+y
-" map <C-x> "+x
+
+" "ctrl+c ctrl+v ctrl+x
+" :map <C-V> "+pa
+" :map <C-C> "+y
+" :map <C-X> "+x
+" :vmap <C-V> "+pa
+" :vmap <C-C> "+y
+vnoremap <C-c> "+y
+nmap <C-v> "+p
 
 " file code type
 set ffs=dos,unix
@@ -188,7 +199,7 @@ map <silent> <F1> :if &guioptions =~# 'T' <Bar>
 
 map <F2> :%s/\r//g<cr>:w<cr>gg
 
-"F4 file infor
+"F3 file infor
 let g:vimrc_author='loseblue' 
 let g:vimrc_email='loseblue[a]163.com' 
 let g:vimrc_homepage='http://www.google.com' 
@@ -260,6 +271,15 @@ if has("cscope")
     set cscopetag
     set nocscopeverbose
 
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+        " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    
+
     map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> "g: Find this definition 
     map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> "d: Find functions called by this function 
     map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> "c: Find functions calling this function 
@@ -300,84 +320,79 @@ let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ."
 let g:SrcExpl_updateTagsKey = "<F12>" 
 "}
 
-"neocomplcache{
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" "neocomplcache{
+" let g:acp_enableAtStartup = 0
+" let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_enable_smart_case = 1
+" let g:neocomplcache_enable_camel_case_completion = 1
+" let g:neocomplcache_enable_underbar_completion = 1
+" let g:neocomplcache_min_syntax_length = 3
+" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
-" Define file-type dependent dictionaries.
-let g:neocomplcache_dictionary_filetype_lists = {
-            \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
-            \ }
+" " Define file-type dependent dictionaries.
+" let g:neocomplcache_dictionary_filetype_lists = {
+            " \ 'default' : '',
+            " \ 'vimshell' : $HOME.'/.vimshell_hist',
+            " \ 'scheme' : $HOME.'/.gosh_completions'
+            " \ }
 
-" Define keyword, for minor languages
-if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+" " Define keyword, for minor languages
+" if !exists('g:neocomplcache_keyword_patterns')
+    " let g:neocomplcache_keyword_patterns = {}
+" endif
+" let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
+" " Plugin key-mappings.
+" imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" inoremap <expr><C-g>     neocomplcache#undo_completion()
+" inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
+" " Recommended key-mappings.
+" " <CR>: close popup and save indent.
+" inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+" " <TAB>: completion.
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" " <C-h>, <BS>: close popup and delete backword char.
+" inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+" inoremap <expr><C-y>  neocomplcache#close_popup()
+" inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
-" Enable omni completion. Not required if they are already set elsewhere in .vimrc
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" " Enable omni completion. Not required if they are already set elsewhere in .vimrc
+" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-" Enable heavy omni completion, which require computational power and may stall the vim. 
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+" " Enable heavy omni completion, which require computational power and may stall the vim. 
+" if !exists('g:neocomplcache_omni_patterns')
+    " let g:neocomplcache_omni_patterns = {}
+" endif
+" let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" "autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+" let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+" let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+" let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
-"}
+" "}
 
-"{ neosnippet
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" "{ neosnippet
+" " Plugin key-mappings.
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" " SuperTab like snippets behavior.
+" imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+" smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" For snippet_complete marker.
-if has('conceal')
-    set conceallevel=2 concealcursor=i
-endif
-"}
+" " For snippet_complete marker.
+" if has('conceal')
+    " set conceallevel=2 concealcursor=i
+" endif
+" "}
 
-"NERDTree{  
-let NERDTreeWinPos ="right"
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
-" let NERDTreeShowBookmarks=1
-"}  
 
 " ctrlp{
 let g:ctrlp_map = '<c-p>'
@@ -385,7 +400,7 @@ let g:ctrlp_cmd = 'CtrlP'
 
 let g:ctrlp_custom_ignore = {
             \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-            \ 'file': '\v\.(exe|so|dll|o|a)$',
+            \ 'file': '\v\.(exe|so|dll|o|a|sbr|obj)$',
             \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
             \ }
 
@@ -397,4 +412,28 @@ let g:ctrlp_match_window_reversed=0
 let g:ctrlp_follow_symlinks=1
 let g:ctrlp_lazy_update = 1
 " }
+
+
+" Ctrl+S
+imap <C-s> <Esc>:wa!<cr>i<Right>
+nmap <C-s> :wa!<cr>
+set nocompatible
+"source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+" "clang_complete
+" let g:clang_auto_select=1
+" let g:clang_complete_auto=1
+" let g:clang_use_library=1 
+" let g:clang_library_path="d:/\MySoftWare/\gVimPortable/\soft"
+
+
+" vim-easytags
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+let g:easytags_events = ['BufWritePost']
+let g:easytags_always_enabled = 1
+let g:easytags_include_members = 1
+let g:easytags_resolve_links = 1
 

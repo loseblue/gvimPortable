@@ -1,0 +1,118 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<A-->	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <A--> :Tbbd<CR>$/;"	m	language:Vim
+<A-j>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    noremap <A-j> <C-d>$/;"	m	language:Vim
+<A-k>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    noremap <A-k> <C-u>$/;"	m	language:Vim
+<A-Left>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <A-Left> :Tbbn<CR>$/;"	m	language:Vim
+<A-q>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <silent> <A-q> :q<CR>$/;"	m	language:Vim
+<A-Right>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <A-Right> :Tbbp<CR>$/;"	m	language:Vim
+<C-c>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^vnoremap <C-c> "+y$/;"	m	language:Vim
+<C-F9>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <silent> <C-F9> :Tlist<CR>$/;"	m	language:Vim
+<C-h>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nnoremap <C-h> <C-w>h$/;"	m	language:Vim
+<C-j>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nnoremap <C-j> <C-w>j$/;"	m	language:Vim
+<C-k>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nnoremap <C-k> <C-w>k$/;"	m	language:Vim
+<C-l>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nnoremap <C-l> <C-w>l$/;"	m	language:Vim
+<C-s>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^imap <C-s> <Esc>:wa!<cr>i<Right>$/;"	m	language:Vim
+<C-s>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <C-s> :wa!<cr>$/;"	m	language:Vim
+<C-v>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <C-v> "+p$/;"	m	language:Vim
+<D-j>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    noremap <D-j> <C-d>$/;"	m	language:Vim
+<D-k>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    noremap <D-k> <C-u>$/;"	m	language:Vim
+<F1>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <silent> <F1> :if &guioptions =~# 'T' <Bar>$/;"	m	language:Vim
+<F2>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <F2> :%s\/\\r\/\/g<cr>:w<cr>gg$/;"	m	language:Vim
+<F3>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <F3> :AuthorInfoDetect<cr>$/;"	m	language:Vim
+<F7>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^imap <F7> <C-R>=strftime("%c")<CR>$/;"	m	language:Vim
+<F8>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <F8> :SrcExplToggle<CR> $/;"	m	language:Vim
+<F9>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <silent> <F9> :TagbarToggle<CR>$/;"	m	language:Vim
+<leader>fc	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> "t: Find this text string $/;"	m	language:Vim
+<leader>fd	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> "c: Find functions calling this function $/;"	m	language:Vim
+<leader>fd	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <leader>fd :se ff=dos<cr>$/;"	m	language:Vim
+<leader>fe	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> "f: Find this file $/;"	m	language:Vim
+<leader>ff	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> "i: Find files #including this file $/;"	m	language:Vim
+<leader>fg	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> "d: Find functions called by this function $/;"	m	language:Vim
+<leader>fi	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> $/;"	m	language:Vim
+<leader>fs	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> "g: Find this definition $/;"	m	language:Vim
+<leader>ft	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> "e: Find this egrep pattern $/;"	m	language:Vim
+<leader>fu	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <leader>fu :se ff=unix<cr>$/;"	m	language:Vim
+<leader>mk	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <silent> <leader>mk :MarksBrowser<cr>$/;"	m	language:Vim
+<leader>pn	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <leader>pn :MPNERDTREE<cr>$/;"	m	language:Vim
+<leader>ps	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <leader>ps :MPSearchInProject =expand("")$/;"	m	language:Vim
+<leader>pt	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nmap <silent> <leader>pt :TagbarToggle<CR>$/;"	m	language:Vim
+<leader>pu	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <leader>pu :MPUpdateTags<cr>$/;"	m	language:Vim
+<S-Left>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <S-Left> :tabp<CR>$/;"	m	language:Vim
+<S-Right>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^map <S-Right> :tabn<CR>$/;"	m	language:Vim
+<space>	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>$/;"	m	language:Vim
+b:verilog_indent_modules	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let b:verilog_indent_modules = 1$/;"	v	language:Vim
+destroy_frame	C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c	/^void destroy_frame(GSM0710_Frame *frame) {$/;"	f	language:C
+ds_MuxDISCParse	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxDISCParse()$/;"	f	language:C
+ds_MuxDispatchMessage	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxDispatchMessage()$/;"	f	language:C
+ds_MuxDMParse	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxDMParse()$/;"	f	language:C
+ds_MuxInitIndParse	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxInitIndParse(void* msgPtr)$/;"	f	language:C
+ds_MuxParseRecBytes	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxParseRecBytes(uint8* pData, uint32 nDataLen)$/;"	f	language:C
+ds_MuxParseRecInformation	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxParseRecInformation(void)$/;"	f	language:C
+ds_MuxParseSendBytes	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxParseSendBytes(uint8* pData, uint32 nDataLen, uint8 nDLCI)$/;"	f	language:C
+ds_MuxReadAdvancedModeFrame	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^long ds_MuxReadAdvancedModeFrame(unsigned char * pRxBuffer, long cbRxBuffer)$/;"	f	language:C
+ds_MuxReadAdvancedModeFramePS	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^long ds_MuxReadAdvancedModeFramePS(void* pParseParam, unsigned char * pRxBuffer, long cbRxBuffer, uint8 * nDLC)$/;"	f	language:C
+ds_MuxReadBasicModeFrame	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^long ds_MuxReadBasicModeFrame(unsigned char* pRxBuffer, uint32 bufferLen)$/;"	f	language:C
+ds_MuxReadBasicModeFrameEXX	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^long ds_MuxReadBasicModeFrameEXX(void* pParseParam, unsigned char * pRxBuffer, long cbRxBuffer)$/;"	f	language:C
+ds_MuxReadBasicModeFramePS	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^long ds_MuxReadBasicModeFramePS(void* pParseParam, unsigned char* pRxBuffer, long cbRxBuffer)$/;"	f	language:C
+ds_MuxSABMParse	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxSABMParse()$/;"	f	language:C
+ds_MuxUAParse	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxUAParse()$/;"	f	language:C
+ds_MuxUIHParse	D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c	/^void ds_MuxUIHParse()$/;"	f	language:C
+g:alternateNoDefaultAlternate	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:alternateNoDefaultAlternate = 1$/;"	v	language:Vim
+g:ctrlp_by_filename	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_by_filename = 1$/;"	v	language:Vim
+g:ctrlp_cmd	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_cmd = 'CtrlP'$/;"	v	language:Vim
+g:ctrlp_custom_ignore	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_custom_ignore = {$/;"	v	language:Vim
+g:ctrlp_follow_symlinks	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_follow_symlinks=1$/;"	v	language:Vim
+g:ctrlp_lazy_update	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_lazy_update = 1$/;"	v	language:Vim
+g:ctrlp_map	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_map = '<c-p>'$/;"	v	language:Vim
+g:ctrlp_match_window_reversed	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_match_window_reversed=0$/;"	v	language:Vim
+g:ctrlp_max_height	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_max_height=9$/;"	v	language:Vim
+g:ctrlp_reuse_window	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_reuse_window = 'netrw\\|help\\|quickfix\\|tagbar\\|taglist'$/;"	v	language:Vim
+g:ctrlp_working_path_mode	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:ctrlp_working_path_mode = 'ra'$/;"	v	language:Vim
+g:easytags_always_enabled	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:easytags_always_enabled = 1$/;"	v	language:Vim
+g:easytags_dynamic_files	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:easytags_dynamic_files = 1$/;"	v	language:Vim
+g:easytags_events	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:easytags_events = ['BufWritePost']$/;"	v	language:Vim
+g:easytags_include_members	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:easytags_include_members = 1$/;"	v	language:Vim
+g:easytags_resolve_links	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:easytags_resolve_links = 1$/;"	v	language:Vim
+g:mapleader	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:mapleader = ","$/;"	v	language:Vim
+g:MP_Bufread_AutoLoad	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:MP_Bufread_AutoLoad = 1$/;"	v	language:Vim
+g:MP_Source_File_Ext_Name	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:MP_Source_File_Ext_Name = 'c,h,cpp,vim,py'$/;"	v	language:Vim
+g:SrcExpl_gobackKey	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_gobackKey = "<SPACE>" $/;"	v	language:Vim
+g:SrcExpl_isUpdateTags	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_isUpdateTags = 0 $/;"	v	language:Vim
+g:SrcExpl_jumpKey	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_jumpKey = "<ENTER>" $/;"	v	language:Vim
+g:SrcExpl_pluginList	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_pluginList = [ $/;"	v	language:Vim
+g:SrcExpl_refreshTime	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_refreshTime = 500 $/;"	v	language:Vim
+g:SrcExpl_searchLocalDef	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_searchLocalDef = 1 $/;"	v	language:Vim
+g:SrcExpl_updateTagsCmd	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ." $/;"	v	language:Vim
+g:SrcExpl_updateTagsKey	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_updateTagsKey = "<F12>" $/;"	v	language:Vim
+g:SrcExpl_winHeight	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:SrcExpl_winHeight = 8 $/;"	v	language:Vim
+g:tagbar_ctags_bin	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    let g:tagbar_ctags_bin = 'ctags'$/;"	v	language:Vim
+g:tagbar_ctags_bin	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^    let g:tagbar_ctags_bin = '\/usr\/local\/Cellar\/ctags\/5.8\/bin\/ctags'$/;"	v	language:Vim
+g:tagbar_left	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:tagbar_left = 1$/;"	v	language:Vim
+g:tagbar_singleclick	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:tagbar_singleclick = 0$/;"	v	language:Vim
+g:tagbar_sort	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:tagbar_sort = 0$/;"	v	language:Vim
+g:tagbar_width	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:tagbar_width = 30$/;"	v	language:Vim
+g:Tb_ModSelTarget	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:Tb_ModSelTarget = 1$/;"	v	language:Vim
+g:Tb_UseSingleClick	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:Tb_UseSingleClick = 1$/;"	v	language:Vim
+g:vimrc_author	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:vimrc_author='loseblue' $/;"	v	language:Vim
+g:vimrc_email	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:vimrc_email='loseblue[a]163.com' $/;"	v	language:Vim
+g:vimrc_homepage	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let g:vimrc_homepage='http:\/\/www.google.com' $/;"	v	language:Vim
+gsm0710_buffer_destroy	C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c	/^void gsm0710_buffer_destroy(GSM0710_Buffer *buf) {$/;"	f	language:C
+gsm0710_buffer_get_frame	C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c	/^GSM0710_Frame *gsm0710_buffer_get_frame(GSM0710_Buffer *buf) {$/;"	f	language:C
+gsm0710_buffer_init	C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c	/^GSM0710_Buffer *gsm0710_buffer_init() {$/;"	f	language:C
+gsm0710_buffer_write	C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c	/^int gsm0710_buffer_write(GSM0710_Buffer *buf, const char *input, int count) {$/;"	f	language:C
+loaded_matchit	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let loaded_matchit = 1$/;"	v	language:Vim
+make_fcs	C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c	/^unsigned char make_fcs(const unsigned char *input, int count) {$/;"	f	language:C
+mapleader	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let mapleader = ","$/;"	v	language:Vim
+MySys	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^function! MySys()$/;"	f	language:Vim
+NERDSpaceDelims	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let NERDSpaceDelims = 1 $/;"	v	language:Vim
+r_crctable	C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c	/^const unsigned char r_crctable[256] = { \/\/reversed, 8-bit, poly=0x07 $/;"	v	language:C
+showmarks_enable	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let showmarks_enable = 1$/;"	v	language:Vim
+showmarks_hlline_lower	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let showmarks_hlline_lower = 1$/;"	v	language:Vim
+showmarks_hlline_upper	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let showmarks_hlline_upper = 1 $/;"	v	language:Vim
+showmarks_ignore_type	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let showmarks_ignore_type = "hqm"$/;"	v	language:Vim
+showmarks_include	D:\MySoftWare\gVimPortable\Data\settings\_vimrc	/^let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"$/;"	v	language:Vim

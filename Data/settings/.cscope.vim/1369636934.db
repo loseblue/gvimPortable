@@ -1,0 +1,15990 @@
+cscope 15 C:\Users\Administrator\Desktop"               0000084536
+	@D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\Android.mk
+
+1 #Cİyrighˆ2008 
+Texas
+ 
+In¡rum’ts
+
+
+2 #
+#AuthÜ(
+s
+è
+Mikk–
+ 
+Chri¡’£n
+ (
+mlc
+@
+ti
+.
+com
+è
+ªd
+ 
+UÌik
+ 
+Bech
+ 
+H®d
+ (
+ubh
+@ti.com)
+
+5 #
+_PATH:ğ$(ÿÎ my-dœ)
+
+7 
+šşude
+ 
+	$$
+(
+CLEAR_VARS
+)
+
+9 
+LOCAL_MODULE
+:ğ
+gsm0710muxd
+
+
+11 
+LOCAL_SRC_FILES
+:= \
+
+12 
+¤c
+/
+gsm0710muxd
+.
+c
+ \
+
+14 
+LOCAL_SHARED_LIBRARIES
+ := \
+
+15 
+libcuts
+ \
+
+17 #fÜ 
+a¥ršf
+
+
+19 
+LOCAL_CFLAGS
+ :ğ-
+DMUX_ANDROID
+
+
+21 
+LOCAL_LDLIBS
+ :ğ-
+Íth»ad
+
+
+24 
+šşude
+ 
+	`$
+(
+BUILD_EXECUTABLE
+)
+
+	@D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\COPYING
+
+1 
+GNU
+ 
+GENERAL
+ 
+PUBLIC
+ 
+LICENSE
+
+
+2 
+	gV”siÚ
+ 2, 
+	gJuÃ
+ 1991
+
+4 
+Cİyright
+ (
+C
+è1989, 1991 
+F»e
+ 
+Soáw¬e
+ 
+	gFound©iÚ
+, 
+	gInc
+.
+
+5 51 
+F¿nklš
+ 
+	gSŒ“t
+, 
+Fiáh
+ 
+	gFloÜ
+, 
+	gBo¡Ú
+, 
+	gMA
+ 02110-1301 
+USA
+
+
+6 
+Ev”yÚe
+ 
+is
+ 
+³rm™‹d
+ 
+to
+ 
+cİy
+ 
+ªd
+ 
+di¡ribu‹
+ 
+v”b©im
+ 
+cİ›s
+
+
+7 
+of
+ 
+this
+ 
+liûn£
+ 
+	gdocum’t
+, 
+but
+ 
+chªgšg
+ 
+™
+ 
+is
+ 
+nÙ
+ 
+	g®lowed
+.
+
+9 
+P»ambË
+
+
+11 
+The
+ 
+liûn£s
+ 
+mo¡
+ 
+soáw¬e
+ 
+¬e
+ 
+desigÃd
+ 
+to
+ 
+ke
+ 
+away
+ 
+your
+
+
+12 
+ä“dom
+ 
+to
+ 
+sh¬e
+ 
+ªd
+ 
+chªge
+ 
+	g™
+. 
+By
+ 
+	gcÚŒa¡
+, 
+the
+ 
+GNU
+ 
+G’”®
+ 
+Public
+
+
+13 
+Liûn£
+ 
+is
+ 
+š‹nded
+ 
+to
+ 
+gu¬ª‹e
+ 
+your
+ 
+ä“dom
+Ø
+sh¬e
+ 
+ªd
+ 
+chªge
+ 
+ä“
+
+
+14 
+	gsoáw¬e
+--
+to
+ 
+make
+ 
+su»
+ 
+the
+ 
+soáw¬e
+ 
+is
+ 
+ä“
+ 
+®l
+ 
+™s
+ 
+	gu£rs
+. 
+This
+
+
+15 
+G’”®
+ 
+Public
+ 
+Liûn£
+ 
+­¶›s
+ 
+to
+ 
+mo¡
+ 
+of
+ 
+the
+ 
+F»e
+ 
+Soáw¬e
+
+
+16 
+	gFound©iÚ
+'s software‡ndo‡ny other…rogram whose‡uthors commito
+
+17 
+usšg
+ 
+	g™
+. (
+Some
+ 
+Ùh”
+ 
+F»e
+ 
+Soáw¬e
+ 
+Found©iÚ
+ 
+soáw¬e
+ 
+is
+ 
+cov”ed
+ 
+by
+
+
+18 
+the
+ 
+GNU
+ 
+Lib¿ry
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+ 
+	gš¡—d
+.è
+You
+ 
+ÿn
+ 
+­¶y
+ 
+™
+ 
+to
+
+
+19 
+your
+ 
+	g´og¿ms
+, 
+	gtoo
+.
+
+21 
+Wh’
+ 
+we
+ 
+¥—k
+ 
+of
+ 
+ä“
+ 
+	gsoáw¬e
+, w
+¬e
+ 
+»ã¼šg
+ 
+to
+ 
+	gä“dom
+, 
+nÙ
+
+
+22 
+	g´iû
+. 
+Our
+ 
+G’”®
+ 
+Public
+ 
+Liûn£s
+ 
+¬e
+ 
+desigÃd
+ 
+to
+ 
+make
+ 
+su»
+ 
+th©
+ 
+you
+
+
+23 
+have
+ 
+the
+ 
+ä“dom
+ 
+to
+ 
+di¡ribu‹
+ 
+cİ›s
+ 
+of
+ 
+ä“
+ 
+soáw¬e
+ (
+ªd
+ 
+ch¬ge
+ 
+
+24 
+this
+ 
+£rviû
+ 
+you
+ 
+wish
+), 
+th©
+ you 
+»ûive
+ 
+sourû
+ 
+code
+ 
+Ü
+ 
+ÿn
+ 
+g‘
+ 
+™
+
+
+25 
+you
+ 
+wªt
+ 
+	g™
+, 
+th©
+ you 
+ÿn
+ 
+chªge
+ 
+the
+ 
+soáw¬e
+ 
+Ü
+ 
+u£
+ 
+p›ûs
+ 
+of
+ 
+™
+
+
+26 
+š
+ 
+Ãw
+ 
+ä“
+ 
+	g´og¿ms
+; 
+ªd
+ 
+th©
+ 
+you
+ 
+know
+ you 
+ÿn
+ dØ
+the£
+ 
+	gthšgs
+.
+
+28 
+To
+ 
+´Ùeù
+ 
+your
+ 
+	grights
+, 
+we
+ 
+Ãed
+ 
+to
+ 
+make
+ 
+»¡riùiÚs
+ 
+th©
+ 
+fÜbid
+
+
+29 
+ªyÚe
+ 
+to
+ 
+d’y
+ 
+you
+ 
+the£
+ 
+rights
+ 
+Ü
+Ø
+ask
+ youØ
+su¼’d”
+ 
+the
+ 
+	grights
+.
+
+30 
+The£
+ 
+»¡riùiÚs
+ 
+Œª¦©e
+ 
+to
+ 
+û¹aš
+ 
+»¥Úsib™›s
+ 
+you
+ you
+
+31 
+di¡ribu‹
+ 
+cİ›s
+ 
+of
+ 
+the
+ 
+	gsoáw¬e
+, 
+Ü
+ 
+you
+ 
+modify
+ 
+	g™
+.
+
+33 
+FÜ
+ 
+	gexam¶e
+, 
+you
+ 
+di¡ribu‹
+ 
+cİ›s
+ 
+of
+ 
+such
+ 
+a
+ 
+	g´og¿m
+, 
+wh‘h”
+
+
+34 
+g¿tis
+ 
+Ü
+ 
+a
+ 
+	gãe
+, 
+you
+ 
+mu¡
+ 
+give
+ 
+the
+ 
+»c›Ás
+ 
+®l
+h
+rights
+ 
+th©
+
+
+35 
+you
+ 
+	ghave
+. 
+You
+ 
+mu¡
+ 
+make
+ 
+su»
+ 
+th©
+ 
+	gthey
+, 
+	gtoo
+, 
+»ûive
+ 
+Ü
+ 
+ÿn
+ 
+g‘
+ 
+the
+
+
+36 
+sourû
+ 
+	gcode
+. 
+And
+ 
+you
+ 
+mu¡
+ 
+show
+ 
+them
+ 
+the£
+ 
+‹rms
+ 
+so
+ 
+they
+ 
+know
+ 
+theœ
+
+
+37 
+	grights
+.
+
+39 
+We
+ 
+´Ùeù
+ 
+your
+ 
+rights
+ 
+w™h
+ 
+two
+ 
+	g¡•s
+: (1è
+cİyright
+ 
+the
+ 
+soáw¬e
+, 
+	gªd
+
+
+40 (2è
+ofãr
+ 
+you
+ 
+this
+ 
+liûn£
+ 
+which
+ 
+gives
+ you 
+Ëg®
+ 
+³rmissiÚ
+ 
+to
+ 
+	gcİy
+,
+
+41 
+di¡ribu‹
+ 
+	gªd
+/
+Ü
+ 
+modify
+ 
+the
+ 
+	gsoáw¬e
+.
+
+43 
+	gAlso
+, 
+—ch
+ 
+	gauthÜ
+'s…rotection‡nd ours, we wanto make certain
+
+44 
+th©
+ 
+ev”yÚe
+ 
+und”¡ªds
+h© 
+th”e
+ 
+is
+ 
+no
+ 
+w¬¿Áy
+ 
+this
+ 
+ä“
+
+
+45 
+	gsoáw¬e
+. 
+If
+ 
+the
+ 
+soáw¬e
+ 
+is
+ 
+modif›d
+ 
+by
+ 
+someÚe
+ 
+ªd
+ 
+·s£d
+ 
+	gÚ
+, 
+we
+
+
+46 
+wªt
+ 
+™s
+ 
+»c›Ás
+ 
+to
+ 
+know
+ 
+th©
+ 
+wh©
+ 
+they
+ 
+have
+ 
+is
+ 
+nÙ
+ 
+the
+ 
+	gÜigš®
+, 
+so
+
+
+47 
+th©
+ 
+ªy
+ 
+´obËms
+ 
+šŒoduûd
+ 
+by
+ 
+Ùh”s
+ 
+wl
+ 
+nÙ
+ 
+»æeù
+ 
+Ú
+ 
+the
+ 
+Üigš®
+
+
+48 
+	gauthÜs
+'„eputations.
+
+50 
+	gFš®ly
+, 
+ªy
+ 
+ä“
+ 
+´og¿m
+ 
+is
+ 
+th»©’ed
+ 
+cÚ¡ªy
+ 
+by
+ 
+soáw¬e
+
+
+51 
+	g·‹Ás
+. 
+We
+ 
+wish
+ 
+to
+ 
+avoid
+ 
+the
+ 
+dªg”
+ 
+th©
+ 
+»di¡ributÜs
+ 
+of
+ 
+a
+ 
+ä“
+
+
+52 
+´og¿m
+ 
+wl
+ 
+šdividu®ly
+ 
+obš
+ 
+·‹Á
+ 
+	gliûn£s
+, 
+š
+ 
+efãù
+ 
+makšg
+ 
+the
+
+
+53 
+´og¿m
+ 
+	g´İr›ry
+. 
+To
+ 
+´ev’t
+ 
+	gthis
+, 
+we
+ 
+have
+ 
+made
+ 
+™
+ 
+ş—r
+ 
+th©
+ 
+ªy
+
+
+54 
+·‹Á
+ 
+mu¡
+ 
+be
+ 
+liûn£d
+ 
+	gev”yÚe
+'s free use or‚ot†icensed‡t‡ll.
+
+56 
+The
+ 
+´eci£
+ 
+‹rms
+ 
+ªd
+ 
+cÚd™iÚs
+ 
+	gcİyšg
+, 
+di¡ributiÚ
+‡nd
+
+57 
+modifiÿtiÚ
+ 
+	gfŞlow
+.
+
+59 
+GNU
+ 
+GENERAL
+ 
+PUBLIC
+ 
+LICENSE
+
+
+60 
+TERMS
+ 
+AND
+ 
+CONDITIONS
+ 
+FOR
+ 
+	gCOPYING
+, 
+DISTRIBUTION
+ AND 
+	gMODIFICATION
+
+
+62 0. 
+This
+ 
+Liûn£
+ 
+­¶›s
+ 
+to
+ 
+ªy
+ 
+´og¿m
+ 
+Ü
+ 
+Ùh”
+ 
+wÜk
+ 
+which
+ 
+cÚšs
+
+
+63 
+a
+ 
+nÙiû
+ 
+¶aûd
+ 
+by
+ 
+the
+ 
+cİyright
+ 
+hŞd”
+ 
+§yšg
+ 
+™
+ 
+may
+ 
+be
+ 
+di¡ribu‹d
+
+
+64 
+und”
+ 
+the
+ 
+‹rms
+ 
+of
+ 
+this
+ 
+G’”®
+ 
+Public
+ 
+	gLiûn£
+. 
+	gThe
+ "Prog¿m", 
+	gb–ow
+,
+
+65 
+»ãrs
+ 
+to
+ 
+ªy
+ 
+such
+ 
+´og¿m
+ 
+Ü
+ 
+	gwÜk
+, 
+ªd
+ 
+	ga
+ "work based onhe Program"
+
+66 
+m—ns
+ 
+e™h”
+ 
+the
+ 
+Prog¿m
+ 
+Ü
+ 
+ªy
+ 
+d”iv©ive
+ 
+wÜk
+ 
+und”
+ 
+cİyright
+ 
+	gÏw
+:
+
+67 
+th©
+ 
+is
+ 
+to
+ 
+§y
+, 
+a
+ 
+wÜk
+ 
+cÚššg
+ 
+the
+ 
+Prog¿m
+ 
+Ü
+‡ 
+pÜtiÚ
+ 
+of
+ 
+	g™
+,
+
+68 
+e™h”
+ 
+v”b©im
+ 
+Ü
+ 
+w™h
+ 
+modifiÿtiÚs
+ 
+	gªd
+/Ü 
+Œª¦©ed
+ 
+što
+ 
+ªÙh”
+
+
+69 
+	gÏnguage
+. (
+	gH”ešaá”
+, 
+Œª¦©iÚ
+ 
+is
+ 
+šşuded
+ 
+w™hout
+ 
+lim™©iÚ
+ 
+š
+
+
+70 
+the
+ 
+	g‹rm
+ "modifiÿtiÚ".è
+Each
+ 
+liûn£e
+ 
+is
+ 
+add»s£d
+ 
+	gas
+ "you".
+
+72 
+Aùiv™›s
+ 
+Ùh”
+ 
+thª
+ 
+	gcİyšg
+, 
+di¡ributiÚ
+ 
+ªd
+ 
+modifiÿtiÚ
+ 
+¬e
+ 
+nÙ
+
+
+73 
+cov”ed
+ 
+by
+ 
+this
+ 
+	gLiûn£
+; 
+they
+ 
+¬e
+ 
+outside
+ 
+™s
+ 
+	gscİe
+. 
+The
+ 
+aù
+ 
+of
+
+
+74 
+ruÂšg
+ 
+the
+ 
+Prog¿m
+ 
+is
+ 
+nÙ
+ 
+	g»¡riùed
+, 
+ªd
+h
+ouut
+ 
+äom
+he Program
+
+75 
+is
+ 
+cov”ed
+ 
+Úly
+ 
+™s
+ 
+cÚ‹Ás
+ 
+cÚ¡™u‹
+ 
+a
+ 
+wÜk
+ 
+ba£d
+ 
+Ú
+ 
+the
+
+
+76 
+Prog¿m
+ (
+šd•’d’t
+ 
+of
+ 
+havšg
+ 
+b“n
+ 
+made
+ 
+by
+ 
+ruÂšg
+ 
+the
+ Program).
+
+77 
+Wh‘h”
+ 
+th©
+ 
+is
+ 
+Œue
+ 
+d•’ds
+ 
+Ú
+ 
+wh©
+ 
+the
+ 
+Prog¿m
+ 
+	gdÛs
+.
+
+79 1. 
+You
+ 
+may
+ 
+cİy
+ 
+ªd
+ 
+di¡ribu‹
+ 
+v”b©im
+ 
+cİ›s
+ 
+of
+ 
+the
+ 
+	gProg¿m
+'s
+
+80 
+sourû
+ 
+code
+ 
+as
+ 
+you
+ 
+»ûive
+ 
+	g™
+, 
+š
+ 
+ªy
+ 
+	gmedium
+, 
+´ovided
+ 
+th©
+ you
+
+81 
+cÚ¥icuou¦y
+ 
+ªd
+ 
+­´İrŸ‹ly
+ 
+publish
+ 
+Ú
+ 
+—ch
+ 
+cİy
+ 
+ª
+ 
+­´İrŸ‹
+
+
+82 
+cİyright
+ 
+nÙiû
+ 
+ªd
+ 
+disşaim”
+ 
+of
+ 
+	gw¬¿Áy
+; 
+k“p
+ 
+šù
+ 
+®l
+ 
+the
+
+
+83 
+nÙiûs
+ 
+th©
+ 
+»ãr
+ 
+to
+ 
+this
+ 
+Liûn£
+ 
+ªd
+Ø
+the
+ 
+ab£nû
+ 
+of
+ 
+ªy
+ 
+	gw¬¿Áy
+;
+
+84 
+ªd
+ 
+give
+ 
+ªy
+ 
+Ùh”
+ 
+»c›Ás
+ 
+of
+ 
+the
+ 
+Prog¿m
+ 
+a
+ 
+cİy
+ oà
+this
+ 
+Liûn£
+
+
+85 
+®Úg
+ 
+w™h
+ 
+the
+ 
+	gProg¿m
+.
+
+87 
+You
+ 
+may
+ 
+ch¬ge
+ 
+a
+ 
+ãe
+ 
+the
+ 
+physiÿl
+ 
+aù
+ 
+of
+ 
+Œªsã¼šg
+‡ 
+	gcİy
+, 
+ªd
+
+
+88 
+you
+ 
+may
+ 
+©
+ 
+your
+ 
+İtiÚ
+ 
+ofãr
+ 
+w¬¿Áy
+ 
+´ÙeùiÚ
+ 
+š
+ 
+exchªge
+ 
+a
+ 
+	gãe
+.
+
+90 2. 
+You
+ 
+may
+ 
+modify
+ 
+your
+ 
+cİy
+ 
+Ü
+ 
+cİ›s
+ 
+of
+ 
+the
+ 
+Prog¿m
+ o¸
+ªy
+ 
+pÜtiÚ
+
+
+91 
+of
+ 
+	g™
+, 
+thus
+ 
+fÜmšg
+ 
+a
+ 
+wÜk
+ 
+ba£d
+ 
+Ú
+ 
+the
+ 
+	gProg¿m
+, 
+ªd
+ 
+cİy
+‡nd
+
+92 
+di¡ribu‹
+ 
+such
+ 
+modifiÿtiÚs
+ 
+Ü
+ 
+wÜk
+ 
+und”
+ 
+the
+ 
+‹rms
+ 
+of
+ 
+	gSeùiÚ
+ 1
+
+93 
+	gabove
+, 
+´ovided
+ 
+th©
+ 
+you
+ 
+®so
+ 
+m“t
+ 
+®l
+ 
+of
+ 
+the£
+ 
+	gcÚd™iÚs
+:
+
+95 
+a
+è
+You
+ 
+mu¡
+ 
+ÿu£
+ 
+the
+ 
+modif›d
+ 
+fes
+ 
+to
+ 
+ÿ¼y
+ 
+´omš’t
+ 
+nÙiûs
+
+
+96 
+¡©šg
+ 
+th©
+ 
+you
+ 
+chªged
+ 
+the
+ 
+fes
+ 
+ªd
+h
+d©e
+ 
+of
+ 
+ªy
+ 
+chªge
+.
+
+98 
+b
+è
+You
+ 
+mu¡
+ 
+ÿu£
+ 
+ªy
+ 
+wÜk
+ 
+th©
+ 
+you
+ 
+di¡ribu‹
+ 
+Ü
+ 
+publish
+,h© 
+š
+
+
+99 
+whŞe
+ 
+Ü
+ 
+š
+ 
+·¹
+ 
+cÚšs
+ o¸
+is
+ 
+d”ived
+ 
+äom
+ 
+the
+ 
+Prog¿m
+ o¸
+ªy
+
+
+100 
+·¹
+ 
+	gth”eof
+, 
+to
+ 
+be
+ 
+liûn£d
+ 
+as
+ 
+a
+ 
+whŞe
+ 
+©
+ 
+no
+ 
+ch¬ge
+Ø
+®l
+ 
+thœd
+
+
+101 
+·¹›s
+ 
+und”
+ 
+the
+ 
+‹rms
+ 
+of
+ 
+this
+ 
+	gLiûn£
+.
+
+103 
+	gc
+è
+If
+ 
+the
+ 
+modif›d
+ 
+´og¿m
+ 
+nÜm®ly
+ 
+»ads
+ 
+commªds
+ 
+š‹¿ùiv–y
+
+
+104 
+wh’
+ 
+	grun
+, 
+you
+ 
+mu¡
+ 
+ÿu£
+ 
+	g™
+, wh’ 
+¡¬‹d
+ 
+ruÂšg
+ 
+such
+
+
+105 
+š‹¿ùive
+ 
+u£
+ 
+š
+ 
+the
+ 
+mo¡
+ 
+Üdš¬y
+ 
+	gway
+, 
+to
+ 
+´št
+ 
+Ü
+ 
+di¥Ïy
+ 
+ª
+
+
+106 
+ªnounûm’t
+ 
+šşudšg
+ 
+ª
+ 
+­´İrŸ‹
+ 
+cİyright
+ 
+nÙiû
+ 
+ªd
+ 
+a
+
+
+107 
+nÙiû
+ 
+th©
+ 
+th”e
+ 
+is
+ 
+no
+ 
+	$w¬¿Áy
+ (
+Ü
+ , 
+§yšg
+ 
+th©
+ 
+you
+ 
+´ovide
+
+
+108 
+a
+ 
+w¬¿Áy
+è
+ªd
+ 
+th©
+ 
+u£rs
+ 
+may
+ 
+»di¡ribu‹
+ 
+the
+ 
+´og¿m
+ 
+und”
+
+
+109 
+the£
+ 
+cÚd™iÚs
+, 
+ªd
+ 
+‹Îšg
+ 
+the
+ 
+u£r
+ 
+how
+ 
+to
+ 
+v›w
+ 
+a
+ 
+cİy
+ 
+of
+ 
+this
+
+
+110 
+Liûn£
+. (
+Exû±iÚ
+: 
+the
+ 
+Prog¿m
+ 
+™£lf
+ 
+is
+ 
+š‹¿ùive
+ 
+but
+
+
+111 
+dÛs
+ 
+nÙ
+ 
+nÜm®ly
+ 
+´št
+ 
+such
+ 
+ª
+ 
+ªnounûm’t
+, 
+your
+ 
+wÜk
+ 
+ba£d
+ 
+Ú
+
+
+112 
+the
+ 
+Prog¿m
+ 
+is
+ 
+nÙ
+ 
+»quœed
+ 
+to
+ 
+´št
+ 
+ª
+ 
+ªnounûm’t
+.)
+
+114 
+The£
+ 
+»quœem’ts
+ 
+­¶y
+ 
+to
+ 
+the
+ 
+modif›d
+ 
+wÜk
+ 
+as
+ 
+a
+ 
+whŞe
+. 
+If
+
+
+115 
+id’tifŸbË
+ 
+£ùiÚs
+ 
+of
+ 
+th©
+ 
+wÜk
+ 
+¬e
+ 
+nÙ
+ 
+d”ived
+ 
+äom
+ 
+the
+ 
+Prog¿m
+,
+
+116 
+ªd
+ 
+ÿn
+ 
+be
+ 
+»asÚably
+ 
+cÚsid”ed
+ 
+šd•’d’t
+‡nd 
+£·¿‹
+ 
+wÜks
+ 
+š
+
+
+117 
+them£lves
+, 
+th’
+ 
+this
+ 
+Liûn£
+, 
+ªd
+ 
+™s
+ 
+‹rms
+, dØ
+nÙ
+ 
+­¶y
+ 
+to
+ 
+tho£
+
+
+118 
+£ùiÚs
+ 
+wh’
+ 
+you
+ 
+di¡ribu‹
+ 
+them
+ 
+as
+ 
+£·¿‹
+ 
+wÜks
+. 
+But
+ when you
+
+119 
+di¡ribu‹
+ 
+the
+ 
+§me
+ 
+£ùiÚs
+ 
+as
+ 
+·¹
+ 
+of
+ 
+a
+ 
+whŞe
+ 
+which
+ 
+is
+‡ 
+wÜk
+ 
+ba£d
+
+
+120 
+Ú
+ 
+the
+ 
+Prog¿m
+,h
+di¡ributiÚ
+ 
+of
+h
+whŞe
+ 
+mu¡
+ 
+be
+ oÀth
+‹rms
+ of
+
+121 
+this
+ 
+Liûn£
+, 
+who£
+ 
+³rmissiÚs
+ 
+Ùh”
+ 
+liûn£es
+ 
+ex‹nd
+ 
+to
+ 
+the
+
+
+122 
+’tœe
+ 
+whŞe
+, 
+ªd
+ 
+thus
+ 
+to
+ 
+—ch
+‡nd 
+ev”y
+ 
+·¹
+ 
+»g¬dËss
+ 
+of
+ 
+who
+ 
+wrÙe
+ 
+™
+.
+
+124 
+Thus
+, 
+™
+ 
+is
+ 
+nÙ
+ 
+the
+ 
+š‹Á
+ 
+of
+ 
+this
+ 
+£ùiÚ
+ 
+to
+ 
+şaim
+ 
+rights
+ 
+Ü
+ 
+cÚ‹¡
+
+
+125 
+your
+ 
+rights
+ 
+to
+ 
+wÜk
+ 
+wr™‹n
+ 
+’tœ–y
+ 
+by
+ 
+you
+; 
+¿th”
+, 
+the
+ 
+š‹Á
+ 
+is
+o
+
+126 
+ex”ci£
+ 
+the
+ 
+right
+ 
+to
+ 
+cÚŒŞ
+h
+di¡ributiÚ
+ 
+of
+ 
+d”iv©ive
+ 
+Ü
+
+
+127 
+cŞËùive
+ 
+wÜks
+ 
+ba£d
+ 
+Ú
+ 
+the
+ 
+Prog¿m
+.
+
+129 
+In
+ 
+add™iÚ
+, 
+m”e
+ 
+agg»g©iÚ
+ 
+of
+ 
+ªÙh”
+ 
+wÜk
+ 
+nÙ
+ 
+ba£d
+ 
+Ú
+ 
+the
+ 
+Prog¿m
+
+
+130 
+w™h
+ 
+the
+ 
+	$Prog¿m
+ (
+Ü
+ 
+w™h
+ 
+a
+ 
+wÜk
+ 
+ba£d
+ 
+Ú
+ 
+the
+ 
+Prog¿m
+èÚ‡ 
+vŞume
+ 
+of
+
+
+131 
+a
+ 
+¡Üage
+ 
+Ü
+ 
+di¡ributiÚ
+ 
+medium
+ 
+dÛs
+ 
+nÙ
+ 
+bršg
+ 
+the
+ 
+Ùh”
+ 
+wÜk
+ 
+und”
+
+
+132 
+the
+ 
+scİe
+ 
+of
+ 
+this
+ 
+Liûn£
+.
+
+134 3. 
+You
+ 
+may
+ 
+cİy
+ 
+ªd
+ 
+di¡ribu‹
+ 
+the
+ 
+	$Prog¿m
+ (
+Ü
+ 
+a
+ 
+wÜk
+ 
+ba£d
+ 
+Ú
+ 
+™
+,
+
+135 
+und”
+ 
+SeùiÚ
+ 2è
+š
+ 
+objeù
+ 
+code
+ 
+Ü
+ 
+execubË
+ 
+fÜm
+ und” 
+the
+ 
+‹rms
+ 
+of
+
+
+136 
+SeùiÚs
+ 1 
+ªd
+ 2 
+above
+ 
+´ovided
+ 
+th©
+ 
+you
+ 
+®so
+ dØ
+Úe
+ 
+of
+ 
+the
+ 
+fŞlowšg
+:
+
+138 
+a
+è
+Accom·ny
+ 
+™
+ 
+w™h
+ 
+the
+ 
+com¶‘e
+ 
+cÜ»¥Údšg
+ 
+machše
+-
+»adabË
+
+
+139 
+sourû
+ 
+code
+, 
+which
+ 
+mu¡
+ 
+be
+ 
+di¡ribu‹d
+ 
+und”
+ 
+the
+ 
+‹rms
+ 
+of
+ 
+SeùiÚs
+
+
+140 1 
+ªd
+ 2 
+above
+ 
+Ú
+ 
+a
+ 
+medium
+ 
+cu¡om¬y
+ 
+u£d
+ 
+soáw¬e
+ 
+š‹rchªge
+; 
+Ü
+,
+
+142 
+b
+è
+Accom·ny
+ 
+™
+ 
+w™h
+ 
+a
+ 
+wr™‹n
+ 
+ofãr
+, 
+v®id
+ 
+©
+ 
+Ëa¡
+ 
+th»e
+
+
+143 
+y—rs
+, 
+to
+ 
+give
+ 
+ªy
+ 
+thœd
+ 
+·¹y
+, 
+a
+ 
+ch¬ge
+ 
+no
+ 
+mÜe
+ 
+thª
+ 
+your
+
+
+144 
+co¡
+ 
+of
+ 
+physiÿÎy
+ 
+³rfÜmšg
+ 
+sourû
+ 
+di¡ributiÚ
+, 
+a
+ 
+com¶‘e
+
+
+145 
+machše
+-
+»adabË
+ 
+cİy
+ 
+of
+ 
+the
+ 
+cÜ»¥Údšg
+ 
+sourû
+ 
+code
+, 
+to
+ 
+be
+
+
+146 
+di¡ribu‹d
+ 
+und”
+ 
+the
+ 
+‹rms
+ 
+of
+ 
+SeùiÚs
+ 1 
+ªd
+ 2 
+above
+ 
+Ú
+ 
+a
+ 
+medium
+
+
+147 
+cu¡om¬y
+ 
+u£d
+ 
+soáw¬e
+ 
+š‹rchªge
+; 
+Ü
+,
+
+149 
+c
+è
+Accom·ny
+ 
+™
+ 
+w™h
+ 
+the
+ 
+šfÜm©iÚ
+ 
+you
+ 
+»ûived
+ 
+as
+ 
+to
+h
+ofãr
+
+
+150 
+to
+ 
+di¡ribu‹
+ 
+cÜ»¥Údšg
+ 
+sourû
+ 
+code
+. (
+This
+ 
+®‹º©ive
+ 
+is
+
+
+151 
+®lowed
+ 
+Úly
+ 
+nÚcomm”cŸl
+ 
+di¡ributiÚ
+ 
+ªd
+ oÆy 
+you
+
+
+152 
+»ûived
+ 
+the
+ 
+´og¿m
+ 
+š
+ 
+objeù
+ 
+code
+ 
+Ü
+ 
+execubË
+ 
+fÜm
+ 
+w™h
+ 
+such
+
+
+153 
+ª
+ 
+ofãr
+, 
+š
+ 
+accÜd
+ 
+w™h
+ 
+Sub£ùiÚ
+ 
+b
+ 
+above
+.)
+
+155 
+The
+ 
+sourû
+ 
+code
+ 
+a
+ 
+wÜk
+ 
+m—ns
+ 
+the
+ 
+´eã¼ed
+ 
+fÜm
+ 
+of
+he work 
+
+156 
+makšg
+ 
+modifiÿtiÚs
+ 
+to
+ 
+™
+. 
+FÜ
+ 
+ª
+ 
+execubË
+ 
+wÜk
+, 
+com¶‘e
+ 
+sourû
+
+
+157 
+code
+ 
+m—ns
+ 
+®l
+ 
+the
+ 
+sourû
+ cod®È
+moduËs
+ 
+™
+ 
+cÚšs
+, 
+¶us
+ 
+ªy
+
+
+158 
+assocŸ‹d
+ 
+š‹rçû
+ 
+defš™iÚ
+ 
+fes
+, 
+¶us
+ 
+the
+ 
+süts
+ 
+u£d
+ 
+to
+
+
+159 
+cÚŒŞ
+ 
+comp©iÚ
+ 
+ªd
+ 
+š¡®ÏtiÚ
+ 
+of
+ 
+the
+ 
+execubË
+. 
+Howev”
+, 
+as
+ 
+a
+
+
+160 
+¥ecŸl
+ 
+exû±iÚ
+, 
+the
+ 
+sourû
+ 
+code
+ 
+di¡ribu‹d
+ 
+Ãed
+ 
+nÙ
+ 
+šşude
+
+
+161 
+ªythšg
+ 
+th©
+ 
+is
+ 
+nÜm®ly
+ 
+	$di¡ribu‹d
+ (
+š
+ 
+e™h”
+ 
+sourû
+ 
+Ü
+ 
+bš¬y
+
+
+162 
+fÜm
+è
+w™h
+ 
+the
+ 
+majÜ
+ 
+	$compÚ’ts
+ (
+comp”
+, 
+k”Ãl
+, 
+ªd
+ 
+so
+ 
+Ú
+è
+of
+ 
+the
+
+
+163 
+İ”©šg
+ 
+sy¡em
+ 
+Ú
+ 
+which
+ 
+the
+ 
+execubË
+ 
+runs
+, 
+uÆess
+ 
+th©
+ 
+compÚ’t
+
+
+164 
+™£lf
+ 
+accom·n›s
+ 
+the
+ 
+execubË
+.
+
+166 
+If
+ 
+di¡ributiÚ
+ 
+of
+ 
+execubË
+ 
+Ü
+ 
+objeù
+ 
+code
+ 
+is
+ 
+made
+ 
+by
+ 
+ofãršg
+
+
+167 
+acûss
+ 
+to
+ 
+cİy
+ 
+äom
+ 
+a
+ 
+desigÇ‹d
+ 
+¶aû
+, 
+th’
+ 
+ofãršg
+ 
+equiv®’t
+
+
+168 
+acûss
+ 
+to
+ 
+cİy
+ 
+the
+ 
+sourû
+ 
+code
+ 
+äom
+h
+§me
+ 
+¶aû
+ 
+couÁs
+ 
+as
+
+
+169 
+di¡ributiÚ
+ 
+of
+ 
+the
+ 
+sourû
+ 
+code
+, 
+ev’
+ 
+though
+ 
+thœd
+ 
+·¹›s
+ 
+¬e
+ 
+nÙ
+
+
+170 
+com³Îed
+ 
+to
+ 
+cİy
+ 
+the
+ 
+sourû
+ 
+®Úg
+ 
+w™h
+h
+objeù
+ 
+code
+.
+
+172 4. 
+You
+ 
+may
+ 
+nÙ
+ 
+cİy
+, 
+modify
+, 
+subliûn£
+, 
+Ü
+ 
+di¡ribu‹
+ 
+the
+ 
+Prog¿m
+
+
+173 
+exû±
+ 
+as
+ 
+ex´es¦y
+ 
+´ovided
+ 
+und”
+ 
+this
+ 
+Liûn£
+. 
+Any
+ 
+©‹m±
+
+
+174 
+Ùh”wi£
+ 
+to
+ 
+cİy
+, 
+modify
+, 
+subliûn£
+ 
+Ü
+ 
+di¡ribu‹
+ 
+the
+ 
+Prog¿m
+ 
+is
+
+
+175 , 
+ªd
+ 
+wl
+ 
+autom©iÿÎy
+ 
+‹rmš©e
+ 
+your
+ 
+rights
+ 
+und”
+ 
+this
+ 
+Liûn£
+.
+
+176 
+Howev”
+, 
+·¹›s
+ 
+who
+ 
+have
+ 
+»ûived
+ 
+cİ›s
+, 
+Ü
+ 
+rights
+, 
+äom
+ 
+you
+ 
+und”
+
+
+177 
+this
+ 
+Liûn£
+ 
+wl
+ 
+nÙ
+ 
+have
+ 
+theœ
+ 
+liûn£s
+ 
+‹rmš©ed
+ 
+so
+ 
+as
+ 
+such
+
+
+178 
+·¹›s
+ 
+»maš
+ 
+š
+ 
+fuÎ
+ 
+com¶Ÿnû
+.
+
+180 5. 
+You
+ 
+¬e
+ 
+nÙ
+ 
+»quœed
+ 
+to
+ 
+acû±
+ 
+this
+ 
+Liûn£
+, 
+sšû
+ 
+you
+ 
+have
+‚ot
+
+181 sigÃd 
+™
+. 
+Howev”
+, 
+nÙhšg
+ 
+g¿Ás
+ 
+you
+ 
+³rmissiÚ
+ 
+to
+ 
+modify
+ 
+Ü
+
+
+182 
+di¡ribu‹
+ 
+the
+ 
+Prog¿m
+ 
+Ü
+ 
+™s
+ 
+d”iv©ive
+ 
+wÜks
+. 
+The£
+ 
+aùiÚs
+ 
+¬e
+
+
+183 
+´ohib™ed
+ 
+by
+ 
+Ïw
+ 
+you
+ dØ
+nÙ
+ 
+acû±
+ 
+this
+ 
+Liûn£
+. 
+Th”efÜe
+, by
+
+184 
+modifyšg
+ 
+Ü
+ 
+di¡ributšg
+ 
+the
+ 
+	`Prog¿m
+ (Ü 
+ªy
+ 
+wÜk
+ 
+ba£d
+ 
+Ú
+he
+
+185 
+Prog¿m
+), 
+you
+ 
+šdiÿ‹
+ 
+your
+ 
+acû±ªû
+ 
+of
+ 
+this
+ 
+Liûn£
+ 
+to
+ dØ
+so
+, 
+ªd
+
+
+186 
+®l
+ 
+™s
+ 
+‹rms
+ 
+ªd
+ 
+cÚd™iÚs
+ 
+cİyšg
+, 
+di¡ributšg
+ 
+Ü
+ 
+modifyšg
+
+
+187 
+the
+ 
+Prog¿m
+ 
+Ü
+ 
+wÜks
+ 
+ba£d
+ 
+Ú
+ 
+™
+.
+
+189 6. 
+Each
+ 
+time
+ 
+you
+ 
+»di¡ribu‹
+ 
+the
+ 
+	`Prog¿m
+ (
+Ü
+ 
+ªy
+ 
+wÜk
+ 
+ba£d
+ 
+Ú
+he
+
+190 
+Prog¿m
+), 
+the
+ 
+»c›Á
+ 
+autom©iÿÎy
+ 
+»ûives
+ 
+a
+ 
+liûn£
+ 
+äom
+he
+
+191 
+Üigš®
+ 
+liûnsÜ
+ 
+to
+ 
+cİy
+, 
+di¡ribu‹
+ 
+Ü
+ 
+modify
+ 
+the
+ 
+Prog¿m
+ 
+subjeù
+o
+
+192 
+the£
+ 
+‹rms
+ 
+ªd
+ 
+cÚd™iÚs
+. 
+You
+ 
+may
+ 
+nÙ
+ 
+impo£
+ 
+ªy
+ 
+fu¹h”
+
+
+193 
+»¡riùiÚs
+ 
+Ú
+ 
+the
+ 
+»c›Ás
+'ƒxercise ofhe„ights granted herein.
+
+194 
+You
+ 
+¬e
+ 
+nÙ
+ 
+»¥ÚsibË
+ 
+’fÜcšg
+ 
+com¶Ÿnû
+ 
+by
+ 
+thœd
+ 
+·¹›s
+ 
+to
+
+
+195 
+this
+ 
+Liûn£
+.
+
+197 7. 
+If
+, 
+as
+ 
+a
+ 
+cÚ£qu’û
+ 
+of
+‡ 
+cou¹
+ 
+judgm’t
+ 
+Ü
+ 
+®Ëg©iÚ
+ oà
+·‹Á
+
+
+198 
+šäšgem’t
+ 
+Ü
+ 
+ªy
+ 
+Ùh”
+ 
+	`»asÚ
+ (
+nÙ
+ 
+lim™ed
+ 
+to
+ 
+·‹Á
+ 
+issues
+),
+
+199 
+cÚd™iÚs
+ 
+¬e
+ 
+impo£d
+ 
+Ú
+ 
+	$you
+ (
+wh‘h”
+ 
+by
+ 
+cou¹
+ 
+Üd”
+, 
+ag»em’t
+ 
+Ü
+
+
+200 
+Ùh”wi£
+è
+th©
+ 
+cÚŒadiù
+ 
+the
+ 
+cÚd™iÚs
+ 
+of
+ 
+this
+ 
+Liûn£
+, 
+they
+ dØ
+nÙ
+
+
+201 
+excu£
+ 
+you
+ 
+äom
+ 
+the
+ 
+cÚd™iÚs
+ 
+of
+ 
+this
+ 
+Liûn£
+. 
+If
+ you 
+ÿÂÙ
+
+
+202 
+di¡ribu‹
+ 
+so
+ 
+as
+ 
+to
+ 
+§tisfy
+ 
+simuÉªeou¦y
+ 
+your
+ 
+oblig©iÚs
+ 
+und”
+ 
+this
+
+
+203 
+Liûn£
+ 
+ªd
+ 
+ªy
+ 
+Ùh”
+ 
+³¹š’t
+ 
+oblig©iÚs
+, 
+th’
+ 
+as
+ 
+a
+ 
+cÚ£qu’û
+ 
+you
+
+
+204 
+may
+ 
+nÙ
+ 
+di¡ribu‹
+ 
+the
+ 
+Prog¿m
+ 
+©
+ 
+®l
+. 
+FÜ
+ 
+exam¶e
+, 
+a
+ 
+·‹Á
+
+
+205 
+liûn£
+ 
+would
+ 
+nÙ
+ 
+³rm™
+ 
+roy®ty
+-
+ä“
+ 
+»di¡ributiÚ
+ 
+of
+ 
+the
+ 
+Prog¿m
+ 
+by
+
+
+206 
+®l
+ 
+tho£
+ 
+who
+ 
+»ûive
+ 
+cİ›s
+ 
+dœeùly
+ 
+Ü
+ 
+šdœeùly
+ 
+through
+ 
+you
+, 
+th’
+
+
+207 
+the
+ 
+Úly
+ 
+way
+ 
+you
+ 
+could
+ 
+§tisfy
+ 
+bÙh
+ 
+™
+ 
+ªd
+ 
+this
+ 
+Liûn£
+ 
+would
+ 
+be
+ 
+to
+
+
+208 
+»äaš
+ 
+’tœ–y
+ 
+äom
+ 
+di¡ributiÚ
+ 
+of
+ 
+the
+ 
+Prog¿m
+.
+
+210 
+If
+ 
+ªy
+ 
+pÜtiÚ
+ 
+of
+ 
+this
+ 
+£ùiÚ
+ 
+is
+ 
+h–d
+ 
+šv®id
+ 
+Ü
+ 
+uÃnfÜûabË
+ 
+und”
+
+
+211 
+ªy
+ 
+·¹icuÏr
+ 
+cœcum¡ªû
+, 
+the
+ 
+b®ªû
+ 
+of
+h
+£ùiÚ
+ 
+is
+ 
+š‹nded
+ 
+to
+
+
+212 
+­¶y
+ 
+ªd
+ 
+the
+ 
+£ùiÚ
+ 
+as
+ 
+a
+ 
+whŞe
+ 
+is
+ 
+š‹nded
+ 
+to
+‡µly 
+š
+ 
+Ùh”
+
+
+213 
+cœcum¡ªûs
+.
+
+215 
+It
+ 
+is
+ 
+nÙ
+ 
+the
+ 
+pu½o£
+ 
+of
+ 
+this
+ 
+£ùiÚ
+ 
+to
+ 
+šduû
+ 
+you
+Ø
+šäšge
+ 
+ªy
+
+
+216 
+·‹Ás
+ 
+Ü
+ 
+Ùh”
+ 
+´İ”ty
+ 
+right
+ 
+şaims
+ o¸
+to
+ 
+cÚ‹¡
+ 
+v®id™y
+ 
+of
+ 
+ªy
+
+
+217 
+such
+ 
+şaims
+; 
+this
+ 
+£ùiÚ
+ 
+has
+ 
+the
+ 
+sŞe
+ 
+pu½o£
+ 
+of
+ 
+´Ùeùšg
+he
+
+218 
+š‹gr™y
+ 
+of
+ 
+the
+ 
+ä“
+ 
+soáw¬e
+ 
+di¡ributiÚ
+ 
+sy¡em
+, 
+which
+ 
+is
+
+
+219 
+im¶em’‹d
+ 
+by
+ 
+public
+ 
+liûn£
+ 
+´aùiûs
+. 
+Mªy
+ 
+³İË
+ 
+have
+ 
+made
+
+
+220 
+g’”ous
+ 
+cÚŒibutiÚs
+ 
+to
+ 
+the
+ 
+wide
+ 
+¿nge
+ 
+of
+ 
+soáw¬e
+ 
+di¡ribu‹d
+
+
+221 
+through
+ 
+th©
+ 
+sy¡em
+ 
+š
+ 
+»lŸnû
+ 
+Ú
+ 
+cÚsi¡’t
+ 
+­¶iÿtiÚ
+ 
+of
+hat
+
+222 
+sy¡em
+; 
+™
+ 
+is
+ 
+up
+ 
+to
+ 
+the
+ 
+authÜ
+/
+dÚÜ
+Ø
+decide
+ 
+he
+ 
+Ü
+ 
+she
+ i 
+wlšg
+
+
+223 
+to
+ 
+di¡ribu‹
+ 
+soáw¬e
+ 
+through
+ 
+ªy
+ 
+Ùh”
+ 
+sy¡em
+ 
+ªd
+ 
+a
+ 
+liûn£e
+ 
+ÿÂÙ
+
+
+224 
+impo£
+ 
+th©
+ 
+choiû
+.
+
+226 
+This
+ 
+£ùiÚ
+ 
+is
+ 
+š‹nded
+ 
+to
+ 
+make
+ 
+thÜoughly
+ 
+ş—r
+ 
+wh©
+ i 
+b–›ved
+o
+
+227 
+be
+ 
+a
+ 
+cÚ£qu’û
+ 
+of
+ 
+the
+ 
+»¡
+ oà
+this
+ 
+Liûn£
+.
+
+229 8. 
+If
+ 
+the
+ 
+di¡ributiÚ
+ 
+ªd
+/
+Ü
+ 
+u£
+ 
+of
+h
+Prog¿m
+ 
+is
+ 
+»¡riùed
+ 
+š
+
+
+230 
+û¹aš
+ 
+couÁr›s
+ 
+e™h”
+ 
+by
+ 
+·‹Ás
+ 
+Ü
+ by 
+cİyrigh‹d
+ 
+š‹rçûs
+, 
+the
+
+
+231 
+Üigš®
+ 
+cİyright
+ 
+hŞd”
+ 
+who
+ 
+¶aûs
+ 
+the
+ 
+Prog¿m
+ 
+und”
+ 
+this
+ 
+Liûn£
+
+
+232 
+may
+ 
+add
+ 
+ª
+ 
+ex¶ic™
+ 
+geog¿phiÿl
+ 
+di¡ributiÚ
+ 
+lim™©iÚ
+ 
+exşudšg
+
+
+233 
+tho£
+ 
+couÁr›s
+, 
+so
+ 
+th©
+ 
+di¡ributiÚ
+ 
+is
+ 
+³rm™‹d
+ 
+Úly
+ 
+š
+ 
+Ü
+ 
+amÚg
+
+
+234 
+couÁr›s
+ 
+nÙ
+ 
+thus
+ 
+exşuded
+. 
+In
+ 
+such
+ , 
+this
+ 
+Liûn£
+ 
+šcÜpÜ©es
+
+
+235 
+the
+ 
+lim™©iÚ
+ 
+as
+ 
+wr™‹n
+ 
+š
+h
+body
+ 
+of
+ 
+this
+ 
+Liûn£
+.
+
+237 9. 
+The
+ 
+F»e
+ 
+Soáw¬e
+ 
+Found©iÚ
+ 
+may
+ 
+publish
+ 
+»vi£d
+ 
+ªd
+/
+Ü
+ 
+Ãw
+ 
+v”siÚs
+
+
+238 
+of
+ 
+the
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+ 
+äom
+ 
+time
+ 
+to
+ime. 
+Such
+ 
+Ãw
+ 
+v”siÚs
+ 
+wl
+
+
+239 
+be
+ 
+sim¬
+ 
+š
+ 
+¥œ™
+ 
+to
+ 
+the
+ 
+´e£Á
+ 
+v”siÚ
+, 
+but
+ 
+may
+ 
+difãr
+ iÀ
+d‘a
+o
+
+240 
+add»ss
+ 
+Ãw
+ 
+´obËms
+ 
+Ü
+ 
+cÚûºs
+.
+
+242 
+Each
+ 
+v”siÚ
+ 
+is
+ 
+giv’
+ 
+a
+ 
+di¡šguishšg
+ v”siÚ 
+numb”
+. 
+If
+ 
+the
+ 
+Prog¿m
+
+
+243 
+¥ecif›s
+ 
+a
+ 
+v”siÚ
+ 
+numb”
+ 
+of
+ 
+this
+ 
+Liûn£
+ 
+which
+ 
+­¶›s
+ 
+to
+ 
+™
+ 
+ªd
+ "any
+
+244 
+Ï‹r
+ 
+v”siÚ
+", you havehe option of followingheerms‡nd conditions
+
+245 
+e™h”
+ 
+of
+ 
+th©
+ 
+v”siÚ
+ 
+Ü
+ oà
+ªy
+ 
+Ï‹r
+ v”siÚ 
+published
+ 
+by
+ 
+the
+ 
+F»e
+
+
+246 
+Soáw¬e
+ 
+Found©iÚ
+. 
+If
+ 
+the
+ 
+Prog¿m
+ 
+dÛs
+ 
+nÙ
+ 
+¥ecify
+ 
+a
+ 
+v”siÚ
+ 
+numb”
+ 
+of
+
+
+247 
+this
+ 
+Liûn£
+, 
+you
+ 
+may
+ 
+choo£
+ 
+ªy
+ 
+v”siÚ
+ 
+ev”
+ 
+published
+ 
+by
+ 
+the
+ 
+F»e
+ 
+Soáw¬e
+
+
+248 
+Found©iÚ
+.
+
+250 10. 
+If
+ 
+you
+ 
+wish
+ 
+to
+ 
+šcÜpÜ©e
+ 
+·¹s
+ 
+of
+ 
+the
+ 
+Prog¿m
+ 
+što
+ 
+Ùh”
+ 
+ä“
+
+
+251 
+´og¿ms
+ 
+who£
+ 
+di¡ributiÚ
+ 
+cÚd™iÚs
+ 
+¬e
+ 
+difã»Á
+, 
+wr™e
+ 
+to
+ 
+the
+ 
+authÜ
+
+
+252 
+to
+ 
+ask
+ 
+³rmissiÚ
+. 
+FÜ
+ 
+soáw¬e
+ 
+which
+ 
+is
+ 
+cİyrigh‹d
+ 
+by
+ 
+the
+ 
+F»e
+
+
+253 
+Soáw¬e
+ 
+Found©iÚ
+, 
+wr™e
+ 
+to
+ 
+the
+ 
+F»e
+ Soáw¬Found©iÚ; 
+we
+ 
+som‘imes
+
+
+254 
+make
+ 
+exû±iÚs
+ 
+this
+. 
+Our
+ 
+decisiÚ
+ 
+wl
+ 
+be
+ 
+guided
+ 
+by
+ 
+the
+ 
+two
+ 
+gßls
+
+
+255 
+of
+ 
+´e£rvšg
+ 
+the
+ 
+ä“
+ 
+¡©us
+ oà
+®l
+ 
+d”iv©ives
+ oà
+our
+ f»
+soáw¬e
+ 
+ªd
+
+
+256 
+of
+ 
+´omÙšg
+ 
+the
+ 
+sh¬šg
+ 
+ªd
+ 
+»u£
+ oà
+soáw¬e
+ 
+g’”®ly
+.
+
+258 
+NO
+ 
+WARRANTY
+
+
+260 11. 
+BECAUSE
+ 
+THE
+ 
+PROGRAM
+ 
+IS
+ 
+LICENSED
+ 
+FREE
+ 
+OF
+ 
+CHARGE
+, 
+THERE
+ IS 
+NO
+ 
+WARRANTY
+
+
+261 
+FOR
+ 
+THE
+ 
+PROGRAM
+, 
+TO
+ THE 
+EXTENT
+ 
+PERMITTED
+ 
+BY
+ 
+APPLICABLE
+ 
+LAW
+. 
+EXCEPT
+ 
+WHEN
+
+
+262 
+OTHERWISE
+ 
+STATED
+ 
+IN
+ 
+WRITING
+ 
+THE
+ 
+COPYRIGHT
+ 
+HOLDERS
+ 
+AND
+/
+OR
+ 
+OTHER
+ 
+PARTIES
+
+
+263 
+PROVIDE
+ 
+THE
+ 
+PROGRAM
+ "AS IS" 
+WITHOUT
+ 
+WARRANTY
+ 
+OF
+ 
+ANY
+ 
+KIND
+, 
+EITHER
+ 
+EXPRESSED
+
+
+264 
+OR
+ 
+IMPLIED
+, 
+INCLUDING
+, 
+BUT
+ 
+NOT
+ 
+LIMITED
+ 
+TO
+, 
+THE
+ IMPLIED 
+WARRANTIES
+ 
+OF
+
+
+265 
+MERCHANTABILITY
+ 
+AND
+ 
+FITNESS
+ 
+FOR
+ 
+A
+ 
+PARTICULAR
+ 
+PURPOSE
+. 
+THE
+ 
+ENTIRE
+ 
+RISK
+ 
+AS
+
+
+266 
+TO
+ 
+THE
+ 
+QUALITY
+ 
+AND
+ 
+PERFORMANCE
+ 
+OF
+ THE 
+PROGRAM
+ 
+IS
+ 
+WITH
+ 
+YOU
+. 
+SHOULD
+ THE
+
+267 
+PROGRAM
+ 
+PROVE
+ 
+DEFECTIVE
+, 
+YOU
+ 
+ASSUME
+ 
+THE
+ 
+COST
+ 
+OF
+ 
+ALL
+ 
+NECESSARY
+ 
+SERVICING
+,
+
+268 
+REPAIR
+ 
+OR
+ 
+CORRECTION
+.
+
+270 12. 
+IN
+ 
+NO
+ 
+EVENT
+ 
+UNLESS
+ 
+REQUIRED
+ 
+BY
+ 
+APPLICABLE
+ 
+LAW
+ 
+OR
+ 
+AGREED
+ 
+TO
+ IN 
+WRITING
+
+
+271 
+WILL
+ 
+ANY
+ 
+COPYRIGHT
+ 
+HOLDER
+, 
+OR
+ ANY 
+OTHER
+ 
+PARTY
+ 
+WHO
+ 
+MAY
+ 
+MODIFY
+ 
+AND
+/OR
+
+272 
+REDISTRIBUTE
+ 
+THE
+ 
+PROGRAM
+ 
+AS
+ 
+PERMITTED
+ 
+ABOVE
+, 
+BE
+ 
+LIABLE
+ 
+TO
+ 
+YOU
+ 
+FOR
+ 
+DAMAGES
+,
+
+273 
+INCLUDING
+ 
+ANY
+ 
+GENERAL
+, 
+SPECIAL
+, 
+INCIDENTAL
+ 
+OR
+ 
+CONSEQUENTIAL
+ 
+DAMAGES
+ 
+ARISING
+
+
+274 
+OUT
+ 
+OF
+ 
+THE
+ 
+USE
+ 
+OR
+ 
+INABILITY
+ 
+TO
+ USE THE 
+	`PROGRAM
+ (
+INCLUDING
+ 
+BUT
+ 
+NOT
+ 
+LIMITED
+
+
+275 
+TO
+ 
+LOSS
+ 
+OF
+ 
+DATA
+ 
+OR
+ DATA 
+BEING
+ 
+RENDERED
+ 
+INACCURATE
+ OR 
+LOSSES
+ 
+SUSTAINED
+ 
+BY
+
+
+276 
+YOU
+ 
+OR
+ 
+THIRD
+ 
+PARTIES
+ OR 
+A
+ 
+FAILURE
+ 
+OF
+ 
+THE
+ 
+PROGRAM
+ 
+TO
+ 
+OPERATE
+ 
+WITH
+ 
+ANY
+ 
+OTHER
+
+
+277 
+PROGRAMS
+), 
+EVEN
+ 
+IF
+ 
+SUCH
+ 
+HOLDER
+ 
+OR
+ 
+OTHER
+ 
+PARTY
+ 
+HAS
+ 
+BEEN
+ 
+ADVISED
+ 
+OF
+ 
+THE
+
+
+278 
+POSSIBILITY
+ 
+OF
+ 
+SUCH
+ 
+DAMAGES
+.
+
+280 
+END
+ 
+OF
+ 
+TERMS
+ 
+AND
+ 
+CONDITIONS
+
+
+282 
+How
+ 
+to
+ 
+Aµly
+ 
+The£
+ 
+T”ms
+Ø
+Your
+ 
+New
+ 
+Prog¿ms
+
+
+284 
+If
+ 
+you
+ 
+dev–İ
+ 
+a
+ 
+Ãw
+ 
+´og¿m
+, 
+ªd
+ you 
+wªt
+ 
+™
+ 
+to
+ 
+be
+ 
+of
+ 
+the
+ 
+g»©e¡
+
+
+285 
+possibË
+ 
+u£
+ 
+to
+ 
+the
+ 
+public
+,h
+be¡
+ 
+way
+Ø
+ach›ve
+ 
+this
+ 
+is
+Ø
+make
+ 
+™
+
+
+286 
+ä“
+ 
+soáw¬e
+ 
+which
+ 
+ev”yÚe
+ 
+ÿn
+ 
+»di¡ribu‹
+ 
+ªd
+ 
+chªge
+ 
+und”
+ 
+the£
+ 
+‹rms
+.
+
+288 
+To
+ dØ
+so
+, 
+©ch
+ 
+the
+ 
+fŞlowšg
+ 
+nÙiûs
+ 
+to
+h
+´og¿m
+. 
+It
+ 
+is
+ 
+§ã¡
+
+
+289 
+to
+ 
+©ch
+ 
+them
+Ø
+the
+ 
+¡¬t
+ 
+of
+ 
+—ch
+ 
+sourû
+ 
+fe
+Ø
+mo¡
+ 
+efãùiv–y
+
+
+290 
+cÚvey
+ 
+the
+ 
+exşusiÚ
+ 
+of
+ 
+w¬¿Áy
+; 
+ªd
+ 
+—ch
+ 
+fe
+ 
+should
+ 
+have
+ 
+©
+ 
+Ëa¡
+
+
+291 
+the
+ "cİyright" 
+lše
+ 
+ªd
+ 
+a
+ 
+poš‹r
+ 
+to
+ 
+wh”e
+h
+fuÎ
+ 
+nÙiû
+ 
+is
+ 
+found
+.
+
+293 <
+Úe
+ 
+lše
+ 
+to
+ 
+give
+ 
+the
+ 
+´og¿m
+'s‚ame‡nd‡ brief idea of what it does.>
+
+294 
+	`Cİyright
+ (
+C
+è<
+y—r
+> <
+Çme
+ 
+of
+ 
+authÜ
+>
+
+296 
+This
+ 
+´og¿m
+ 
+is
+ 
+ä“
+ 
+soáw¬e
+; 
+you
+ 
+ÿn
+ 
+»di¡ribu‹
+ 
+™
+ 
+ªd
+/
+Ü
+ 
+modify
+
+
+297 
+™
+ 
+und”
+ 
+the
+ 
+‹rms
+ 
+of
+h
+GNU
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+ 
+as
+ 
+published
+ 
+by
+
+
+298 
+the
+ 
+F»e
+ 
+Soáw¬e
+ 
+Found©iÚ
+; 
+e™h”
+ 
+v”siÚ
+ 2 
+of
+h
+Liûn£
+, 
+Ü
+
+
+299 (
+©
+ 
+your
+ 
+İtiÚ
+è
+ªy
+ 
+Ï‹r
+ 
+v”siÚ
+.
+
+301 
+This
+ 
+´og¿m
+ 
+is
+ 
+di¡ribu‹d
+ 
+š
+ 
+the
+ 
+hİe
+ 
+th©
+ 
+™
+ 
+wl
+ 
+be
+ 
+u£ful
+,
+
+302 
+but
+ 
+WITHOUT
+ 
+ANY
+ 
+WARRANTY
+; 
+w™hout
+ 
+ev’
+ 
+the
+ 
+im¶›d
+ 
+w¬¿Áy
+ 
+of
+
+
+303 
+MERCHANTABILITY
+ 
+Ü
+ 
+FITNESS
+ 
+FOR
+ 
+A
+ 
+PARTICULAR
+ 
+PURPOSE
+. 
+S“
+ 
+the
+
+
+304 
+GNU
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+ 
+mÜe
+ 
+d‘as
+.
+
+306 
+You
+ 
+should
+ 
+have
+ 
+»ûived
+ 
+a
+ 
+cİy
+ 
+of
+ 
+the
+ 
+GNU
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+
+
+307 
+®Úg
+ 
+w™h
+ 
+this
+ 
+´og¿m
+; 
+nÙ
+, 
+wr™e
+ 
+to
+ 
+the
+ 
+F»e
+ 
+Soáw¬e
+
+
+308 
+Found©iÚ
+, 
+Inc
+., 51 
+F¿nklš
+ 
+SŒ“t
+, 
+Fiáh
+ 
+FloÜ
+, 
+Bo¡Ú
+, 
+MA
+ 02110-1301 
+USA
+
+
+311 
+Also
+ 
+add
+ 
+šfÜm©iÚ
+ 
+Ú
+ 
+how
+ 
+to
+ 
+cÚù
+ 
+you
+ 
+by
+ 
+–eùrÚic
+ 
+ªd
+ 
+·³r
+ 
+ma
+.
+
+313 
+If
+ 
+the
+ 
+´og¿m
+ 
+is
+ 
+š‹¿ùive
+, 
+make
+ 
+™
+ 
+ouut
+ 
+a
+ 
+nÙiû
+ 
+like
+ 
+this
+
+
+314 
+wh’
+ 
+™
+ 
+¡¬ts
+ 
+š
+ 
+ª
+ 
+š‹¿ùive
+ 
+mode
+:
+
+316 
+GnomovisiÚ
+ 
+v”siÚ
+ 69, 
+	$Cİyright
+ (
+C
+è
+y—r
+ 
+Çme
+ 
+of
+ 
+authÜ
+
+
+317 
+GnomovisiÚ
+ 
+comes
+ 
+w™h
+ 
+ABSOLUTELY
+ 
+NO
+ 
+WARRANTY
+; 
+d‘as
+ 
+ty³
+ `
+show
+ 
+w
+'.
+
+318 
+This
+ 
+is
+ 
+ä“
+ 
+soáw¬e
+, 
+ªd
+ 
+you
+ 
+¬e
+ 
+w–come
+ 
+to
+ 
+»di¡ribu‹
+ 
+™
+
+
+319 
+und”
+ 
+û¹aš
+ 
+cÚd™iÚs
+; 
+ty³
+ `
+show
+ 
+c
+' for details.
+
+321 
+The
+ 
+hypÙh‘iÿl
+ 
+commªds
+ `
+show
+ 
+w
+'‡nd `show c' 
+should
+ show 
+the
+ 
+­´İrŸ‹
+
+
+322 
+·¹s
+ 
+of
+ 
+the
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+. 
+Of
+ 
+cour£
+,h
+commªds
+ 
+you
+ 
+u£
+ 
+may
+
+
+323 
+be
+ 
+ÿÎed
+ 
+som‘hšg
+ 
+Ùh”
+ 
+thª
+ `
+show
+ 
+w
+'‡nd `show c'; 
+they
+ 
+could
+ 
+ev’
+ be
+
+324 
+mou£
+-
+şicks
+ 
+Ü
+ 
+m’u
+ 
+™ems
+--
+wh©ev”
+ 
+su™s
+ 
+your
+ 
+´og¿m
+.
+
+326 
+You
+ 
+should
+ 
+®so
+ 
+g‘
+ 
+your
+ 
+	$em¶oy”
+ (
+you
+ 
+wÜk
+ 
+as
+ 
+a
+ 
+´og¿mm”
+è
+Ü
+ 
+your
+
+
+327 
+schoŞ
+, 
+ªy
+, 
+to
+ 
+sign
+ 
+a
+ "cİyrighˆdisşaim”" 
+the
+ 
+´og¿m
+, 
+
+328 
+Ãûs§ry
+. 
+H”e
+ 
+is
+ 
+a
+ 
+§m¶e
+; 
+®‹r
+ 
+the
+ 
+Çmes
+:
+
+330 
+YoyodyÃ
+, 
+Inc
+., 
+h”eby
+ 
+disşaims
+ 
+®l
+ 
+cİyright
+ 
+š‹»¡
+ 
+š
+ 
+the
+ 
+´og¿m
+
+
+331 `
+GnomovisiÚ
+' (which makes…asses‡t compilers) written by James Hacker.
+
+333 <
+sigÇtu»
+ 
+of
+ 
+Ty
+ 
+CoÚ
+>, 1 
+A´
+ 1989
+
+334 
+Ty
+ 
+CoÚ
+, 
+P»sid’t
+ 
+of
+ 
+Viû
+
+
+336 
+This
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+ 
+dÛs
+ 
+nÙ
+ 
+³rm™
+ 
+šcÜpÜ©šg
+ 
+your
+ 
+´og¿m
+ 
+što
+
+
+337 
+´İr›ry
+ 
+´og¿ms
+. 
+If
+ 
+your
+ 
+´og¿m
+ 
+is
+ 
+a
+ 
+subroutše
+ 
+lib¿ry
+, 
+you
+ 
+may
+
+
+338 
+cÚsid”
+ 
+™
+ 
+mÜe
+ 
+u£ful
+ 
+to
+ 
+³rm™
+ 
+lškšg
+ 
+´İr›ry
+ 
+­¶iÿtiÚs
+ 
+w™h
+ 
+the
+
+
+339 
+lib¿ry
+. 
+If
+ 
+this
+ 
+is
+ 
+wh©
+ 
+you
+ 
+wªt
+ 
+to
+ do, 
+u£
+ 
+the
+ 
+GNU
+ 
+Lib¿ry
+ 
+G’”®
+
+
+340 
+Public
+ 
+Liûn£
+ 
+š¡—d
+ 
+of
+ 
+this
+ License.
+
+	@D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\Makefile
+
+1 #Cİyrighˆ2009 
+Texas
+ 
+In¡rum’ts
+
+
+2 #AuthÜ(
+s
+è
+UÌik
+ 
+Bech
+ 
+H®d
+ (
+ubh
+@
+ti
+.
+com
+)
+
+3 #
+#Thi 
+´og¿m
+ 
+is
+ 
+ä“
+ 
+soáw¬e
+; 
+you
+ 
+ÿn
+ 
+»di¡ribu‹
+ 
+™
+ 
+ªd
+/
+Ü
+
+
+5 #modify 
+™
+ 
+und”
+ 
+the
+ 
+‹rms
+ 
+of
+h
+GNU
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+
+
+6 #a 
+published
+ 
+by
+ 
+the
+ 
+F»e
+ 
+Soáw¬e
+ 
+Found©iÚ
+; 
+e™h”
+ 
+v”siÚ
+ 2
+
+7 #oà
+the
+ 
+Liûn£
+, 
+Ü
+ (
+©
+ 
+your
+ 
+İtiÚ
+è
+ªy
+ 
+Ï‹r
+ 
+v”siÚ
+.
+
+8 #
+#Thi 
+´og¿m
+ 
+is
+ 
+di¡ribu‹d
+ 
+š
+ 
+the
+ 
+hİe
+ 
+th©
+ 
+™
+ 
+wl
+ 
+be
+ 
+u£ful
+,
+
+10 #buˆ
+WITHOUT
+ 
+ANY
+ 
+WARRANTY
+; 
+w™hout
+ 
+ev’
+ 
+the
+ 
+im¶›d
+ 
+w¬¿Áy
+ 
+of
+
+
+11 #MERCHANTABILITY 
+Ü
+ 
+FITNESS
+ 
+FOR
+ 
+A
+ 
+PARTICULAR
+ 
+PURPOSE
+. 
+S“
+ 
+the
+
+
+12 #GNU 
+G’”®
+ 
+Public
+ 
+Liûn£
+ 
+mÜe
+ 
+d‘as
+.
+
+13 #
+#You 
+should
+ 
+have
+ 
+»ûived
+ 
+a
+ 
+cİy
+ 
+of
+ 
+the
+ 
+GNU
+ 
+G’”®
+ 
+Public
+ 
+Liûn£
+
+
+15 #®Úg 
+w™h
+ 
+this
+ 
+´og¿m
+; 
+nÙ
+, 
+wr™e
+ 
+to
+ 
+the
+ 
+F»e
+ 
+Soáw¬e
+
+
+16 #Found©iÚ, 
+Inc
+., 59 
+Tem¶e
+ 
+PÏû
+ - 
+Su™e
+ 330, 
+Bo¡Ú
+, 
+MA
+ 02111-1307, 
+USA
+.
+
+19 #commªd 
+lše
+ 
+v¬ŸbË
+. 
+LoÿtiÚ
+ 
+of
+ 
+üoss
+ 
+comp”
+, 
+eg
+. /
+u¤
+/
+bš
+/
+¬m
+-2007
+q3
+/bš/¬m-
+nÚe
+-
+lšux
+-
+gnu—bi
+-
+
+20 
+	gCROSS_COMPILE
+=
+
+21 #commªd 
+lše
+ 
+v¬ŸbË
+. 
+ExŒa
+ 
+comp”
+ 
+æags
+
+
+22 
+EXTRA_CFLAGS
+=
+
+24 
+CC
+:=
+gcc
+
+
+25 
+CFLAGS
+:ğ
+$
+(
+EXTRA_CFLAGS
+è-
+W®l
+ -
+O2
+
+
+26 
+LDFLAGS
+:ğ-
+W®l
+ -
+O2
+
+
+27 
+LIBS
+:=-
+Íth»ad
+
+
+30 
+objeùs
+ = 
+¤c
+/
+gsm0710muxd
+.
+o
+
+
+32 
+gsm0710muxd
+ : 
+$
+(
+objeùs
+)
+
+33 
+$
+(
+CROSS_COMPILE
+)$(
+CC
+è$(
+LDFLAGS
+è$(
+LIBS
+è$^ -
+o
+ $@
+
+36 
+¤c
+/
+gsm0710muxd
+.
+o
+ : src/gsm0710muxd.
+c
+
+
+37 
+$
+(
+CROSS_COMPILE
+)$(
+CC
+è$(
+CFLAGS
+è-
+c
+ $^ -
+o
+ $@
+
+40 .
+PHONY
+ : 
+ş—n
+
+
+41 
+ş—n
+ :
+
+42 -
+rm
+ 
+gsm0710muxd
+ 
+$
+(
+objeùs
+)
+
+	@D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\src\create_tag.bat
+
+1 
+d–
+ 
+	gcscİe
+.
+out
+ cscİe.
+fes
+
+
+2 
+echo
+ 
+	gd–
+ "cscİe.ouˆcscİe.fe gs" 
+	gsucûssful
+!
+
+4 
+	gecho
+ "ctags create"
+
+5 
+	gùags
+ --
+	gÏnguages
+=
+c
+ --
+Ïngm­
+=c:+.
+h
+ --
+exŒa
+=+
+q
+ -
+R
+
+
+7 
+echo
+ "cscope create"
+
+8 
+REM
+ 
+vim_fšd
+ . -
+Çme
+ "*.h" -
+o
+ -Çm"*.c" > 
+cscİe
+.
+fes
+
+
+9 
+REM
+ 
+cscİe
+ -
+bCkR
+ -
+i
+ cscİe.
+fes
+
+
+10 
+cscİe
+ -
+bCkR
+
+
+12 
+·u£
+
+
+	@D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\src\gsm0710muxd.c
+
+29 #iâdeà
+_GNU_SOURCE
+
+
+30 
+	#_GNU_SOURCE
+
+
+	)
+
+38 
+	~<”ºo.h
+>
+
+39 
+	~<fú.h
+>
+
+41 
+	~<·ths.h
+>
+
+42 
+	#MUX_ANDROID
+
+
+43 #ifdeà
+MUX_ANDROID
+
+
+	)
+
+44 
+	~<·thcÚf.h
+>
+
+46 
+	~<sigÇl.h
+>
+
+47 
+	~<¡dio.h
+>
+
+48 
+	~<¡dlib.h
+>
+
+49 
+	~<¡ršg.h
+>
+
+50 
+	~<sys/ioùl.h
+>
+
+51 
+	~<sys/sock‘.h
+>
+
+52 
+	~<sys/¡©.h
+>
+
+53 
+	~<sys/time.h
+>
+
+54 
+	~<sys/ty³s.h
+>
+
+55 
+	~<sys/wa™.h
+>
+
+56 
+	~<‹rmios.h
+>
+
+57 
+	~<time.h
+>
+
+58 
+	~<uni¡d.h
+>
+
+59 
+	~<±h»ad.h
+>
+
+66 #iâdeà
+MUX_ANDROID
+
+
+67 
+	~<sy¦og.h
+>
+
+69 
+	#LOGMUX
+(
+lvl
+,
+f
+,...èdo{ifÖvl<=
+sy¦og_Ëv–
+){\
+
+70 ià(
+logtofe
+){\
+
+71 
+	`årštf
+(
+muxlogfe
+,"%d:%s(): " 
+f
+ "\n", 
+__LINE__
+, 
+__FUNCTION__
+, ##
+__VA_ARGS__
+);\
+
+72 
+	`fæush
+(
+muxlogfe
+);}\
+
+74 
+	`årštf
+(
+¡d”r
+,"%d:%s(): " 
+f
+ "\n", 
+__LINE__
+, 
+__FUNCTION__
+, ##
+__VA_ARGS__
+);\
+
+76 }0)
+
+	)
+
+78 
+	#LOG_TAG
+ "MUXD"
+
+	)
+
+79 
+	~<uts/Log.h
+>
+
+80 
+	#LOGMUX
+(
+lvl
+,
+f
+,...èdo{ifÖvl<=
+sy¦og_Ëv–
+){\
+
+81 
+	`LOG_PRI
+(
+ªdroid_log_lvl_cÚv”t
+[
+lvl
+],
+LOG_TAG
+,"%d:%s(): " 
+f
+, 
+__LINE__
+, 
+__FUNCTION__
+, ##
+__VA_ARGS__
+);}\
+
+82 }0)
+
+	)
+
+85 
+	#LOG_EMERG
+ 0
+
+	)
+
+86 
+	#LOG_ALERT
+ 1
+
+	)
+
+87 
+	#LOG_CRIT
+ 2
+
+	)
+
+88 
+	#LOG_ERR
+ 3
+
+	)
+
+89 
+	#LOG_WARNING
+ 4
+
+	)
+
+90 
+	#LOG_NOTICE
+ 5
+
+	)
+
+91 
+	#LOG_INFO
+ 6
+
+	)
+
+92 
+	#LOG_DEBUG
+ 7
+
+	)
+
+95 
+	gªdroid_log_lvl_cÚv”t
+[8]={
+ANDROID_LOG_SILENT
+,
+
+96 
+ANDROID_LOG_SILENT
+,
+
+97 
+ANDROID_LOG_FATAL
+,
+
+98 
+ANDROID_LOG_ERROR
+,
+
+99 
+ANDROID_LOG_WARN
+,
+
+100 
+ANDROID_LOG_INFO
+,
+
+101 
+ANDROID_LOG_DEBUG
+,
+
+102 
+ANDROID_LOG_VERBOSE
+};
+
+106 
+	#SYSCHECK
+(
+c
+èdo{if((c)<0){
+	`LOGMUX
+(
+LOG_ERR
+,"sy¡em-”rÜ: '%s' (code: %d)", 
+	`¡»¼Ü
+(
+”ºo
+),ƒrrno);\
+
+108 }0)
+
+	)
+
+111 
+	#GSM0710_FRAME_FLAG
+ 0xF9
+
+112 
+	#GSM0710_FRAME_ADV_FLAG
+ 0x7E
+
+113 
+	#GSM0710_FRAME_ADV_ESC
+ 0x7D
+
+114 
+	#GSM0710_FRAME_ADV_ESC_COPML
+ 0x20
+
+115 
+	#GSM0710_FRAME_ADV_ESCAPED_SYMS
+ { 
+GSM0710_FRAME_ADV_FLAG
+, 
+GSM0710_FRAME_ADV_ESC
+, 0x11, 0x91, 0x13, 0x93 }
+
+117 
+	#GSM0710_PF
+ 0x10
+
+118 
+	#GSM0710_CR
+ 0x02
+
+119 
+	#GSM0710_EA
+ 0x01
+
+121 
+	#GSM0710_TYPE_SABM
+ 0x2F
+
+122 
+	#GSM0710_TYPE_UA
+ 0x63
+
+123 
+	#GSM0710_TYPE_DM
+ 0x0F
+
+124 
+	#GSM0710_TYPE_DISC
+ 0x43
+
+125 
+	#GSM0710_TYPE_UIH
+ 0xEF
+
+126 
+	#GSM0710_TYPE_UI
+ 0x03
+
+128 
+	#GSM0710_CONTROL_PN
+ (0x80|
+GSM0710_EA
+)
+
+129 
+	#GSM0710_CONTROL_CLD
+ (0xC0|
+GSM0710_EA
+)
+
+130 
+	#GSM0710_CONTROL_PSC
+ (0x40|
+GSM0710_EA
+)
+
+131 
+	#GSM0710_CONTROL_TEST
+ (0x20|
+GSM0710_EA
+)
+
+132 
+	#GSM0710_CONTROL_MSC
+ (0xE0|
+GSM0710_EA
+)
+
+133 
+	#GSM0710_CONTROL_NSC
+ (0x10|
+GSM0710_EA
+)
+
+134 
+	#GSM0710_CONTROL_RPN
+ (0x90|
+GSM0710_EA
+)
+
+135 
+	#GSM0710_CONTROL_RLS
+ (0x50|
+GSM0710_EA
+)
+
+136 
+	#GSM0710_CONTROL_SNC
+ (0xD0|
+GSM0710_EA
+)
+
+139 
+	#GSM0710_SIGNAL_FC
+ 0x02
+
+	)
+
+140 
+	#GSM0710_SIGNAL_RTC
+ 0x04
+
+	)
+
+141 
+	#GSM0710_SIGNAL_RTR
+ 0x08
+
+	)
+
+142 
+	#GSM0710_SIGNAL_IC
+ 0x40
+
+143 
+	#GSM0710_SIGNAL_DV
+ 0x80
+
+144 
+	#GSM0710_SIGNAL_DTR
+ 0x04
+
+	)
+
+145 
+	#GSM0710_SIGNAL_DSR
+ 0x04
+
+	)
+
+146 
+	#GSM0710_SIGNAL_RTS
+ 0x08
+
+	)
+
+147 
+	#GSM0710_SIGNAL_CTS
+ 0x08
+
+	)
+
+148 
+	#GSM0710_SIGNAL_DCD
+ 0x80
+
+150 
+	#GSM0710_COMMAND_IS
+(
+ty³
+, 
+commªd
+è(Ñy³ & ~
+GSM0710_CR
+è=ğcommªd)
+
+	)
+
+151 
+	#GSM0710_FRAME_IS
+(
+ty³
+, 
+äame
+è((äame->
+cÚŒŞ
+ & ~
+GSM0710_PF
+è=ğty³)
+
+	)
+
+152 #iâdeà
+mš
+
+
+153 
+	#mš
+(
+a
+,
+b
+è(× < bè?‡ :b)
+
+	)
+
+155 
+	#GSM0710_WRITE_RETRIES
+ 5
+
+	)
+
+156 
+	#GSM0710_MAX_CHANNELS
+ 32
+
+	)
+
+159 
+	#GSM0710_POLLING_INTERVAL
+ 5
+
+	)
+
+160 
+	#GSM0710_BUFFER_SIZE
+ 2048
+
+	)
+
+166 
+	sGSM0710_F¿me
+
+
+168 
+	mchªÃl
+;
+
+169 
+	mcÚŒŞ
+;
+
+170 
+	mËngth
+;
+
+171 *
+	md©a
+;
+
+172 } 
+	tGSM0710_F¿me
+;
+
+174 
+	sGSM0710_Bufãr
+
+
+176 
+	md©a
+[
+GSM0710_BUFFER_SIZE
+];
+
+177 *
+	m»adp
+;
+
+178 *
+	mwr™•
+;
+
+179 *
+	m’dp
+;
+
+180 
+	md©acouÁ
+;
+
+181 
+	mÃwd©¬—dy
+;
+
+182 
+	mšput_¦“pšg
+;
+
+183 
+	mæag_found
+;
+
+184 
+	m»ûived_couÁ
+;
+
+185 
+	mdrİ³d_couÁ
+;
+
+186 
+	madv_d©a
+[
+GSM0710_BUFFER_SIZE
+];
+
+187 
+	madv_Ëngth
+;
+
+188 
+	madv_found_esc
+;
+
+189 } 
+	tGSM0710_Bufãr
+;
+
+191 
+	sChªÃl
+
+
+193 
+	mid
+;
+
+194 * 
+	mdeviûÇme
+;
+
+195 
+	mfd
+;
+
+196 
+	mİ’ed
+;
+
+197 
+	mv24_sigÇls
+;
+
+198 * 
+	m±¢ame
+;
+
+199 * 
+	mÜigš
+;
+
+200 
+	m»maššg
+;
+
+201 *
+	mtmp
+;
+
+202 
+	m»İ’
+;
+
+203 
+	mdisc_ua_³ndšg
+;
+
+204 } 
+	tChªÃl
+;
+
+206 
+	eMux”S‹s
+
+
+208 
+	mMUX_STATE_OPENING
+,
+
+209 
+	mMUX_STATE_INITILIZING
+,
+
+210 
+	mMUX_STATE_MUXING
+,
+
+211 
+	mMUX_STATE_CLOSING
+,
+
+212 
+	mMUX_STATE_OFF
+,
+
+213 
+	mMUX_STATES_COUNT
+
+
+214 } 
+	tMux”S‹s
+;
+
+216 
+	sS”Ÿl
+
+
+218 *
+	mdeviûÇme
+;
+
+219 
+	mfd
+;
+
+220 
+Mux”S‹s
+ 
+	m¡©e
+;
+
+221 
+GSM0710_Bufãr
+ *
+	mš_buf
+;
+
+222 *
+	madv_äame_buf
+;
+
+223 
+time_t
+ 
+	mäame_»ûive_time
+;
+
+224 
+	mpšg_numb”
+;
+
+225 } 
+	tS”Ÿl
+;
+
+228 
+	sPŞl_Th»ad_Arg
+
+
+230 
+	mfd
+;
+
+231 (*
+	m»ad_funùiÚ_±r
+)(*);
+
+232 * 
+	m»ad_funùiÚ_¬g
+;
+
+233 }
+	tPŞl_Th»ad_Arg
+;
+
+241 
+	#gsm0710_bufãr_šc
+(
+»adp
+,
+d©acouÁ
+) do {„eadp++; datacount--; \
+
+242 ià(
+»adp
+ =ğ
+buf
+->
+’dp
+è»ad°ğbuf->
+d©a
+; \
+
+243 } 0)
+
+	)
+
+248 
+	#gsm0710_bufãr_Ëngth
+(
+buf
+è(buf->
+d©acouÁ
+)
+
+	)
+
+254 
+	#gsm0710_bufãr_ä“
+(
+buf
+è(
+GSM0710_BUFFER_SIZE
+ - buf->
+d©acouÁ
+)
+
+	)
+
+257 
+w©chdog
+(
+S”Ÿl
+ * 
+£rŸl
+);
+
+258 
+şo£_deviûs
+();
+
+259 
+th»ad_£rŸl_deviû_»ad
+(* 
+v¬gp
+);
+
+260 
+p£udo_deviû_»ad
+(* 
+v¬gp
+);
+
+261 * 
+pŞl_th»ad
+(* 
+v¬gp
+);
+
+262 * 
+as£mbË_äame_th»ad
+(* 
+v¬gp
+);
+
+263 
+ü—‹_th»ad
+(
+±h»ad_t
+ * 
+th»ad_id
+, * 
+th»ad_funùiÚ
+, * 
+th»ad_funùiÚ_¬g
+ );
+
+264 
+£t_maš_ex™_sigÇl
+(
+sigÇl
+);
+
+265 
+»¡¬t_±y_š‹rçû
+(
+ChªÃl
+* 
+chªÃl
+);
+
+272 
+	gşo£_chªÃl_cmd
+[] = { 
+GSM0710_CONTROL_CLD
+ | 
+GSM0710_CR
+, 
+GSM0710_EA
+ | (0 << 1) };
+
+273 
+	g‹¡_chªÃl_cmd
+[] = { 
+GSM0710_CONTROL_TEST
+ | 
+GSM0710_CR
+, 
+GSM0710_EA
+ | (6 << 1), 'P', 'I', 'N', 'G', '\r', '\n', };
+
+277 cÚ¡ 
+	gr_üùabË
+[] = {
+
+303 * 
+	g»visiÚ
+ = "$Rev: 1 $";
+
+304 
+	gno_d«mÚ
+ = 0;
+
+305 
+	gpš_code
+ = -1;
+
+306 
+	gu£_pšg
+ = 0;
+
+307 
+	gu£_timeout
+ = 0;
+
+308 
+	glogtofe
+ = 0;
+
+309 
+	gsy¦og_Ëv–
+ = 
+LOG_INFO
+;
+
+310 
+FILE
+ * 
+	gmuxlogfe
+;
+
+311 
+	gvœ_pÜts
+ = 2;
+
+313 
+	gmaš_ex™_sigÇl
+=0;
+
+314 
+	guih_pf_b™_»ûived
+ = 0;
+
+315 
+	g±s_»İ’
+=0;
+
+318 
+±h»ad_t
+ 
+	g£r_»ad_th»ad
+;
+
+319 
+±h»ad_t
+ 
+	gäame_as£mbly_th»ad
+;
+
+320 
+±h»ad_t
+ 
+	gp£udo_‹rmš®
+[
+GSM0710_MAX_CHANNELS
+-1];
+
+321 
+±h»ad_cÚd_t
+ 
+	gÃwd©¬—dy_sigÇl
+ = 
+PTHREAD_COND_INITIALIZER
+;
+
+322 
+±h»ad_cÚd_t
+ 
+	gbufã¼—dy_sigÇl
+ = 
+PTHREAD_COND_INITIALIZER
+;
+
+323 
+±h»ad_©Œ_t
+ 
+	gth»ad_©Œ
+;
+
+324 
+±h»ad_mu‹x_t
+ 
+	gsy¦ogdump_lock
+;
+
+325 
+±h»ad_mu‹x_t
+ 
+	gwr™e_äame_lock
+;
+
+326 
+±h»ad_mu‹x_t
+ 
+	gmaš_ex™_sigÇl_lock
+;
+
+327 
+±h»ad_mu‹x_t
+ 
+	g±s_»İ’_lock
+;
+
+328 
+±h»ad_mu‹x_t
+ 
+	gd©acouÁ_lock
+;
+
+329 
+±h»ad_mu‹x_t
+ 
+	gÃwd©¬—dy_lock
+;
+
+330 
+±h»ad_mu‹x_t
+ 
+	gbufã¼—dy_lock
+;
+
+333 
+S”Ÿl
+ 
+	g£rŸl
+;
+
+335 
+ChªÃl
+ 
+	gchªÃÎi¡
+[
+GSM0710_MAX_CHANNELS
+];
+
+338 
+	gcmux_mode
+ = 1;
+
+339 
+	gcmux_sub£t
+ = 0;
+
+340 
+	gcmux_pÜt_¥“d
+ = 5;
+
+342 
+	gcmux_N1
+ = 1509;
+
+345 
+	gcmux_T1
+ = 10;
+
+347 
+	gcmux_N2
+ = 3;
+
+349 
+	gcmux_T2
+ = 30;
+
+351 
+	gcmux_T3
+ = 10;
+
+353 
+	gcmux_k
+ = 2;
+
+361 
+	gbaud_¿‹s
+[] = {
+
+364 
+¥“d_t
+ 
+	gbaud_b™s
+[] = {
+
+365 0, 
+B9600
+, 
+B19200
+, 
+B38400
+, 
+B57600
+, 
+B115200
+, 
+B230400
+, 
+B460800
+, 
+B921600
+
+
+377 
+	$baud_¿‹_šdex
+(
+
+378 
+baud_¿‹
+)
+
+380 
+i
+;
+
+381 
+i
+ = 0; i < (
+baud_¿‹s
+) / (*baud_rates); ++i)
+
+382 ià(
+baud_¿‹s
+[
+i
+] =ğ
+baud_¿‹
+)
+
+383  
+i
+;
+
+385 
+	}
+}
+
+393 
+	$äame_ÿlc_üc
+(
+
+394 cÚ¡ *
+šput
+,
+
+395 
+Ëngth
+)
+
+397 
+fcs
+ = 0xFF;
+
+398 
+i
+;
+
+399 
+i
+ = 0; i < 
+Ëngth
+; i++)
+
+400 
+fcs
+ = 
+r_üùabË
+[fc ^ 
+šput
+[
+i
+]];
+
+401  0xFF - 
+fcs
+;
+
+402 
+	}
+}
+
+411 
+	$fl_adv_äame_buf
+(
+
+412 *
+adv_buf
+,
+
+413 cÚ¡ *
+d©a
+,
+
+414 
+Ëngth
+)
+
+416 cÚ¡ 
+esc
+[] = 
+GSM0710_FRAME_ADV_ESCAPED_SYMS
+;
+
+417 
+i
+, 
+esc_i
+, 
+adv_i
+ = 0;
+
+418 
+i
+ = 0; i < 
+Ëngth
+; ++i, ++
+adv_i
+)
+
+420 
+adv_buf
+[
+adv_i
+] = 
+d©a
+[
+i
+];
+
+421 
+esc_i
+ = 0;ƒsc_˜< (
+esc
+) / (esc[0]); ++esc_i)
+
+422 ià(
+d©a
+[
+i
+] =ğ
+esc
+[
+esc_i
+])
+
+424 
+adv_buf
+[
+adv_i
+] = 
+GSM0710_FRAME_ADV_ESC
+;
+
+425 
+adv_i
+++;
+
+426 
+adv_buf
+[
+adv_i
+] = 
+d©a
+[
+i
+] ^ 
+GSM0710_FRAME_ADV_ESC_COPML
+;
+
+430  
+adv_i
+;
+
+431 
+	}
+}
+
+440 
+	$sy¦ogdump
+(
+
+441 cÚ¡ *
+´efix
+,
+
+442 cÚ¡ *
+±r
+,
+
+443 
+Ëngth
+)
+
+445 ià(
+LOG_DEBUG
+>
+sy¦og_Ëv–
+)
+
+448 
+bufãr
+[100];
+
+449 
+off£t
+ = 0l;
+
+450 
+i
+;
+
+452 
+	`±h»ad_mu‹x_lock
+(&
+sy¦ogdump_lock
+);
+
+453 
+off£t
+ < 
+Ëngth
+)
+
+455 
+off
+;
+
+456 
+	`¡rıy
+(
+bufãr
+, 
+´efix
+);
+
+457 
+off
+ = 
+	`¡¾’
+(
+bufãr
+);
+
+458 
+	`SYSCHECK
+(
+	`¢´štf
+(
+bufãr
+ + 
+off
+, (bufãrè- off, "%08x: ", 
+off£t
+));
+
+459 
+off
+ = 
+	`¡¾’
+(
+bufãr
+);
+
+460 
+i
+ = 0; i < 16; i++)
+
+462 ià(
+off£t
+ + 
+i
+ < 
+Ëngth
+){
+
+463 
+	`SYSCHECK
+(
+	`¢´štf
+(
+bufãr
+ + 
+off
+, (bufãrè- off, "%02x%c", 
+±r
+[
+off£t
+ + 
+i
+], i == 7 ? '-' : ' '));
+
+466 
+	`SYSCHECK
+(
+	`¢´štf
+(
+bufãr
+ + 
+off
+, (bufãrè- off, " .%c", 
+i
+ == 7 ? '-' : ' '));
+
+468 
+off
+ = 
+	`¡¾’
+(
+bufãr
+);
+
+470 
+	`SYSCHECK
+(
+	`¢´štf
+(
+bufãr
+ + 
+off
+, (buffer) - off, " "));
+
+471 
+off
+ = 
+	`¡¾’
+(
+bufãr
+);
+
+472 
+i
+ = 0; i < 16; i++)
+
+473 ià(
+off£t
+ + 
+i
+ < 
+Ëngth
+)
+
+475 
+	`SYSCHECK
+(
+	`¢´štf
+(
+bufãr
+ + 
+off
+, (bufãrè- off, "%c", (
+±r
+[
+off£t
+ + 
+i
+] < ' ') ? '.' :…tr[offset + i]));
+
+476 
+off
+ = 
+	`¡¾’
+(
+bufãr
+);
+
+478 
+off£t
+ += 16;
+
+479 
+	`LOGMUX
+(
+LOG_DEBUG
+,"%s", 
+bufãr
+);
+
+481 
+	`±h»ad_mu‹x_uÆock
+(&
+sy¦ogdump_lock
+);
+
+484 
+	}
+}
+
+495 
+	$wr™e_äame
+(
+
+496 
+chªÃl
+,
+
+497 cÚ¡ *
+šput
+,
+
+498 
+Ëngth
+,
+
+499 
+ty³
+)
+
+502 
+	`±h»ad_mu‹x_lock
+(&
+wr™e_äame_lock
+);
+
+503 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+505 
+´efix
+[5] = { 
+GSM0710_FRAME_FLAG
+, 
+GSM0710_EA
+ | 
+GSM0710_CR
+, 0, 0, 0 };
+
+506 
+po¡fix
+[2] = { 0xFF, 
+GSM0710_FRAME_FLAG
+ };
+
+507 
+´efix_Ëngth
+ = 4;
+
+508 
+c
+;
+
+531 
+	`LOGMUX
+(
+LOG_DEBUG
+, "S’dšg f¿mtØchªÃÈ%d", 
+chªÃl
+);
+
+533 
+´efix
+[1] =…»fix[1] | ((63 & (è
+chªÃl
+) << 2);
+
+535 
+´efix
+[2] = 
+ty³
+;
+
+536 ià((
+ty³
+ =ğ
+GSM0710_TYPE_UIH
+ ||y³ =ğ
+GSM0710_TYPE_UI
+) &&
+
+537 
+uih_pf_b™_»ûived
+ == 1 &&
+
+538 
+	`GSM0710_COMMAND_IS
+(
+šput
+[0],
+GSM0710_CONTROL_MSC
+) ){
+
+539 
+´efix
+[2] =…»fix[2] | 
+GSM0710_PF
+;
+
+540 
+uih_pf_b™_»ûived
+ = 0;
+
+543 
+Ëngth
+ = 
+	`mš
+(
+cmux_N1
+,†ength);
+
+544 ià(!
+cmux_mode
+)
+
+549 ià(
+Ëngth
+ > 127)
+
+551 
+´efix_Ëngth
+ = 5;
+
+552 
+´efix
+[3] = (0x007F & 
+Ëngth
+) << 1;
+
+553 
+´efix
+[4] = (0x7F80 & 
+Ëngth
+) >> 7;
+
+556 
+´efix
+[3] = 1 | (
+Ëngth
+ << 1);
+
+557 
+po¡fix
+[0] = 
+	`äame_ÿlc_üc
+(
+´efix
+ + 1, 
+´efix_Ëngth
+ - 1);
+
+558 
+	`sy¦ogdump
+("> ", 
+´efix
+,
+´efix_Ëngth
+);
+
+559 
+c
+ = 
+	`wr™e
+(
+£rŸl
+.
+fd
+, 
+´efix
+, 
+´efix_Ëngth
+);
+
+560 ià(
+c
+ !ğ
+´efix_Ëngth
+)
+
+562 
+	`LOGMUX
+(
+LOG_WARNING
+, "Couldn't writehe whole…refixohe serial…ort forhe virtual…ort %d. Wrote only %d bytes",
+
+563 
+chªÃl
+, 
+c
+);
+
+566 ià(
+Ëngth
+ > 0)
+
+568 
+	`sy¦ogdump
+("> ", 
+šput
+,
+Ëngth
+);
+
+569 
+c
+ = 
+	`wr™e
+(
+£rŸl
+.
+fd
+, 
+šput
+, 
+Ëngth
+);
+
+570 ià(
+Ëngth
+ !ğ
+c
+)
+
+572 
+	`LOGMUX
+(
+LOG_WARNING
+, "Couldn't write‡ll dataohe serial…ort fromhe virtual…ort %d. Wrote only %d bytes",
+
+573 
+chªÃl
+, 
+c
+);
+
+577 
+	`sy¦ogdump
+("> ", 
+po¡fix
+,2);
+
+578 
+c
+ = 
+	`wr™e
+(
+£rŸl
+.
+fd
+, 
+po¡fix
+, 2);
+
+579 ià(
+c
+ != 2)
+
+581 
+	`LOGMUX
+(
+LOG_WARNING
+, "Couldn't writehe whole…ostfixohe serial…ort forhe virtual…ort %d. Wrote only %d bytes",
+
+582 
+chªÃl
+, 
+c
+);
+
+588 
+offs
+ = 1;
+
+589 
+£rŸl
+.
+adv_äame_buf
+[0] = 
+GSM0710_FRAME_ADV_FLAG
+;
+
+590 
+offs
+ +ğ
+	`fl_adv_äame_buf
+(
+£rŸl
+.
+adv_äame_buf
+ + offs, 
+´efix
+ + 1, 2);
+
+591 
+offs
+ +ğ
+	`fl_adv_äame_buf
+(
+£rŸl
+.
+adv_äame_buf
+ + offs, 
+šput
+, 
+Ëngth
+);
+
+593 
+po¡fix
+[0] = 
+	`äame_ÿlc_üc
+(
+´efix
+ + 1, 2);
+
+594 
+offs
+ +ğ
+	`fl_adv_äame_buf
+(
+£rŸl
+.
+adv_äame_buf
+ + offs, 
+po¡fix
+, 1);
+
+595 
+£rŸl
+.
+adv_äame_buf
+[
+offs
+] = 
+GSM0710_FRAME_ADV_FLAG
+;
+
+596 
+offs
+++;
+
+597 
+	`sy¦ogdump
+("> ", (*)
+£rŸl
+.
+adv_äame_buf
+, 
+offs
+);
+
+598 
+c
+ = 
+	`wr™e
+(
+£rŸl
+.
+fd
+, s”Ÿl.
+adv_äame_buf
+, 
+offs
+);
+
+599 ià(
+c
+ !ğ
+offs
+)
+
+601 
+	`LOGMUX
+(
+LOG_WARNING
+, "Couldn't writehe whole‡dvanced…acketohe serial…ort forhe virtual…ort %d. Wrote only %d bytes",
+
+602 
+chªÃl
+, 
+c
+);
+
+606 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave");
+
+608 
+	`±h»ad_mu‹x_uÆock
+(&
+wr™e_äame_lock
+);
+
+609  
+Ëngth
+;
+
+610 
+	}
+}
+
+619 
+	$hªdË_chªÃl_d©a
+(
+
+620 *
+buf
+,
+
+621 
+Ën
+,
+
+622 
+chªÃl
+)
+
+624 
+wr™‹n
+ = 0;
+
+625 
+i
+ = 0;
+
+626 
+Ï¡
+ = 0;
+
+628 
+wr™‹n
+ !ğ
+Ën
+ && 
+i
+ < 
+GSM0710_WRITE_RETRIES
+)
+
+630 
+Ï¡
+ = 
+	`wr™e_äame
+(
+chªÃl
+, 
+buf
+ + 
+wr™‹n
+, 
+Ën
+ - wr™‹n, 
+GSM0710_TYPE_UIH
+);
+
+631 
+wr™‹n
+ +ğ
+Ï¡
+;
+
+632 ià(
+Ï¡
+ == 0)
+
+633 
+i
+++;
+
+635 ià(
+i
+ =ğ
+GSM0710_WRITE_RETRIES
+)
+
+636 
+	`LOGMUX
+(
+LOG_WARNING
+, "Couldn't write datao channel %d. Wrote only %d bytes, when should have written %d",
+
+637 
+chªÃl
+, 
+wr™‹n
+, 
+Ën
+);
+
+639 
+	}
+}
+
+646 
+	$logiÿl_chªÃl_şo£
+(
+ChªÃl
+* 
+chªÃl
+)
+
+648 ià(
+chªÃl
+->
+fd
+ >= 0)
+
+649 
+	`şo£
+(
+chªÃl
+->
+fd
+);
+
+650 
+chªÃl
+->
+fd
+ = -1;
+
+651 ià(
+chªÃl
+->
+±¢ame
+ !ğ
+NULL
+)
+
+652 
+	`ä“
+(
+chªÃl
+->
+±¢ame
+);
+
+653 
+chªÃl
+->
+±¢ame
+ = 
+NULL
+;
+
+654 ià(
+chªÃl
+->
+tmp
+ !ğ
+NULL
+)
+
+655 
+	`ä“
+(
+chªÃl
+->
+tmp
+);
+
+656 
+chªÃl
+->
+tmp
+ = 
+NULL
+;
+
+657 ià(
+chªÃl
+->
+Üigš
+ !ğ
+NULL
+)
+
+658 
+	`ä“
+(
+chªÃl
+->
+Üigš
+);
+
+659 
+chªÃl
+->
+Üigš
+ = 
+NULL
+;
+
+660 
+chªÃl
+->
+İ’ed
+ = 0;
+
+661 
+chªÃl
+->
+v24_sigÇls
+ = 0;
+
+662 
+chªÃl
+->
+»maššg
+ = 0;
+
+664 
+	}
+}
+
+672 
+	$logiÿl_chªÃl_š™
+(
+ChªÃl
+* 
+chªÃl
+, 
+id
+)
+
+674 
+chªÃl
+->
+id
+ = id;
+
+675 
+chªÃl
+->
+deviûÇme
+ = 
+id
+?"/dev/±mx":
+NULL
+;
+
+676 
+chªÃl
+->
+fd
+ = -1;
+
+677 
+chªÃl
+->
+±¢ame
+ = 
+NULL
+;
+
+678 
+chªÃl
+->
+tmp
+ = 
+NULL
+;
+
+679 
+chªÃl
+->
+Üigš
+ = 
+NULL
+;
+
+680 
+chªÃl
+->
+»İ’
+ = 0;
+
+681 
+chªÃl
+->
+disc_ua_³ndšg
+ = 0;
+
+682  
+	`logiÿl_chªÃl_şo£
+(
+chªÃl
+);
+
+683 
+	}
+}
+
+690 
+	$»¡¬t_±y_š‹rçû
+(
+ChªÃl
+* 
+chªÃl
+)
+
+692 ià(
+chªÃl
+->
+fd
+ < 0)
+
+694 
+	`SYSCHECK
+(
+chªÃl
+->
+fd
+ = 
+	`İ’
+(chªÃl->
+deviûÇme
+, 
+O_RDWR
+ | 
+O_NONBLOCK
+));
+
+695 * 
+±s
+ = 
+	`±¢ame
+(
+chªÃl
+->
+fd
+);
+
+696 ià(
+±s
+ =ğ
+NULL
+è
+	`SYSCHECK
+(-1);
+
+697 
+chªÃl
+->
+±¢ame
+ = 
+	`¡rdup
+(
+±s
+);
+
+698 
+‹rmios
+ 
+İtiÚs
+;
+
+699 
+	`tcg‘©Œ
+(
+chªÃl
+->
+fd
+, &
+İtiÚs
+);
+
+700 
+İtiÚs
+.
+c_læag
+ &ğ~(
+ICANON
+ | 
+ECHO
+ | 
+ECHOE
+ | 
+ISIG
+);
+
+701 
+İtiÚs
+.
+c_iæag
+ &ğ~(
+INLCR
+ | 
+ICRNL
+ | 
+IGNCR
+);
+
+702 
+İtiÚs
+.
+c_oæag
+ &ğ~(
+OPOST
+| 
+OLCUC
+| 
+ONLRET
+| 
+ONOCR
+| 
+OCRNL
+);
+
+703 
+	`tc£‰r
+(
+chªÃl
+->
+fd
+, 
+TCSANOW
+, &
+İtiÚs
+);
+
+704 ià(!
+	`¡rcmp
+(
+chªÃl
+->
+deviûÇme
+, "/dev/ptmx"))
+
+707 
+	`SYSCHECK
+(
+	`g¿Á±
+(
+chªÃl
+->
+fd
+));
+
+708 
+	`SYSCHECK
+(
+	`uÆock±
+(
+chªÃl
+->
+fd
+));
+
+710 
+chªÃl
+->
+v24_sigÇls
+ = 
+GSM0710_SIGNAL_DV
+ | 
+GSM0710_SIGNAL_RTR
+ | 
+GSM0710_SIGNAL_RTC
+ | 
+GSM0710_EA
+;
+
+712 
+	`LOGMUX
+(
+LOG_INFO
+, "Reİ’ed %s, chªÃÈnumb”: %d fd: %d ",
+chªÃl
+->
+±¢ame
+, chªÃl->
+id
+, chªÃl->
+fd
+);
+
+713 
+PŞl_Th»ad_Arg
+* 
+pŞl_th»ad_¬g
+ = (PŞl_Th»ad_Arg*è
+	`m®loc
+((Poll_Thread_Arg));
+
+714 
+pŞl_th»ad_¬g
+->
+fd
+ = 
+chªÃl
+->fd;
+
+715 
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_±r
+ = &
+p£udo_deviû_»ad
+;
+
+716 
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_¬g
+ = (*è(
+chªÃl
+);
+
+717 if(
+	`ü—‹_th»ad
+(&
+p£udo_‹rmš®
+[
+chªÃl
+->
+id
+], 
+pŞl_th»ad
+,(*è
+pŞl_th»ad_¬g
+)!=0){
+
+718 
+	`LOGMUX
+(
+LOG_ERR
+,"Could‚Ù„e¡¬ˆth»ad fÜ†i¡’šg oÀ%s", 
+chªÃl
+->
+±¢ame
+);
+
+721 
+	`LOGMUX
+(
+LOG_INFO
+, "Re¡¬‹dh»ad†i¡’šg oÀ%s", 
+chªÃl
+->
+±¢ame
+);
+
+724 
+	}
+}
+
+731 
+	$p£udo_deviû_»ad
+(* 
+v¬gp
+)
+
+733 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+734 
+ChªÃl
+* 
+chªÃl
+ = (ChªÃl*)
+v¬gp
+;
+
+735 
+buf
+[4096];
+
+737 
+Ën
+ = 
+	`»ad
+(
+chªÃl
+->
+fd
+, 
+buf
+ + chªÃl->
+»maššg
+, (buf) - channel->remaining);
+
+738 ià(!
+chªÃl
+->
+İ’ed
+)
+
+740 
+	`LOGMUX
+(
+LOG_WARNING
+, "Writeo‡ channel which wasn't‡ckedo be open.");
+
+741 
+	`wr™e_äame
+(
+chªÃl
+->
+id
+, 
+NULL
+, 0, 
+GSM0710_TYPE_SABM
+ | 
+GSM0710_PF
+);
+
+742 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave");
+
+745 ià(
+Ën
+ >= 0)
+
+747 
+	`LOGMUX
+(
+LOG_DEBUG
+, "D©¨äom chªÃÈ%d, %d by‹s", 
+chªÃl
+->
+id
+, 
+Ën
+);
+
+748 ià(
+chªÃl
+->
+»maššg
+ > 0)
+
+750 
+	`memıy
+(
+buf
+, 
+chªÃl
+->
+tmp
+, chªÃl->
+»maššg
+);
+
+751 
+	`ä“
+(
+chªÃl
+->
+tmp
+);
+
+752 
+chªÃl
+->
+tmp
+ = 
+NULL
+;
+
+754 ià(
+Ën
+ + 
+chªÃl
+->
+»maššg
+ > 0)
+
+755 
+chªÃl
+->
+»maššg
+ = 
+	`hªdË_chªÃl_d©a
+(
+buf
+, 
+Ën
+ + chªÃl->»maššg, chªÃl->
+id
+);
+
+757 ià(
+chªÃl
+->
+»maššg
+ > 0)
+
+759 
+chªÃl
+->
+tmp
+ = 
+	`m®loc
+(chªÃl->
+»maššg
+);
+
+760 
+	`memıy
+(
+chªÃl
+->
+tmp
+, 
+buf
+ + (bufè- chªÃl->
+»maššg
+, channel->remaining);
+
+762 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave");
+
+766 
+”ºo
+){
+
+767 
+EINTR
+:
+
+768 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINTR caught");
+
+770 
+EAGAIN
+:
+
+771 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EAGAIN caught");
+
+773 
+EBADF
+:
+
+774 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EBADF caught");
+
+776 
+EINVAL
+:
+
+777 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINVAL caught");
+
+779 
+EFAULT
+:
+
+780 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EFAULT caught");
+
+782 
+EIO
+:
+
+783 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EIO caught");
+
+785 
+EISDIR
+:
+
+786 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EISDIR caught");
+
+789 
+	`LOGMUX
+(
+LOG_ERR
+,"Unknown interrupt signal caught\n");
+
+793 
+	`LOGMUX
+(
+LOG_INFO
+, "Aµl. drİ³d cÚÃùiÚ, deviû % shu‰šg down. S‘Øb»İ’ed", 
+chªÃl
+->
+±¢ame
+);
+
+795 
+	`şo£
+(
+chªÃl
+->
+fd
+);
+
+796 
+chªÃl
+->
+fd
+ = -1;
+
+797 
+	`ä“
+(
+chªÃl
+->
+±¢ame
+);
+
+798 
+chªÃl
+->
+±¢ame
+ = 
+NULL
+;
+
+799 
+	`±h»ad_mu‹x_lock
+(&
+±s_»İ’_lock
+);
+
+800 
+±s_»İ’
+ = 1;
+
+801 
+	`±h»ad_mu‹x_uÆock
+(&
+±s_»İ’_lock
+);
+
+802 
+chªÃl
+->
+»İ’
+ = 1;
+
+804 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave");
+
+806 
+	}
+}
+
+813 
+	$c_®loc_chªÃl
+(cÚ¡ * 
+Üigš
+, 
+±h»ad_t
+ * 
+th»ad_id
+)
+
+815 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+816 
+i
+;
+
+817 ià(
+£rŸl
+.
+¡©e
+ =ğ
+MUX_STATE_MUXING
+)
+
+818 
+i
+=1;i<
+GSM0710_MAX_CHANNELS
+;i++)
+
+819 ià(
+chªÃÎi¡
+[
+i
+].
+fd
+ < 0)
+
+821 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Found f»chªÃÈ%d fd %d oÀ%s", 
+i
+, 
+chªÃÎi¡
+[i].
+fd
+, chªÃÎi¡[i].
+deviûÇme
+);
+
+822 
+chªÃÎi¡
+[
+i
+].
+Üigš
+ = 
+	`¡rdup
+(origin);
+
+823 
+	`SYSCHECK
+(
+chªÃÎi¡
+[
+i
+].
+fd
+ = 
+	`İ’
+(chªÃÎi¡[i].
+deviûÇme
+, 
+O_RDWR
+ | 
+O_NONBLOCK
+));
+
+824 * 
+±s
+ = 
+	`±¢ame
+(
+chªÃÎi¡
+[
+i
+].
+fd
+);
+
+825 ià(
+±s
+ =ğ
+NULL
+è
+	`SYSCHECK
+(-1);
+
+826 
+chªÃÎi¡
+[
+i
+].
+±¢ame
+ = 
+	`¡rdup
+(
+±s
+);
+
+827 
+‹rmios
+ 
+İtiÚs
+;
+
+828 
+	`tcg‘©Œ
+(
+chªÃÎi¡
+[
+i
+].
+fd
+, &
+İtiÚs
+);
+
+829 
+İtiÚs
+.
+c_læag
+ &ğ~(
+ICANON
+ | 
+ECHO
+ | 
+ECHOE
+ | 
+ISIG
+);
+
+830 
+İtiÚs
+.
+c_iæag
+ &ğ~(
+INLCR
+ | 
+ICRNL
+ | 
+IGNCR
+);
+
+831 
+İtiÚs
+.
+c_oæag
+ &ğ~(
+OPOST
+| 
+OLCUC
+| 
+ONLRET
+| 
+ONOCR
+| 
+OCRNL
+);
+
+832 
+	`tc£‰r
+(
+chªÃÎi¡
+[
+i
+].
+fd
+, 
+TCSANOW
+, &
+İtiÚs
+);
+
+833 ià(!
+	`¡rcmp
+(
+chªÃÎi¡
+[
+i
+].
+deviûÇme
+, "/dev/ptmx"))
+
+836 
+	`SYSCHECK
+(
+	`g¿Á±
+(
+chªÃÎi¡
+[
+i
+].
+fd
+));
+
+837 
+	`SYSCHECK
+(
+	`uÆock±
+(
+chªÃÎi¡
+[
+i
+].
+fd
+));
+
+839 
+chªÃÎi¡
+[
+i
+].
+v24_sigÇls
+ = 
+GSM0710_SIGNAL_DV
+ | 
+GSM0710_SIGNAL_RTR
+ | 
+GSM0710_SIGNAL_RTC
+ | 
+GSM0710_EA
+;
+
+841 
+	`LOGMUX
+(
+LOG_DEBUG
+, "New chªÃÈ´İ”t›s:‚umb”: %d fd: %d deviû: %s", 
+i
+, 
+chªÃÎi¡
+[i].
+fd
+, chªÃÎi¡[i].
+deviûÇme
+);
+
+842 
+PŞl_Th»ad_Arg
+* 
+pŞl_th»ad_¬g
+ = (PŞl_Th»ad_Arg*è
+	`m®loc
+((Poll_Thread_Arg));
+
+843 
+pŞl_th»ad_¬g
+->
+fd
+ = 
+chªÃÎi¡
+[
+i
+].fd;
+
+844 
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_±r
+ = &
+p£udo_deviû_»ad
+;
+
+845 
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_¬g
+ = (*è(
+chªÃÎi¡
++
+i
+);
+
+846 if(
+	`ü—‹_th»ad
+(
+th»ad_id
+, 
+pŞl_th»ad
+,(*è
+pŞl_th»ad_¬g
+)!=0){
+
+847 
+	`LOGMUX
+(
+LOG_ERR
+,"Could‚Ù c»©th»ad fÜ†i¡’šg oÀ%s", 
+chªÃÎi¡
+[
+i
+].
+±¢ame
+);
+
+850 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Th»ad i ruÂšg‡nd†i¡’šg oÀ%s", 
+chªÃÎi¡
+[
+i
+].
+±¢ame
+);
+
+852 
+	`wr™e_äame
+(
+i
+, 
+NULL
+, 0, 
+GSM0710_TYPE_SABM
+ | 
+GSM0710_PF
+);
+
+853 
+	`LOGMUX
+(
+LOG_INFO
+, "Connecting %so virtual channel %d for %s on %s",
+
+854 
+chªÃÎi¡
+[
+i
+].
+±¢ame
+, chªÃÎi¡[i].
+id
+, chªÃÎi¡[i].
+Üigš
+, 
+£rŸl
+.
+deviûÇme
+);
+
+857 
+	`LOGMUX
+(
+LOG_ERR
+, "Not muxing or‚o free channel found");
+
+859 
+	}
+}
+
+866 
+GSM0710_Bufãr
+ *
+	$gsm0710_bufãr_š™
+()
+
+868 
+GSM0710_Bufãr
+* 
+buf
+ = (GSM0710_Bufãr*)
+	`m®loc
+((GSM0710_Buffer));
+
+869 ià(
+buf
+)
+
+871 
+	`mem£t
+(
+buf
+, 0, (
+GSM0710_Bufãr
+));
+
+872 
+buf
+->
+»adp
+ = buf->
+d©a
+;
+
+873 
+buf
+->
+wr™•
+ = buf->
+d©a
+;
+
+874 
+buf
+->
+’dp
+ = buf->
+d©a
+ + 
+GSM0710_BUFFER_SIZE
+;
+
+876  
+buf
+;
+
+877 
+	}
+}
+
+884 
+	$gsm0710_bufãr_de¡roy
+(
+
+885 
+GSM0710_Bufãr
+* 
+buf
+)
+
+887 
+	`ä“
+(
+buf
+);
+
+888 
+	}
+}
+
+897 
+	$gsm0710_bufãr_wr™e
+(
+
+898 
+GSM0710_Bufãr
+* 
+buf
+,
+
+899 cÚ¡ *
+šput
+,
+
+900 
+Ëngth
+)
+
+902 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+903 
+	`LOGMUX
+(
+LOG_DEBUG
+,"GSM0710 bufã¸(up-to-d©e): f»%d, stÜed %d", 
+	`gsm0710_bufãr_ä“
+(
+buf
+),
+	`gsm0710_bufãr_Ëngth
+(buf));
+
+904 
+c
+ = 
+buf
+->
+’dp
+ - buf->
+wr™•
+;
+
+905 
+Ëngth
+ = 
+	`mš
+Ö’gth, 
+	`gsm0710_bufãr_ä“
+(
+buf
+));
+
+906 ià(
+Ëngth
+ > 
+c
+)
+
+908 
+	`memıy
+(
+buf
+->
+wr™•
+, 
+šput
+, 
+c
+);
+
+909 
+	`memıy
+(
+buf
+->
+d©a
+, 
+šput
+ + 
+c
+, 
+Ëngth
+ - c);
+
+910 
+buf
+->
+wr™•
+ = buf->
+d©a
+ + (
+Ëngth
+ - 
+c
+);
+
+914 
+	`memıy
+(
+buf
+->
+wr™•
+, 
+šput
+, 
+Ëngth
+);
+
+915 
+buf
+->
+wr™•
+ +ğ
+Ëngth
+;
+
+916 ià(
+buf
+->
+wr™•
+ =ğbuf->
+’dp
+)
+
+917 
+buf
+->
+wr™•
+ = buf->
+d©a
+;
+
+920 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+921 
+buf
+->
+d©acouÁ
+ +ğ
+Ëngth
+;
+
+922 
+	`LOGMUX
+(
+LOG_DEBUG
+,"GSM0710 bufã¸(up-to-d©e): wr™‹À%d, f»%d, stÜed %d", 
+Ëngth
+,
+	`gsm0710_bufãr_ä“
+(
+buf
+),
+	`gsm0710_bufãr_Ëngth
+(buf));
+
+923 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+925 
+	`±h»ad_mu‹x_lock
+(&
+Ãwd©¬—dy_lock
+);
+
+926 
+buf
+->
+Ãwd©¬—dy
+ = 1;
+
+927 
+	`±h»ad_mu‹x_uÆock
+(&
+Ãwd©¬—dy_lock
+);
+
+928 
+	`±h»ad_cÚd_sigÇl
+(&
+Ãwd©¬—dy_sigÇl
+);
+
+929 
+	`LOGMUX
+(
+LOG_DEBUG
+,"Leave");
+
+930  
+Ëngth
+;
+
+931 
+	}
+}
+
+938 
+	$de¡roy_äame
+(
+
+939 
+GSM0710_F¿me
+ * 
+äame
+)
+
+941 ià(
+äame
+->
+Ëngth
+ > 0)
+
+942 
+	`ä“
+(
+äame
+->
+d©a
+);
+
+943 
+	`ä“
+(
+äame
+);
+
+944 
+	}
+}
+
+952 
+GSM0710_F¿me
+* 
+	$gsm0710_ba£_bufãr_g‘_äame
+(
+
+953 
+GSM0710_Bufãr
+ * 
+buf
+)
+
+955 
+’d
+;
+
+956 
+Ëngth_Ãeded
+ = 5;
+
+957 
+fcs
+ = 0xFF;
+
+958 
+GSM0710_F¿me
+ *
+äame
+ = 
+NULL
+;
+
+959 *
+loÿl_»adp
+;
+
+960 
+loÿl_d©acouÁ
+, 
+loÿl_d©acouÁ_backup
+;
+
+961 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+964 !
+buf
+->
+æag_found
+ && 
+	`gsm0710_bufãr_Ëngth
+(buf) > 0)
+
+966 ià(*
+buf
+->
+»adp
+ =ğ
+GSM0710_FRAME_FLAG
+)
+
+967 
+buf
+->
+æag_found
+ = 1;
+
+968 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+969 
+	`gsm0710_bufãr_šc
+(
+buf
+->
+»adp
+,buf->
+d©acouÁ
+);
+
+970 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+972 ià(!
+buf
+->
+æag_found
+)
+
+974 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave. No start frame 0xf9 found in bytes stored in GSM0710 buffer");
+
+975  
+NULL
+;
+
+978 
+	`gsm0710_bufãr_Ëngth
+(
+buf
+è> 0 && (*buf->
+»adp
+ =ğ
+GSM0710_FRAME_FLAG
+))
+
+980 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+981 
+	`gsm0710_bufãr_šc
+(
+buf
+->
+»adp
+,buf->
+d©acouÁ
+);
+
+982 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+989 
+loÿl_»adp
+ = 
+buf
+->
+»adp
+;
+
+990 
+loÿl_d©acouÁ
+ = 
+loÿl_d©acouÁ_backup
+ = 
+buf
+->
+d©acouÁ
+;
+
+992 ià(
+loÿl_d©acouÁ
+ >ğ
+Ëngth_Ãeded
+)
+
+994 ià((
+äame
+ = (
+GSM0710_F¿me
+*)
+	`m®loc
+((GSM0710_F¿me))è!ğ
+NULL
+)
+
+996 
+äame
+->
+chªÃl
+ = ((*
+loÿl_»adp
+ & 252) >> 2);
+
+997 ià(
+äame
+->
+chªÃl
+ > 
+vœ_pÜts
+ )
+
+999 
+	`LOGMUX
+(
+LOG_WARNING
+, "Drİpšg f¿me: CÜru±! ChªÃÈAddr. f›ld indiÿ‹d %d, which dÛ nÙƒxi¡",
+äame
+->
+chªÃl
+);
+
+1000 
+	`de¡roy_äame
+(
+äame
+);
+
+1001 
+buf
+->
+æag_found
+ = 0;
+
+1002 
+buf
+->
+drİ³d_couÁ
+++;
+
+1003 
+upd©e_bufãr_drİpšg_äame
+;
+
+1005 
+fcs
+ = 
+r_üùabË
+[fc ^ *
+loÿl_»adp
+];
+
+1006 
+	`gsm0710_bufãr_šc
+(
+loÿl_»adp
+,
+loÿl_d©acouÁ
+);
+
+1007 
+Ëngth_Ãeded
+--;
+
+1008 
+äame
+->
+cÚŒŞ
+ = *
+loÿl_»adp
+;
+
+1009 
+fcs
+ = 
+r_üùabË
+[fc ^ *
+loÿl_»adp
+];
+
+1010 
+	`gsm0710_bufãr_šc
+(
+loÿl_»adp
+,
+loÿl_d©acouÁ
+);
+
+1011 
+Ëngth_Ãeded
+--;
+
+1012 
+äame
+->
+Ëngth
+ = (*
+loÿl_»adp
+ & 254) >> 1;
+
+1013 
+fcs
+ = 
+r_üùabË
+[fc ^ *
+loÿl_»adp
+];
+
+1016 
+	`LOGMUX
+(
+LOG_ERR
+, "Out of memory, when‡llocating space for frame");
+
+1017 ià((*
+loÿl_»adp
+ & 1) == 0)
+
+1023 
+	`gsm0710_bufãr_šc
+(
+loÿl_»adp
+,
+loÿl_d©acouÁ
+);
+
+1024 
+äame
+->
+Ëngth
+ +ğ(*
+loÿl_»adp
+*128);
+
+1025 
+fcs
+ = 
+r_üùabË
+[fcs^*
+loÿl_»adp
+];
+
+1027 
+Ëngth_Ãeded
+ +ğ
+äame
+->
+Ëngth
+;
+
+1028 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Ëngth_Ãeded: %d,‡vaabË iÀloÿl_d©acouÁ: %d",
+Ëngth_Ãeded
+,
+loÿl_d©acouÁ
+);
+
+1030 ià(
+äame
+->
+Ëngth
+ > 
+cmux_N1
+)
+
+1032 
+	`LOGMUX
+(
+LOG_WARNING
+, "Drİpšg f¿me: CÜru±! L’gth f›ld indiÿ‹d %d. Max %d‡Îowed",
+äame
+->
+Ëngth
+, 
+cmux_N1
+);
+
+1033 
+	`de¡roy_äame
+(
+äame
+);
+
+1034 
+buf
+->
+æag_found
+ = 0;
+
+1035 
+buf
+->
+drİ³d_couÁ
+++;
+
+1036 
+upd©e_bufãr_drİpšg_äame
+;
+
+1038 ià(!(
+loÿl_d©acouÁ
+ >ğ
+Ëngth_Ãeded
+))
+
+1040 
+	`ä“
+(
+äame
+);
+
+1041 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave, frameƒxtraction cancelled. Frame‚ot completely stored in„e-assembly buffer yet");
+
+1042  
+NULL
+;
+
+1044 
+	`gsm0710_bufãr_šc
+(
+loÿl_»adp
+,
+loÿl_d©acouÁ
+);
+
+1047 ià(
+äame
+->
+Ëngth
+ > 0)
+
+1049 ià((
+äame
+->
+d©a
+ = 
+	`m®loc
+((è* f¿me->
+Ëngth
+)è!ğ
+NULL
+)
+
+1051 
+’d
+ = 
+buf
+->
+’dp
+ - 
+loÿl_»adp
+;
+
+1052 ià(
+äame
+->
+Ëngth
+ > 
+’d
+)
+
+1054 
+	`memıy
+(
+äame
+->
+d©a
+, 
+loÿl_»adp
+, 
+’d
+);
+
+1055 
+	`memıy
+(
+äame
+->
+d©a
+ + 
+’d
+, 
+buf
+->d©a, f¿me->
+Ëngth
+ -ƒnd);
+
+1056 
+loÿl_»adp
+ = 
+buf
+->
+d©a
+ + (
+äame
+->
+Ëngth
+ - 
+’d
+);
+
+1057 
+loÿl_d©acouÁ
+ -ğ
+äame
+->
+Ëngth
+;
+
+1061 
+	`memıy
+(
+äame
+->
+d©a
+, 
+loÿl_»adp
+, f¿me->
+Ëngth
+);
+
+1062 
+loÿl_»adp
+ +ğ
+äame
+->
+Ëngth
+;
+
+1063 
+loÿl_d©acouÁ
+ -ğ
+äame
+->
+Ëngth
+;
+
+1064 ià(
+loÿl_»adp
+ =ğ
+buf
+->
+’dp
+)
+
+1065 
+loÿl_»adp
+ = 
+buf
+->
+d©a
+;
+
+1067 ià(
+	`GSM0710_FRAME_IS
+(
+GSM0710_TYPE_UI
+, 
+äame
+))
+
+1069 
+’d
+ = 0;ƒnd < 
+äame
+->
+Ëngth
+;ƒnd++)
+
+1070 
+fcs
+ = 
+r_üùabË
+[fc ^ (
+äame
+->
+d©a
+[
+’d
+])];
+
+1075 
+	`LOGMUX
+(
+LOG_ERR
+, "Out of memory, when‡llocating space for frame data");
+
+1076 
+äame
+->
+Ëngth
+ = 0;
+
+1080 ià(
+r_üùabË
+[
+fcs
+ ^ (*
+loÿl_»adp
+)] != 0xCF)
+
+1082 
+	`gsm0710_bufãr_šc
+(
+loÿl_»adp
+,
+loÿl_d©acouÁ
+);
+
+1083 ià(*
+loÿl_»adp
+ !ğ
+GSM0710_FRAME_FLAG
+)
+
+1085 
+	`LOGMUX
+(
+LOG_WARNING
+, "Dropping frame: Corrupt! End flag‚ot…resent‡nd FCS mismatch.");
+
+1086 
+	`de¡roy_äame
+(
+äame
+);
+
+1087 
+buf
+->
+æag_found
+ = 0;
+
+1088 
+buf
+->
+drİ³d_couÁ
+++;
+
+1089 
+upd©e_bufãr_drİpšg_äame
+;
+
+1093 
+	`LOGMUX
+(
+LOG_WARNING
+, "Dropping frame: FCS doesn't match");
+
+1094 
+	`de¡roy_äame
+(
+äame
+);
+
+1095 
+buf
+->
+æag_found
+ = 0;
+
+1096 
+buf
+->
+drİ³d_couÁ
+++;
+
+1097 
+upd©e_bufãr_drİpšg_äame
+;
+
+1103 
+	`gsm0710_bufãr_šc
+(
+loÿl_»adp
+,
+loÿl_d©acouÁ
+);
+
+1104 ià(*
+loÿl_»adp
+ !ğ
+GSM0710_FRAME_FLAG
+)
+
+1106 
+	`LOGMUX
+(
+LOG_WARNING
+, "Drİpšg f¿me: End fÏg‚Ù…»£Á. In¡—d: %d", *
+loÿl_»adp
+);
+
+1107 
+	`de¡roy_äame
+(
+äame
+);
+
+1108 
+buf
+->
+æag_found
+ = 0;
+
+1109 
+buf
+->
+drİ³d_couÁ
+++;
+
+1110 
+upd©e_bufãr_drİpšg_äame
+;
+
+1113 
+buf
+->
+»ûived_couÁ
+++;
+
+1114 
+	`gsm0710_bufãr_šc
+(
+loÿl_»adp
+,
+loÿl_d©acouÁ
+);
+
+1119 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave,‚otƒnough bytes stored in buffer for header information yet");
+
+1120  
+NULL
+;
+
+1124 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+1125 
+buf
+->
+»adp
+ = 
+loÿl_»adp
+;
+
+1126 
+buf
+->
+d©acouÁ
+ -ğ(
+loÿl_d©acouÁ_backup
+ - 
+loÿl_d©acouÁ
+);
+
+1127 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+1128 
+buf
+->
+æag_found
+ = 0;
+
+1129 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave, frame found");
+
+1130  
+äame
+;
+
+1133 
+upd©e_bufãr_drİpšg_äame
+:
+
+1135 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+1136 
+buf
+->
+»adp
+ = 
+loÿl_»adp
+;
+
+1137 
+buf
+->
+d©acouÁ
+ -ğ(
+loÿl_d©acouÁ_backup
+ - 
+loÿl_d©acouÁ
+);
+
+1138 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+1139  
+	`gsm0710_ba£_bufãr_g‘_äame
+(
+buf
+);
+
+1140 
+	}
+}
+
+1148 
+GSM0710_F¿me
+ *
+	$gsm0710_advªûd_bufãr_g‘_äame
+(
+
+1149 
+GSM0710_Bufãr
+ * 
+buf
+)
+
+1151 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+1152 
+l_begš
+:
+
+1154 !
+buf
+->
+æag_found
+ && 
+	`gsm0710_bufãr_Ëngth
+(buf) > 0)
+
+1156 ià(*
+buf
+->
+»adp
+ =ğ
+GSM0710_FRAME_ADV_FLAG
+)
+
+1158 
+buf
+->
+æag_found
+ = 1;
+
+1159 
+buf
+->
+adv_Ëngth
+ = 0;
+
+1160 
+buf
+->
+adv_found_esc
+ = 0;
+
+1162 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+1163 
+	`gsm0710_bufãr_šc
+(
+buf
+->
+»adp
+,buf->
+d©acouÁ
+);
+
+1164 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+1166 ià(!
+buf
+->
+æag_found
+)
+
+1167  
+NULL
+;
+
+1168 ià(0 =ğ
+buf
+->
+adv_Ëngth
+)
+
+1170 
+	`gsm0710_bufãr_Ëngth
+(
+buf
+è> 0 && (*buf->
+»adp
+ =ğ
+GSM0710_FRAME_ADV_FLAG
+))
+
+1172 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+1173 
+	`gsm0710_bufãr_šc
+(
+buf
+->
+»adp
+,buf->
+d©acouÁ
+);
+
+1174 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+1178 
+	`gsm0710_bufãr_Ëngth
+(
+buf
+) > 0)
+
+1180 ià(!
+buf
+->
+adv_found_esc
+ && 
+GSM0710_FRAME_ADV_FLAG
+ =ğ*(buf->
+»adp
+))
+
+1182 
+GSM0710_F¿me
+ *
+äame
+ = 
+NULL
+;
+
+1183 *
+d©a
+ = 
+buf
+->
+adv_d©a
+;
+
+1184 
+fcs
+ = 0xFF;
+
+1185 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+1186 
+	`gsm0710_bufãr_šc
+(
+buf
+->
+»adp
+,buf->
+d©acouÁ
+);
+
+1187 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+1188 ià(
+buf
+->
+adv_Ëngth
+ < 3)
+
+1190 
+	`LOGMUX
+(
+LOG_WARNING
+, "ToØshÜˆadv f¿me,†’gth:%d", 
+buf
+->
+adv_Ëngth
+);
+
+1191 
+buf
+->
+æag_found
+ = 0;
+
+1192 
+l_begš
+;
+
+1195 ià((
+äame
+ = (
+GSM0710_F¿me
+*)
+	`m®loc
+((GSM0710_F¿me))è!ğ
+NULL
+)
+
+1197 
+äame
+->
+chªÃl
+ = ((
+d©a
+[0] & 252) >> 2);
+
+1198 
+fcs
+ = 
+r_üùabË
+[fc ^ 
+d©a
+[0]];
+
+1199 
+äame
+->
+cÚŒŞ
+ = 
+d©a
+[1];
+
+1200 
+fcs
+ = 
+r_üùabË
+[fc ^ 
+d©a
+[1]];
+
+1201 
+äame
+->
+Ëngth
+ = 
+buf
+->
+adv_Ëngth
+ - 3;
+
+1204 
+	`LOGMUX
+(
+LOG_ERR
+,"Out of memory, when‡llocating space for frame");
+
+1206 ià(
+äame
+->
+Ëngth
+ > 0)
+
+1208 ià((
+äame
+->
+d©a
+ = (*è
+	`m®loc
+((è* f¿me->
+Ëngth
+)))
+
+1210 
+	`memıy
+(
+äame
+->
+d©a
+, d©¨+ 2, f¿me->
+Ëngth
+);
+
+1211 ià(
+	`GSM0710_FRAME_IS
+(
+GSM0710_TYPE_UI
+, 
+äame
+))
+
+1213 
+i
+;
+
+1214 
+i
+ = 0; i < 
+äame
+->
+Ëngth
+; ++i)
+
+1215 
+fcs
+ = 
+r_üùabË
+[fc ^ (
+äame
+->
+d©a
+[
+i
+])];
+
+1220 
+	`LOGMUX
+(
+LOG_ERR
+,"Out of memory, when‡llocating space for frame data");
+
+1221 
+buf
+->
+æag_found
+ = 0;
+
+1222 
+l_begš
+;
+
+1226 ià(
+r_üùabË
+[
+fcs
+ ^ 
+d©a
+[
+buf
+->
+adv_Ëngth
+ - 1]] != 0xCF)
+
+1228 
+	`LOGMUX
+(
+LOG_WARNING
+, "Dropping frame: FCS doesn't match");
+
+1229 
+	`de¡roy_äame
+(
+äame
+);
+
+1230 
+buf
+->
+æag_found
+ = 0;
+
+1231 
+buf
+->
+drİ³d_couÁ
+++;
+
+1232 
+l_begš
+;
+
+1236 
+buf
+->
+»ûived_couÁ
+++;
+
+1237 
+buf
+->
+æag_found
+ = 0;
+
+1238 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave success");
+
+1239  
+äame
+;
+
+1242 ià(
+buf
+->
+adv_Ëngth
+ >ğ(buf->
+adv_d©a
+))
+
+1244 
+	`LOGMUX
+(
+LOG_WARNING
+, "ToØlÚg‡dv f¿me,†’gth:%d", 
+buf
+->
+adv_Ëngth
+);
+
+1245 
+buf
+->
+æag_found
+ = 0;
+
+1246 
+buf
+->
+drİ³d_couÁ
+++;
+
+1247 
+l_begš
+;
+
+1249 ià(
+buf
+->
+adv_found_esc
+)
+
+1251 
+buf
+->
+adv_d©a
+[buf->
+adv_Ëngth
+] = *(buf->
+»adp
+è^ 
+GSM0710_FRAME_ADV_ESC_COPML
+;
+
+1252 
+buf
+->
+adv_Ëngth
+++;
+
+1253 
+buf
+->
+adv_found_esc
+ = 0;
+
+1255 ià(
+GSM0710_FRAME_ADV_ESC
+ =ğ*(
+buf
+->
+»adp
+))
+
+1256 
+buf
+->
+adv_found_esc
+ = 1;
+
+1259 
+buf
+->
+adv_d©a
+[buf->
+adv_Ëngth
+] = *(buf->
+»adp
+);
+
+1260 
+buf
+->
+adv_Ëngth
+++;
+
+1262 
+	`±h»ad_mu‹x_lock
+(&
+d©acouÁ_lock
+);
+
+1263 
+	`gsm0710_bufãr_šc
+(
+buf
+->
+»adp
+,buf->
+d©acouÁ
+);
+
+1264 
+	`±h»ad_mu‹x_uÆock
+(&
+d©acouÁ_lock
+);
+
+1266  
+NULL
+;
+
+1267 
+	}
+}
+
+1278 
+	$mem¡r
+(
+
+1279 cÚ¡ *
+hay¡ack
+,
+
+1280 
+Ëngth
+,
+
+1281 cÚ¡ *
+ÃedË
+)
+
+1283 
+i
+;
+
+1284 
+j
+ = 0;
+
+1285 ià(
+ÃedË
+[0] == '\0')
+
+1287 
+i
+ = 0; i < 
+Ëngth
+; i++)
+
+1288 ià(
+ÃedË
+[
+j
+] =ğ
+hay¡ack
+[
+i
+])
+
+1290 
+j
+++;
+
+1291 ià(
+ÃedË
+[
+j
+] == '\0')
+
+1295 
+j
+ = 0;
+
+1297 
+	}
+}
+
+1306 
+	$ch©
+(
+
+1307 
+£rŸl_deviû_fd
+,
+
+1308 *
+cmd
+,
+
+1309 
+to
+)
+
+1311 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+1312 
+buf
+[1024];
+
+1313 
+£l
+;
+
+1314 
+Ën
+;
+
+1315 
+wrÙe
+ = 0;
+
+1316 
+	`sy¦ogdump
+("> ", (*è
+cmd
+, 
+	`¡¾’
+(cmd));
+
+1317 
+	`SYSCHECK
+(
+wrÙe
+ = 
+	`wr™e
+(
+£rŸl_deviû_fd
+, 
+cmd
+, 
+	`¡¾’
+(cmd)));
+
+1318 
+	`LOGMUX
+(
+LOG_DEBUG
+, "WrÙ%d by‹s", 
+wrÙe
+);
+
+1320 #ifdeà
+MUX_ANDROID
+
+
+1322 
+	`ioùl
+(
+£rŸl_deviû_fd
+, 
+TCSBRK
+, 1);
+
+1324 
+	`SYSCHECK
+(
+	`tcd¿š
+(
+£rŸl_deviû_fd
+));
+
+1327 
+fd_£t
+ 
+rfds
+;
+
+1328 
+	`FD_ZERO
+(&
+rfds
+);
+
+1329 
+	`FD_SET
+(
+£rŸl_deviû_fd
+, &
+rfds
+);
+
+1330 
+timev®
+ 
+timeout
+;
+
+1331 
+timeout
+.
+tv_£c
+ = 
+to
+;
+
+1332 
+timeout
+.
+tv_u£c
+ = 0;
+
+1335 
+	`SYSCHECK
+(
+£l
+ = 
+	`£Ëù
+(
+£rŸl_deviû_fd
+ + 1, &
+rfds
+, 
+NULL
+, NULL, &
+timeout
+));
+
+1336 
+	`LOGMUX
+(
+LOG_DEBUG
+, "S–eùed %d", 
+£l
+);
+
+1337 ià(
+	`FD_ISSET
+(
+£rŸl_deviû_fd
+, &
+rfds
+))
+
+1339 
+	`mem£t
+(
+buf
+, 0, (buf));
+
+1340 
+Ën
+ = 
+	`»ad
+(
+£rŸl_deviû_fd
+, 
+buf
+, (buf));
+
+1341 
+	`SYSCHECK
+(
+Ën
+);
+
+1342 
+	`LOGMUX
+(
+LOG_DEBUG
+, "R—d %d by‹ äom s”ŸÈdeviû", 
+Ën
+);
+
+1343 
+	`sy¦ogdump
+("< ", 
+buf
+, 
+Ën
+);
+
+1344 
+”ºo
+ = 0;
+
+1345 ià(
+	`mem¡r
+((*è
+buf
+, 
+Ën
+, "OK"))
+
+1347 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Received OK");
+
+1350 ià(
+	`mem¡r
+((*è
+buf
+, 
+Ën
+, "ERROR"))
+
+1352 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Received ERROR");
+
+1356 } 
+£l
+);
+
+1358 
+	}
+}
+
+1365 
+	$hªdË_commªd
+(
+
+1366 
+GSM0710_F¿me
+ * 
+äame
+)
+
+1368 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+1369 
+ty³
+, 
+sigÇls
+;
+
+1370 
+Ëngth
+ = 0, 
+i
+, 
+ty³_Ëngth
+, 
+chªÃl
+, 
+suµÜ‹d
+ = 1;
+
+1371 *
+»¥Ú£
+;
+
+1373 ià(
+äame
+->
+Ëngth
+ > 0)
+
+1375 
+ty³
+ = 
+äame
+->
+d©a
+[0];
+
+1376 
+i
+ = 0; (
+äame
+->
+Ëngth
+ > i && (äame->
+d©a
+[i] & 
+GSM0710_EA
+) == 0); i++);
+
+1377 
+i
+++;
+
+1378 
+ty³_Ëngth
+ = 
+i
+;
+
+1379 ià((
+ty³
+ & 
+GSM0710_CR
+) == GSM0710_CR)
+
+1382 
+äame
+->
+Ëngth
+ > 
+i
+)
+
+1384 
+Ëngth
+ = (Ëngth * 128è+ ((
+äame
+->
+d©a
+[
+i
+] & 254) >> 1);
+
+1385 ià((
+äame
+->
+d©a
+[
+i
+] & 1) == 1)
+
+1387 
+i
+++;
+
+1389 
+i
+++;
+
+1390 (
+ty³
+ & ~
+GSM0710_CR
+))
+
+1392 
+GSM0710_CONTROL_CLD
+:
+
+1393 
+	`LOGMUX
+(
+LOG_INFO
+, "The mobile station„equested mux-modeermination");
+
+1394 
+£rŸl
+.
+¡©e
+ = 
+MUX_STATE_CLOSING
+;
+
+1396 
+GSM0710_CONTROL_PSC
+:
+
+1397 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Power Service Control command: ***");
+
+1398 
+	`LOGMUX
+(
+LOG_DEBUG
+, "F¿me->d©¨ğ% / f¿me->Ëngth = %d", 
+äame
+->
+d©a
+ + 
+i
+, f¿me->
+Ëngth
+ - i);
+
+1400 
+GSM0710_CONTROL_TEST
+:
+
+1401 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Test command: ");
+
+1402 
+	`LOGMUX
+(
+LOG_DEBUG
+, "F¿me->d©¨ğ% / f¿me->Ëngth = %d", 
+äame
+->
+d©a
+ + 
+i
+, f¿me->
+Ëngth
+ - i);
+
+1405 
+GSM0710_CONTROL_MSC
+:
+
+1406 ià(
+i
+ + 1 < 
+äame
+->
+Ëngth
+)
+
+1408 
+chªÃl
+ = ((
+äame
+->
+d©a
+[
+i
+] & 252) >> 2);
+
+1409 
+i
+++;
+
+1410 
+sigÇls
+ = (
+äame
+->
+d©a
+[
+i
+]);
+
+1414 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Modem stu commªd oÀchªÃÈ%d", 
+chªÃl
+);
+
+1415 ià((
+sigÇls
+ & 
+GSM0710_SIGNAL_FC
+) == GSM0710_SIGNAL_FC)
+
+1416 
+	`LOGMUX
+(
+LOG_DEBUG
+, "No frames‡llowed");
+
+1420 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Frames‡llowed");
+
+1422 ià((
+sigÇls
+ & 
+GSM0710_SIGNAL_RTC
+) == GSM0710_SIGNAL_RTC)
+
+1425 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Signal RTC");
+
+1427 ià((
+sigÇls
+ & 
+GSM0710_SIGNAL_IC
+) == GSM0710_SIGNAL_IC)
+
+1430 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Signal Ring");
+
+1432 ià((
+sigÇls
+ & 
+GSM0710_SIGNAL_DV
+) == GSM0710_SIGNAL_DV)
+
+1435 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Signal DV");
+
+1439 
+	`LOGMUX
+(
+LOG_ERR
+, "Modem status command, but‚o info. i: %d,†en: %d, data-len: %d",
+
+1440 
+i
+, 
+Ëngth
+, 
+äame
+->length);
+
+1443 
+	`LOGMUX
+(
+LOG_ERR
+,"UnknowÀcommªd (%dèäomhcÚŒŞ chªÃl", 
+ty³
+);
+
+1444 ià((
+»¥Ú£
+ = 
+	`m®loc
+((è* (2 + 
+ty³_Ëngth
+))è!ğ
+NULL
+)
+
+1446 
+i
+ = 0;
+
+1447 
+»¥Ú£
+[
+i
+++] = 
+GSM0710_CONTROL_NSC
+;
+
+1448 
+ty³_Ëngth
+ &= 127;
+
+1449 
+»¥Ú£
+[
+i
+++] = 
+GSM0710_EA
+ | (
+ty³_Ëngth
+ << 1);
+
+1450 
+ty³_Ëngth
+--)
+
+1452 
+»¥Ú£
+[
+i
+] = 
+äame
+->
+d©a
+[i - 2];
+
+1453 
+i
+++;
+
+1455 
+	`wr™e_äame
+(0, 
+»¥Ú£
+, 
+i
+, 
+GSM0710_TYPE_UIH
+);
+
+1456 
+	`ä“
+(
+»¥Ú£
+);
+
+1457 
+suµÜ‹d
+ = 0;
+
+1460 
+	`LOGMUX
+(
+LOG_ERR
+,"Out of memory, when‡llocating space for„esponse");
+
+1463 ià(
+suµÜ‹d
+)
+
+1466 
+äame
+->
+d©a
+[0] = f¿me->d©a[0] & ~
+GSM0710_CR
+;
+
+1467 
+	`wr™e_äame
+(0, 
+äame
+->
+d©a
+, f¿me->
+Ëngth
+, 
+GSM0710_TYPE_UIH
+);
+
+1468 (
+ty³
+ & ~
+GSM0710_CR
+)){
+
+1469 
+GSM0710_CONTROL_MSC
+:
+
+1470 ià(
+äame
+->
+cÚŒŞ
+ & 
+GSM0710_PF
+){
+
+1471 
+uih_pf_b™_»ûived
+ = 1;
+
+1473 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Sending 1st MSC command App->Modem");
+
+1474 
+äame
+->
+d©a
+[0] = f¿me->d©a[0] | 
+GSM0710_CR
+;
+
+1475 
+	`wr™e_äame
+(0, 
+äame
+->
+d©a
+, f¿me->
+Ëngth
+, 
+GSM0710_TYPE_UIH
+);
+
+1485 ià(
+	`GSM0710_COMMAND_IS
+(
+ty³
+, 
+GSM0710_CONTROL_NSC
+))
+
+1486 
+	`LOGMUX
+(
+LOG_ERR
+, "The mobile station didn't supporthe command sent");
+
+1488 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Command‡cknowledged byhe mobile station");
+
+1492 
+	}
+}
+
+1499 
+	$exŒaù_äames
+(
+GSM0710_Bufãr
+* 
+buf
+)
+
+1501 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+1502 
+äames_exŒaùed
+ = 0;
+
+1503 
+GSM0710_F¿me
+ *
+äame
+;
+
+1504 (
+äame
+ = 
+cmux_mode
+
+
+1505 ? 
+	`gsm0710_advªûd_bufãr_g‘_äame
+(
+buf
+)
+
+1506 : 
+	`gsm0710_ba£_bufãr_g‘_äame
+(
+buf
+)))
+
+1508 
+äames_exŒaùed
+++;
+
+1510 
+	`±h»ad_mu‹x_lock
+(&
+bufã¼—dy_lock
+);
+
+1511 ià(
+buf
+->
+šput_¦“pšg
+ == 1)
+
+1513 
+	`±h»ad_cÚd_sigÇl
+(&
+Ãwd©¬—dy_sigÇl
+);
+
+1515 
+	`±h»ad_mu‹x_uÆock
+(&
+bufã¼—dy_lock
+);
+
+1517 ià((
+	`GSM0710_FRAME_IS
+(
+GSM0710_TYPE_UI
+, 
+äame
+è|| GSM0710_FRAME_IS(
+GSM0710_TYPE_UIH
+, frame)))
+
+1519 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Frame is UI or UIH");
+
+1520 ià(
+äame
+->
+cÚŒŞ
+ & 
+GSM0710_PF
+){
+
+1521 
+uih_pf_b™_»ûived
+ = 1;
+
+1524 ià(
+äame
+->
+chªÃl
+ > 0)
+
+1526 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Wr™šg %d by‹ f¿m»ûived oÀchªÃÈ%dØ%s",
+äame
+->
+Ëngth
+,äame->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+±¢ame
+);
+
+1529 
+wr™e_»suÉ
+;
+
+1530 ià((
+wr™e_»suÉ
+ = 
+	`wr™e
+(
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+fd
+, f¿me->
+d©a
+, f¿me->
+Ëngth
+)) >= 0)
+
+1532 
+	`LOGMUX
+(
+LOG_DEBUG
+, "wr™e(è»tuºed. Wr™‹À%d/%d by‹ oàäamtØ%s",
+wr™e_»suÉ
+,
+äame
+->
+Ëngth
+,
+chªÃÎi¡
+[äame->
+chªÃl
+].
+±¢ame
+);
+
+1533 
+	`fsync
+(
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+fd
+);
+
+1536 
+”ºo
+){
+
+1537 
+EINTR
+:
+
+1538 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINTR caught");
+
+1540 
+EAGAIN
+:
+
+1541 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EAGAIN caught");
+
+1543 
+EBADF
+:
+
+1544 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EBADF caught");
+
+1546 
+EINVAL
+:
+
+1547 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINVAL caught");
+
+1549 
+EFAULT
+:
+
+1550 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EFAULT caught");
+
+1552 
+EIO
+:
+
+1553 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EIO caught");
+
+1555 
+EFBIG
+:
+
+1556 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EFBIG caught");
+
+1558 
+ENOSPC
+:
+
+1559 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal ENOSPC caught");
+
+1561 
+EPIPE
+:
+
+1562 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EPIPE caught");
+
+1565 
+	`LOGMUX
+(
+LOG_ERR
+,"Unknown interrupt signal caught from write()\n");
+
+1572 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Frame channel == 0, control channel command");
+
+1573 
+	`hªdË_commªd
+(
+äame
+);
+
+1579 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Not‡n information frame");
+
+1580 (
+äame
+->
+cÚŒŞ
+ & ~
+GSM0710_PF
+))
+
+1582 
+GSM0710_TYPE_UA
+:
+
+1583 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Frame is UA");
+
+1584 ià(
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+İ’ed
+)
+
+1586 
+	`SYSCHECK
+(
+	`logiÿl_chªÃl_şo£
+(
+chªÃÎi¡
++
+äame
+->
+chªÃl
+));
+
+1587 
+	`LOGMUX
+(
+LOG_INFO
+, "Logical channel %d for %s closed",
+
+1588 
+äame
+->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+Üigš
+);
+
+1592 if(
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+disc_ua_³ndšg
+ == 0){
+
+1593 
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+İ’ed
+ = 1;
+
+1594 ià(
+äame
+->
+chªÃl
+ == 0)
+
+1596 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Control channel opened");
+
+1602 
+	`LOGMUX
+(
+LOG_INFO
+, "LogiÿÈchªÃÈ%d o³Ãd", 
+äame
+->
+chªÃl
+);
+
+1605 
+	`LOGMUX
+(
+LOG_INFO
+, "UAØacknowËdgdDISC oÀchªÃÈ%d„eûived", 
+äame
+->
+chªÃl
+);
+
+1606 
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+disc_ua_³ndšg
+ = 0;
+
+1610 
+GSM0710_TYPE_DM
+:
+
+1611 ià(
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+İ’ed
+)
+
+1613 
+	`SYSCHECK
+(
+	`logiÿl_chªÃl_şo£
+(
+chªÃÎi¡
++
+äame
+->
+chªÃl
+));
+
+1614 
+	`LOGMUX
+(
+LOG_INFO
+, "DM„eceived, sohe channel %d for %s was‡lready closed",
+
+1615 
+äame
+->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+Üigš
+);
+
+1619 ià(
+äame
+->
+chªÃl
+ == 0)
+
+1621 
+	`LOGMUX
+(
+LOG_INFO
+, "Couldn't open control channel.\n->Terminating");
+
+1622 
+£rŸl
+.
+¡©e
+ = 
+MUX_STATE_CLOSING
+;
+
+1626 
+	`LOGMUX
+(
+LOG_INFO
+, "LogiÿÈchªÃÈ%d fÜ % couldn'ˆbİ’ed", 
+äame
+->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+Üigš
+);
+
+1629 
+GSM0710_TYPE_DISC
+:
+
+1630 ià(
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+İ’ed
+)
+
+1632 
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+İ’ed
+ = 0;
+
+1633 
+	`wr™e_äame
+(
+äame
+->
+chªÃl
+, 
+NULL
+, 0, 
+GSM0710_TYPE_UA
+ | 
+GSM0710_PF
+);
+
+1634 ià(
+äame
+->
+chªÃl
+ == 0)
+
+1636 
+£rŸl
+.
+¡©e
+ = 
+MUX_STATE_CLOSING
+;
+
+1637 
+	`LOGMUX
+(
+LOG_INFO
+, "Control channel closed");
+
+1640 
+	`LOGMUX
+(
+LOG_INFO
+, "LogiÿÈchªÃÈ%d fÜ % şo£d", 
+äame
+->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+Üigš
+);
+
+1645 
+	`LOGMUX
+(
+LOG_WARNING
+, "Received DISCƒvenhough channel %d for %s was‡lready closed",
+
+1646 
+äame
+->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+Üigš
+);
+
+1647 
+	`wr™e_äame
+(
+äame
+->
+chªÃl
+, 
+NULL
+, 0, 
+GSM0710_TYPE_DM
+ | 
+GSM0710_PF
+);
+
+1650 
+GSM0710_TYPE_SABM
+:
+
+1652 ià(
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+İ’ed
+)
+
+1654 ià(
+äame
+->
+chªÃl
+ == 0)
+
+1655 
+	`LOGMUX
+(
+LOG_INFO
+, "Control channel opened");
+
+1657 
+	`LOGMUX
+(
+LOG_INFO
+, "Logical channel %d for %s opened",
+
+1658 
+äame
+->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+Üigš
+);
+
+1662 
+	`LOGMUX
+(
+LOG_WARNING
+, "Received SABMƒvenhough channel %d for %s was‡lready closed",
+
+1663 
+äame
+->
+chªÃl
+, 
+chªÃÎi¡
+[äame->chªÃl].
+Üigš
+);
+
+1664 
+chªÃÎi¡
+[
+äame
+->
+chªÃl
+].
+İ’ed
+ = 1;
+
+1665 
+	`wr™e_äame
+(
+äame
+->
+chªÃl
+, 
+NULL
+, 0, 
+GSM0710_TYPE_UA
+ | 
+GSM0710_PF
+);
+
+1669 
+	`de¡roy_äame
+(
+äame
+);
+
+1671 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave");
+
+1672  
+äames_exŒaùed
+;
+
+1673 
+	}
+}
+
+1681 * 
+	$as£mbË_äame_th»ad
+(* 
+v¬gp
+)
+
+1683 
+GSM0710_Bufãr
+* 
+buf
+ = (GSM0710_Bufãr*è
+v¬gp
+;
+
+1685 
+buf
+!=
+NULL
+)
+
+1687 
+	`±h»ad_mu‹x_lock
+(&
+Ãwd©¬—dy_lock
+);
+
+1688 !(
+buf
+->
+d©acouÁ
+ > 0è|| !buf->
+Ãwd©¬—dy
+)
+
+1690 
+	`LOGMUX
+(
+LOG_DEBUG
+,"as£mbË_äame_th»ad…uˆtØ¦“p. GSM0710 bufã¸¡Üed %d,‚ewd©¬—dy: %d", 
+buf
+->
+d©acouÁ
+, buf->
+Ãwd©¬—dy
+);
+
+1691 
+	`±h»ad_cÚd_wa™
+(&
+Ãwd©¬—dy_sigÇl
+,&
+Ãwd©¬—dy_lock
+);
+
+1692 
+	`LOGMUX
+(
+LOG_DEBUG
+,"as£mbË_äame_th»ad‡wok’. GSM0710 bufã¸¡Üed %d,‚ewd©¬—dy: %d", 
+buf
+->
+d©acouÁ
+, buf->
+Ãwd©¬—dy
+);
+
+1694 
+buf
+->
+Ãwd©¬—dy
+ = 0;
+
+1695 
+	`±h»ad_mu‹x_uÆock
+(&
+Ãwd©¬—dy_lock
+);
+
+1697 
+	`exŒaù_äames
+(
+buf
+);
+
+1700 
+	`LOGMUX
+(
+LOG_ERR
+, "assemble_frame_threaderminated");
+
+1701  
+NULL
+;
+
+1702 
+	}
+}
+
+1709 
+	$sigÇl_Œ—tm’t
+(
+
+1710 
+·¿m
+)
+
+1712 
+·¿m
+)
+
+1714 
+SIGPIPE
+:
+
+1715 
+	`ex™
+(0);
+
+1717 
+SIGHUP
+:
+
+1720 
+SIGINT
+:
+
+1721 
+SIGTERM
+:
+
+1722 
+SIGUSR1
+:
+
+1726 
+	`£t_maš_ex™_sigÇl
+(1);
+
+1728 
+SIGKILL
+:
+
+1730 
+	`ex™
+(0);
+
+1733 
+	}
+}
+
+1741 * 
+	$pŞl_th»ad_£rŸl
+(*
+v¬gp
+) {
+
+1742 
+	`LOGMUX
+(
+LOG_DEBUG
+,"Enter");
+
+1743 
+PŞl_Th»ad_Arg
+* 
+pŞl_th»ad_¬g
+ = (PŞl_Th»ad_Arg*)
+v¬gp
+;
+
+1744 if(
+pŞl_th»ad_¬g
+->
+fd
+== -1 ){
+
+1745 
+	`LOGMUX
+(
+LOG_ERR
+, "Serial…ort‚ot initialized");
+
+1746 
+‹rmš©e
+;
+
+1750 if((*(
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_±r
+))ÕŞl_th»ad_¬g->
+»ad_funùiÚ_¬g
+)!=0){
+
+1751 
+	`LOGMUX
+(
+LOG_WARNING
+, "Device„ead function„eturnedƒrror");
+
+1752 
+‹rmš©e
+;
+
+1755 
+‹rmš©e
+;
+
+1757 
+‹rmš©e
+:
+
+1758 
+	`LOGMUX
+(
+LOG_ERR
+, "Device…ollinghreaderminated");
+
+1759 
+	`ä“
+(
+pŞl_th»ad_¬g
+);
+
+1760  
+NULL
+;
+
+1761 
+	}
+}
+
+1768 
+	$th»ad_£rŸl_deviû_»ad
+(* 
+v¬gp
+)
+
+1770 
+S”Ÿl
+ * 
+£rŸl
+ = (S”Ÿl*è
+v¬gp
+;
+
+1771 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+1773 
+£rŸl
+->
+¡©e
+)
+
+1775 
+MUX_STATE_MUXING
+:
+
+1777 
+buf
+[4096];
+
+1778 
+Ën
+;
+
+1780 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Serial Data");
+
+1781 
+Ëngth
+;
+
+1782 ià((
+Ëngth
+ = 
+	`gsm0710_bufãr_ä“
+(
+£rŸl
+->
+š_buf
+)) > 0)
+
+1784 if((
+Ën
+ = 
+	`»ad
+(
+£rŸl
+->
+fd
+, 
+buf
+, 
+	`mš
+(
+Ëngth
+, (buf)))) > 0)
+
+1786 
+	`sy¦ogdump
+("< ", 
+buf
+, 
+Ën
+);
+
+1787 
+	`gsm0710_bufãr_wr™e
+(
+£rŸl
+->
+š_buf
+, 
+buf
+, 
+Ën
+);
+
+1789 ià((
+Ëngth
+ > 0è&& (
+Ën
+ == 0))
+
+1791 
+	`LOGMUX
+(
+LOG_DEBUG
+,"Waiting for data from serial device");
+
+1796 
+”ºo
+){
+
+1797 
+EINTR
+:
+
+1798 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINTR caught");
+
+1800 
+EAGAIN
+:
+
+1801 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EAGAIN caught");
+
+1803 
+EBADF
+:
+
+1804 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EBADF caught");
+
+1806 
+EINVAL
+:
+
+1807 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINVAL caught");
+
+1809 
+EFAULT
+:
+
+1810 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EFAULT caught");
+
+1812 
+EIO
+:
+
+1813 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EIO caught");
+
+1815 
+EISDIR
+:
+
+1816 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EISDIR caught");
+
+1819 
+	`LOGMUX
+(
+LOG_ERR
+,"Unknown interrupt signal caught\n");
+
+1826 
+	`±h»ad_mu‹x_lock
+(&
+bufã¼—dy_lock
+);
+
+1827 
+	`LOGMUX
+(
+LOG_WARNING
+,"Internal„e-assembly buffer is full, waiting for flusho‡ppl!");
+
+1828 
+£rŸl
+->
+š_buf
+->
+šput_¦“pšg
+ = 1;
+
+1829 !(
+	`gsm0710_bufãr_ä“
+(
+£rŸl
+->
+š_buf
+)) > 0)
+
+1831 
+	`LOGMUX
+(
+LOG_DEBUG
+,"£r_»ad_th»ad…uˆtØ¦“p. GSM0710 bufã¸ha %d by‹ ä“", 
+	`gsm0710_bufãr_ä“
+(
+£rŸl
+->
+š_buf
+));
+
+1832 
+	`±h»ad_cÚd_wa™
+(&
+bufã¼—dy_sigÇl
+,&
+bufã¼—dy_lock
+);
+
+1833 
+	`LOGMUX
+(
+LOG_DEBUG
+,"ser_read_thread‡woken");
+
+1835 
+£rŸl
+->
+š_buf
+->
+šput_¦“pšg
+ = 0;
+
+1836 
+	`LOGMUX
+(
+LOG_WARNING
+,"IÁ”ÇÈ»-as£mbly bufã¸·¹ly flushed, f»¥aû: %d",
+	`gsm0710_bufãr_ä“
+(
+£rŸl
+->
+š_buf
+));
+
+1837 
+	`±h»ad_mu‹x_uÆock
+(&
+bufã¼—dy_lock
+);
+
+1840 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave, keep watching");
+
+1845 
+	`LOGMUX
+(
+LOG_WARNING
+, "DÚ'ˆknow howØhªdË„—dšg iÀ¡©%d", 
+£rŸl
+->
+¡©e
+);
+
+1849 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Leave, stop watching");
+
+1851 
+	}
+}
+
+1858 
+	$İ’_£rŸl_deviû
+(
+
+1859 
+S”Ÿl
+* 
+£rŸl
+
+
+1862 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+1863 
+i
+;
+
+1864 
+i
+=0;i<
+GSM0710_MAX_CHANNELS
+;i++)
+
+1865 
+	`SYSCHECK
+(
+	`logiÿl_chªÃl_š™
+(
+chªÃÎi¡
++
+i
+, i));
+
+1867 
+	`SYSCHECK
+(
+£rŸl
+->
+fd
+ = 
+	`İ’
+(£rŸl->
+deviûÇme
+, 
+O_RDWR
+ | 
+O_NOCTTY
+ | 
+O_NONBLOCK
+));
+
+1869 
+	`LOGMUX
+(
+LOG_INFO
+, "Opened serial…ort");
+
+1870 
+fdæags
+;
+
+1871 
+	`SYSCHECK
+(
+fdæags
+ = 
+	`fú
+(
+£rŸl
+->
+fd
+, 
+F_GETFL
+));
+
+1872 
+	`SYSCHECK
+(
+	`fú
+(
+£rŸl
+->
+fd
+, 
+F_SETFL
+, 
+fdæags
+ & ~
+O_NONBLOCK
+));
+
+1873 
+‹rmios
+ 
+t
+;
+
+1874 
+	`tcg‘©Œ
+(
+£rŸl
+->
+fd
+, &
+t
+);
+
+1875 
+t
+.
+c_cæag
+ &ğ~(
+CSIZE
+ | 
+CSTOPB
+ | 
+PARENB
+ | 
+PARODD
+);
+
+1876 
+t
+.
+c_cæag
+ |ğ
+CREAD
+ | 
+CLOCAL
+ | 
+CS8
+ ;
+
+1877 
+t
+.
+c_cæag
+ &ğ~(
+CRTSCTS
+);
+
+1878 
+t
+.
+c_læag
+ &ğ~(
+ICANON
+ | 
+ECHO
+ | 
+ECHOE
+ | 
+ECHOK
+ | 
+ECHONL
+ | 
+ISIG
+);
+
+1879 
+t
+.
+c_iæag
+ &ğ~(
+INPCK
+ | 
+IGNPAR
+ | 
+PARMRK
+ | 
+ISTRIP
+ | 
+IXANY
+ | 
+ICRNL
+);
+
+1880 
+t
+.
+c_iæag
+ &ğ~(
+IXON
+ | 
+IXOFF
+);
+
+1881 
+t
+.
+c_oæag
+ &ğ~(
+OPOST
+ | 
+OCRNL
+);
+
+1882 
+t
+.
+c_cc
+[
+VMIN
+] = 1;
+
+1883 
+t
+.
+c_cc
+[
+VTIME
+] = 0;
+
+1885 #ifdeà
+MUX_ANDROID
+
+
+1887 
+posix_vdi§bË
+;
+
+1888 
+cur_·th
+[
+FILENAME_MAX
+];
+
+1889 ià(!
+	`g‘cwd
+(
+cur_·th
+, (cur_path))){
+
+1890 
+	`LOGMUX
+(
+LOG_ERR
+,"_g‘cwd„‘uºedƒ¼nØ%d",
+”ºo
+);
+
+1893 
+posix_vdi§bË
+ = 
+	`·thcÚf
+(
+cur_·th
+, 
+_PC_VDISABLE
+);
+
+1894 
+t
+.
+c_cc
+[
+VINTR
+] = 
+posix_vdi§bË
+;
+
+1895 
+t
+.
+c_cc
+[
+VQUIT
+] = 
+posix_vdi§bË
+;
+
+1896 
+t
+.
+c_cc
+[
+VSTART
+] = 
+posix_vdi§bË
+;
+
+1897 
+t
+.
+c_cc
+[
+VSTOP
+] = 
+posix_vdi§bË
+;
+
+1898 
+t
+.
+c_cc
+[
+VSUSP
+] = 
+posix_vdi§bË
+;
+
+1900 
+t
+.
+c_cc
+[
+VINTR
+] = 
+_POSIX_VDISABLE
+;
+
+1901 
+t
+.
+c_cc
+[
+VQUIT
+] = 
+_POSIX_VDISABLE
+;
+
+1902 
+t
+.
+c_cc
+[
+VSTART
+] = 
+_POSIX_VDISABLE
+;
+
+1903 
+t
+.
+c_cc
+[
+VSTOP
+] = 
+_POSIX_VDISABLE
+;
+
+1904 
+t
+.
+c_cc
+[
+VSUSP
+] = 
+_POSIX_VDISABLE
+;
+
+1907 
+¥“d_t
+ 
+¥“d
+ = 
+baud_b™s
+[
+cmux_pÜt_¥“d
+];
+
+1908 
+	`cf£ti¥“d
+(&
+t
+, 
+¥“d
+);
+
+1909 
+	`cf£to¥“d
+(&
+t
+, 
+¥“d
+);
+
+1910 
+	`SYSCHECK
+(
+	`tc£‰r
+(
+£rŸl
+->
+fd
+, 
+TCSANOW
+, &
+t
+));
+
+1911 
+¡©us
+ = 
+TIOCM_DTR
+ | 
+TIOCM_RTS
+;
+
+1912 
+	`ioùl
+(
+£rŸl
+->
+fd
+, 
+TIOCMBIS
+, &
+¡©us
+);
+
+1913 
+	`LOGMUX
+(
+LOG_INFO
+, "Configured serial device");
+
+1914 
+£rŸl
+->
+pšg_numb”
+ = 0;
+
+1915 
+	`time
+(&
+£rŸl
+->
+äame_»ûive_time
+);
+
+1916 
+£rŸl
+->
+¡©e
+ = 
+MUX_STATE_INITILIZING
+;
+
+1917 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Sw™ched Mux s‹Ø%d ",
+£rŸl
+->
+¡©e
+);
+
+1919 
+	}
+}
+
+1926 
+	$¡¬t_mux”
+(
+
+1927 
+S”Ÿl
+* 
+£rŸl
+
+
+1930 
+	`LOGMUX
+(
+LOG_INFO
+, "Configuring modem");
+
+1931 
+gsm_commªd
+[100];
+
+1933 ià(
+	`ch©
+(
+£rŸl
+->
+fd
+, "AT\r\n", 1) < 0)
+
+1935 
+	`LOGMUX
+(
+LOG_WARNING
+, "Modem does‚ot„espondo AT commands,rying close mux mode");
+
+1937 
+	`wr™e_äame
+(0, 
+NULL
+, 0, 
+GSM0710_CONTROL_CLD
+ | 
+GSM0710_CR
+);
+
+1939 
+	`wr™e_äame
+(0, 
+şo£_chªÃl_cmd
+, 2, 
+GSM0710_TYPE_UIH
+);
+
+1940 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, "AT\r\n", 1));
+
+1942 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, "ATZ\r\n", 3));
+
+1943 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, "ATE0\r\n", 1));
+
+1946 
+	`SYSCHECK
+(
+	`¢´štf
+(
+gsm_commªd
+, (gsm_commªd), "AT+IPR=%d\r\n", 
+baud_¿‹s
+[
+cmux_pÜt_¥“d
+]));
+
+1947 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, 
+gsm_commªd
+, 1));
+
+1948 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, "AT\r\n", 1));
+
+1949 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, "AT&S0\r\n", 1));
+
+1950 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, "AT\\Q3\r\n", 1));
+
+1952 ià(
+pš_code
+ >= 0)
+
+1954 
+	`LOGMUX
+(
+LOG_DEBUG
+, "£nd…š %04d", 
+pš_code
+);
+
+1956 
+	`SYSCHECK
+(
+	`¢´štf
+(
+gsm_commªd
+, (gsm_commªd), "AT+CPIN=%04d\r\n", 
+pš_code
+));
+
+1957 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, 
+gsm_commªd
+, 10));
+
+1960 ià(
+cmux_mode
+){
+
+1961 
+	`SYSCHECK
+(
+	`¢´štf
+(
+gsm_commªd
+, (gsm_command), "AT+CMUX=1\r\n"));
+
+1964 
+	`SYSCHECK
+(
+	`¢´štf
+(
+gsm_commªd
+, (gsm_command), "AT+CMUX=%d,%d,%d,%d\r\n"
+
+1965 , 
+cmux_mode
+
+
+1966 , 
+cmux_sub£t
+
+
+1967 , 
+cmux_pÜt_¥“d
+
+
+1968 , 
+cmux_N1
+
+
+1972 
+	`LOGMUX
+(
+LOG_INFO
+, "Starting mux mode");
+
+1973 
+	`SYSCHECK
+(
+	`ch©
+(
+£rŸl
+->
+fd
+, 
+gsm_commªd
+, 3));
+
+1974 
+£rŸl
+->
+¡©e
+ = 
+MUX_STATE_MUXING
+;
+
+1975 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Sw™ched Mux s‹Ø%d ",
+£rŸl
+->
+¡©e
+);
+
+1976 
+	`LOGMUX
+(
+LOG_INFO
+, "Waiting for mux-mode");
+
+1977 
+	`¦“p
+(1);
+
+1978 
+	`LOGMUX
+(
+LOG_INFO
+, "Init control channel");
+
+1980 
+	}
+}
+
+1987 
+	$şo£_deviûs
+()
+
+1989 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+1990 
+i
+;
+
+1991 
+i
+=1;i<
+GSM0710_MAX_CHANNELS
+;i++)
+
+1995 ià(
+chªÃÎi¡
+[
+i
+].
+fd
+ >= 0)
+
+1997 ià(
+chªÃÎi¡
+[
+i
+].
+İ’ed
+)
+
+1999 
+	`LOGMUX
+(
+LOG_INFO
+, "Closšg dowÀthlogiÿÈchªÃÈ%d", 
+i
+);
+
+2000 ià(
+cmux_mode
+)
+
+2001 
+	`wr™e_äame
+(
+i
+, 
+NULL
+, 0, 
+GSM0710_CONTROL_CLD
+ | 
+GSM0710_CR
+);
+
+2003 
+	`wr™e_äame
+(
+i
+, 
+şo£_chªÃl_cmd
+, 2, 
+GSM0710_TYPE_UIH
+);
+
+2004 
+	`SYSCHECK
+(
+	`logiÿl_chªÃl_şo£
+(
+chªÃÎi¡
++
+i
+));
+
+2006 
+	`LOGMUX
+(
+LOG_INFO
+, "LogiÿÈchªÃÈ%d clo£d", 
+chªÃÎi¡
+[
+i
+].
+id
+);
+
+2009 ià(
+£rŸl
+.
+fd
+ >= 0)
+
+2011 ià(
+cmux_mode
+)
+
+2012 
+	`wr™e_äame
+(0, 
+NULL
+, 0, 
+GSM0710_CONTROL_CLD
+ | 
+GSM0710_CR
+);
+
+2014 
+	`wr™e_äame
+(0, 
+şo£_chªÃl_cmd
+, 2, 
+GSM0710_TYPE_UIH
+);
+
+2015 cÚ¡ * 
+poff
+ = "AT@POFF\r\n";
+
+2016 
+	`sy¦ogdump
+("> ", (*)
+poff
+, 
+	`¡¾’
+(poff));
+
+2017 
+	`wr™e
+(
+£rŸl
+.
+fd
+, 
+poff
+, 
+	`¡¾’
+(poff));
+
+2018 
+	`SYSCHECK
+(
+	`şo£
+(
+£rŸl
+.
+fd
+));
+
+2019 
+£rŸl
+.
+fd
+ = -1;
+
+2021 
+£rŸl
+.
+¡©e
+ = 
+MUX_STATE_OFF
+;
+
+2023 
+	}
+}
+
+2030 
+	$w©chdog
+(
+S”Ÿl
+ * 
+£rŸl
+)
+
+2032 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+2033 
+i
+;
+
+2035 
+	`LOGMUX
+(
+LOG_DEBUG
+, "S”ŸÈ¡©i %d", 
+£rŸl
+->
+¡©e
+);
+
+2036 
+£rŸl
+->
+¡©e
+)
+
+2038 
+MUX_STATE_OPENING
+:
+
+2039 ià(
+	`İ’_£rŸl_deviû
+(
+£rŸl
+) != 0){
+
+2040 
+	`LOGMUX
+(
+LOG_WARNING
+, "Could‚ot open serial device‡nd start muxer");
+
+2043 
+	`LOGMUX
+(
+LOG_INFO
+, "Watchdog started");
+
+2044 
+MUX_STATE_INITILIZING
+:
+
+2045 ià(
+	`¡¬t_mux”
+(
+£rŸl
+) < 0)
+
+2046 
+	`LOGMUX
+(
+LOG_WARNING
+, "Could‚Ù o³À®Èdeviû ªd s¹ mux”ƒ¼no=%d", 
+”ºo
+);
+
+2049 if(
+	`ü—‹_th»ad
+(&
+äame_as£mbly_th»ad
+, 
+as£mbË_äame_th»ad
+,(*è
+£rŸl
+->
+š_buf
+)!=0){
+
+2050 
+	`LOGMUX
+(
+LOG_ERR
+,"Could‚ot createhread for frame-assmbly");
+
+2055 
+PŞl_Th»ad_Arg
+* 
+pŞl_th»ad_¬g
+ = (PŞl_Th»ad_Arg*è
+	`m®loc
+((Poll_Thread_Arg));
+
+2056 
+pŞl_th»ad_¬g
+->
+fd
+ = 
+£rŸl
+->fd;
+
+2057 
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_±r
+ = &
+th»ad_£rŸl_deviû_»ad
+;
+
+2058 
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_¬g
+ = (*è
+£rŸl
+;
+
+2059 if(
+	`ü—‹_th»ad
+(&
+£r_»ad_th»ad
+, 
+pŞl_th»ad_£rŸl
+,(*è
+pŞl_th»ad_¬g
+)!=0){
+
+2060 
+	`LOGMUX
+(
+LOG_ERR
+,"Could‚Ù c»©th»ad fÜ†i¡’šg oÀ%s", 
+£rŸl
+->
+deviûÇme
+);
+
+2063 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Th»ad i ruÂšg‡nd†i¡’šg oÀ%s", 
+£rŸl
+->
+deviûÇme
+);
+
+2064 
+	`wr™e_äame
+(0, 
+NULL
+, 0, 
+GSM0710_TYPE_SABM
+ | 
+GSM0710_PF
+);
+
+2067 ià(
+vœ_pÜts
+<
+GSM0710_MAX_CHANNELS
+){
+
+2068 
+i
+=1;i<=
+vœ_pÜts
+;i++){
+
+2069 
+	`LOGMUX
+(
+LOG_INFO
+, "AÎoÿtšg†ogiÿÈchªÃÈ%d/%d ",
+i
+,
+vœ_pÜts
+);
+
+2070 if((
+	`c_®loc_chªÃl
+("w©chdog_š™", &
+p£udo_‹rmš®
+[
+i
+])) != 0)
+
+2071 
+	`£t_maš_ex™_sigÇl
+(1);
+
+2072 
+	`¦“p
+(1);
+
+2076 
+	`LOGMUX
+(
+LOG_ERR
+,"CªnÙ‡Îoÿ‹ %d vœtu®…Üts", 
+vœ_pÜts
+);
+
+2079 
+	`LOGMUX
+(
+LOG_INFO
+, "Multiplexing started..");
+
+2082 
+MUX_STATE_MUXING
+:
+
+2084 ià(
+±s_»İ’
+==1){
+
+2085 
+i
+=1;i<=
+vœ_pÜts
+;i++){
+
+2086 ià(
+chªÃÎi¡
+[
+i
+].
+»İ’
+ == 1){
+
+2087 if(
+	`»¡¬t_±y_š‹rçû
+(&
+chªÃÎi¡
+[
+i
+]) != 0)
+
+2089 
+	`£t_maš_ex™_sigÇl
+(1);
+
+2092 
+chªÃÎi¡
+[
+i
+].
+»İ’
+ = 0;
+
+2093 
+	`±h»ad_mu‹x_lock
+(&
+±s_»İ’_lock
+);
+
+2094 
+±s_»İ’
+=0;
+
+2095 
+	`±h»ad_mu‹x_uÆock
+(&
+±s_»İ’_lock
+);
+
+2101 ià(
+u£_pšg
+)
+
+2103 ià(
+£rŸl
+->
+pšg_numb”
+ > 
+u£_pšg
+)
+
+2105 
+	`LOGMUX
+(
+LOG_DEBUG
+, "nØpšg„•ly fÜ %dimes,„e£‰šg modem", 
+£rŸl
+->
+pšg_numb”
+);
+
+2106 
+£rŸl
+->
+¡©e
+ = 
+MUX_STATE_CLOSING
+;
+
+2107 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Sw™ched Mux s‹Ø%d ",
+£rŸl
+->
+¡©e
+);
+
+2111 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Sending PINGohe modem");
+
+2113 
+	`wr™e_äame
+(0, 
+‹¡_chªÃl_cmd
+, Ñe¡_chªÃl_cmd), 
+GSM0710_TYPE_UI
+);
+
+2114 
+£rŸl
+->
+pšg_numb”
+++;
+
+2117 ià(
+u£_timeout
+)
+
+2119 
+time_t
+ 
+cu¼’t_time
+;
+
+2120 
+	`time
+(&
+cu¼’t_time
+);
+
+2121 ià(
+cu¼’t_time
+ - 
+£rŸl
+->
+äame_»ûive_time
+ > 
+u£_timeout
+)
+
+2123 
+	`LOGMUX
+(
+LOG_DEBUG
+, "timeout,„esetting modem");
+
+2124 
+£rŸl
+->
+¡©e
+ = 
+MUX_STATE_CLOSING
+;
+
+2125 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Sw™ched Mux s‹Ø%d ",
+£rŸl
+->
+¡©e
+);
+
+2131 
+MUX_STATE_CLOSING
+:
+
+2132 
+	`şo£_deviûs
+();
+
+2133 
+£rŸl
+->
+¡©e
+ = 
+MUX_STATE_OPENING
+;
+
+2134 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Sw™ched Mux s‹Ø%d ",
+£rŸl
+->
+¡©e
+);
+
+2137 
+	`LOGMUX
+(
+LOG_WARNING
+, "DÚ'ˆknow howØhªdË s‹ %d", 
+£rŸl
+->
+¡©e
+);
+
+2141 
+	}
+}
+
+2148 
+	$u§ge
+(
+
+2149 *
+_Çme
+)
+
+2151 
+	`årštf
+(
+¡d”r
+, "\tU§ge: % [İtiÚs]\n", 
+_Çme
+);
+
+2152 
+	`årštf
+(
+¡d”r
+, "Options:\n");
+
+2154 
+	`årštf
+(
+¡d”r
+, "\t-d: FÜk, g‘‡ d«mÚ [%s]\n", 
+no_d«mÚ
+?"no":"yes");
+
+2155 
+	`årštf
+(
+¡d”r
+, "\t-v: S‘ v”bo£†oggšg†ev–. 0 (S’tè- 7 (Debugè[%d]\n",
+sy¦og_Ëv–
+);
+
+2157 
+	`årštf
+(
+¡d”r
+, "\t- <£rŸÈpÜˆÇme>: S”ŸÈpÜˆdeviûØcÚÃùØ[%s]\n", 
+£rŸl
+.
+deviûÇme
+);
+
+2158 
+	`årštf
+(
+¡d”r
+, "\t-ˆ<timeout>:„e£ˆmodem‡á”hi numb” oà£cÚd oàs’û [%d]\n", 
+u£_timeout
+);
+
+2159 
+	`årštf
+(
+¡d”r
+, "\t-P <pš-code>: PIN codtØuÆock SIM [%d]\n", 
+pš_code
+);
+
+2160 
+	`årštf
+(
+¡d”r
+, "\t-°<numb”>: u£…šg‡nd„e£ˆmodem‡á”hi numb” oàuÇnsw”ed…šg [%d]\n", 
+u£_pšg
+);
+
+2162 
+	`årštf
+(
+¡d”r
+, "\t-b <baud¿‹>: modbaud¿‹ [%d]\n", 
+baud_¿‹s
+[
+cmux_pÜt_¥“d
+]);
+
+2163 
+	`årštf
+(
+¡d”r
+, "\t-m <modem>: Mod(basic,‡dvªûdè[%s]\n", 
+cmux_mode
+?"advanced":"basic");
+
+2164 
+	`årštf
+(
+¡d”r
+, "\t-à<äamsize>: F¿msiz[%d]\n", 
+cmux_N1
+);
+
+2165 
+	`årštf
+(
+¡d”r
+, "\t-À<numb” oàpÜts>: Numb” oàvœtu®…Üt tØü—‹, mu¡ bš„ªg1-31 [%d]\n", 
+vœ_pÜts
+);
+
+2166 
+	`årštf
+(
+¡d”r
+, "\t-Ø<ouuˆlogØfe>: OuuˆlogØ/tmp/gsm0710muxd.log [%s]\n", 
+logtofe
+?"yes":"no");
+
+2168 
+	`årštf
+(
+¡d”r
+, "\t-h: Showhis help message‡nd show current settings.\n");
+
+2170 
+	}
+}
+
+2177 
+	$£t_maš_ex™_sigÇl
+(
+sigÇl
+){
+
+2179 
+	`±h»ad_mu‹x_lock
+(&
+maš_ex™_sigÇl_lock
+);
+
+2180 
+maš_ex™_sigÇl
+ = 
+sigÇl
+;
+
+2181 
+	`±h»ad_mu‹x_uÆock
+(&
+maš_ex™_sigÇl_lock
+);
+
+2182 
+	}
+}
+
+2191 
+	$ü—‹_th»ad
+(
+±h»ad_t
+ * 
+th»ad_id
+, * 
+th»ad_funùiÚ
+, * 
+th»ad_funùiÚ_¬g
+ ){
+
+2192 
+	`LOGMUX
+(
+LOG_DEBUG
+,"Enter");
+
+2193 
+	`±h»ad_©Œ_š™
+(&
+th»ad_©Œ
+);
+
+2194 
+	`±h»ad_©Œ_£td‘ach¡©e
+(&
+th»ad_©Œ
+, 
+PTHREAD_CREATE_DETACHED
+);
+
+2196 if(
+	`±h»ad_ü—‹
+(
+th»ad_id
+, &
+th»ad_©Œ
+, 
+th»ad_funùiÚ
+, 
+th»ad_funùiÚ_¬g
+)!=0){
+
+2197 
+”ºo
+){
+
+2198 
+EAGAIN
+:
+
+2199 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EAGAIN caught");
+
+2201 
+EINVAL
+:
+
+2202 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINVAL caught");
+
+2205 
+	`LOGMUX
+(
+LOG_ERR
+,"Unknown interrupt signal caught");
+
+2207 
+	`LOGMUX
+(
+LOG_ERR
+,"Could‚ot createhread");
+
+2208 
+	`£t_maš_ex™_sigÇl
+(1);
+
+2211 
+	`±h»ad_©Œ_de¡roy
+(&
+th»ad_©Œ
+);
+
+2213 
+	}
+}
+
+2221 * 
+	$pŞl_th»ad
+(*
+v¬gp
+) {
+
+2222 
+	`LOGMUX
+(
+LOG_DEBUG
+,"Enter");
+
+2223 
+PŞl_Th»ad_Arg
+* 
+pŞl_th»ad_¬g
+ = (PŞl_Th»ad_Arg*)
+v¬gp
+;
+
+2224 if(
+pŞl_th»ad_¬g
+->
+fd
+== -1 ){
+
+2225 
+	`LOGMUX
+(
+LOG_ERR
+, "Serial…ort‚ot initialized");
+
+2226 
+‹rmš©e
+;
+
+2230 
+fd_£t
+ 
+fdr
+,
+fdw
+;
+
+2231 
+	`FD_ZERO
+(&
+fdr
+);
+
+2232 
+	`FD_ZERO
+(&
+fdw
+);
+
+2233 
+	`FD_SET
+(
+pŞl_th»ad_¬g
+->
+fd
+,&
+fdr
+);
+
+2234 ià(
+	`£Ëù
+((1+
+pŞl_th»ad_¬g
+->
+fd
+),&
+fdr
+,&
+fdw
+,
+NULL
+,NULL)>0) {
+
+2235 ià(
+	`FD_ISSET
+(
+pŞl_th»ad_¬g
+->
+fd
+,&
+fdr
+)) {
+
+2236 if((*(
+pŞl_th»ad_¬g
+->
+»ad_funùiÚ_±r
+))ÕŞl_th»ad_¬g->
+»ad_funùiÚ_¬g
+)!=0){
+
+2237 
+	`LOGMUX
+(
+LOG_WARNING
+, "Device„ead function„eturnedƒrror");
+
+2238 
+‹rmš©e
+;
+
+2243 
+”ºo
+){
+
+2244 
+EINTR
+:
+
+2245 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINTR caught");
+
+2247 
+EAGAIN
+:
+
+2248 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EAGAIN caught");
+
+2250 
+EBADF
+:
+
+2251 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EBADF caught");
+
+2253 
+EINVAL
+:
+
+2254 
+	`LOGMUX
+(
+LOG_ERR
+,"Interrupt signal EINVAL caught");
+
+2257 
+	`LOGMUX
+(
+LOG_ERR
+,"Unknown interrupt signal caught\n");
+
+2259 
+‹rmš©e
+;
+
+2262 
+‹rmš©e
+;
+
+2264 
+‹rmš©e
+:
+
+2265 
+	`LOGMUX
+(
+LOG_ERR
+, "Device…ollinghreaderminated");
+
+2266 
+	`ä“
+(
+pŞl_th»ad_¬g
+);
+
+2267  
+NULL
+;
+
+2268 
+	}
+}
+
+2276 
+	$maš
+(
+¬gc
+,*
+¬gv
+[])
+
+2278 
+	`LOGMUX
+(
+LOG_DEBUG
+, "Enter");
+
+2279 
+İt
+;
+
+2281 
+£rŸl
+.
+deviûÇme
+ = "/dev/ttyS0";
+
+2282 (
+İt
+ = 
+	`g‘İt
+(
+¬gc
+, 
+¬gv
+, "dov:s:t:p:f:n:h?m:b:P:")) > 0)
+
+2284 
+İt
+)
+
+2287 
+sy¦og_Ëv–
+ = 
+	`©oi
+(
+İrg
+);
+
+2288 ià((
+sy¦og_Ëv–
+>
+LOG_DEBUG
+) || (syslog_level < 0)){
+
+2289 
+	`u§ge
+(
+¬gv
+[0]);
+
+2290 
+	`ex™
+(0);
+
+2291 #ifdeà
+MUX_ANDROID
+
+
+2297 
+logtofe
+ = 1;
+
+2298 ià((
+muxlogfe
+=
+	`fİ’
+("/tmp/gsm0710muxd.log", "w+")è=ğ
+NULL
+){
+
+2299 
+	`årštf
+(
+¡d”r
+, "E¼Ü: %s.\n", 
+	`¡»¼Ü
+(
+”ºo
+));
+
+2300 
+	`u§ge
+(
+¬gv
+[0]);
+
+2301 
+	`ex™
+(0);
+
+2304 
+	`årštf
+(
+¡d”r
+, "gsm0710muxd†og is outputo /tmp/gsm0710muxd.log\n");
+
+2307 
+no_d«mÚ
+ = !no_daemon;
+
+2310 
+£rŸl
+.
+deviûÇme
+ = 
+İrg
+;
+
+2313 
+u£_timeout
+ = 
+	`©oi
+(
+İrg
+);
+
+2316 
+u£_pšg
+ = 
+	`©oi
+(
+İrg
+);
+
+2319 
+pš_code
+ = 
+	`©oi
+(
+İrg
+);
+
+2323 
+cmux_N1
+ = 
+	`©oi
+(
+İrg
+);
+
+2326 
+vœ_pÜts
+ = 
+	`©oi
+(
+İrg
+);
+
+2327 ià((
+vœ_pÜts
+>
+GSM0710_MAX_CHANNELS
+-1) || (vir_ports < 1)){
+
+2328 
+	`u§ge
+(
+¬gv
+[0]);
+
+2329 
+	`ex™
+(0);
+
+2333 ià(!
+	`¡rcmp
+(
+İrg
+, "basic"))
+
+2334 
+cmux_mode
+ = 0;
+
+2335 ià(!
+	`¡rcmp
+(
+İrg
+, "advanced"))
+
+2336 
+cmux_mode
+ = 1;
+
+2338 
+cmux_mode
+ = 0;
+
+2341 
+cmux_pÜt_¥“d
+ = 
+	`baud_¿‹_šdex
+(
+	`©oi
+(
+İrg
+));
+
+2346 
+	`u§ge
+(
+¬gv
+[0]);
+
+2347 
+	`ex™
+(0);
+
+2352 
+	`umask
+(0);
+
+2354 
+	`sigÇl
+(
+SIGHUP
+, 
+sigÇl_Œ—tm’t
+);
+
+2355 
+	`sigÇl
+(
+SIGPIPE
+, 
+sigÇl_Œ—tm’t
+);
+
+2356 
+	`sigÇl
+(
+SIGKILL
+, 
+sigÇl_Œ—tm’t
+);
+
+2357 
+	`sigÇl
+(
+SIGINT
+, 
+sigÇl_Œ—tm’t
+);
+
+2358 
+	`sigÇl
+(
+SIGUSR1
+, 
+sigÇl_Œ—tm’t
+);
+
+2359 
+	`sigÇl
+(
+SIGTERM
+, 
+sigÇl_Œ—tm’t
+);
+
+2361 #iâdeà
+MUX_ANDROID
+
+
+2362 ià(
+no_d«mÚ
+)
+
+2363 
+	`İ’log
+(
+¬gv
+[0], 
+LOG_NDELAY
+ | 
+LOG_PID
+ | 
+LOG_PERROR
+, 
+LOG_LOCAL0
+);
+
+2365 
+	`İ’log
+(
+¬gv
+[0], 
+LOG_NDELAY
+ | 
+LOG_PID
+, 
+LOG_LOCAL0
+);
+
+2368 ià((
+£rŸl
+.
+š_buf
+ = 
+	`gsm0710_bufãr_š™
+()è=ğ
+NULL
+
+
+2369 || (
+£rŸl
+.
+adv_äame_buf
+ = (*)
+	`m®loc
+((
+cmux_N1
+ + 3è* 2 + 2)è=ğ
+NULL
+)
+
+2371 
+	`LOGMUX
+(
+LOG_ERR
+,"Out of memory");
+
+2372 
+	`ex™
+(-1);
+
+2374 
+	`LOGMUX
+(
+LOG_DEBUG
+, "% % ¡¬tšg", *
+¬gv
+, 
+»visiÚ
+);
+
+2376 
+£rŸl
+.
+¡©e
+ = 
+MUX_STATE_OPENING
+;
+
+2378 
+	`LOGMUX
+(
+LOG_INFO
+,"Called with following options:");
+
+2379 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-d: FÜk, g‘‡ d«mÚ [%s]", 
+no_d«mÚ
+?"no":"yes");
+
+2380 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-v: S‘ v”bo£†oggšg†ev–. 0 (S’tè- 7 (Debugè[%d]",
+sy¦og_Ëv–
+);
+
+2381 
+	`LOGMUX
+(
+LOG_INFO
+,"\t- <£rŸÈpÜˆÇme>: S”ŸÈpÜˆdeviûØcÚÃùØ[%s]", 
+£rŸl
+.
+deviûÇme
+);
+
+2382 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-ˆ<timeout>:„e£ˆmodem‡á”hi numb” oà£cÚd oàs’û [%d]", 
+u£_timeout
+);
+
+2383 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-P <pš-code>: PIN codtØuÆock SIM [%d]", 
+pš_code
+);
+
+2384 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-°<numb”>: u£…šg‡nd„e£ˆmodem‡á”hi numb” oàuÇnsw”ed…šg [%d]", 
+u£_pšg
+);
+
+2385 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-b <baud¿‹>: modbaud¿‹ [%d]", 
+baud_¿‹s
+[
+cmux_pÜt_¥“d
+]);
+
+2386 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-m <modem>: Mod(basic,‡dvªûdè[%s]", 
+cmux_mode
+?"advanced":"basic");
+
+2387 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-à<äamsize>: F¿msiz[%d]", 
+cmux_N1
+);
+
+2388 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-À<numb” oàpÜts>: Numb” oàvœtu®…Üt tØü—‹, mu¡ bš„ªg1-31 [%d]", 
+vœ_pÜts
+);
+
+2389 
+	`LOGMUX
+(
+LOG_INFO
+,"\t-Ø<ouuˆlogØfe>: OuuˆlogØ/tmp/gsm0710muxd.log [%s]", 
+logtofe
+?"yes":"no");
+
+2391 (
+maš_ex™_sigÇl
+==0è&& (
+	`w©chdog
+(&
+£rŸl
+)==0)){
+
+2392 
+	`LOGMUX
+(
+LOG_INFO
+, "GSM0710 bufãr. StÜed %d", 
+	`gsm0710_bufãr_Ëngth
+(
+£rŸl
+.
+š_buf
+));
+
+2393 
+	`LOGMUX
+(
+LOG_INFO
+, "F¿me »ûived/drİ³d: %d/%d",
+£rŸl
+.
+š_buf
+->
+»ûived_couÁ
+,£rŸl.š_buf->
+drİ³d_couÁ
+);
+
+2394 
+	`¦“p
+(5);
+
+2399 
+	`SYSCHECK
+(
+	`şo£_deviûs
+());
+
+2400 
+	`ä“
+(
+£rŸl
+.
+adv_äame_buf
+);
+
+2401 
+	`gsm0710_bufãr_de¡roy
+(
+£rŸl
+.
+š_buf
+);
+
+2402 
+	`LOGMUX
+(
+LOG_INFO
+, "Received %ld frames‡nd dropped %ld„eceived frames duringhe mux-mode",
+
+2403 
+£rŸl
+.
+š_buf
+->
+»ûived_couÁ
+, s”Ÿl.š_buf->
+drİ³d_couÁ
+);
+
+2404 
+	`LOGMUX
+(
+LOG_DEBUG
+, "% fšished", 
+¬gv
+[0]);
+
+2406 #iâdeà
+MUX_ANDROID
+
+
+2407 
+	`şo£log
+();
+
+2410 ià(
+logtofe
+)
+
+2411 
+	`fşo£
+(
+muxlogfe
+);
+
+2414 
+	}
+}
+
+	@D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\src\tags
+
+1 !
+	g_TAG_FILE_FORMAT
+ 2 /
+ex‹nded
+ 
+	gfÜm©
+; --fÜm©=1 
+wl
+ 
+nÙ
+ 
+­³nd
+ ;"o†ines/
+
+2 !
+	g_TAG_FILE_SORTED
+ 1 /0=
+unsÜ‹d
+, 1=
+sÜ‹d
+, 2=
+fŞdÿ£
+/
+
+3 !
+_TAG_PROGRAM_AUTHOR
+ 
+D¬»n
+ 
+H›b”t
+ /
+dh›b”t
+@
+u£rs
+.
+sourûfÜge
+.
+Ãt
+/
+
+4 !
+_TAG_PROGRAM_NAME
+ 
+Exub”ªt
+ 
+Cgs
+
+
+5 !
+_TAG_PROGRAM_URL
+ 
+h‰p
+:
+
+6 !
+_TAG_PROGRAM_VERSION
+ 5.8
+
+7 
+ChªÃl
+ .\
+gsm0710muxd
+.
+c
+ /^ChªÃÈ\/\/ 
+	tChªÃl
+ 
+	td©a$
+/;" s file:
+
+8 
+	gChªÃl
+ .\
+	ggsm0710muxd
+.
+	gc
+ /^} ChªÃl;
+	g$
+/;"yperef:struct:Channel file:
+
+9 
+	gChªÃl
+::
+deviûÇme
+ .\
+gsm0710muxd
+.
+c
+ /^ * deviûÇme;
+	g$
+/;" m struct:Channel file:
+
+10 
+	gChªÃl
+::
+disc_ua_³ndšg
+ .\
+gsm0710muxd
+.
+c
+ /^ disc_ua_³ndšg;
+	g$
+/;" m struct:Channel file:
+
+11 
+	gChªÃl
+::
+fd
+ .\
+gsm0710muxd
+.
+c
+ /^ fd;
+	g$
+/;" m struct:Channel file:
+
+12 
+	gChªÃl
+::
+id
+ .\
+gsm0710muxd
+.
+c
+ /^ id; \/\/ 
+	ggsm
+ 07 10 
+chªÃl
+ 
+	gid$
+/;" m struct:Channel file:
+
+13 
+	gChªÃl
+::
+İ’ed
+ .\
+gsm0710muxd
+.
+c
+ /^ İ’ed;
+	g$
+/;" m struct:Channel file:
+
+14 
+	gChªÃl
+::
+Üigš
+ .\
+gsm0710muxd
+.
+c
+ /^ * origš;
+	g$
+/;" m struct:Channel file:
+
+15 
+	gChªÃl
+::
+±¢ame
+ .\
+gsm0710muxd
+.
+c
+ /^ *…t¢ame;
+	g$
+/;" m struct:Channel file:
+
+16 
+	gChªÃl
+::
+»maššg
+ .\
+gsm0710muxd
+.
+c
+ /^ »maššg;
+	g$
+/;" m struct:Channel file:
+
+17 
+	gChªÃl
+::
+»İ’
+ .\
+gsm0710muxd
+.
+c
+ /^ »İ’;
+	g$
+/;" m struct:Channel file:
+
+18 
+	gChªÃl
+::
+tmp
+ .\
+gsm0710muxd
+.
+c
+ /^ *tmp;
+	g$
+/;" m struct:Channel file:
+
+19 
+	gChªÃl
+::
+v24_sigÇls
+ .\
+gsm0710muxd
+.
+c
+ /^ v24_sigÇls;
+	g$
+/;" m struct:Channel file:
+
+20 
+	gGSM0710_BUFFER_SIZE
+ .\
+	ggsm0710muxd
+.
+	gc
+ 160;" d file:
+
+21 
+	gGSM0710_Bufãr
+ .\
+	ggsm0710muxd
+.
+	gc
+ /^
+	gGSM0710_Bufãr$
+/;" s file:
+
+22 
+	gGSM0710_Bufãr
+ .\
+	ggsm0710muxd
+.
+	gc
+ /^} GSM0710_Bufãr;
+	g$
+/;"yperef:struct:GSM0710_Buffer file:
+
+23 
+	gGSM0710_Bufãr
+::
+adv_d©a
+ .\
+gsm0710muxd
+.
+c
+ /^ adv_d©a[
+GSM0710_BUFFER_SIZE
+];
+	g$
+/;" m struct:GSM0710_Buffer file:
+
+24 
+	gGSM0710_Bufãr
+::
+adv_found_esc
+ .\
+gsm0710muxd
+.
+c
+ /^ adv_found_esc;
+	g$
+/;" m struct:GSM0710_Buffer file:
+
+25 
+	gGSM0710_Bufãr
+::
+adv_Ëngth
+ .\
+gsm0710muxd
+.
+c
+ /^ adv_Ëngth;
+	g$
+/;" m struct:GSM0710_Buffer file:
+
+26 
+	gGSM0710_Bufãr
+::
+d©a
+ .\
+gsm0710muxd
+.
+c
+ /^ d©a[
+GSM0710_BUFFER_SIZE
+];
+	g$
+/;" m struct:GSM0710_Buffer file:
+
+27 
+	gGSM0710_Bufãr
+::
+d©acouÁ
+ .\
+gsm0710muxd
+.
+c
+ /^ d©acouÁ;
+	g$
+/;" m struct:GSM0710_Buffer file:
+
+28 
+	gGSM0710_Bufãr
+::
+drİ³d_couÁ
+ .\
+gsm0710muxd
+.
+c
+ /^ drİ³d_couÁ;
+	g$
+/;" m struct:GSM0710_Buffer file:
+
+29 
+	gGSM0710_Bufãr
+::
+’dp
+ .\
+gsm0710muxd
+.
+c
+ /^ *’dp;
+	g$
+/;" m struct:GSM0710_Buffer file:
+
+30 
+	gGSM0710_Bufãr
+::
+æag_found
+ .\
+gsm0710muxd
+.
+c
+ /^ æag_found;\/\/ 
+£t
+ 
+Ï¡
+ 
+ch¬aù”
+ 
+»ad
+ 
+was
+ 
+	gæag$
+/;" m struct:GSM0710_Buffer file:
+
+31 
+	gGSM0710_Bufãr
+::
+šput_¦“pšg
+ .\
+gsm0710muxd
+.
+c
+ /^ input_sleeping; \
+
+	@
+1
+.
+0
+6
+446
+D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\Android.mk
+D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\COPYING
+D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\Makefile
+D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\src\create_tag.bat
+D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\src\gsm0710muxd.c
+D:\work\mine\121203_2.5G_L4\MUX\mux²Î¿¼´úÂë(ÊÕ¼¯)\gsm0710muxd\src\tags
