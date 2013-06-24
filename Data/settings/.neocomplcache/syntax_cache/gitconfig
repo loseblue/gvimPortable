@@ -1,1 +1,0 @@
-['end', 'skip', 'nextgroup', 'gitconfigComment', 'gitconfigSection', 'gitconfigAssignment', 'gitconfigNone', 'gitconfigBoolean', 'gitconfigNumber', 'gitConfigString', 'gitConfigEscape', 'gitConfigError', 'gitconfigVariable', 'yes', 'xxx', 'z0-9', 'start', 'keepend', 'false', 'kip', 'match', 'matchgroup', 'roup', 'a-z0-9', 'eepend', 'true', 'contains']

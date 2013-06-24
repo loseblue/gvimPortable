@@ -41,24 +41,20 @@ Bundle 'Mark'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Marks-Browser'
 Bundle 'matchit.zip'
-" Bundle 'Shougo/neocomplcache'
-" Bundle 'Shougo/neosnippet'
-" Bundle 'Rip-Rip/clang_complete'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
 " ======easytags=====
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-shell'
 " ======easytags=====
-
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
-Bundle 'loseblue/springColorScheme'
-Bundle 'Wombat'
-Bundle 'dsolstad/vim-wombat256i'
 Bundle 'Tagbar'
 Bundle 'wesleyche/SrcExpl'
 Bundle 'taglist.vim'
 Bundle 'genutils'
+Bundle 'EasyGrep'
 Bundle 'loseblue/TabBar'
 Bundle 'surround.vim'
 Bundle 'jiazhoulvke/myproject'
@@ -68,6 +64,12 @@ Bundle 'drmingdrmer/xptemplate'
 Bundle 'loseblue/TxtBrowser'
 Bundle 'godlygeek/tabular'
 Bundle 'DrawIt'
+Bundle 'CRefVim'
+"==========colorscheme============
+Bundle 'loseblue/springColorScheme'
+Bundle 'loseblue/Wombat'
+Bundle 'dsolstad/vim-wombat256i'
+"==========colorscheme============
 
 filetype plugin indent on    " required!
 
@@ -197,7 +199,7 @@ map <silent> <F1> :if &guioptions =~# 'T' <Bar>
             \endif<CR>
 "}
 
-map <F2> :%s/\r//g<cr>:w<cr>gg
+map <F2> :MarksBrowser<cr>
 
 "F3 file infor
 let g:vimrc_author='loseblue' 
@@ -205,8 +207,8 @@ let g:vimrc_email='loseblue[a]163.com'
 let g:vimrc_homepage='http://www.google.com' 
 nmap <F3> :AuthorInfoDetect<cr>
 
-" :nmap <F4> :exec 'lvimgrep /' . input('/', expand('<cword>')) . '/j % <bar> lopen'<CR>
 :nmap <F4> :exec 'lvimgrep /' . input('/') . '/j % <bar> lopen'<CR>
+map <F5> :%s/\r//g<cr>:w<cr>gg
 imap <F7> <C-R>=strftime("%c")<CR>
 
 " <F9> open Tagbar
@@ -248,8 +250,6 @@ let showmarks_hlline_lower = 1
 let showmarks_hlline_upper = 1 
 "}
 
-" markbrowser setting
-nmap <silent> <leader>mk :MarksBrowser<cr>
 
 " a.vim {
 let g:alternateNoDefaultAlternate = 1
@@ -320,80 +320,6 @@ let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ."
 let g:SrcExpl_updateTagsKey = "<F12>" 
 "}
 
-" "neocomplcache{
-" let g:acp_enableAtStartup = 0
-" let g:neocomplcache_enable_at_startup = 1
-" let g:neocomplcache_enable_smart_case = 1
-" let g:neocomplcache_enable_camel_case_completion = 1
-" let g:neocomplcache_enable_underbar_completion = 1
-" let g:neocomplcache_min_syntax_length = 3
-" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-" " Define file-type dependent dictionaries.
-" let g:neocomplcache_dictionary_filetype_lists = {
-            " \ 'default' : '',
-            " \ 'vimshell' : $HOME.'/.vimshell_hist',
-            " \ 'scheme' : $HOME.'/.gosh_completions'
-            " \ }
-
-" " Define keyword, for minor languages
-" if !exists('g:neocomplcache_keyword_patterns')
-    " let g:neocomplcache_keyword_patterns = {}
-" endif
-" let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" " Plugin key-mappings.
-" imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-" smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-" inoremap <expr><C-g>     neocomplcache#undo_completion()
-" inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" " Recommended key-mappings.
-" " <CR>: close popup and save indent.
-" inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" " <TAB>: completion.
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" " <C-h>, <BS>: close popup and delete backword char.
-" inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-" inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-" inoremap <expr><C-y>  neocomplcache#close_popup()
-" inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" " Enable omni completion. Not required if they are already set elsewhere in .vimrc
-" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" " Enable heavy omni completion, which require computational power and may stall the vim. 
-" if !exists('g:neocomplcache_omni_patterns')
-    " let g:neocomplcache_omni_patterns = {}
-" endif
-" let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-" "autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-" let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-" let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-" let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
-" "}
-
-" "{ neosnippet
-" " Plugin key-mappings.
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-
-" " SuperTab like snippets behavior.
-" imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" " For snippet_complete marker.
-" if has('conceal')
-    " set conceallevel=2 concealcursor=i
-" endif
-" "}
-
-
 " ctrlp{
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -422,13 +348,6 @@ set nocompatible
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-" "clang_complete
-" let g:clang_auto_select=1
-" let g:clang_complete_auto=1
-" let g:clang_use_library=1 
-" let g:clang_library_path="d:/\MySoftWare/\gVimPortable/\soft"
-
-
 " vim-easytags
 set tags=./tags;
 let g:easytags_dynamic_files = 1
@@ -436,4 +355,89 @@ let g:easytags_events = ['BufWritePost']
 let g:easytags_always_enabled = 1
 let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
+
+" CRefVim
+map <silent> <unique> <Leader>ct <Plug>CRV_CRefVimInvoke
+
+"-------------------------------------------------------------------------------
+
+"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+
+" Define dictionary.
+let g:neocomplcache_dictionary_filetype_lists = {
+            \ 'default' : '',
+            \ 'vimshell' : $HOME.'/.vimshell_hist',
+            \ 'scheme' : $HOME.'/.gosh_completions'
+            \ }
+
+" Define keyword.
+if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+    return neocomplcache#smart_close_popup() . "\<CR>"
+    " For no inserting <CR> key.
+    "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-TAB>  pumvisible() ? "\<C-p>" : "\<C-TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
+" AutoComplPop like behavior.
+let g:neocomplcache_enable_auto_select = 1
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+    let g:neocomplcache_omni_patterns = {}
+endif
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+
+"-------------------------------------------------------------------------------
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+xmap <C-l>     <Plug>(neosnippet_start_unite_snippet_target)
+"禁止预览窗口
+set completeopt-=preview
+" For snippet_complete marker.
+if has('conceal')
+    set conceallevel=2 concealcursor=i
+endif
+
+" 代码片段集
+" NeoBundle 'honza/snipmate-snippets'
+" NeoBundle 'spf13/snipmate-snippets'
+" Tell Neosnippet about the other snippets
+" let g:neosnippet#snippets_directory=$VIMFILES.'/bundle/snipmate-snippets/snippets'
 
