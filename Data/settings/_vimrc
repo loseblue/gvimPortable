@@ -1,4 +1,4 @@
-"let g:ctrlp_by_filename = 0=============================================================================
+"=============================================================================
 "     FileName: _vimrc
 "         Desc: 
 "       Author: loseblue
@@ -34,7 +34,7 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 Bundle 'a.vim'
-Bundle 'brookhong/cscope.vim'
+" Bundle 'brookhong/cscope.vim'
 Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
 Bundle 'Mark'
@@ -44,10 +44,11 @@ Bundle 'matchit.zip'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 " ======easytags=====
-Bundle 'xolox/vim-easytags'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-shell'
+" Bundle 'xolox/vim-easytags'
+" Bundle 'xolox/vim-misc'
+" Bundle 'xolox/vim-shell'
 " ======easytags=====
+Bundle 'gtags.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'Tagbar'
@@ -99,9 +100,8 @@ set foldenable
 set fdm=indent      " floader lines
 set laststatus=2
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
-"set showcmd "shwo cursor poistion in nomoal mode 
-set cursorcolumn  " high light cursor column
-set cursorline    " high light cursor line
+" set cursorcolumn  " high light cursor column
+" set cursorline    " high light cursor line
 set linespace=-2   " set line high space
 set lines=25 columns=120 "init UI size
 set linebreak      "Do not cut words between lines, USELESS!
@@ -200,14 +200,14 @@ map <silent> <F1> :if &guioptions =~# 'T' <Bar>
 "}
 
 map <F2> :MarksBrowser<cr>
+:nmap <F3> :exec 'lvimgrep /' . input('/') . '/j % <bar> lopen'<CR>
 
-"F3 file infor
+"F4 file infor
 let g:vimrc_author='loseblue' 
 let g:vimrc_email='loseblue[a]163.com' 
 let g:vimrc_homepage='http://www.google.com' 
-nmap <F3> :AuthorInfoDetect<cr>
+nmap <F4> :AuthorInfoDetect<cr>
 
-:nmap <F4> :exec 'lvimgrep /' . input('/') . '/j % <bar> lopen'<CR>
 map <F5> :%s/\r//g<cr>:w<cr>gg
 imap <F7> <C-R>=strftime("%c")<CR>
 
@@ -247,7 +247,7 @@ let showmarks_enable = 1
 let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let showmarks_ignore_type = "hqm"
 let showmarks_hlline_lower = 1
-let showmarks_hlline_upper = 1 
+" let showmarks_hlline_upper = 1 
 "}
 
 
@@ -265,31 +265,28 @@ nmap <silent> <leader>pt :TagbarToggle<CR>
 map <leader>pn :MPNERDTREE<cr>
 
 
-if has("cscope")
-    set cscopequickfix=s-,c-,d-,i-,t-,e-
-    set cscopetagorder=0
-    set cscopetag
-    set nocscopeverbose
+" " add any database in current directory
+" if filereadable("cscope.out")
+    " cs add cscope.out
+    " " else add database pointed to by environment
+" elseif $CSCOPE_DB != ""
+    " cs add $CSCOPE_DB
+" endif
 
-    " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-        " else add database pointed to by environment
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
-    
+" set cscopequickfix=s-,c-,d-,i-,t-,e-
+" set cscopetagorder=0
+" set cscopetag
+" set nocscopeverbose
 
-    map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> "g: Find this definition 
-    map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> "d: Find functions called by this function 
-    map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> "c: Find functions calling this function 
-    map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> "t: Find this text string 
-    map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> "e: Find this egrep pattern 
-    map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> "f: Find this file 
-    map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> "i: Find files #including this file 
-    map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> 
-endif
-"}
+" map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR> "g: Find this definition 
+" map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR> "d: Find functions called by this function 
+" map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR> "c: Find functions calling this function 
+" map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR> "t: Find this text string 
+" map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR> "e: Find this egrep pattern 
+" map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR> "f: Find this file 
+" map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR> "i: Find files #including this file 
+" map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR> map <leader>l :call ToggleLocationList()<CR> 
+" "}
 
 "tabbar & tab swith{
 let g:Tb_UseSingleClick = 1
@@ -351,93 +348,12 @@ behave mswin
 " vim-easytags
 set tags=./tags;
 let g:easytags_dynamic_files = 1
-let g:easytags_events = ['BufWritePost']
-let g:easytags_always_enabled = 1
-let g:easytags_include_members = 1
+" let g:easytags_events = ['BufWritePost']
+" let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
 
 " CRefVim
 map <silent> <unique> <Leader>ct <Plug>CRV_CRefVimInvoke
 
-"-------------------------------------------------------------------------------
-
-"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-            \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
-            \ }
-
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return neocomplcache#smart_close_popup() . "\<CR>"
-    " For no inserting <CR> key.
-    "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><C-TAB>  pumvisible() ? "\<C-p>" : "\<C-TAB>"
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" AutoComplPop like behavior.
-let g:neocomplcache_enable_auto_select = 1
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
-endif
-"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-
-"-------------------------------------------------------------------------------
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-xmap <C-l>     <Plug>(neosnippet_start_unite_snippet_target)
-"禁止预览窗口
-set completeopt-=preview
-" For snippet_complete marker.
-if has('conceal')
-    set conceallevel=2 concealcursor=i
-endif
-
-" 代码片段集
-" NeoBundle 'honza/snipmate-snippets'
-" NeoBundle 'spf13/snipmate-snippets'
-" Tell Neosnippet about the other snippets
-" let g:neosnippet#snippets_directory=$VIMFILES.'/bundle/snipmate-snippets/snippets'
-
+source $HOME\cfg_neocomplcache.vim
+source $HOME\cfg_cscopeGtags.vim

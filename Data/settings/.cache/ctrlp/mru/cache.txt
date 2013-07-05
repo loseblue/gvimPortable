@@ -1,29 +1,87 @@
-D:\Projects\modem2.5g\branches\l4\navi\baseband\project.vim
-C:\Users\Administrator\Desktop\1.trc
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
-D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_agent\vc_project\trace\2013.06.23\Stt201306.23_17.24.trc
+C:\Users\Administrator\Desktop\2.trc
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_tools.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\project.vim
 D:\MySoftWare\gVimPortable\Data\settings\_vimrc
-D:\Projects\modem2.5g\branches\l4\tags\L4_V1.00.00_20130517\source\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_msg.h
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
+C:\Users\Administrator\Desktop\1.trc
+D:\MySoftWare\gVimPortable\Data\settings\cfg_cscopeGtags.vim
+D:\MySoftWare\gVimPortable\Data\settings\cfg_neocomplcache.vim
+d:\MySoftWare\gVimPortable\App\vim\vim73\doc\if_cscop.txt
+d:\MySoftWare\gVimPortable\App\vim\vim73\doc\quickfix.txt
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_main.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\spl_base.h
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\nw\src\spl_nw_main.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\stack\include\itf_api.h
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MT\MT未接通对端挂断
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MT\MT未接通本地挂断
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MT\MT接通本地挂断
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO未接通对端挂断
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO未接通本地挂断
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO接通对端挂断(OK)
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO接通本地挂断(OK)
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_common.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_tools.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\include\spl_common.h
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\include\at_common.h
+D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\neocomplcache\doc\neocomplcache.txt
+D:\MySoftWare\gVimPortable\Data\settings\neocomplcache.vimrc
+D:\MySoftWare\gVimPortable\Data\settings\neocomplcache.conf
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_command_table.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gc\src\at_cmd_gc.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+C:\Users\Administrator\Desktop\7.2-05.txt
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO接通对端挂断
+C:\Users\Administrator\Desktop\701_l1c_amr_8.trc
+C:\Users\Administrator\Desktop\701_l1c_amr_7.trc
+C:\Users\Administrator\Desktop\701_l1c_amr_5.trc
+C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO接通本地挂断
+D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
+C:\Documents and Settings\Administrator\.ssh\config
+C:\MinGW\bin\git-proxy
+C:\Documents and Settings\Administrator\.gitconfig
+D:\MySoftWare\git_proxy\git-proxy
+C:\Users\Administrator\Desktop\connect-1.103-win32-msvc\connect.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gprs\src\at_cmd_gprs.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_ds_msg.h
+C:\Users\Administrator\Desktop\2.jpg
+D:\Projects\modem2.5g\branches\l4\navi\baseband\tags
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\spl_const.h
+C:\Users\Administrator\.gitconfig
+C:\Users\Administrator\Desktop\Android AT Commmand Log\MO接通本端挂断.txt
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\id\src\at_cmd_id.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ppp\src\ppp.c
+D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\project.vim
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ppp\src\ppp_service.c
+C:\Users\Administrator\Desktop\Atd99#_RkModem_2.trc
+D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\vim-easytags\doc\easytags.txt
+C:\Users\Administrator\Desktop\Atd99#_RkModem_data.trc
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\include\spl_ss_data.h
+D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\ss\src\ss_tool.c
+D:\work\code\vim\Marks-Browser\plugin\marksbrowser.vim
+D:\work\code\l4_base\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_const.h
 d:\MySoftWare\gVimPortable\Data\settings\_vimrc
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_cmdlist.c
+D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_agent\vc_project\trace\2013.06.23\Stt201306.23_17.24.trc
+D:\Projects\modem2.5g\branches\l4\tags\L4_V1.00.00_20130517\source\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
 D:\work\code\vim\Wombat\README
 D:\work\code\vim\Wombat\colors\wombat.vim
 D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\molokai\colors\molokai.vim
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
-d:\MySoftWare\gVimPortable\App\vim\vim73\doc\quickfix.txt
 C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.c
 C:\Users\Administrator\Desktop\gsmmux-alpha-2\gsm0710.c
 D:\Projects\modem2.5g\branches\l4\navi\project.vim
 d:\Projects\modem2.5g\branches\l4\navi\project.vim
 d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
 D:\Projects\modem2.5g\branches\l4\navi\tools\release\GenBinFile\rk_strid_base.cfg
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
 D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\CRefVim\doc\crefvim.txt
 d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_main.c
 D:\Projects\modem2.5g\branches\l4\navi\.clang_complete
 d:\Projects\modem2.5g\branches\l4\navi\.clang_complete
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_channel.c
@@ -91,12 +149,10 @@ C:\Users\Administrator\Desktop\a_wang.trc
 D:\Projects\modem2.5g\branches\l4\navi\test\l4\integration1\vc_project\trace\2013.06.06\Stt201306.06_16.22.trc
 C:\Users\Administrator\Desktop\a.trc
 C:\Users\Administrator\Desktop\memLeak.trc
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
 E:\Vmware\sharedFolder\gsmmux-alpha-2\gsm0710.c
 E:\Vmware\sharedFolder\gsmmux-alpha-2\buffer.c
 E:\Vmware\sharedFolder\mux0710-0.0.2\src\mux0710.c
 D:\MySoftWare\TotalCommanderPortable\Data\Plugins\wfx\wfx_devman\pluginst.inf
-C:\Users\Administrator\.gitconfig
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\include\ds_mux.h
 D:\work\mine\121203_2.5G_L4\MUX\mux参考代码(收集)\gsm0710muxd\src\gsm0710muxd.c
 d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
@@ -107,9 +163,7 @@ D:\work\mine\121203_2.5G_L4\MUX\mux参考代码(收集)\mux0710-0.0.2\src\mux0710.c
 D:\work\mine\121203_2.5G_L4\MUX\mux参考代码(收集)\mux0710-0.0.2\README
 C:\Users\Administrator\Desktop\Navi系统测试\trace\死机-长通话15分.trc
 C:\Users\Administrator\Desktop\Navi系统测试\trace\MT call10.trc
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_ds_msg.h
 D:\Projects\modem2.5g\branches\l4\.gitignore
 D:\Projects\modem2.5g\branches\l4\1.log
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_ds_itf.h
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gc\src\at_cmd_gc.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_at_itf.h
