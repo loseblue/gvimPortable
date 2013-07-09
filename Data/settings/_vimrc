@@ -61,7 +61,6 @@ Bundle 'surround.vim'
 Bundle 'jiazhoulvke/myproject'
 Bundle 'TeTrIs.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'drmingdrmer/xptemplate'
 Bundle 'loseblue/TxtBrowser'
 Bundle 'godlygeek/tabular'
 Bundle 'DrawIt'
@@ -355,5 +354,139 @@ let g:easytags_resolve_links = 1
 " CRefVim
 map <silent> <unique> <Leader>ct <Plug>CRV_CRefVimInvoke
 
-source $HOME\cfg_neocomplcache.vim
-source $HOME\cfg_cscopeGtags.vim
+" Neocomplcache
+let g:acp_enableAtStartup = 0
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+let g:neocomplcache_dictionary_filetype_lists = {
+            \ 'default' : '',
+            \ 'vimshell' : $HOME.'/.vimshell_hist',
+            \ 'scheme' : $HOME.'/.gosh_completions'
+            \ }
+
+" Define keyword.
+if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+" Recommended key-mappings.
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-TAB>  pumvisible() ? "\<C-p>" : "\<C-TAB>"
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
+" Enable omni completion.
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+    let g:neocomplcache_omni_patterns = {}
+endif
+
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+" Neosnippet
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+    set conceallevel=2 concealcursor=i
+endif
+
+" Load my snippets
+let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
+
+" settings of cscope.
+" I use GNU global instead cscope because global is faster.
+set cscopetag
+set cscopeprg=gtags-cscope
+set cscopequickfix=c-,d-,e-,f-,g0,i-,s-,t-
+nmap <silent> <leader>gd <ESC>:cstag <c-r><c-w><CR>
+nmap <silent> <leader>gc <ESC>:lcs f c <c-r><c-w><cr>:lw<cr>
+nmap <silent> <leader>gs <ESC>:lcs f s <c-r><c-w><cr>:lw<cr>
+command! -nargs=+ -complete=dir FindFiles :call FindFiles(<f-args>)
+au VimEnter * call VimEnterCallback()
+au BufAdd *.[ch] call FindGtags(expand('<afile>'))
+au BufWritePost *.[ch] call UpdateGtags(expand('<afile>'))
+
+function! FindFiles(pat, ...)
+    let path = ''
+    for str in a:000
+        let path .= str . ','
+    endfor
+
+    if path == ''
+        let path = &path
+    endif
+
+    echo 'finding...'
+    redraw
+    call append(line('$'), split(globpath(path, a:pat), '\n'))
+    echo 'finding...done!'
+    redraw
+endfunc
+
+function! VimEnterCallback()
+    for f in argv()
+        if fnamemodify(f, ':e') != 'c' && fnamemodify(f, ':e') != 'h'
+            continue
+        endif
+
+        call FindGtags(f)
+    endfor
+endfunc
+
+function! FindGtags(f)
+    let dir = fnamemodify(a:f, ':p:h')
+    while 1
+        if has('win32') || has('win64')
+            let tmp = dir . '\GTAGS'
+        else
+            let tmp = dir . '/GTAGS'
+        endif
+
+        if filereadable(tmp)
+            exe 'cs add ' . tmp . ' ' . dir
+            break
+        elseif dir == '/'
+            break
+        endif
+
+        let dir = fnamemodify(dir, ":h")
+    endwhile
+endfunc
+
+function! UpdateGtags(f)
+    let dir = fnamemodify(a:f, ':p:h')
+    " echoerr "FindGtags1" dir 
+    if has('win32') || has('win64')
+        exe 'silent !cd ' . dir . ' && global -u'
+    else
+        exe 'silent !cd ' . dir . ' && global -u &> /dev/null &'
+    endif
+endfunction
+
+

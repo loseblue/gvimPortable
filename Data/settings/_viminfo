@@ -8,63 +8,67 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/ss_ 
+~MSle0~/atd
 
 # Last Substitute Search Pattern:
-~MSle0~&\r
+~MSle0&\r
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
 :w
+:%s/ /,0x/g
+:%s/ / 0x/g
+:source 1.vim
+:q
+:copen
+:source cfg_cscopeGtags.vim
+:echo "hello world"
+:co
+:x
 :BundleClean
 :Tabularize /=
 :Tabularize \=
 :help cscopequickfix
 :help quickfix
-:q
 :lcs f c 
-:x
 :Gozilla
 :q!
 :Gtags -f %
 :BundleInstall
-:global -u
-:Gtags -u
-:Gtags -r at_CrssClccInd
-:Gtags -r at_CrssClrrInd
-:Gtags -r 
-:Gtags -r at_ResultErr
-:HighlightTags
 
 # Search String History (newest to oldest):
+?/atd
+?/RRD :
+?/RRI 
+?/at
+?/cc_ 
 ? \r
-?/ss_ 
-?/ss_SetMmiBitStatus
-? \<aucBuffer\>
-? \<usTmpVal\>
-?/ss_
-?/cscopequickfix
+?  
 ? \<UpdateGtags\>
-?/cscope
-?/AT_response
-?/conn
-?/con
-?/connnect
-?/SPL_AT_SS_QUERY_CALL_WAITING_RSP
-?/ss_RetRsltInfoPresence
-?/ccwa
-?/csco
-? u
-? \<cscopeprg\>
-?/tag
+? \<tmp\>
+? \<fnamemodify\>
+? \<FindGtags\>
+? \<argv\>
+? \<VimEnterCallback\>
+?/err
+?/er
+?/echo
+?/f-args
+?/at_ 16
+?/ds
+?/ds_ 
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')  
 
 # Input Line History (newest to oldest):
+@\<tmp\>
+@\<argv\>
+@\<FindFiles\>
+@\<AT\>
 @Y
 @\<aucBuffer\>
 @\<usTmpVal\>
@@ -81,150 +85,1202 @@ $
 @\<pppDataPtr\>
 @\<pRecvAtData\>
 @\<nServiceCode\>
-@\<spl_CcGetCurrentCallTI\>
-@\<gsm0710_buffer_get_frame\>
-@\Ve
-@\<map\>
 
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	t
+"0	LINE	0
+	" settings of cscope.
+	" I use GNU global instead cscope because global is faster.
+	set cscopetag
+	set cscopeprg=gtags-cscope
+	set cscopequickfix=c-,d-,e-,f-,g0,i-,s-,t-
+	nmap <silent> <leader>gd <ESC>:cstag <c-r><c-w><CR>
+	nmap <silent> <leader>gc <ESC>:lcs f c <c-r><c-w><cr>:lw<cr>
+	nmap <silent> <leader>gs <ESC>:lcs f s <c-r><c-w><cr>:lw<cr>
+	command! -nargs=+ -complete=dir FindFiles :call FindFiles(<f-args>)
+	au VimEnter * call VimEnterCallback()
+	au BufAdd *.[ch] call FindGtags(expand('<afile>'))
+	au BufWritePost *.[ch] call UpdateGtags(expand('<afile>'))
+	
+	function! FindFiles(pat, ...)
+	    let path = ''
+	    for str in a:000
+	        let path .= str . ','
+	    endfor
+	
+	    if path == ''
+	        let path = &path
+	    endif
+	
+	    echo 'finding...'
+	    redraw
+	    call append(line('$'), split(globpath(path, a:pat), '\n'))
+	    echo 'finding...done!'
+	    redraw
+	endfunc
+	
+	function! VimEnterCallback()
+	    for f in argv()
+	        if fnamemodify(f, ':e') != 'c' && fnamemodify(f, ':e') != 'h'
+	            continue
+	        endif
+	
+	        call FindGtags(f)
+	    endfor
+	endfunc
+	
+	function! FindGtags(f)
+	    let dir = fnamemodify(a:f, ':p:h')
+	    while 1
+	        if has('win32') || has('win64')
+	            let tmp = dir . '\GTAGS'
+	        else
+	            let tmp = dir . '/GTAGS'
+	        endif
+	
+	        if filereadable(tmp)
 ""1	LINE	0
-	
+	RRD : 4         rrd_FSM [ rrd_VOID,  RRD_IMM_ASS_CMD ] ==> rrd_VOID 
 "2	LINE	0
-	
+	RRD : 4         rrd_FSM [ rrd_VOID,  RRD_IMM_ASS_CMD ] ==> rrd_VOID 
 "3	LINE	0
-	
-"4	BLOCK	17
-	spl_AtSsAllMessage
-"5	BLOCK	17
-	spl_AtSsAllMessage
+	RRD : 4         rrd_FSM [ rrd_VOID,  RRD_IMM_ASS_CMD ] ==> rrd_VOID 
+"4	LINE	0
+	RRD : 4         rrd_FSM [ rrd_VOID,  RRD_IMM_ASS_CMD ] ==> rrd_VOID 
+"5	LINE	0
+	RRD : 4         rrd_FSM [ rrd_VOID,  RRD_IMM_ASS_CMD ] ==> rrd_VOID 
 "6	LINE	0
-	
+	RRD : 2  --> <L1_RELEASE_REQ>
 "7	LINE	0
-	    // UnRegister AO
+	RRD : 2  --> <LAP_NORMAL_RELEASE_REQ>
 "8	LINE	0
-	
-	
+	RRD : 2  --> <LAP_DATA_REQ>
 "9	LINE	0
-	    // parmeter2 is Class
-"a	CHAR	0
+	RRD : 2  --> <RR_DATA_IND>
+"a@	CHAR	0
 	ddn
 "d	CHAR	0
 	k
 "i	CHAR	0
 	
 "-	CHAR	0
-	t
+	 
 
 # File marks:
-'0  169  0  C:\Users\Administrator\Desktop\2.trc
-'1  828  30  C:\Users\Administrator\Desktop\2.trc
-'2  5  0  ~\[Vundle] clean
-'3  49  23  ~\_vimrc
-'4  176  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
-'5  5  0  ~\cfg_cscopeGtags.vim
-'6  1  0  ~\cfg_neocomplcache.vim
-'7  255  9  d:\MySoftWare\gVimPortable\App\vim\vim73\doc\if_cscop.txt
-'8  6  36  ~\cfg_cscopeGtags.vim
-'9  1  0  ~\cfg_cscopeGtags.vim
+'0  71  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\sap_usr.c
+'1  7004  0  C:\Users\Administrator\Desktop\09-16.txt
+'2  54  0  C:\Users\Administrator\Desktop\1.txt
+'3  422  0  ~\_vimrc
+'4  512  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\at_cmd_cfg.c
+'5  65  48  ~\cfg_cscopeGtags.vim
+'6  63  4  ~\cfg_cscopeGtags.vim
+'7  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\1.vim
+'8  78  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\1.vim
+'9  74  49  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\1.vim
 
 # Jumplist (newest first):
--'  169  0  C:\Users\Administrator\Desktop\2.trc
--'  1  0  C:\Users\Administrator\Desktop\2.trc
--'  293  0  C:\Users\Administrator\Desktop\2.trc
--'  198  60  C:\Users\Administrator\Desktop\2.trc
--'  353  0  C:\Users\Administrator\Desktop\2.trc
--'  179  51  C:\Users\Administrator\Desktop\2.trc
--'  178  31  C:\Users\Administrator\Desktop\2.trc
--'  291  0  C:\Users\Administrator\Desktop\2.trc
--'  124  0  C:\Users\Administrator\Desktop\2.trc
--'  123  49  C:\Users\Administrator\Desktop\2.trc
--'  7  17  C:\Users\Administrator\Desktop\2.trc
--'  828  30  C:\Users\Administrator\Desktop\2.trc
--'  35  16  C:\Users\Administrator\Desktop\2.trc
--'  910  0  C:\Users\Administrator\Desktop\2.trc
--'  99  36  C:\Users\Administrator\Desktop\2.trc
--'  318  0  C:\Users\Administrator\Desktop\2.trc
--'  14  33  C:\Users\Administrator\Desktop\2.trc
--'  172  10  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  14  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\project.vim
--'  5  0  ~\[Vundle] clean
--'  1  0  ~\_vimrc
--'  49  23  ~\_vimrc
--'  176  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  139  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  211  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  1838  12  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  1829  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  93  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_msg.h
--'  546  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
--'  180  37  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  177  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  179  13  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  114  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
--'  1836  13  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  1841  12  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  210  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  147  26  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  89  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  216  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  252  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  80  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  165  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  227  55  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  214  19  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  221  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  90  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  66  39  C:\Users\Administrator\Desktop\2.trc
--'  325  0  C:\Users\Administrator\Desktop\2.trc
--'  1  0  C:\Users\Administrator\Desktop\1.trc
--'  193  0  C:\Users\Administrator\Desktop\1.trc
--'  154  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  20  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  5  0  ~\cfg_cscopeGtags.vim
--'  1  0  ~\cfg_cscopeGtags.vim
--'  1  0  ~\cfg_neocomplcache.vim
--'  255  9  d:\MySoftWare\gVimPortable\App\vim\vim73\doc\if_cscop.txt
--'  871  0  d:\MySoftWare\gVimPortable\App\vim\vim73\doc\quickfix.txt
--'  1  0  d:\MySoftWare\gVimPortable\App\vim\vim73\doc\quickfix.txt
--'  546  5  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\spl_base.h
--'  129  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
--'  565  5  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_main.c
--'  6  36  ~\cfg_cscopeGtags.vim
--'  56  10  ~\cfg_cscopeGtags.vim
--'  12  28  ~\cfg_cscopeGtags.vim
--'  132  43  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
--'  547  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\spl_base.h
--'  546  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_main.c
--'  545  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\spl_base.h
--'  566  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_main.c
--'  2  0  D:\Projects\modem2.5g\branches\[Vundle] clean
--'  37  20  ~\_vimrc
--'  359  17  ~\_vimrc
--'  288  23  ~\_vimrc
--'  287  23  ~\_vimrc
--'  286  23  ~\_vimrc
--'  285  23  ~\_vimrc
--'  284  23  ~\_vimrc
--'  283  23  ~\_vimrc
--'  282  23  ~\_vimrc
--'  281  23  ~\_vimrc
--'  279  8  ~\_vimrc
--'  278  6  ~\_vimrc
--'  277  6  ~\_vimrc
--'  276  6  ~\_vimrc
--'  273  14  ~\_vimrc
--'  272  10  ~\_vimrc
--'  211  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  1838  12  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
+-'  71  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\sap_usr.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\sap_usr.c
+-'  7004  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  6634  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  6529  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  6501  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  5159  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  5087  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4193  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4185  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4150  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4146  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4071  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4067  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4038  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4036  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  4027  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3966  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3965  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3931  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3925  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3899  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3889  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3886  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3867  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3835  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3807  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3801  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  3790  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  12160  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  12096  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11678  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11625  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11619  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11601  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11589  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11581  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11568  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11542  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11506  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11485  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11452  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11268  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11147  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11045  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  11026  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10969  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10867  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10806  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10728  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10672  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10398  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10286  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10215  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  10110  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9708  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9662  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9656  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9653  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9630  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9627  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9621  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9613  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9592  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9584  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9550  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9532  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9510  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9485  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9446  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9406  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9363  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9326  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9289  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9232  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9224  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9196  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9168  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9154  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9137  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9104  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9071  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9053  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  9036  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8989  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8675  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8629  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8623  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8607  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8584  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8215  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  8130  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  7762  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  7700  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  7694  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  7685  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  7650  0  C:\Users\Administrator\Desktop\09-16.txt
+-'  7604  0  C:\Users\Administrator\Desktop\09-16.txt
 
 # History of marks within files (newest to oldest):
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\sap_usr.c
+	"	71	4
+
+> C:\Users\Administrator\Desktop\1.trc
+	"	97	0
+	^	14	13
+	.	1	0
+	+	15990	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	7
+	+	1	9
+	+	1	9
+	+	1	2
+	+	1	2
+	+	1	0
+	+	1	0
+	+	1	19
+	+	1	19
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	1
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	25
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	21	22
+	+	1	0
+
+> C:\Users\Administrator\Desktop\09-16.txt
+	"	7004	0
+	.	6634	0
+	+	3909	0
+	+	10856	0
+	+	12191	0
+	+	6634	0
+
+> C:\Users\Administrator\Desktop\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\1.txt
+	"	54	0
+	^	54	0
+	.	55	0
+	+	71	0
+	+	3	0
+	+	51	0
+	+	50	102
+	+	1	18
+	+	51	50
+	+	55	0
+
+> ~\_vimrc
+	"	422	0
+	^	492	0
+	.	405	0
+	+	70	0
+	+	355	56
+	+	355	56
+	+	45	0
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	52	0
+	+	79	16
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	73
+	+	355	56
+	+	58	8
+	+	79	16
+	+	52	0
+	+	70	0
+	+	37	0
+	+	202	8
+	+	202	0
+	+	209	0
+	+	202	0
+	+	208	7
+	+	202	0
+	+	204	0
+	+	202	0
+	+	203	0
+	+	350	0
+	+	351	0
+	+	249	0
+	+	350	0
+	+	103	0
+	+	102	0
+	+	290	0
+	+	350	0
+	+	1	1
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	355	56
+	+	356	0
+	+	492	11
+	+	351	0
+	+	51	0
+	+	275	0
+	+	289	0
+	+	275	0
+	+	288	0
+	+	275	0
+	+	280	0
+	+	267	0
+	+	275	0
+	+	275	0
+	+	273	0
+	+	275	0
+	+	37	0
+	+	275	0
+	+	289	0
+	+	492	27
+	+	37	0
+	+	49	0
+	+	64	0
+	+	492	0
+	+	492	0
+	+	492	0
+	+	357	0
+	+	385	0
+	+	386	0
+	+	387	0
+	+	389	0
+	+	394	0
+	+	493	0
+	+	358	0
+	+	359	0
+	+	360	0
+	+	361	0
+	+	362	0
+	+	363	0
+	+	385	0
+	+	406	0
+	+	405	0
+	a	47	19
+	l	2	0
+	p	1	0
+
+> ~\cfg_cscopeGtags.vim
+	"	11	49
+	.	65	48
+	+	63	0
+	+	1	0
+	+	13	0
+	+	6	23
+	+	7	21
+	+	8	21
+	+	6	22
+	+	7	23
+	+	8	22
+	+	8	22
+	+	6	23
+	+	7	23
+	+	5	0
+	+	6	0
+	+	5	0
+	+	28	8
+	+	40	8
+	+	56	8
+	+	28	0
+	+	28	0
+	+	28	4
+	+	28	0
+	+	44	25
+	+	63	0
+	+	64	0
+	+	63	0
+	+	66	0
+	+	65	48
+	l	2	0
+	p	1	0
+
+> ~\-TabBar-
+	"	1	1
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~\cfg_neocomplcache.vim
+	"	81	89
+	.	63	0
+	+	44	54
+	+	63	0
+	+	62	0
+	+	69	0
+	+	68	0
+	+	63	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\at_cmd_cfg.c
+	"	512	0
+	.	512	0
+	+	1	0
+	+	512	0
+	+	515	0
+	+	512	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\1.vim
+	"	80	0
+	^	74	21
+	.	74	20
+	+	52	25
+	+	3	0
+	+	11	0
+	+	13	0
+	+	79	28
+	+	9	0
+	+	34	28
+	+	35	0
+	+	34	0
+	+	29	29
+	+	32	0
+	+	11	0
+	+	13	0
+	+	29	13
+	+	13	0
+	+	15	22
+	+	58	30
+	+	62	33
+	+	39	0
+	+	15	0
+	+	13	0
+	+	81	0
+	+	51	0
+	+	56	0
+	+	54	0
+	+	52	25
+	+	51	0
+	+	61	0
+	+	81	0
+	+	55	0
+	+	17	0
+	+	13	0
+	+	32	0
+	+	35	0
+	+	79	59
+	+	79	0
+	+	43	0
+	+	79	4
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	35
+	+	79	0
+	+	1	0
+	+	79	0
+	+	79	27
+	+	79	0
+	+	79	4
+	+	73	0
+	+	79	0
+	+	77	0
+	+	74	0
+	+	76	0
+	+	73	0
+	+	74	49
+	+	61	0
+	+	72	0
+	+	78	0
+	+	78	0
+	+	75	12
+	+	72	0
+	+	74	48
+	+	75	48
+	+	74	20
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\ControlP
+	"	1	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
+	"	386	0
+	^	93	0
+	.	387	0
+	+	281	0
+	+	289	0
+	+	294	0
+	+	305	0
+	+	310	0
+	+	336	0
+	+	84	0
+	+	83	0
+	+	129	0
+	+	224	0
+	+	138	0
+	+	145	0
+	+	323	0
+	+	323	0
+	+	323	0
+	+	323	0
+	+	323	0
+	+	319	0
+	+	323	12
+	+	323	13
+	+	350	0
+	+	323	99
+	+	323	0
+	+	298	0
+	+	299	0
+	+	297	0
+	+	290	0
+	+	299	99
+	+	306	83
+	+	311	79
+	+	316	82
+	+	320	83
+	+	300	34
+	+	93	0
+	+	72	0
+	+	72	0
+	+	124	0
+	+	387	0
+	l	2	0
+	p	1	0
+
+> ~\.vim\bundle\Mark\plugin\mark.vim
+	"	371	3
+
+> ~\.vim\bundle\myproject\plugin\myproject.vim
+	"	301	0
+
+> ~\.vim\bundle\myproject\plugin\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~\.vim\bundle\TabBar\plugin\tabbar.vim
+	"	1340	38
+
+> ~\.vim\bundle\TabBar\plugin\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+
+> ~\.vim\bundle\The-NERD-tree\plugin\NERD_tree.vim
+	"	21	89
+
+> ~\.vim\bundle\The-NERD-tree\plugin\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+
+> ~\1.vim
+	"	3	0
+	^	3	0
+	.	3	0
+	+	11	0
+	+	17	0
+	+	32	0
+	+	17	0
+	+	16	0
+	+	4	0
+	+	4	27
+	+	7	6
+	+	7	6
+	+	7	6
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	4
+	+	7	5
+	+	7	49
+	+	7	0
+	+	7	4
+	+	7	5
+	+	5	0
+	+	7	0
+	+	67	0
+	+	65	0
+	+	66	0
+	+	48	19
+	+	52	19
+	+	66	0
+	+	7	0
+	+	14	0
+	+	13	0
+	+	4	0
+	+	3	0
+
+> ~\.vim\bundle\AuthorInfo\plugin\authorinfo.vim
+	"	156	34
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\project.vim
+	"	1	0
+	^	2	66
+	.	2	0
+	+	2	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\ControlP
+	"	1	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
+	"	576	37
+	.	573	0
+	+	1361	0
+	+	1363	0
+	+	1365	0
+	+	1377	0
+	+	1382	0
+	+	1387	0
+	+	1402	0
+	+	1403	0
+	+	1405	0
+	+	1394	0
+	+	1417	0
+	+	344	0
+	+	340	0
+	+	237	0
+	+	234	0
+	+	227	0
+	+	1851	0
+	+	406	11
+	+	412	0
+	+	416	0
+	+	420	0
+	+	422	0
+	+	425	18
+	+	429	18
+	+	573	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\-TabBar-
+	"	1	52
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\__Tagbar__
+	"	6	4
+	.	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
+	"	7	19
+	.	12	0
+	+	10	0
+	+	12	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\DTMF.txt
+	"	1	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\Android_init.txt
+	"	11	37
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\tags
+	"	11	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\GTAGS
+	"	1	432
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\GPATH
+	"	1	612
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
+	"	1	0
+	l	2	0
+	p	1	0
+
+> D:\work\mine\130705_2.5G_L4_INV\INV Android_ATÃüÁîÁ÷³Ì\DTMF.txt
+	"	374	0
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\.gitignore
+	"	22	4
+	^	22	5
+	.	22	4
+	+	23	0
+	+	22	4
+	l	2	0
+	p	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\tools\release\GenBinFile\rk_strid_base.cfg
+	"	316	21
+	l	2	0
+	p	1	0
+
+> C:\Documents and Settings\Administrator\.gitconfig
+	"	23	0
+	^	16	17
+	.	24	0
+	+	20	0
+	+	11	0
+	+	12	0
+	+	24	0
+	l	2	1
+	p	1	0
 
 > C:\Users\Administrator\Desktop\2.trc
 	"	169	0
@@ -236,25 +1292,6 @@ $
 	+	1	0
 	l	2	0
 	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
-	"	102	4
-	^	83	0
-	.	120	0
-	+	256	0
-	+	264	0
-	+	270	0
-	+	276	0
-	+	281	0
-	+	307	0
-	+	84	0
-	+	83	0
-	+	104	0
-	+	199	0
-	+	113	0
-	+	120	0
-	l	103	4
-	p	102	4
 
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
 	"	340	0
@@ -394,118 +1431,6 @@ $
 	+	2	0
 	+	2	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\project.vim
-	"	1	0
-	^	2	66
-	.	2	0
-	+	2	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\ControlP
-	"	1	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
 	"	14	0
 	.	687	0
@@ -614,244 +1539,6 @@ $
 	m	166	35
 	p	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\__Tagbar__
-	"	9	4
-	.	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-	+	13	0
-
-> C:\Users\Administrator\Desktop\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\[Marks]
 	"	2	0
 	.	1	0
@@ -870,114 +1557,6 @@ $
 	+	1	0
 	+	1	0
 
-> ~\_vimrc
-	"	1	0
-	^	359	28
-	.	49	0
-	+	356	0
-	+	355	2
-	+	356	31
-	+	54	8
-	+	54	8
-	+	54	0
-	+	54	8
-	+	298	0
-	+	80	16
-	+	54	0
-	+	54	0
-	+	69	23
-	+	70	0
-	+	69	11
-	+	73	0
-	+	80	16
-	+	72	0
-	+	71	0
-	+	80	16
-	+	71	0
-	+	71	0
-	+	356	56
-	+	356	56
-	+	45	0
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	52	0
-	+	80	16
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	73
-	+	356	56
-	+	58	8
-	+	80	16
-	+	52	0
-	+	71	0
-	+	37	0
-	+	203	8
-	+	203	0
-	+	210	0
-	+	203	0
-	+	209	7
-	+	203	0
-	+	205	0
-	+	203	0
-	+	204	0
-	+	351	0
-	+	352	0
-	+	250	0
-	+	351	0
-	+	104	0
-	+	103	0
-	+	291	0
-	+	351	0
-	+	1	1
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	356	56
-	+	357	0
-	+	358	11
-	+	352	0
-	+	51	0
-	+	276	0
-	+	290	0
-	+	276	0
-	+	289	0
-	+	276	0
-	+	281	0
-	+	268	0
-	+	276	0
-	+	276	0
-	+	274	0
-	+	276	0
-	+	37	0
-	+	276	0
-	+	290	0
-	+	359	27
-	+	37	0
-	+	49	0
-	a	47	19
-	l	2	0
-	p	1	0
-
 > ~\[Vundle] clean
 	"	5	0
 	.	1	0
@@ -987,153 +1566,6 @@ $
 	+	5	0
 	+	1	0
 	p	5	0
-
-> ~\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> C:\Users\Administrator\Desktop\1.trc
-	"	1	0
-	^	14	13
-	.	1	0
-	+	15990	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	7
-	+	1	9
-	+	1	9
-	+	1	2
-	+	1	2
-	+	1	0
-	+	1	0
-	+	1	19
-	+	1	19
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	1
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	25
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	21	22
-	+	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
-	"	211	0
-	^	227	56
-	.	1846	0
-	+	1356	0
-	+	1358	0
-	+	1360	0
-	+	1372	0
-	+	1377	0
-	+	1382	0
-	+	1397	0
-	+	1398	0
-	+	1400	0
-	+	1389	0
-	+	1412	0
-	+	344	0
-	+	340	0
-	+	237	0
-	+	234	0
-	+	227	0
-	+	1846	0
-	l	2	0
-	p	1	0
 
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
 	"	546	4
@@ -1151,39 +1583,6 @@ $
 
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_msg.h
 	"	93	0
-	l	2	0
-	p	1	0
-
-> ~\cfg_cscopeGtags.vim
-	"	5	0
-	.	5	0
-	+	60	0
-	+	1	0
-	+	13	0
-	+	6	23
-	+	7	21
-	+	8	21
-	+	6	22
-	+	7	23
-	+	8	22
-	+	8	22
-	+	6	23
-	+	7	23
-	+	5	0
-	+	6	0
-	+	5	0
-	l	2	0
-	p	1	0
-
-> ~\cfg_neocomplcache.vim
-	"	1	0
-	.	63	0
-	+	44	54
-	+	63	0
-	+	62	0
-	+	69	0
-	+	68	0
-	+	63	0
 	l	2	0
 	p	1	0
 
@@ -1474,11 +1873,6 @@ $
 	+	1	0
 	p	38	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\tags
-	"	1	0
-	l	2	0
-	p	1	0
-
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\~\VIMRUTIME
 	"	1	0
 	p	1	0
@@ -1624,13 +2018,6 @@ $
 	+	6	0
 	l	1	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
-	"	10	11
-	.	10	0
-	+	10	0
-	l	2	0
-	p	1	0
-
 > C:\Documents and Settings\Administrator\.ssh\config
 	"	4	8
 	^	4	9
@@ -1670,16 +2057,6 @@ $
 	"	1	0
 	.	2	0
 	+	2	0
-
-> C:\Documents and Settings\Administrator\.gitconfig
-	"	24	5
-	^	16	17
-	.	12	0
-	+	20	0
-	+	11	0
-	+	12	0
-	l	2	1
-	p	1	0
 
 > C:\Users\Administrator\Desktop\connect-1.103-win32-msvc\connect.c
 	"	200	35
@@ -1832,199 +2209,5 @@ $
 
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\id\src\at_cmd_id.c
 	"	9	0
-	l	2	0
-	p	1	0
-
-> C:\Users\Administrator\Desktop\Android AT Commmand Log\MO½ÓÍ¨±¾¶Ë¹Ò¶Ï.txt
-	"	9	29
-	l	2	0
-	p	1	0
-
-> C:\Users\Administrator\Desktop\Android AT Commmand Log\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ppp\src\ppp.c
-	"	13	0
-	.	164	0
-	+	234	0
-	+	164	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\project.vim
-	"	7	0
-	^	1	38
-	.	1	37
-	+	2	83
-	+	1	37
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ppp\src\ppp_service.c
-	"	2367	12
-	l	2	0
-	p	1	0
-
-> C:\Users\Administrator\Desktop\Atd99#_RkModem_data.trc
-	"	31	0
-	.	300	0
-	+	2	0
-	+	1	0
-	+	132	0
-	+	300	0
-	l	1	0
-
-> C:\Users\Administrator\Desktop\Atd99#_RkModem_2.trc
-	"	145	13
-	.	3	0
-	+	3	0
-	l	2	0
-	p	1	0
-
-> ~\.vim\bundle\vim-easytags\doc\easytags.txt
-	"	356	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\stack\ss\src\ss_tool.c
-	"	449	0
-	.	851	0
-	+	455	0
-	+	851	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\include\spl_ss_data.h
-	"	10	55
-	.	32	0
-	+	32	0
-
-> D:\work\code\vim\Marks-Browser\plugin\marksbrowser.vim
-	"	67	4
-	.	68	0
-	+	68	0
-	+	67	0
-	+	68	0
-
-> D:\work\code\l4_base\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
-	"	1	0
-	.	70	0
-	+	931	0
-	+	933	0
-	+	932	0
-	+	936	0
-	+	70	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\splf\src\spl.c
-	"	184	0
-	.	184	0
-	+	498	0
-	+	501	0
-	+	90	0
-	+	184	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_const.h
-	"	40	55
-	^	40	56
-	.	40	55
-	+	41	7
-	+	39	6
-	+	40	6
-	+	41	9
-	+	42	15
-	+	40	55
-	l	42	1
-	p	41	1
-
-> d:\MySoftWare\gVimPortable\[Vundle] clean
-	"	3	0
-	.	1	0
-	+	14	0
-	+	12	0
-	+	9	0
-	+	7	0
-	+	6	0
-	+	4	0
-	+	3	0
-	+	1	0
-	p	3	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_cmdlist.c
-	"	1	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\[Vundle] clean
-	"	2	0
-	.	1	0
-	+	1	0
-	p	2	0
-
-> D:\MySoftWare\gVimPortable\[Vundle] Installer
-	"	22	16
-	.	1	0
-	+	317	0
-	+	285	0
-	+	253	0
-	+	219	0
-	+	182	0
-	+	146	0
-	+	110	0
-	+	73	0
-	+	37	0
-	+	1	0
-	p	37	0
-
-> D:\Projects\modem2.5g\branches\[Marks]
-	"	10	7
-	.	1	0
-	+	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_agent\vc_project\trace\2013.06.23\Stt201306.23_17.24.trc
-	"	16	0
-	.	16	0
-	+	1	0
-	+	24	0
-	+	1	0
-	+	24	0
-	+	4	0
-	+	13	0
-	+	16	0
-
-> C:\Users\Administrator\Desktop\__Tagbar__
-	"	1	0
-
-> D:\Projects\modem2.5g\branches\l4\tags\L4_V1.00.00_20130517\source\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
-	"	698	0
-	l	2	0
-	p	1	0
-
-> D:\work\code\vim\Wombat\README
-	"	6	22
-	^	6	23
-	.	6	22
-	+	9	0
-	+	9	0
-	+	1	19
-	+	2	12
-	+	9	0
-	+	6	22
-	l	9	0
-	p	8	0
-
-> D:\work\code\vim\Wombat\colors\wombat.vim
-	"	26	8
-	^	26	9
-	.	25	0
-	+	25	0
-	+	25	16
-	+	26	16
-	+	27	0
-	+	12	0
-	+	25	0
 	l	2	0
 	p	1	0

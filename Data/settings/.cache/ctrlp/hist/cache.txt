@@ -1,4 +1,8 @@
 
+ds.c
+mux
+spl_ss_pa
+at_cmd_ss.c
 spl_ss_to
 spl_cc_pa
 at_cmd_ss.c
@@ -14,7 +18,3 @@ spl_cc_pa
 ds.c
 at_comm
 at_cmd_cc.c
-at_cmd_ss.c
-spl_cc_pa
-spl
-spl_cc_pa

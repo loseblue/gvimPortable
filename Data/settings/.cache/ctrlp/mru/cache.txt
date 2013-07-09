@@ -1,15 +1,40 @@
-C:\Users\Administrator\Desktop\2.trc
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\project.vim
 D:\MySoftWare\gVimPortable\Data\settings\_vimrc
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_msg.h
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\project.vim
+D:\Projects\modem2.5g\branches\l4\navi\baseband\sap\src\sap_usr.c
+C:\Users\Administrator\Desktop\09-16.txt
 C:\Users\Administrator\Desktop\1.trc
+C:\Users\Administrator\Desktop\1.txt
 D:\MySoftWare\gVimPortable\Data\settings\cfg_cscopeGtags.vim
 D:\MySoftWare\gVimPortable\Data\settings\cfg_neocomplcache.vim
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\at_cmd_cfg.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cfg\src\1.vim
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
+D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\The-NERD-tree\plugin\NERD_tree.vim
+D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\myproject\plugin\myproject.vim
+D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\Mark\plugin\mark.vim
+D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\TabBar\plugin\tabbar.vim
+D:\MySoftWare\gVimPortable\Data\settings\1.vim
+D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\AuthorInfo\plugin\authorinfo.vim
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
+D:\Projects\modem2.5g\branches\l4\navi\baseband\Android_init.txt
+D:\Projects\modem2.5g\branches\l4\navi\baseband\DTMF.txt
+D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
+D:\Projects\modem2.5g\branches\l4\navi\baseband\tags
+D:\Projects\modem2.5g\branches\l4\navi\baseband\GPATH
+D:\Projects\modem2.5g\branches\l4\navi\baseband\GTAGS
+D:\work\mine\130705_2.5G_L4_INV\INV Android_AT命令流程\DTMF.txt
+D:\Projects\modem2.5g\branches\l4\.gitignore
+D:\Projects\modem2.5g\branches\l4\navi\tools\release\GenBinFile\rk_strid_base.cfg
+C:\Documents and Settings\Administrator\.gitconfig
+C:\Users\Administrator\Desktop\2.trc
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_msg.h
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
 d:\MySoftWare\gVimPortable\App\vim\vim73\doc\if_cscop.txt
 d:\MySoftWare\gVimPortable\App\vim\vim73\doc\quickfix.txt
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_main.c
@@ -33,23 +58,19 @@ D:\MySoftWare\gVimPortable\Data\settings\neocomplcache.vimrc
 D:\MySoftWare\gVimPortable\Data\settings\neocomplcache.conf
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\engine\src\at_command_table.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gc\src\at_cmd_gc.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
 C:\Users\Administrator\Desktop\7.2-05.txt
 C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO接通对端挂断
 C:\Users\Administrator\Desktop\701_l1c_amr_8.trc
 C:\Users\Administrator\Desktop\701_l1c_amr_7.trc
 C:\Users\Administrator\Desktop\701_l1c_amr_5.trc
 C:\Users\Administrator\Desktop\INV Android_AT命令流程\MO\MO接通本地挂断
-D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
 C:\Documents and Settings\Administrator\.ssh\config
 C:\MinGW\bin\git-proxy
-C:\Documents and Settings\Administrator\.gitconfig
 D:\MySoftWare\git_proxy\git-proxy
 C:\Users\Administrator\Desktop\connect-1.103-win32-msvc\connect.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\gprs\src\at_cmd_gprs.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_ds_msg.h
 C:\Users\Administrator\Desktop\2.jpg
-D:\Projects\modem2.5g\branches\l4\navi\baseband\tags
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\include\spl_const.h
 C:\Users\Administrator\.gitconfig
 C:\Users\Administrator\Desktop\Android AT Commmand Log\MO接通本端挂断.txt
@@ -78,10 +99,8 @@ C:\Users\Administrator\Desktop\gsmmux-alpha-2\gsm0710.c
 D:\Projects\modem2.5g\branches\l4\navi\project.vim
 d:\Projects\modem2.5g\branches\l4\navi\project.vim
 d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
-D:\Projects\modem2.5g\branches\l4\navi\tools\release\GenBinFile\rk_strid_base.cfg
 D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\CRefVim\doc\crefvim.txt
 d:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux_tools.c
 D:\Projects\modem2.5g\branches\l4\navi\.clang_complete
 d:\Projects\modem2.5g\branches\l4\navi\.clang_complete
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_channel.c
@@ -91,7 +110,6 @@ D:\Projects\modem2.5g\branches\l4\create_tag.bat
 C:\Users\Administrator\Desktop\gsmmux-alpha-2\buffer.h
 C:\Users\Administrator\Desktop\gsmmux-alpha-2\tags
 D:\MySoftWare\gVimPortable\Data\settings\_vimtags
-D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
 C:\Users\Administrator\Desktop\Stt201306.20_10.27.trc
 E:\my\web\index.html
 E:\my\web\mux.html
@@ -163,7 +181,6 @@ D:\work\mine\121203_2.5G_L4\MUX\mux参考代码(收集)\mux0710-0.0.2\src\mux0710.c
 D:\work\mine\121203_2.5G_L4\MUX\mux参考代码(收集)\mux0710-0.0.2\README
 C:\Users\Administrator\Desktop\Navi系统测试\trace\死机-长通话15分.trc
 C:\Users\Administrator\Desktop\Navi系统测试\trace\MT call10.trc
-D:\Projects\modem2.5g\branches\l4\.gitignore
 D:\Projects\modem2.5g\branches\l4\1.log
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_ds_itf.h
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_at_itf.h

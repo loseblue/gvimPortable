@@ -7,9 +7,16 @@ nmap <silent> <leader>gd <ESC>:cstag <c-r><c-w><CR>
 nmap <silent> <leader>gc <ESC>:lcs f c <c-r><c-w><cr>:lw<cr>
 nmap <silent> <leader>gs <ESC>:lcs f s <c-r><c-w><cr>:lw<cr>
 command! -nargs=+ -complete=dir FindFiles :call FindFiles(<f-args>)
+
+
+
 au VimEnter * call VimEnterCallback()
 au BufAdd *.[ch] call FindGtags(expand('<afile>'))
 au BufWritePost *.[ch] call UpdateGtags(expand('<afile>'))
+
+
+call FindGtags(expand('<afile>'))
+
 
 function! FindFiles(pat, ...)
     let path = ''
@@ -43,9 +50,11 @@ function! FindGtags(f)
     while 1
         let tmp = dir . '/GTAGS'
         if filereadable(tmp)
+            echo tmp
             exe 'cs add ' . tmp . ' ' . dir
             break
         elseif dir == '/'
+            echo dir
             break
         endif
 
@@ -57,4 +66,6 @@ function! UpdateGtags(f)
     let dir = fnamemodify(a:f, ':p:h')
     exe 'silent !cd ' . dir . ' && global -u &> /dev/null &'
 endfunction
+
+
 
