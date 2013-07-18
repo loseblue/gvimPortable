@@ -1,20 +1,13 @@
 
-ds.c
-mux
 spl_ss_pa
 at_cmd_ss.c
-spl_ss_to
-spl_cc_pa
-at_cmd_ss.c
-spl
 spl_ss_pa
-spl_cc_pa.c
-spl_cc_pa
+at_cmd
 at_cmd_ss.c
-at_cmd_cc.c
+spl_ss_pa
+spl_ss_tools
+at_cmd_ss.c
+spl_ss_pa
 spl_cc_pa
-spl_cc_par
+spl_
 spl_cc_pa
-ds.c
-at_comm
-at_cmd_cc.c

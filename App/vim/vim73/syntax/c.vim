@@ -371,4 +371,9 @@ hi def link cCppOut		Comment
 
 let b:current_syntax = "c"
 
+
+syn match cFunction /\<\w\+\%(\s*(\)\@=/
+
+hi default link cFunction cType
+
 " vim: ts=8
