@@ -63,7 +63,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'DrawIt'
 Bundle 'tpope/vim-fugitive'
 "==========colorscheme============
-Bundle 'bling/vim-airline'
 Bundle 'loseblue/Wombat'
 Bundle 'dsolstad/vim-wombat256i'
 "==========colorscheme============
@@ -94,7 +93,6 @@ set nu!             " show line number
 set autoread        " Set to auto read when a file is changed from the outside
 set foldenable
 set fdm=indent      " floader lines
-set laststatus=2
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " set cursorcolumn  " high light cursor column
 " set cursorline    " high light cursor line
@@ -114,15 +112,19 @@ set vb t_vb=
 set noerrorbells
 set novisualbell
 
-" highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
+" status line setting [including OS,filecoding, course position,present, time]
+set laststatus=2 
+" highlight StatusLine guifg=White guibg=Grey           
+highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
+set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
 " if has('statusline')
-    " set laststatus=2
     " set statusline=%<%f\   "filename
     " set statusline+=%w%h%m%r "Option
     " set statusline+=%{fugitive#statusline()} "Git
     " set statusline+=\ [%{&ff}/%Y]            " filetype
     " set statusline+=\ [%{getcwd()}]          " current dir
-    " set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
+    " set statusline+=\ [A=\%03.3b/H=0x\%02.2B] " ASCII / Hexadecimal value of char
     " set statusline+=%=%-14.(%l,%c%V%)\ %p%%\ %L  " Right aligned file nav info
 " endif
 
@@ -451,4 +453,3 @@ function! UpdateGtags(f)
         exe 'silent !cd ' . dir . ' && global -u &> /dev/null &'
     endif
 endfunction
-
