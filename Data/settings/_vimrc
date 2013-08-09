@@ -4,7 +4,7 @@
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.0
-"   LastChange: 2013-07-15 17:22:16
+"   LastChange: 2013-08-01 16:07:54
 "      History:
 "=============================================================================
 " Platform
@@ -50,6 +50,7 @@ Bundle 'xolox/vim-session'
 " Bundle 'xolox/vim-easytags'
 " ======easytags=====
 Bundle 'gtags.vim'
+Bundle 'jordanchen/gtags-cscope.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'majutsushi/tagbar'
@@ -174,8 +175,8 @@ nnoremap <C-l> <C-w>l
 
 
 " "ctrl+c ctrl+v ctrl+x
-vnoremap <C-c> "+y
-nmap <C-v> "+p
+map <C-c> "+y
+map <C-v> "+p
 
 " file code type
 set ffs=dos,unix

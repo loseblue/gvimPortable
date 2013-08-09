@@ -1,4 +1,8 @@
 
+ds.c
+ds_too
+ds_mux.c
+ds.c
 at_cmd_cc.c
 at_cmd_ss.c
 spl_ss_tools
@@ -14,7 +18,3 @@ spl_ss_pa
 at_cmd_ss.c
 spl_ss_pa
 at_cmd_ss.c
-spl_ss_pa
-at_cmd
-at_cmd_ss.c
-spl_ss_pa

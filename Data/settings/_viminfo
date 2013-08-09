@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/SPL_AT_CALL_ANSWER_REQ
+~MSle0~/gtag
 
 # Last Substitute Search Pattern:
 ~MSle0&\r
@@ -18,10 +18,14 @@ $
 
 # Command Line History (newest to oldest):
 :w
-:s hell.txt
-:s test.txt
+:BundleInstall
+:q!
 :q
 :.ll
+:TOhtml
+:verbose map
+:s hell.txt
+:s test.txt
 :s
 :x
 :%s//\tOperation ID /\t/\/tOperation ID Code /\t/g
@@ -30,41 +34,42 @@ $
 :%s/mux/ss/g
 :help :statusline
 :help :status
-:BundleInstall
 :BundleClean
 :version
 :show st
-:help :powerline
-:help powerline
-:help airline
 
 # Search String History (newest to oldest):
-?/SPL_AT_CALL_ANSWER_REQ
-?/ring
-?/ind
-?/spl_CcClccParse
-?/13501174337
-?/HOLD
-? \<faclityComponentProblemCodeHandle\>
-? \<pSpeechCallInfo\>
-? \r
-? \<0x00000000\>
-? \<8\>
-? \<AT_DS_DATA_IND\>
-? \<SPL_AT_CC_CLCC_IND\>
-? \<DS_AP_REV_DATA_REQ\>
-?/ <-- <AT_DS_DATA_IND>
-?/+clcc
+?/gtag
+?/cscope
+?/gtags
+?/findGtags
 ?/clcc
+? \<0x88c1c\>
+?/SPL_AT_CC_CLCC_IND
+?/at_CrssClccInd
+? \r
+?/connect
 ?/atd
-? \<clcc\>
-?/carri
+?/no carr
+? \<AT\>
+? \<CONNECT\>
+?/no carri
+?/carr
+?/carriet
+?/barrier
+? \s\+$
+?/c-c
 
 # Expression History (newest to oldest):
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')
 =((foldclosed(line('.')) < 0) ? 'zc' : 'zo')  
 
 # Input Line History (newest to oldest):
+@cc :
+@cc: 
+@\<CONNECT\>
+@cc_ 
+@connect
 @\<pSpeechCallInfo\>
 @ss_ 
 @\<AT_DS_DATA_IND\>
@@ -80,60 +85,45 @@ $
 @\<faclityComponentErrorLenHandle\>
 @\<faclityComponentProblemCodeHandle\>
 @\<faclityComponentSequenceLenHandle\>
-@\<faclityComponentProblemCodeLenHandle\>
-@\<faclityComponentOperationIDTagHandle\>
-@\<FAC_COMPO_OPER_ID_TAG\>
-@\<faclityComponentLinkedIDHandle\>
-@\<srcStr\>
 
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	HOLD
-""1	LINE	0
-	
+""0	CHAR	0
+	vim
+"1	CHAR	0
+	gtags
 "2	LINE	0
 	
-	
-"3	CHAR	0
-	260
-<① 1949--2012年每年中国国内市场的石油（或代表性成品油，如93号汽油）、煤炭（如秦皇岛港5000kc平均价）、天然气（如全国工业用户销售平均价）、电力（如全国工业用户购买价）的价格数据。 
-	② 如果没有上述数据的全部，那么你们有哪些部分数据？ 
-	③ 提供上述数据的费用如何测算的，总费用多少
-	
-	
-	
-	
-	成品油价格数据我们有自98年价格市场化以后的每次调整价格
-	煤炭（秦皇岛港5000kc平均价）我们有从2000年起秦皇岛价格数据。
-	电力价格（全国工业用户购买价）我们有现行的每个省份自己的电力的价格，没有历史的。
-	天然气价格目前我们还没有这方面的渠道，暂时无法获得。
-	
-	1、成品油和煤炭价格由于在很长时间内都是受政府控制，对市场化之后的价格我们都是有的。
-	2、电力价格各省市各有不同，同时每个省份的工业电价在不同季节和不同时间段也都不同，构成非常复杂。往期电价官网没有系统公布似乎也没有留存。
+"3	LINE	0
 	
 "4	LINE	0
-	2、电力价格各省市各有不同，同时每个省份的工业电价在不同季节和不同时间段也都不同，构成非常复杂。我们有现行的每个省份自己的电力的价格，但是没有历史的。
-	
 	
 "5	LINE	0
-	1、成品油和煤炭价格由于在很长时间内都是受政府控制，对市场化之后的价格我们都是有的
+	        exe 'silent !cd ' . dir . ' && global -u &> /dev/null &'
 "6	LINE	0
-	3、天然气价格也是分各省市构成，目前我们还没有这方面的渠道，暂时无法获得。
-"7	BLOCK	7
-	电力价格
-"8	BLOCK	3
-	煤炭
+	cscope -bCkR -i cscope.files
+"7	LINE	0
+	g_simRec.void
+"8	LINE	0
+	接受旧衣、物、捐赠｜邮址：湖南省醴陵市东富镇莲石塘村莲塘组（丁子春(负责助学) 收）邮编：412205｜支付宝：yshp317@gmail.com｜义工网｜百科
+	
+	评论《生活帮——你必须知道的家庭急救常识！（很全面）》的内容...
+	
+	
+	
+	　笑话　心理学　语录　书/电影/音乐　两性　哲学　工作　学习　生活
+	
+	
+	左岸读书QQ群 57724110 第2群 31027430 第3群 110561995 欢迎加入~
+	
+	
+	
+	
+	from 爱左岸_Blog版 http://www.izoan.cn/post/jijiuchangshi.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+zuoan2+%28%E5%B7%A6%E5%B2%B8%E8%AF%BB%E4%B9%A6%29
+	
 "9	LINE	0
-	        if(data == 0x00)
-	            resultAdd("\tGeneral Problem Code\t: Unrecognized Component (0x00)\n");  
-	        else if(data == 0x01)
-	            resultAdd("\tGeneral Problem Code\t:Mistyped Component  (0x01)\n");  
-	        else if(data == 0x02)
-	            resultAdd("\tGeneral Problem Code\t:Badly Structured Component  (0x02)\n");  
-	        else
-	            alert("General Problem Code ERROR");
+	
 "a	CHAR	0
 	ddn
 "d	CHAR	0
@@ -144,294 +134,434 @@ $
 	711
 <rReq:w€齜€齜€齜€齜€?2€齜€齜€齜€齜:A€齜€齜€齜€齜jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj,,wgllllllllllllReq:w€齜€齜€齜€齜€?-€齜€齜€齜€齜€?1€齜€齜€齜€齜€齝€齜Hkjjjjj€?jj€?jnnk€?k€?j€?j€?€?dwd$:w€齜€齜€齜€齜€?€?€?€?V€?j€?jVjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkd€?2€齜€齜€齜€齜jjjjjjjjjjjjjjjjjjjVjjjjjjjjp,m€?j€?kkk,mjjyw€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?€?r7€?€?dwiF		:w€齜€齜€齜€齜€?€?€?€?iB.hjiB.€?€?iB.
 "-	CHAR	0
-	也是分各省市构成，
+	vim
 
 # File marks:
-'0  13  23  C:\Users\Administrator\Desktop\1.trc
-'1  486  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
-'2  116  27  D:\work\code\openair4G\openair2\DOCS\DOXYGEN\Doxyfile
-'3  9  49  D:\work\code\openair4G\openair2\DOCS\Documentation\flow.txt
-'4  164  0  D:\work\code\openair4G\openair2\Makefile
-'5  1  0  D:\work\code\openair4G\openair2\S1AP
-'6  462  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
-'7  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
-'8  1  0  C:\Users\Administrator\Desktop\1.trc
-'9  156  21  C:\Users\Administrator\Desktop\1.trc
+'0  16  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
+'1  196  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+'2  33  0  C:\Users\Administrator\Desktop\[Vundle] Installer
+'3  53  35  ~\_vimrc
+'4  748  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+'5  748  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+'6  452  18  ~\_vimrc
+'7  454  14  ~\_vimrc
+'8  6  20  ~\_vimrc
+'9  63  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
 
 # Jumplist (newest first):
--'  13  23  C:\Users\Administrator\Desktop\1.trc
--'  417  21  C:\Users\Administrator\Desktop\1.trc
--'  328  0  C:\Users\Administrator\Desktop\1.trc
--'  136  38  C:\Users\Administrator\Desktop\1.trc
--'  135  28  C:\Users\Administrator\Desktop\1.trc
--'  134  34  C:\Users\Administrator\Desktop\1.trc
--'  133  28  C:\Users\Administrator\Desktop\1.trc
--'  99  33  C:\Users\Administrator\Desktop\1.trc
--'  1  0  C:\Users\Administrator\Desktop\1.trc
--'  350  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  486  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  349  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  81  9  d:\work\code\openair4G\openair2\LAYER2\MAC\ue_procedures.c
--'  1  0  d:\work\code\openair4G\openair2\LAYER2\MAC\ue_procedures.c
--'  112  42  D:\work\code\openair4G\openair2\LAYER2\MAC\main.c
--'  121  0  D:\work\code\openair4G\openair2\LAYER2\MAC\main.c
--'  109  0  D:\work\code\openair4G\openair2\LAYER2\MAC\main.c
--'  96  0  D:\work\code\openair4G\openair2\LAYER2\MAC\main.c
--'  77  4  D:\work\code\openair4G\openair2\LAYER2\MAC\main.c
--'  1  0  D:\work\code\openair4G\openair2\LAYER2\MAC\main.c
--'  158  0  D:\work\code\openair4G\openair2\LAYER2\openair2_proc.c
--'  19  0  D:\work\code\openair4G\openair2\LAYER2\register.c
--'  1  0  D:\work\code\openair4G\openair2\LAYER2\register.c
--'  101  16  D:\work\code\openair4G\openair2\LAYER2\layer2_top.c
--'  1  0  D:\work\code\openair4G\openair2\LAYER2\openair2_proc.c
--'  107  0  D:\work\code\openair4G\openair2\LAYER2\layer2_top.c
--'  86  0  D:\work\code\openair4G\openair2\LAYER2\layer2_top.c
--'  66  29  D:\work\code\openair4G\openair2\LAYER2\layer2_top.c
--'  68  2  D:\work\code\openair4G\openair2\LAYER2\layer2_top.c
--'  1  0  D:\work\code\openair4G\openair2\LAYER2\layer2_top.c
--'  116  27  D:\work\code\openair4G\openair2\DOCS\DOXYGEN\Doxyfile
--'  1  0  D:\work\code\openair4G\openair2\DOCS\DOXYGEN\Doxyfile
--'  9  49  D:\work\code\openair4G\openair2\DOCS\Documentation\flow.txt
--'  1  0  D:\work\code\openair4G\openair2\DOCS\Documentation\flow.txt
--'  164  0  D:\work\code\openair4G\openair2\Makefile
--'  1  0  D:\work\code\openair4G\openair2\Makefile
--'  1  0  D:\work\code\openair4G\openair2\S1AP
--'  1287  13  C:\Users\Administrator\Desktop\1.trc
--'  2875  13  C:\Users\Administrator\Desktop\1.trc
--'  836  35  C:\Users\Administrator\Desktop\1.trc
--'  84  36  C:\Users\Administrator\Desktop\1.trc
--'  79  9  C:\Users\Administrator\Desktop\1.trc
--'  78  26  C:\Users\Administrator\Desktop\1.trc
--'  77  26  C:\Users\Administrator\Desktop\1.trc
--'  292  25  C:\Users\Administrator\Desktop\1.trc
--'  1  0  C:\Users\Administrator\Desktop\1.c
--'  514  41  D:\work\code\javascript\SS_Parser\ss.html
--'  503  27  D:\work\code\javascript\SS_Parser\ss.html
--'  506  0  D:\work\code\javascript\SS_Parser\ss.html
--'  594  16  D:\work\code\javascript\SS_Parser\ss.html
--'  43  16  D:\work\code\javascript\SS_Parser\ss.html
--'  596  20  D:\work\code\javascript\SS_Parser\ss.html
--'  599  65  D:\work\code\javascript\SS_Parser\ss.html
--'  494  0  D:\work\code\javascript\SS_Parser\ss.html
--'  52  23  D:\work\code\javascript\SS_Parser\ss.html
--'  1  0  D:\work\code\javascript\SS_Parser\ss.html
--'  462  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  464  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  377  36  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  360  13  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
--'  256  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  27  32  D:\work\code\OpenAirInterface\openair2\PHY_INTERFACE\mac_phy_primitives.c
--'  1  0  D:\work\code\OpenAirInterface\openair2\PHY_INTERFACE\mac_phy_primitives.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  9  30  C:\Users\Administrator\Desktop\1.trc
--'  180  28  C:\Users\Administrator\Desktop\1.trc
--'  185  0  C:\Users\Administrator\Desktop\1.trc
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  655  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  312  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  589  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  599  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  600  206  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  602  2  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  597  200  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  649  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
--'  606  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  610  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  653  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  596  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  583  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  582  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
--'  307  45  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  291  0  C:\Users\Administrator\Desktop\1.trc
--'  14  37  C:\Users\Administrator\Desktop\1.trc
--'  488  0  C:\Users\Administrator\Desktop\1.trc
--'  137  0  C:\Users\Administrator\Desktop\1.trc
--'  271  19  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  309  39  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  306  12  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
--'  190  0  C:\Users\Administrator\Desktop\1.trc
--'  326  0  C:\Users\Administrator\Desktop\1.trc
--'  289  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
+-'  16  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
+-'  196  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  741  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  1  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
+-'  33  0  C:\Users\Administrator\Desktop\[Vundle] Installer
+-'  1  0  C:\Users\Administrator\Desktop\a21.txt
+-'  53  35  ~\_vimrc
+-'  37  0  ~\_vimrc
+-'  1  0  ~\_vimrc
+-'  748  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  452  18  ~\_vimrc
+-'  750  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  454  14  ~\_vimrc
+-'  388  0  ~\_vimrc
+-'  5  14  D:\MySoftWare\gVimPortable\soft\create_tag.bat
+-'  1  0  D:\MySoftWare\gVimPortable\soft\create_tag.bat
+-'  387  27  ~\_vimrc
+-'  386  14  ~\_vimrc
+-'  389  14  ~\_vimrc
+-'  52  8  ~\_vimrc
+-'  9  68  ~\_vimrc
+-'  6  20  ~\_vimrc
+-'  68  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  63  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  69  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  73  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  76  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  72  8  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  39  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  74  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  10494  64  C:\Users\Administrator\Desktop\a21.txt
+-'  7943  34  C:\Users\Administrator\Desktop\a21.txt
+-'  533933  2  C:\Users\Administrator\Desktop\asm.txt
+-'  533693  0  C:\Users\Administrator\Desktop\asm.txt
+-'  7945  30  C:\Users\Administrator\Desktop\a21.txt
+-'  7966  51  C:\Users\Administrator\Desktop\a21.txt
+-'  7964  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7962  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7954  1  C:\Users\Administrator\Desktop\a21.txt
+-'  7950  23  C:\Users\Administrator\Desktop\a21.txt
+-'  7946  24  C:\Users\Administrator\Desktop\a21.txt
+-'  7944  26  C:\Users\Administrator\Desktop\a21.txt
+-'  7937  51  C:\Users\Administrator\Desktop\a21.txt
+-'  7935  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7933  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7481  1  C:\Users\Administrator\Desktop\a21.txt
+-'  7477  23  C:\Users\Administrator\Desktop\a21.txt
+-'  7473  24  C:\Users\Administrator\Desktop\a21.txt
+-'  7472  19  C:\Users\Administrator\Desktop\a21.txt
+-'  7471  26  C:\Users\Administrator\Desktop\a21.txt
+-'  7470  25  C:\Users\Administrator\Desktop\a21.txt
+-'  7464  51  C:\Users\Administrator\Desktop\a21.txt
+-'  7462  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7460  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7458  42  C:\Users\Administrator\Desktop\a21.txt
+-'  7318  1  C:\Users\Administrator\Desktop\a21.txt
+-'  7314  23  C:\Users\Administrator\Desktop\a21.txt
+-'  7310  24  C:\Users\Administrator\Desktop\a21.txt
+-'  7309  19  C:\Users\Administrator\Desktop\a21.txt
+-'  7308  26  C:\Users\Administrator\Desktop\a21.txt
+-'  7307  25  C:\Users\Administrator\Desktop\a21.txt
+-'  7301  51  C:\Users\Administrator\Desktop\a21.txt
+-'  7299  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7297  49  C:\Users\Administrator\Desktop\a21.txt
+-'  7016  1  C:\Users\Administrator\Desktop\a21.txt
+-'  7012  23  C:\Users\Administrator\Desktop\a21.txt
+-'  7008  24  C:\Users\Administrator\Desktop\a21.txt
+-'  7007  19  C:\Users\Administrator\Desktop\a21.txt
+-'  7006  26  C:\Users\Administrator\Desktop\a21.txt
+-'  7005  25  C:\Users\Administrator\Desktop\a21.txt
+-'  6999  51  C:\Users\Administrator\Desktop\a21.txt
+-'  6997  49  C:\Users\Administrator\Desktop\a21.txt
+-'  6995  49  C:\Users\Administrator\Desktop\a21.txt
+-'  6684  1  C:\Users\Administrator\Desktop\a21.txt
+-'  6680  23  C:\Users\Administrator\Desktop\a21.txt
+-'  6676  24  C:\Users\Administrator\Desktop\a21.txt
+-'  6675  19  C:\Users\Administrator\Desktop\a21.txt
+-'  6674  26  C:\Users\Administrator\Desktop\a21.txt
+-'  6673  25  C:\Users\Administrator\Desktop\a21.txt
+-'  6667  51  C:\Users\Administrator\Desktop\a21.txt
+-'  6665  49  C:\Users\Administrator\Desktop\a21.txt
+-'  6663  49  C:\Users\Administrator\Desktop\a21.txt
+-'  757  1  C:\Users\Administrator\Desktop\a21.txt
+-'  753  23  C:\Users\Administrator\Desktop\a21.txt
+-'  749  24  C:\Users\Administrator\Desktop\a21.txt
+-'  748  19  C:\Users\Administrator\Desktop\a21.txt
+-'  747  26  C:\Users\Administrator\Desktop\a21.txt
+-'  746  25  C:\Users\Administrator\Desktop\a21.txt
+-'  740  51  C:\Users\Administrator\Desktop\a21.txt
+-'  738  49  C:\Users\Administrator\Desktop\a21.txt
+-'  736  49  C:\Users\Administrator\Desktop\a21.txt
+-'  10503  10  C:\Users\Administrator\Desktop\a21.txt
+-'  10502  10  C:\Users\Administrator\Desktop\a21.txt
+-'  53  35  ~\_vimrc
+-'  196  0  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+-'  741  4  D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
 
 # History of marks within files (newest to oldest):
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
-	"	350	4
-	.	380	0
-	+	625	0
-	+	188	0
-	+	577	0
-	+	506	0
-	+	532	0
-	+	184	0
-	+	169	0
-	+	199	0
-	+	354	0
-	+	334	0
-	+	474	0
-	+	470	0
-	+	138	0
-	+	262	0
-	+	316	0
-	+	316	0
-	+	167	0
-	+	167	0
-	+	239	0
-	+	738	17
-	+	732	28
-	+	843	28
-	+	849	17
-	+	356	0
-	+	360	13
-	+	377	36
-	+	462	5
-	+	462	5
-	+	462	0
-	+	377	6
-	+	462	0
-	+	377	9
-	+	462	0
-	+	462	0
-	+	462	0
-	+	462	0
-	+	378	0
-	+	462	0
-	+	378	0
-	+	380	0
-	+	379	0
-	+	384	0
-	+	385	0
-	+	386	0
-	+	390	0
-	+	391	0
-	+	392	0
-	+	397	0
-	+	398	0
-	+	399	0
-	+	403	0
-	+	404	0
-	+	405	0
-	+	408	0
-	+	409	0
-	+	410	0
-	+	414	0
-	+	417	0
-	+	420	0
-	+	421	0
-	+	422	0
-	+	434	0
-	+	435	0
-	+	449	0
-	+	450	0
-	+	462	0
-	+	358	0
-	+	490	0
-	+	486	0
-	+	380	0
-	l	2	0
-	p	1	0
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
+	"	16	0
 
-> C:\Users\Administrator\Desktop\1.trc
-	"	13	23
-	^	84	37
-	.	9	30
-	+	13872	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	7
-	+	50	9
-	+	50	9
-	+	50	2
-	+	50	2
-	+	50	0
-	+	50	0
-	+	50	19
-	+	50	19
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	1
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	25
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	22
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	57
-	+	50	0
-	+	50	0
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
+	"	1	0
+	^	1	9
+	.	1	0
+	+	1	0
+	+	4	0
+	+	3	0
+	+	1	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\ControlP
+	"	1	0
+	.	2	0
 	+	1	0
 	+	1	0
-	+	345	57
-	+	345	0
-	+	259	36
-	+	245	29
 	+	1	0
-	+	560	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 	+	1	0
 	+	2	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+	"	196	0
+	^	746	0
+	.	700	0
+	+	32	0
+	+	238	0
+	+	238	0
+	+	239	4
+	+	238	0
+	+	238	0
+	+	237	0
+	+	238	0
+	+	239	0
+	+	238	0
+	+	164	0
+	+	164	0
+	+	161	41
+	+	170	0
+	+	167	5
+	+	168	7
+	+	169	0
+	+	170	0
+	+	171	4
+	+	170	0
+	+	164	0
+	+	39	0
+	+	40	38
+	+	41	1
+	+	43	6
+	+	40	36
+	+	48	0
+	+	45	8
+	+	46	7
+	+	48	0
+	+	42	15
+	+	65	0
+	+	239	0
+	+	167	0
+	+	166	40
+	+	167	0
+	+	166	69
+	+	159	0
+	+	166	40
+	+	166	40
+	+	166	0
+	+	166	40
+	+	155	0
+	+	166	40
+	+	166	40
+	+	167	0
+	+	238	33
+	+	277	33
+	+	574	0
+	+	174	0
+	+	175	0
+	+	200	0
+	+	64	1
+	+	47	13
+	+	51	1
+	+	49	0
+	+	53	40
+	+	59	0
+	+	58	0
+	+	53	20
+	+	52	15
+	+	47	20
+	+	53	25
+	+	55	38
+	+	57	18
+	+	53	24
+	+	58	0
+	+	61	15
+	+	75	0
+	+	179	0
+	+	67	0
+	+	76	0
+	+	49	0
+	+	76	0
+	+	751	0
+	+	748	0
+	+	748	0
+	+	700	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\a21.txt
+	"	1	0
+
+> C:\Users\Administrator\Desktop\[Vundle] Installer
+	"	33	0
+	.	1	0
+	+	65	0
+	+	33	0
 	+	1	0
-	+	9	30
-	s	239	35
 
 > C:\Users\Administrator\Desktop\-TabBar-
 	"	1	0
@@ -536,6 +666,707 @@ $
 	+	2	0
 	+	2	0
 	+	2	0
+
+> ~\_vimrc
+	"	53	35
+	^	53	35
+	.	53	35
+	+	1	0
+	+	1	0
+	+	1	13
+	+	1	2
+	+	1	0
+	+	1	22
+	+	1	0
+	+	1	79
+	+	37	8
+	+	451	3
+	+	451	8
+	+	451	0
+	+	450	0
+	+	451	7
+	+	451	30
+	+	451	26
+	+	451	0
+	+	451	0
+	+	451	0
+	+	37	0
+	+	39	0
+	+	42	0
+	+	37	0
+	+	451	0
+	+	450	0
+	+	251	32
+	+	252	32
+	+	253	32
+	+	42	0
+	+	49	26
+	+	47	0
+	+	49	0
+	+	48	0
+	+	47	0
+	+	50	0
+	+	124	0
+	+	68	0
+	+	67	0
+	+	66	0
+	+	67	0
+	+	128	0
+	+	67	8
+	+	20	0
+	+	67	0
+	+	1	101
+	+	1	0
+	+	130	0
+	+	129	18
+	+	65	8
+	+	422	13
+	+	423	12
+	+	438	14
+	+	67	0
+	+	131	0
+	+	67	0
+	+	97	15
+	+	130	0
+	+	97	0
+	+	20	0
+	+	128	36
+	+	123	0
+	+	122	0
+	+	122	0
+	+	122	0
+	+	130	0
+	+	122	108
+	+	122	0
+	+	130	0
+	+	122	0
+	+	118	0
+	+	116	0
+	+	122	0
+	+	120	80
+	+	130	0
+	+	117	4
+	+	118	0
+	+	119	0
+	+	120	48
+	+	119	0
+	+	118	0
+	+	7	0
+	+	178	0
+	+	179	13
+	+	178	0
+	+	179	0
+	+	179	0
+	+	179	8
+	+	180	6
+	+	180	6
+	+	179	10
+	+	180	10
+	+	180	10
+	+	179	0
+	+	178	0
+	+	179	0
+	+	180	0
+	+	179	10
+	+	454	0
+	+	452	18
+	+	53	35
+	p	1	0
+	s	9	77
+
+> D:\MySoftWare\gVimPortable\soft\create_tag.bat
+	"	5	14
+	^	14	0
+	.	14	0
+	+	9	0
+	+	11	0
+	+	15	0
+	+	11	11
+	+	12	32
+	+	15	0
+	+	13	4
+	+	14	0
+
+> D:\MySoftWare\gVimPortable\soft\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+
+> ~\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\asm.txt
+	"	533933	2
+
+> C:\Users\Administrator\Desktop\__Tagbar__
+	"	14	4
+	.	35	0
+	+	35	0
+	+	35	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
+	"	510	16
+	.	494	0
+	+	494	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\__Tagbar__
+	"	13	4
+	.	36	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+	+	36	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4.h
+	"	234	0
+	^	232	17
+	.	232	16
+	+	219	0
+	+	215	0
+	+	216	28
+	+	215	10
+	+	216	10
+	+	215	19
+	+	216	20
+	+	190	0
+	+	220	0
+	+	222	0
+	+	236	0
+	+	222	1
+	+	223	0
+	+	240	0
+	+	232	8
+	+	233	8
+	+	234	14
+	+	232	14
+	+	233	14
+	+	232	10
+	+	233	10
+	+	232	13
+	+	233	15
+	+	232	16
+
+> c:\ControlP
+	"	1	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> c:\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+
+> c:\__Tagbar__
+	"	16	4
+	.	22	0
+	+	22	0
+
+> C:\Users\Administrator\Desktop\14.txt
+	"	1	0
+	.	1	0
+	+	10257	0
+	+	10257	0
+	+	1	0
+	+	10257	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\1.trc
+	"	1088	28
+	.	1	0
+	+	13252	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	7
+	+	1	9
+	+	1	9
+	+	1	2
+	+	1	2
+	+	1	0
+	+	1	0
+	+	1	19
+	+	1	19
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	1
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	25
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	22
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	57
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	57
+	+	1	0
+	+	1	36
+	+	1	29
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	30
+	+	2	0
+	+	1	0
+
+> C:\Users\Administrator\Desktop\[Marks]
+	"	2	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> d:\MySoftWare\gVimPortable\App\vim\vim73\doc\usr_41.txt
+	"	2271	0
+
+> C:\Users\Administrator\Desktop\mine\121206_2.5G_CRSS\notifySS.asn
+	"	1	0
+	^	1	0
+
+> C:\Users\Administrator\Desktop\mine\121206_2.5G_CRSS\notifySS.asn.html
+	"	83	74
+	^	2	0
+	.	25	0
+	+	25	0
+
+> C:\Users\Administrator\Desktop\mine\121206_2.5G_CRSS\-TabBar-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+
+> C:\Users\Administrator\Desktop\1.c
+	"	25	7
+	^	25	8
+	.	25	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	22	0
+	+	1	0
+	+	15	9
+	+	15	0
+	+	15	57
+	+	22	0
+	+	1	0
+	+	12	0
+	+	1	3
+	+	15	3
+	+	1	6
+	+	15	6
+	+	4	19
+	+	16	18
+	+	17	5
+	+	21	0
+	+	13	2
+	+	13	8
+	+	13	6
+	+	13	9
+	+	14	0
+	+	17	5
+	+	18	10
+	+	13	0
+	+	19	5
+	+	1	6
+	+	4	0
+	+	11	3
+	+	11	6
+	+	11	0
+	+	1	0
+	+	4	0
+	+	3	0
+	+	4	0
+	+	3	0
+	+	8	0
+	+	25	22
+	+	21	7
+	+	25	30
+	+	24	26
+	+	28	0
+	+	17	8
+	+	28	7
+	+	25	0
+
+> C:\Users\Administrator\Desktop\2.txt
+	"	12209	33
+	^	12215	10
+	.	12215	9
+	+	12215	9
+
+> C:\Users\Administrator\Desktop\ap01.txt
+	"	1634	59
+
+> C:\Users\Administrator\Desktop\18.txt
+	"	9445	28
+
+> C:\Program Files\Wiz\Wiz.ini
+	"	6	9
+	.	6	9
+	+	6	9
+
+> E:\TDDOWNLOAD\lte\Openair0_Embedded_HW_SW_related_to_Openairinterface\openair0\README.txt
+	"	10	0
+
+> E:\TDDOWNLOAD\lte\openlte_v00-08-03\openlte_v00-08-03\README
+	"	16	37
+
+> E:\TDDOWNLOAD\lte\openlte_v00-08-03\openlte_v00-08-03\liblte\src\liblte_mac.cc
+	"	167	27
+
+> E:\TDDOWNLOAD\lte\openlte_v00-08-03\openlte_v00-08-03\liblte\src\__Tagbar__
+	"	7	4
+	.	10	0
+	+	10	0
+
+> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
+	"	350	4
+	.	380	0
+	+	625	0
+	+	188	0
+	+	577	0
+	+	506	0
+	+	532	0
+	+	184	0
+	+	169	0
+	+	199	0
+	+	354	0
+	+	334	0
+	+	474	0
+	+	470	0
+	+	138	0
+	+	262	0
+	+	316	0
+	+	316	0
+	+	167	0
+	+	167	0
+	+	239	0
+	+	738	17
+	+	732	28
+	+	843	28
+	+	849	17
+	+	356	0
+	+	360	13
+	+	377	36
+	+	462	5
+	+	462	5
+	+	462	0
+	+	377	6
+	+	462	0
+	+	377	9
+	+	462	0
+	+	462	0
+	+	462	0
+	+	462	0
+	+	378	0
+	+	462	0
+	+	378	0
+	+	380	0
+	+	379	0
+	+	384	0
+	+	385	0
+	+	386	0
+	+	390	0
+	+	391	0
+	+	392	0
+	+	397	0
+	+	398	0
+	+	399	0
+	+	403	0
+	+	404	0
+	+	405	0
+	+	408	0
+	+	409	0
+	+	410	0
+	+	414	0
+	+	417	0
+	+	420	0
+	+	421	0
+	+	422	0
+	+	434	0
+	+	435	0
+	+	449	0
+	+	450	0
+	+	462	0
+	+	358	0
+	+	490	0
+	+	486	0
+	+	380	0
+	l	2	0
+	p	1	0
 
 > D:\work\code\openair4G\openair2\LAYER2\layer2_top.c
 	"	101	16
@@ -703,166 +1534,8 @@ $
 	+	501	8
 	+	503	28
 
-> C:\Users\Administrator\Desktop\1.c
-	"	1	0
-	^	9	0
-	.	8	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	22	0
-	+	1	0
-	+	15	9
-	+	15	0
-	+	15	57
-	+	22	0
-	+	1	0
-	+	12	0
-	+	1	3
-	+	15	3
-	+	1	6
-	+	15	6
-	+	4	19
-	+	16	18
-	+	17	5
-	+	21	0
-	+	13	2
-	+	13	8
-	+	13	6
-	+	13	9
-	+	14	0
-	+	17	5
-	+	18	10
-	+	13	0
-	+	19	5
-	+	1	6
-	+	4	0
-	+	11	3
-	+	11	6
-	+	11	0
-	+	1	0
-	+	4	0
-	+	3	0
-	+	4	0
-	+	3	0
-	+	8	0
-
 > D:\work\code\openair4G\openair2\S1AP
 	"	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
-	"	1	0
-	^	1	9
-	.	1	0
-	+	1	0
-	+	4	0
-	+	3	0
-	+	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\ControlP
-	"	1	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
 
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
 	"	1	0
@@ -970,110 +1643,6 @@ $
 	+	314	0
 	l	2	0
 	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\__Tagbar__
-	"	11	4
-	.	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
 
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
 	"	1	0
@@ -1289,110 +1858,6 @@ $
 	.	27	0
 	+	27	0
 
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
 > D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_agent\vc_project\trace\2013.07.29\Stt201307.29_17.22.trc
 	"	6312	65
 
@@ -1558,113 +2023,6 @@ $
 	l	2	0
 	m	167	35
 	p	1	0
-
-> ~\_vimrc
-	"	256	0
-	^	116	17
-	.	117	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	16
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	13
-	+	1	2
-	+	1	0
-	+	1	22
-	+	1	0
-	+	1	79
-	+	37	8
-	+	450	3
-	+	450	8
-	+	450	0
-	+	449	0
-	+	450	7
-	+	450	30
-	+	450	26
-	+	450	0
-	+	450	0
-	+	450	0
-	+	37	0
-	+	39	0
-	+	42	0
-	+	37	0
-	+	450	0
-	+	449	0
-	+	250	32
-	+	251	32
-	+	252	32
-	+	42	0
-	+	49	26
-	+	47	0
-	+	49	0
-	+	48	0
-	+	47	0
-	+	50	0
-	+	123	0
-	+	67	0
-	+	66	0
-	+	65	0
-	+	66	0
-	+	127	0
-	+	66	8
-	+	20	0
-	+	66	0
-	+	1	101
-	+	1	0
-	+	129	0
-	+	128	18
-	+	64	8
-	+	421	13
-	+	422	12
-	+	437	14
-	+	66	0
-	+	130	0
-	+	66	0
-	+	96	15
-	+	129	0
-	+	96	0
-	+	20	0
-	+	127	36
-	+	122	0
-	+	121	0
-	+	121	0
-	+	121	0
-	+	129	0
-	+	121	108
-	+	121	0
-	+	129	0
-	+	121	0
-	+	117	0
-	+	115	0
-	+	121	0
-	+	119	80
-	+	129	0
-	+	116	4
-	+	117	0
-	+	118	0
-	+	119	48
-	+	118	0
-	+	117	0
-	p	1	0
-	s	1	0
 
 > ~\.vim\bundle\vim-multiple-cursors\doc\multiple_cursors.txt
 	"	117	0
@@ -1961,9 +2319,6 @@ $
 > d:\MySoftWare\gVimPortable\App\vim\vim73\doc\eval.txt
 	"	6829	14
 
-> C:\Users\Administrator\Desktop\2.txt
-	"	62455	53
-
 > D:\Projects\modem2.5g\branches\l4\navi\baseband\tags
 	"	11	0
 	l	2	0
@@ -1995,110 +2350,6 @@ $
 > D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\ros\mem\src\sxs_mem.c
 	"	40	19
 
-> ~\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
 > C:\Users\Administrator\Desktop\attachment\长通话-MT-10分30秒掉线.trc
 	"	37	37
 
@@ -2120,12 +2371,6 @@ $
 > C:\Users\Administrator\Desktop\[Vundle] clean
 	"	3	0
 	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\[Vundle] Installer
-	"	33	0
-	.	1	0
-	+	33	0
 	+	1	0
 
 > C:\Users\Administrator\Desktop\trace\V1.00.=-UTF\移动卡长通话MT2-12分26秒死机.trc
@@ -2249,391 +2494,3 @@ $
 
 > ~\.vim\bundle\vim-powerline\fontpatcher\README.rst
 	"	23	0
-
-> C:\Users\Administrator\Desktop\trace\V1.00.=-UTF\�ƶ�����ͨ��MO1-11��20������.trc
-	"	34	0
-	^	34	0
-	.	34	0
-	+	34	0
-
-> C:\Users\Administrator\Desktop\�տ������פ��������.trc
-	"	1	9
-
-> C:\Users\Administrator\Desktop\������ros�⣬��������Ӿ�����2.trc
-	"	20	53
-	^	18	0
-	.	30	0
-	+	19	0
-	+	9	0
-	+	19	0
-	+	18	0
-	+	19	0
-	+	18	0
-	+	21	0
-	+	31	0
-	+	19	0
-	+	18	0
-	+	19	0
-	+	19	0
-	+	19	0
-	+	18	0
-	+	19	0
-	+	19	0
-	+	21	0
-	+	19	0
-	+	21	0
-	+	21	0
-	+	19	0
-	+	23	0
-	+	21	0
-	+	19	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	23	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	23	0
-	+	24	29
-	+	35	36
-	+	31	37
-	+	21	0
-	+	24	0
-	+	24	0
-	+	19	0
-	+	24	0
-	+	21	0
-	+	24	0
-	+	21	0
-	+	24	0
-	+	27	0
-	+	24	0
-	+	29	0
-	+	24	0
-	+	24	0
-	+	30	0
-	+	24	0
-	+	24	0
-	+	30	0
-	+	21	0
-	+	30	0
-	+	24	0
-	+	24	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	30	0
-	+	21	0
-	+	30	0
-	+	21	0
-	+	30	0
-	+	19	0
-	+	30	0
-	+	19	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	27	0
-	+	19	0
-	+	24	0
-	+	31	0
-	+	30	0
-	+	35	0
-	+	31	0
-	+	35	0
-	+	30	0
-	+	36	0
-	+	31	0
-	+	36	0
-	+	36	0
-	+	36	0
-	+	36	0
-	+	36	0
-	+	36	0
-	+	36	0
-	+	36	0
-	+	35	0
-	+	36	0
-	+	30	0
-
-> C:\Users\Administrator\Desktop\������ros�⣬��������Ӿ����� - ���� - ���� - ����.trc
-	"	16489	53
-
-> C:\Users\Administrator\Desktop\������ros�⣬��������Ӿ�����.trc
-	"	5205	31
-	.	1773	0
-	+	44	0
-	+	152	0
-	+	167	0
-	+	157	0
-	+	169	0
-	+	144	0
-	+	273	0
-	+	288	0
-	+	278	0
-	+	290	0
-	+	265	0
-	+	410	0
-	+	425	0
-	+	415	0
-	+	427	0
-	+	402	0
-	+	529	0
-	+	544	0
-	+	534	0
-	+	546	0
-	+	521	0
-	+	708	0
-	+	723	0
-	+	713	0
-	+	725	0
-	+	700	0
-	+	857	0
-	+	872	0
-	+	862	0
-	+	874	0
-	+	849	0
-	+	1066	0
-	+	1071	0
-	+	1081	0
-	+	1083	0
-	+	1058	0
-	+	1171	0
-	+	1186	0
-	+	1176	0
-	+	1188	0
-	+	1163	0
-	+	1242	0
-	+	1236	0
-	+	1381	0
-	+	1533	0
-	+	1644	0
-	+	1275	0
-	+	1314	0
-	+	1386	0
-	+	1396	0
-	+	7	0
-	+	11	0
-	+	18	0
-	+	1316	0
-	+	1261	0
-	+	1375	0
-	+	1275	0
-	+	1338	0
-	+	1398	0
-	+	1369	0
-	+	1401	0
-	+	1525	0
-	+	1550	0
-	+	1636	0
-	+	1661	0
-	+	1691	0
-	+	1697	0
-	+	1861	0
-	+	1871	0
-	+	2033	0
-	+	2108	0
-	+	2411	0
-	+	2420	0
-	+	2425	0
-	+	2454	0
-	+	2472	0
-	+	2712	0
-	+	2726	0
-	+	2878	0
-	+	2925	0
-	+	3033	0
-	+	3068	0
-	+	3418	0
-	+	3491	0
-	+	3866	0
-	+	3878	0
-	+	4053	0
-	+	4076	0
-	+	1538	0
-	+	1548	0
-	+	1649	0
-	+	1659	0
-	+	2039	0
-	+	2194	0
-	+	2196	0
-	+	1719	0
-	+	1735	0
-	+	1803	0
-	+	1804	0
-	+	1773	0
-
-> d:\MySoftWare\gVimPortable\App\vim\vim73\doc\repeat.txt
-	"	174	51
-
-> C:\Users\Administrator\Desktop\������ros�⣬����3���Ӿ�����.trc
-	"	9253	56
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\V1.00.=-UTF\�ƶ�����ͨ��MO1-11��20������.trc
-	"	130712	0
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\V1.00.=-UTF\�ƶ�����ͨ��MT1-12��20������.trc
-	"	236437	0
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\V1.00.=-UTF\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-
-> C:\Users\Administrator\Desktop\V1.00.=-UTF\�ƶ�����ͨ��MT2-12��26������.trc
-	"	160823	0
-	.	1	0
-	+	1	0
-
-> C:\Users\Administrator\Desktop\trace\attachment\ͨ�������з����ţ�10����1��δ���ɹ�.log
-	"	125	0
-
-> C:\Users\Administrator\Desktop\trace\attachment\ͨ�������з����ŵ��ߣ�10������1��δ���ͳɹ�.trc
-	"	35844	0
-	.	1	0
-	+	1	0
-	+	1	0
-	s	19648	0
-
-> C:\Users\Administrator\Desktop\trace\attachment\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\MySoftWare\gVimPortable\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\MySoftWare\gVimPortable\ControlP
-	"	1	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> D:\MySoftWare\gVimPortable\__Tagbar__
-	"	10	4
-	.	12	0
-	+	12	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\-TabBar-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\__Tagbar__
-	"	1	0
-	.	12	0
-	+	12	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\Source_Explorer
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_itf.h
-	"	108	8
-	.	4041	0
-	+	1	0
-	+	11	0
-	+	12	0
-	+	29	0
-	+	2	0
-	+	597	0
-	+	100	0
-	+	4023	0
-	+	4031	0
-	+	4024	0
-	+	4041	0
-	+	4041	14
-	+	4041	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4_spl_msg.h
-	"	93	0
-	^	1	2
-	.	1	2
-	+	1	0
-	+	11	0
-	+	12	0
-	+	24	0
-	+	2	0
-	+	1	2
-	l	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
-	"	1	0
-	l	2	0
-	p	1	0
-
-> D:\Projects\modem2.5g\branches\l4\navi\baseband\GTAGS
-	"	1	0
-	l	2	0
-	p	1	0
-
-> D:\MySoftWare\gVimPortable\App\vim\vim73\syntax\c.vim
-	"	378	0
-	^	378	0
-	.	374	0
-	+	374	0

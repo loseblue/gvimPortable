@@ -1,4 +1,25 @@
+D:\Projects\modem2.5g\branches\l4\navi\baseband\GRTAGS
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds.c
+D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
+C:\Users\Administrator\Desktop\a21.txt
+D:\MySoftWare\gVimPortable\Data\settings\_vimrc
+D:\MySoftWare\gVimPortable\soft\create_tag.bat
+C:\Users\Administrator\Desktop\asm.txt
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\interface\include\l4.h
+D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\ds\src\ds_mux.c
 C:\Users\Administrator\Desktop\1.trc
+C:\Users\Administrator\Desktop\14.txt
+d:\MySoftWare\gVimPortable\App\vim\vim73\doc\usr_41.txt
+C:\Users\Administrator\Desktop\mine\121206_2.5G_CRSS\notifySS.asn
+C:\Users\Administrator\Desktop\1.c
+C:\Users\Administrator\Desktop\2.txt
+C:\Users\Administrator\Desktop\18.txt
+C:\Users\Administrator\Desktop\ap01.txt
+c:\Program Files\Wiz\Wiz.ini
+C:\Program Files\Wiz\Wiz.ini
+E:\TDDOWNLOAD\lte\Openair0_Embedded_HW_SW_related_to_Openairinterface\openair0\README.txt
+E:\TDDOWNLOAD\lte\openlte_v00-08-03\openlte_v00-08-03\README
+E:\TDDOWNLOAD\lte\openlte_v00-08-03\openlte_v00-08-03\liblte\src\liblte_mac.cc
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\cc\src\at_cmd_cc.c
 D:\work\code\openair4G\openair2\LAYER2\MAC\ue_procedures.c
 D:\work\code\openair4G\openair2\LAYER2\MAC\main.c
@@ -10,19 +31,16 @@ D:\work\code\openair4G\openair2\DOCS\DOXYGEN\Doxyfile
 D:\work\code\openair4G\openair2\DOCS\Documentation\flow.txt
 D:\work\code\openair4G\openair2\Makefile
 D:\work\code\openair4G\openair2\S1AP
-C:\Users\Administrator\Desktop\1.c
 D:\work\code\javascript\SS_Parser\ss.html
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\at\service\ss\src\at_cmd_ss.c
 D:\work\code\OpenAirInterface\openair2\PHY_INTERFACE\mac_phy_primitives.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_parse.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\ss\src\spl_ss_tools.c
-D:\Projects\modem2.5g\branches\l4\navi\baseband\create_tag.bat
 D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_agent\vc_project\trace\2013.07.29\Stt201307.29_17.22.trc
 C:\Users\Administrator\Desktop\ss\ss.asn1
 C:\Users\Administrator\Desktop\2.trc
 D:\Projects\modem2.5g\branches\l4\navi\baseband\l4\spl\spls\cc\src\spl_cc_parse.c
 D:\Projects\modem2.5g\branches\l4\navi\baseband\GPATH
-D:\MySoftWare\gVimPortable\Data\settings\_vimrc
 D:\MySoftWare\gVimPortable\Data\settings\.vim\bundle\vim-multiple-cursors\doc\multiple_cursors.txt
 D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\vc_project\trace\2013.07.24\Stt201307.24_11.48.trc
 D:\Projects\modem2.5g\branches\l4\navi\test\l4\l4_unit_test_simu\l4\vc_project\trace\2013.07.24\用例7-CC 被叫拒接流程.trc
@@ -38,7 +56,6 @@ D:\Projects\modem2.5g\branches\l4\navi\tools\release\GMonitor\default.cfg
 D:\Projects\modem2.5g\branches\l4\navi\tools\release\GenBinFile\config.ini
 D:\MySoftWare\MyWebServer\web\aaa.txt
 d:\MySoftWare\gVimPortable\App\vim\vim73\doc\change.txt
-C:\Users\Administrator\Desktop\2.txt
 d:\MySoftWare\gVimPortable\App\vim\vim73\doc\eval.txt
 C:\Users\Administrator\Desktop\attachment\长通话-MT-11分50秒死机.trc
 D:\Projects\modem2.5g\branches\protocol\integration\navi\baseband\ros\mem\src\sxs_mem.c
