@@ -46,7 +46,6 @@ Bundle 'Shougo/neosnippet'
 " ======easytags=====
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-shell'
-Bundle 'xolox/vim-session'
 " Bundle 'xolox/vim-easytags'
 " ======easytags=====
 Bundle 'gtags.vim'
@@ -120,13 +119,13 @@ highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey
 set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 " if has('statusline')
-    " set statusline=%<%f\   "filename
-    " set statusline+=%w%h%m%r "Option
-    " set statusline+=%{fugitive#statusline()} "Git
-    " set statusline+=\ [%{&ff}/%Y]            " filetype
-    " set statusline+=\ [%{getcwd()}]          " current dir
-    " set statusline+=\ [A=\%03.3b/H=0x\%02.2B] " ASCII / Hexadecimal value of char
-    " set statusline+=%=%-14.(%l,%c%V%)\ %p%%\ %L  " Right aligned file nav info
+" set statusline=%<%f\   "filename
+" set statusline+=%w%h%m%r "Option
+" set statusline+=%{fugitive#statusline()} "Git
+" set statusline+=\ [%{&ff}/%Y]            " filetype
+" set statusline+=\ [%{getcwd()}]          " current dir
+" set statusline+=\ [A=\%03.3b/H=0x\%02.2B] " ASCII / Hexadecimal value of char
+" set statusline+=%=%-14.(%l,%c%V%)\ %p%%\ %L  " Right aligned file nav info
 " endif
 
 " file encoding setting
@@ -312,10 +311,8 @@ let g:ctrlp_lazy_update = 1
 imap <C-s> <Esc>:wa!<cr>i<Right>
 nmap <C-s> :wa!<cr>
 set nocompatible
-"source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-
 
 " Neocomplcache {
 let g:acp_enableAtStartup = 0
@@ -454,3 +451,31 @@ function! UpdateGtags(f)
         exe 'silent !cd ' . dir . ' && global -u &> /dev/null &'
     endif
 endfunction
+
+
+
+set diffexpr=MyDiff()
+function MyDiff()
+    let opt = '-a --binary '
+    if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+    if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+    let arg1 = v:fname_in
+    if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+    let arg2 = v:fname_new
+    if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+    let arg3 = v:fname_out
+    if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+    let eq = ''
+    if $VIMRUNTIME =~ ' '
+        if &sh =~ '\<cmd'
+            let cmd = '""' . $VIMRUNTIME . '\diff"'
+            let eq = '"'
+        else
+            let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+        endif
+    else
+        let cmd = $VIMRUNTIME . '\diff'
+    endif
+    silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
