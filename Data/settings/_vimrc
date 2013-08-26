@@ -74,7 +74,7 @@ filetype plugin indent on    " required!
 if has('gui_running')
     colorscheme Wombat
 else
-    colorscheme wombat256
+    colorscheme wombat256i
 endif
 
 "}}}
