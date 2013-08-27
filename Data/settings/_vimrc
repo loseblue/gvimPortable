@@ -4,7 +4,7 @@
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.0
-"   LastChange: 2013-08-01 16:07:54
+"   LastChange: 2013-08-27 23:40:54
 "      History:
 "=============================================================================
 " Platform
@@ -72,7 +72,7 @@ filetype plugin indent on    " required!
 " {{{colorscheme
 " colorscheme spring  " color scheme
 if has('gui_running')
-    colorscheme Wombat
+    colorscheme wombat
 else
     colorscheme wombat256i
 endif
@@ -92,7 +92,7 @@ set backspace=2     " backspace can be used
 set nu!             " show line number
 set autoread        " Set to auto read when a file is changed from the outside
 set foldenable
-set fdm=indent      " floader lines
+" set fdm=indent      " floader lines
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " set cursorcolumn  " high light cursor column
 " set cursorline    " high light cursor line
@@ -264,7 +264,7 @@ let g:Tb_UseSingleClick = 1
 let g:Tb_ModSelTarget = 1
 map <A-Left> :Tbbn<CR>
 map <A-Right> :Tbbp<CR>
-map <A--> :Tbbd<CR>
+map <A-0> :Tbbd<CR>
 map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
 ""}
@@ -313,6 +313,11 @@ nmap <C-s> :wa!<cr>
 set nocompatible
 source $VIMRUNTIME/mswin.vim
 behave mswin
+
+" NerdTree {
+let NERDTreeWinPos="right"
+let NERDTreeShowBookmarks=1
+" }
 
 " Neocomplcache {
 let g:acp_enableAtStartup = 0
