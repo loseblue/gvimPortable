@@ -225,7 +225,7 @@ let g:tagbar_width = 30
 let g:tagbar_sort = 0
 
 " roll half screen Alt + jk{
-if MySys() == 'windows'
+if MySys() == 'windows' || MySys()=='unix'
     noremap <A-j> <C-d>
     noremap <A-k> <C-u>
 else
@@ -247,11 +247,9 @@ let showmarks_hlline_lower = 1
 " let showmarks_hlline_upper = 1 
 "}
 
-
 " a.vim {
 let g:alternateNoDefaultAlternate = 1
 "}
-
 
 " vim-multiple-cursors {
 let g:multi_cursor_use_default_mapping=0
@@ -409,8 +407,6 @@ function! FindFiles(pat, ...)
     if path == ''
         let path = &path
     endif
-
-    echo 'finding...'
     redraw
     call append(line('$'), split(globpath(path, a:pat), '\n'))
     echo 'finding...done!'
@@ -422,7 +418,6 @@ function! VimEnterCallback()
         if fnamemodify(f, ':e') != 'c' && fnamemodify(f, ':e') != 'h'
             continue
         endif
-
         call FindGtags(f)
     endfor
 endfunc
@@ -459,8 +454,6 @@ function! UpdateGtags(f)
     endif
 endfunction
 
-
-
 set diffexpr=MyDiff()
 function MyDiff()
     let opt = '-a --binary '
@@ -485,4 +478,3 @@ function MyDiff()
     endif
     silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
-
