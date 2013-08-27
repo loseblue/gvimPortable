@@ -148,7 +148,7 @@ if MySys() == 'windows'
     " set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
     set guifont=yaheiInconsolata:h11
 else
-    set guifont=Monaco:h14
+    set guifont=Monaco:h12
 endif
 
 " copy current file/path to clipboard ,p:file name & path ,P:only path
@@ -174,8 +174,10 @@ nnoremap <C-l> <C-w>l
 
 
 " "ctrl+c ctrl+v ctrl+x
-map <C-c> "+y
-map <C-v> "+p
+vmap <C-c> "+y
+imap <C-v> <ESC>"+p
+nmap <C-v> "+p
+vmap <C-v> "+p
 
 " file code type
 set ffs=dos,unix
