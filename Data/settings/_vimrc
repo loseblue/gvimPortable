@@ -8,25 +8,39 @@
 "      History:
 "=============================================================================
 " Platform
-function! MySys()
-    if has('win32') || has('win64')
-        return "windows"
-    elseif has("unix")
-        return "unix"
-    else
-        return "mac"
-    endif
-endfunction
+" {{{
+if has("win32") || has("win64") || has("win95") || has("win32unix")
+  let g:OS = "win"
+  let g:win = 1
+  let g:mac = 0
+  let g:unix = 0
+elseif has("mac") || has("macunix")
+  let g:OS = "mac"
+  let g:mac = 1
+  let g:win = 0
+  let g:unix = 0
+elseif has("unix")
+  let g:OS = "unix"
+  let g:unix = 1
+  let g:win = 0
+  let g:mac = 0
+endif
+if has("gui") || has("gui_running")
+  let g:gui = 1
+else
+  let g:gui = 0
+endif
+if has("gui_macvim")
+  let g:mvim = 1
+else
+  let g:mvim = 0
+endif
 
 "=========================== Vundle start ================================
 set nocompatible    " be iMproved
 filetype off        " required!
 
-if MySys() == 'windows'
-    set rtp+=~/.vim/bundle/vundle/
-else
-    set rtp+=~/.vim/bundle/vundle/
-endif
+set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
 " required!
@@ -71,7 +85,7 @@ filetype plugin indent on    " required!
 
 " {{{colorscheme
 " colorscheme spring  " color scheme
-if has('gui_running')
+if g:gui
     colorscheme wombat
 else
     colorscheme wombat256i
@@ -143,12 +157,13 @@ let g:mapleader = ","
 set ignorecase smartcase "search cease smart
 
 " VIM font setting
-if MySys() == 'windows'
+if g:mac || g:mvim
+    set guifont=Monaco:h12
+else
+    set guifont=Monaco:h12
     " set guifont=Envy_Code_R:h10:cANSI
     " set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
     set guifont=yaheiInconsolata:h11
-else
-    set guifont=Monaco:h12
 endif
 
 " copy current file/path to clipboard ,p:file name & path ,P:only path
@@ -216,7 +231,7 @@ imap <F7> <C-R>=strftime("%c")<CR>
 nmap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
-if MySys() == 'windows'
+if g:win
     let g:tagbar_ctags_bin = 'ctags'
 else
     let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
@@ -225,12 +240,12 @@ let g:tagbar_width = 30
 let g:tagbar_sort = 0
 
 " roll half screen Alt + jk{
-if MySys() == 'windows' || MySys()=='unix'
-    noremap <A-j> <C-d>
-    noremap <A-k> <C-u>
-else
+if g:mac || g:mvim
     noremap <D-j> <C-d>
     noremap <D-k> <C-u>
+else
+    noremap <A-j> <C-d>
+    noremap <A-k> <C-u>
 endif
 "}
 
@@ -262,9 +277,15 @@ let g:multi_cursor_quit_key='<Esc>'
 "tabbar & tab swith{
 let g:Tb_UseSingleClick = 1
 let g:Tb_ModSelTarget = 1
+if g:mac || g:mvim
+map <D-Left> :Tbbn<CR>
+map <D-Right> :Tbbp<CR>
+map <D--> :Tbbd<CR>
+else
 map <A-Left> :Tbbn<CR>
 map <A-Right> :Tbbp<CR>
-map <A-0> :Tbbd<CR>
+map <A--> :Tbbd<CR>
+endif
 map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
 ""}
