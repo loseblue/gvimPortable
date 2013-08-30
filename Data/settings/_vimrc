@@ -3,37 +3,37 @@
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 1.0.0
-"   LastChange: 2013-08-27 23:40:54
+"      Version: 1.0.3
+"   LastChange: 2013-08-28 14:16:55
 "      History:
 "=============================================================================
 " Platform
 " {{{
 if has("win32") || has("win64") || has("win95") || has("win32unix")
-  let g:OS = "win"
-  let g:win = 1
-  let g:mac = 0
-  let g:unix = 0
+    let g:OS = "win"
+    let g:win = 1
+    let g:mac = 0
+    let g:unix = 0
 elseif has("mac") || has("macunix")
-  let g:OS = "mac"
-  let g:mac = 1
-  let g:win = 0
-  let g:unix = 0
+    let g:OS = "mac"
+    let g:mac = 1
+    let g:win = 0
+    let g:unix = 0
 elseif has("unix")
-  let g:OS = "unix"
-  let g:unix = 1
-  let g:win = 0
-  let g:mac = 0
+    let g:OS = "unix"
+    let g:unix = 1
+    let g:win = 0
+    let g:mac = 0
 endif
 if has("gui") || has("gui_running")
-  let g:gui = 1
+    let g:gui = 1
 else
-  let g:gui = 0
+    let g:gui = 0
 endif
 if has("gui_macvim")
-  let g:mvim = 1
+    let g:mvim = 1
 else
-  let g:mvim = 0
+    let g:mvim = 0
 endif
 
 "=========================== Vundle start ================================
@@ -159,8 +159,9 @@ set ignorecase smartcase "search cease smart
 " VIM font setting
 if g:mac || g:mvim
     set guifont=Monaco:h12
+elseif g:unix
+    set guifont=Monaco
 else
-    set guifont=Monaco:h12
     " set guifont=Envy_Code_R:h10:cANSI
     " set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
     set guifont=yaheiInconsolata:h11
@@ -278,13 +279,13 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:Tb_UseSingleClick = 1
 let g:Tb_ModSelTarget = 1
 if g:mac || g:mvim
-map <D-Left> :Tbbn<CR>
-map <D-Right> :Tbbp<CR>
-map <D--> :Tbbd<CR>
+    map <D-Left> :Tbbn<CR>
+    map <D-Right> :Tbbp<CR>
+    map <D--> :Tbbd<CR>
 else
-map <A-Left> :Tbbn<CR>
-map <A-Right> :Tbbp<CR>
-map <A--> :Tbbd<CR>
+    map <A-Left> :Tbbn<CR>
+    map <A-Right> :Tbbp<CR>
+    map <A--> :Tbbd<CR>
 endif
 map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
