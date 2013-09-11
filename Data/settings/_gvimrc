@@ -42,3 +42,5 @@ if g:mvim
     macm Edit.Font.Smaller key=<nop>
 endif
 " }
+
+set vb t_vb=
