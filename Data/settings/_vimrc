@@ -3,8 +3,8 @@
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 1.0.3
-"   LastChange: 2013-08-28 14:16:55
+"      Version: 1.0.4
+"   LastChange: 2013-09-25 14:59:34
 "      History:
 "=============================================================================
 " Platform
@@ -55,8 +55,9 @@ Bundle 'Mark'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Marks-Browser'
 Bundle 'matchit.zip'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
+Bundle 'mileszs/ack.vim'
+" Bundle 'Shougo/neocomplcache'
+" Bundle 'Shougo/neosnippet'
 " ======easytags=====
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-shell'
@@ -67,7 +68,6 @@ Bundle 'jordanchen/gtags-cscope.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'majutsushi/tagbar'
-Bundle 'wesleyche/SrcExpl'
 Bundle 'genutils'
 Bundle 'EasyGrep'
 Bundle 'loseblue/TabBar'
@@ -96,7 +96,7 @@ endif
 
 "=========================== END Vundle ================================
 
-set nobackup      " cloese backup
+set nobackup                              " cloese backup
 syntax enable       " 
 set display=lastline
 filetype plugin indent on " detect file type
@@ -106,13 +106,14 @@ set backspace=2     " backspace can be used
 set nu!             " show line number
 set autoread        " Set to auto read when a file is changed from the outside
 set foldenable
-" set fdm=indent      " floader lines
+set fdm=syntax      " floader lines
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 " set cursorcolumn  " high light cursor column
 " set cursorline    " high light cursor line
 set linespace=-2   " set line high space
 set lines=25 columns=120 "init UI size
 set linebreak      "Do not cut words between lines, USELESS!
+set clipboard=unnamed                          " yank and paste with the system clipboard
 
 "assigned line setting 
 set list
@@ -122,9 +123,7 @@ set showtabline=2
 set paste
 
 " shut down error ringBell
-set vb t_vb=
-set noerrorbells
-set novisualbell
+set noerrorbells visualbell t_vb=
 
 " status line setting [including OS,filecoding, course position,present, time]
 set laststatus=2 
@@ -132,18 +131,8 @@ set laststatus=2
 highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
 set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
-" if has('statusline')
-" set statusline=%<%f\   "filename
-" set statusline+=%w%h%m%r "Option
-" set statusline+=%{fugitive#statusline()} "Git
-" set statusline+=\ [%{&ff}/%Y]            " filetype
-" set statusline+=\ [%{getcwd()}]          " current dir
-" set statusline+=\ [A=\%03.3b/H=0x\%02.2B] " ASCII / Hexadecimal value of char
-" set statusline+=%=%-14.(%l,%c%V%)\ %p%%\ %L  " Right aligned file nav info
-" endif
 
 " file encoding setting
-" set fileencodings=utf-8,chinese,latin-1
 set encoding=utf-8
 set fileencodings=utf-8,gbk,ucs-bom,cp936 "redad file orders 
 set fenc=utf-8 "create new file encoding 
@@ -291,23 +280,6 @@ map <S-Left> :tabp<CR>
 map <S-Right> :tabn<CR>
 ""}
 
-"SrcExpl{
-nmap <F8> :SrcExplToggle<CR> 
-let g:SrcExpl_winHeight = 8 
-let g:SrcExpl_refreshTime = 500 
-let g:SrcExpl_jumpKey = "<ENTER>" 
-let g:SrcExpl_gobackKey = "<SPACE>" 
-let g:SrcExpl_pluginList = [ 
-            \ "__Tagbar__", 
-            \ "_NERD_tree_", 
-            \ "-TagBar-",
-            \ "Source_Explorer" 
-            \ ] 
-let g:SrcExpl_searchLocalDef = 1 
-let g:SrcExpl_isUpdateTags = 0 
-let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ." 
-let g:SrcExpl_updateTagsKey = "<F12>" 
-"}
 
 " ctrlp{
 let g:ctrlp_map = '<c-p>'
@@ -341,71 +313,88 @@ let NERDTreeWinPos="right"
 let NERDTreeShowBookmarks=1
 " }
 
-" Neocomplcache {
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher {
+if executable('ag')
+    let g:ackprg = 'ag --nogroup --column'
 
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-            \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
-            \ }
+    " Use Ag over Grep
+    set grepprg=ag\ --nogroup\ --nocolor
 
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><C-TAB>  pumvisible() ? "\<C-p>" : "\<C-TAB>"
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" Enable omni completion.
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
-endif
-
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-"}
-
-" Neosnippet {
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-    set conceallevel=2 concealcursor=i
-endif
-
-" Load my snippets
-let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
 " }
+
+" dasyGrep{
+let EasyGrepMode = 2     "extension mode
+let EasyGrepCommand = 1  "grep
+" }
+
+" " Neocomplcache {
+" let g:acp_enableAtStartup = 0
+" let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_enable_smart_case = 1
+" let g:neocomplcache_enable_camel_case_completion = 1
+" let g:neocomplcache_enable_underbar_completion = 1
+" let g:neocomplcache_min_syntax_length = 3
+" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" " Define dictionary.
+" let g:neocomplcache_dictionary_filetype_lists = {
+            " \ 'default' : '',
+            " \ 'vimshell' : $HOME.'/.vimshell_hist',
+            " \ 'scheme' : $HOME.'/.gosh_completions'
+            " \ }
+
+" " Define keyword.
+" if !exists('g:neocomplcache_keyword_patterns')
+    " let g:neocomplcache_keyword_patterns = {}
+" endif
+" let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
+" " Plugin key-mappings.
+" imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" inoremap <expr><C-g>     neocomplcache#undo_completion()
+" inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+" " Recommended key-mappings.
+" inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><C-TAB>  pumvisible() ? "\<C-p>" : "\<C-TAB>"
+" inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+" inoremap <expr><C-y>  neocomplcache#close_popup()
+" inoremap <expr><C-e>  neocomplcache#cancel_popup()
+
+" " Enable omni completion.
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+" " Enable heavy omni completion.
+" if !exists('g:neocomplcache_omni_patterns')
+    " let g:neocomplcache_omni_patterns = {}
+" endif
+
+" let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+" let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+" "}
+
+" " Neosnippet {
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+
+" " SuperTab like snippets behavior.
+" imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+" smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" " For snippet_complete marker.
+" if has('conceal')
+    " set conceallevel=2 concealcursor=i
+" endif
+
+" " Load my snippets
+" let g:neosnippet#snippets_directory = '$HOME/.vim/snippets'
+" " }
 
 " settings of cscope.
 " I use GNU global instead cscope because global is faster.
