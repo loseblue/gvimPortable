@@ -1,13 +1,7 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CLASSES_ROOT\*\shell\gvimtab]
-@="Open with gvim tab"
-
-[HKEY_CLASSES_ROOT\*\shell\gvimtab\command]
-@="d:\\MySoftWare\\gVimPortable\\gVimPortable.exe -p --remote-tab-silent \"%1\" \"%*\""
-
 [HKEY_CLASSES_ROOT\*\shell\gvimbuffer]
-@="Open with gvim buffer"
+@="Open with gvim"
 
 [HKEY_CLASSES_ROOT\*\shell\gvimbuffer\command]
 @="d:\\MySoftWare\\gVimPortable\\gVimPortable.exe -p --remote-silent \"%1\" \"%*\""
