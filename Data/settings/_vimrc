@@ -4,7 +4,7 @@
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.4
-"   LastChange: 2013-09-25 14:59:34
+"   LastChange: 2013-09-26 10:37:52
 "      History:
 "=============================================================================
 " Platform
@@ -84,36 +84,31 @@ Bundle 'dsolstad/vim-wombat256i'
 filetype plugin indent on    " required!
 
 " {{{colorscheme
-" colorscheme spring  " color scheme
 if g:gui
     colorscheme wombat
 else
     colorscheme wombat256i
 endif
-
 "}}}
-
 
 "=========================== END Vundle ================================
 
-set nobackup                              " cloese backup
-syntax enable       " 
+set nobackup               " cloese backup
+syntax enable              "
 set display=lastline
-filetype plugin indent on " detect file type
+filetype plugin indent on  " detect file type
 set iskeyword+=_,$,@,%,#,-
-
-set backspace=2     " backspace can be used
-set nu!             " show line number
-set autoread        " Set to auto read when a file is changed from the outside
+set backspace=2            " backspace can be used
+set nu!                    " show line number
+set autoread               " Set to auto read when a file is changed from the outside
 set foldenable
-set fdm=syntax      " floader lines
-nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
-" set cursorcolumn  " high light cursor column
-" set cursorline    " high light cursor line
-set linespace=-2   " set line high space
-set lines=25 columns=120 "init UI size
-set linebreak      "Do not cut words between lines, USELESS!
-set clipboard=unnamed                          " yank and paste with the system clipboard
+set fdm=syntax             " floader lines
+" set cursorcolumn         " high light cursor column
+" set cursorline           " high light cursor line
+set linespace=-2           " set line high space
+set lines=25 columns=120   " init UI size
+set linebreak              " Do not cut words between lines, USELESS!
+set clipboard=unnamed      " yank and paste with the system clipboard
 
 "assigned line setting 
 set list
@@ -127,10 +122,9 @@ set noerrorbells visualbell t_vb=
 
 " status line setting [including OS,filecoding, course position,present, time]
 set laststatus=2 
-" highlight StatusLine guifg=White guibg=Grey           
 highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
 set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 " file encoding setting
 set encoding=utf-8
@@ -139,6 +133,13 @@ set fenc=utf-8 "create new file encoding
 set nobomb
 " set ambiwidth=double
 
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if g:win
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+else
+    set wildignore+=.git\*,.hg\*,.svn\*
+endif
 
 "Set mapleader
 let mapleader = ","
