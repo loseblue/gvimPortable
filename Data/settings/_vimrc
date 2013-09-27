@@ -4,37 +4,19 @@
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.4
-"   LastChange: 2013-09-26 10:37:52
+"   LastChange: 2013-09-27 14:25:54
 "      History:
 "=============================================================================
 " Platform
 " {{{
-if has("win32") || has("win64") || has("win95") || has("win32unix")
-    let g:OS = "win"
-    let g:win = 1
-    let g:mac = 0
-    let g:unix = 0
-elseif has("mac") || has("macunix")
-    let g:OS = "mac"
-    let g:mac = 1
-    let g:win = 0
-    let g:unix = 0
-elseif has("unix")
-    let g:OS = "unix"
-    let g:unix = 1
-    let g:win = 0
-    let g:mac = 0
-endif
-if has("gui") || has("gui_running")
-    let g:gui = 1
-else
-    let g:gui = 0
-endif
-if has("gui_macvim")
-    let g:mvim = 1
-else
-    let g:mvim = 0
-endif
+" if has("win32") || has("win64")
+    " let g:OS = "win"
+" elseif has("mac") || has("macunix")
+    " let g:OS = "mac"
+" elseif has("unix")
+    " let g:OS = "unix"
+" endif
+"}}}
 
 "=========================== Vundle start ================================
 set nocompatible    " be iMproved
@@ -84,7 +66,7 @@ Bundle 'dsolstad/vim-wombat256i'
 filetype plugin indent on    " required!
 
 " {{{colorscheme
-if g:gui
+if has("gui") || has("gui_running")
     colorscheme wombat
 else
     colorscheme wombat256i
@@ -109,16 +91,21 @@ set linespace=-2           " set line high space
 set lines=25 columns=120   " init UI size
 set linebreak              " Do not cut words between lines, USELESS!
 set clipboard=unnamed      " yank and paste with the system clipboard
+set lazyredraw             " Don't redraw while executing macros
 
-"assigned line setting 
+set noerrorbells visualbell t_vb= " shut down error ringBell
+
+set encoding=utf-8 " file encoding setting
+set fileencodings=utf-8,gbk,ucs-bom,cp936 "redad file orders 
+set fenc=utf-8 "create new file encoding 
+set nobomb
+
 set list
 set listchars=tab:\|-
 set tabpagemax=15 
 set showtabline=2
 set paste
 
-" shut down error ringBell
-set noerrorbells visualbell t_vb=
 
 " status line setting [including OS,filecoding, course position,present, time]
 set laststatus=2 
@@ -126,16 +113,10 @@ highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey
 set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
-" file encoding setting
-set encoding=utf-8
-set fileencodings=utf-8,gbk,ucs-bom,cp936 "redad file orders 
-set fenc=utf-8 "create new file encoding 
-set nobomb
-" set ambiwidth=double
 
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if g:win
+set wildignore=*.o,*.a,*~,*.pyc
+if has("win32") || has("win64")
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
     set wildignore+=.git\*,.hg\*,.svn\*
@@ -147,19 +128,15 @@ let g:mapleader = ","
 set ignorecase smartcase "search cease smart
 
 " VIM font setting
-if g:mac || g:mvim
+if has("gui_macvim")
     set guifont=Monaco:h12
-elseif g:unix
+elseif has("unix")
     set guifont=Monaco
 else
     " set guifont=Envy_Code_R:h10:cANSI
     " set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
     set guifont=yaheiInconsolata:h11
 endif
-
-" copy current file/path to clipboard ,p:file name & path ,P:only path
-" noremap ,p :let @*=expand("%:p")<CR><Esc>
-" noremap ,P :let @*=expand("%:p:h")<CR><Esc>
 
 " C setting
 set tabstop=4       " set width of tab
@@ -169,7 +146,6 @@ set sm        " bracket mactch
 set cindent   " c style cindent
 set cino=l1   " case brace indent
 let b:verilog_indent_modules = 1
-
 
 nmap <silent> <A-q> :q<CR>
 "window jump in VIM Ctrl + hjkl
@@ -196,15 +172,17 @@ let loaded_matchit = 1
 
 " """"""""""""""""""" F1-F12"""""""""""""""""""""""""
 " F1 Toggle Menu and Toolbar {
-set guioptions-=m
-set guioptions-=T
-map <silent> <F1> :if &guioptions =~# 'T' <Bar>
-            \set guioptions-=T <Bar>
-            \set guioptions-=m <bar>
-            \else <Bar>
-            \set guioptions+=T <Bar>
-            \set guioptions+=m <Bar>
-            \endif<CR>
+if has("gui") || has("gui_running")
+    set guioptions-=m
+    set guioptions-=T
+    map <silent> <F1> :if &guioptions =~# 'T' <Bar>
+                \set guioptions-=T <Bar>
+                \set guioptions-=m <bar>
+                \else <Bar>
+                \set guioptions+=T <Bar>
+                \set guioptions+=m <Bar>
+                \endif<CR>
+endif
 "}
 
 map <F2> :MarksBrowser<cr>
@@ -222,7 +200,7 @@ imap <F7> <C-R>=strftime("%c")<CR>
 nmap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
-if g:win
+if has("win32") || has("win64")
     let g:tagbar_ctags_bin = 'ctags'
 else
     let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
@@ -231,7 +209,7 @@ let g:tagbar_width = 30
 let g:tagbar_sort = 0
 
 " roll half screen Alt + jk{
-if g:mac || g:mvim
+if has("gui_macvim")
     noremap <D-j> <C-d>
     noremap <D-k> <C-u>
 else
@@ -268,7 +246,7 @@ let g:multi_cursor_quit_key='<Esc>'
 "tabbar & tab swith{
 let g:Tb_UseSingleClick = 1
 let g:Tb_ModSelTarget = 1
-if g:mac || g:mvim
+if has("gui_macvim")
     map <D-Left> :Tbbn<CR>
     map <D-Right> :Tbbp<CR>
     map <D--> :Tbbd<CR>
@@ -459,11 +437,8 @@ endfunc
 function! UpdateGtags(f)
     let dir = fnamemodify(a:f, ':p:h')
     " echoerr "FindGtags1" dir 
-    if has('win32') || has('win64')
-        exe 'silent !cd ' . dir . ' && global -u'
-    else
-        exe 'silent !cd ' . dir . ' && global -u &> /dev/null &'
-    endif
+    " exe 'silent !cd ' . dir . ' && global -u'
+    call xolox#misc#os#exec({'command': printf('cd %s && global -u', dir), 'async': 1})
 endfunction
 
 set diffexpr=MyDiff()
