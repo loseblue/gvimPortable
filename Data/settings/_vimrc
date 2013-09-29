@@ -4,7 +4,7 @@
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.4
-"   LastChange: 2013-09-27 14:25:54
+"   LastChange: 2013-09-29 15:24:07
 "      History:
 "=============================================================================
 " Platform
@@ -408,20 +408,21 @@ function! VimEnterCallback()
         if fnamemodify(f, ':e') != 'c' && fnamemodify(f, ':e') != 'h'
             continue
         endif
+        echoerr "VimEnterCallback" f
         call FindGtags(f)
     endfor
 endfunc
 
 function! FindGtags(f)
     let dir = fnamemodify(a:f, ':p:h')
-    let depth = 20
+    let depth = 10
     while depth > 0
         if has('win32') || has('win64')
             let tmp = dir . '\GTAGS'
         else
             let tmp = dir . '/GTAGS'
         endif
-
+		
         if filereadable(tmp)
             exe 'cs add ' . tmp . ' ' . dir
             break
@@ -436,9 +437,10 @@ endfunc
 
 function! UpdateGtags(f)
     let dir = fnamemodify(a:f, ':p:h')
-    " echoerr "FindGtags1" dir 
     " exe 'silent !cd ' . dir . ' && global -u'
-    call xolox#misc#os#exec({'command': printf('cd %s && global -u', dir), 'async': 1})
+	" call xolox#misc#os#exec({'command': printf('cd %s && global -u', dir), 'async': 1})
+    call xolox#misc#os#exec({'command': printf('cd %s', dir), 'async': 1})
+	call xolox#misc#os#exec({'command': 'global -u', 'async': 1})
 endfunction
 
 set diffexpr=MyDiff()
