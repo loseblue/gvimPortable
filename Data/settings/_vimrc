@@ -4,11 +4,11 @@
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.4
-"   LastChange: 2013-09-29 15:24:07
+"   LastChange: 2013-10-14 15:37:53
 "      History:
 "=============================================================================
 " Platform
-" {{{
+
 " if has("win32") || has("win64")
     " let g:OS = "win"
 " elseif has("mac") || has("macunix")
@@ -35,9 +35,9 @@ Bundle 'EasyMotion'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Mark'
 Bundle 'Yggdroot/indentLine'
-Bundle 'Marks-Browser'
+Bundle 'project.tar.gz'
+Bundle 'amiorin/vim-project'
 Bundle 'matchit.zip'
-Bundle 'mileszs/ack.vim'
 " Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neosnippet'
 " ======easytags=====
@@ -292,18 +292,6 @@ let NERDTreeWinPos="right"
 let NERDTreeShowBookmarks=1
 " }
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher {
-if executable('ag')
-    let g:ackprg = 'ag --nogroup --column'
-
-    " Use Ag over Grep
-    set grepprg=ag\ --nogroup\ --nocolor
-
-    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
-" }
-
 " dasyGrep{
 let EasyGrepMode = 2     "extension mode
 let EasyGrepCommand = 1  "grep
@@ -384,9 +372,13 @@ nmap <silent> <leader>gd <ESC>:cstag <c-r><c-w><CR>
 nmap <silent> <leader>gc <ESC>:lcs f c <c-r><c-w><cr>:lw<cr>
 nmap <silent> <leader>gs <ESC>:lcs f s <c-r><c-w><cr>:lw<cr>
 command! -nargs=+ -complete=dir FindFiles :call FindFiles(<f-args>)
-au VimEnter * call VimEnterCallback()
+
+nmap <leader>u :call UpdateGtags(expand('<afile>'))<cr>
 au BufAdd *.[ch] call FindGtags(expand('<afile>'))
-au BufWritePost *.[ch] call UpdateGtags(expand('<afile>'))
+
+" au VimEnter * call VimEnterCallback()
+" au BufAdd *.[ch] call FindGtags(expand('<afile>'))
+" au BufWritePost *.[ch] call UpdateGtags(expand('<afile>'))
 
 function! FindFiles(pat, ...)
     let path = ''
@@ -437,6 +429,7 @@ endfunc
 
 function! UpdateGtags(f)
     let dir = fnamemodify(a:f, ':p:h')
+	" echoerr "fnamemodify" dir
     " exe 'silent !cd ' . dir . ' && global -u'
 	" call xolox#misc#os#exec({'command': printf('cd %s && global -u', dir), 'async': 1})
     call xolox#misc#os#exec({'command': printf('cd %s', dir), 'async': 1})
@@ -467,3 +460,27 @@ function MyDiff()
     endif
     silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
+
+
+let g:project_use_nerdtree = 1
+set rtp+=~/.vim/bundle/vim-project/
+call project#rc("d:\work")
+
+Project  'sunnada_lte'
+" 
+Project  '~/.vim/bundle/vim-fenced-code-blocks' , 'fenced'
+
+" Project  'gollum'
+" File     'gollum/Todo.md'                       , 'todo'
+" Callback 'gollum'                               , 'RemoveTextWidth'
+
+" function! RemoveTextWidth(...) abort
+  " setlocal textwidth=0
+" endfunction
+
+" Project  'leitner'
+" Callback 'leitner'                              , ['AddSpecToPath', 'RemoveTextWidth']
+
+" function! AddSpecToPath(tile) abort
+  " setlocal path+=spec
+" endfunction
