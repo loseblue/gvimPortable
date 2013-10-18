@@ -3,8 +3,8 @@
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 1.0.4
-"   LastChange: 2013-10-14 15:37:53
+"      Version: 1.0.5
+"   LastChange: 2013-10-18 17:43:04
 "      History:
 "=============================================================================
 " Platform
@@ -33,9 +33,9 @@ Bundle 'a.vim'
 Bundle 'loseblue/AuthorInfo'
 Bundle 'EasyMotion'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'Mark'
+Bundle 'loseblue/vim-smooth-scroll'
+Bundle 'ihacklog/Mark'
 Bundle 'Yggdroot/indentLine'
-Bundle 'project.tar.gz'
 Bundle 'amiorin/vim-project'
 Bundle 'matchit.zip'
 " Bundle 'Shougo/neocomplcache'
@@ -58,25 +58,28 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'DrawIt'
 Bundle 'tpope/vim-fugitive'
+Bundle 'TeTrIs.vim'
 "==========colorscheme============
 Bundle 'loseblue/Wombat'
-Bundle 'dsolstad/vim-wombat256i'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'junegunn/vim-emoji'
 "==========colorscheme============
 
 filetype plugin indent on    " required!
 
 " {{{colorscheme
+syntax enable
+colorscheme solarized
 if has("gui") || has("gui_running")
-    colorscheme wombat
+	set background=light
 else
-    colorscheme wombat256i
+    set background=dark
 endif
 "}}}
 
 "=========================== END Vundle ================================
 
 set nobackup               " cloese backup
-syntax enable              "
 set display=lastline
 filetype plugin indent on  " detect file type
 set iskeyword+=_,$,@,%,#,-
@@ -154,8 +157,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
 " "ctrl+c ctrl+v ctrl+x
+set clipboard+=unnamed
 vmap <C-c> "+y
 imap <C-v> <ESC>"+p
 nmap <C-v> "+p
@@ -200,21 +203,18 @@ imap <F7> <C-R>=strftime("%c")<CR>
 nmap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
-if has("win32") || has("win64")
-    let g:tagbar_ctags_bin = 'ctags'
-else
-    let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
-endif
+let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_width = 30
 let g:tagbar_sort = 0
 
-" roll half screen Alt + jk{
+nnoremap zz ztkkkjjj
+" roll 90% screen in screen Alt + jk {
 if has("gui_macvim")
-    noremap <D-j> <C-d>
-    noremap <D-k> <C-u>
+	noremap <silent> <D-k> :call smooth_scroll#up(&scroll*17/10, 0, 2, 1)<CR>
+	noremap <silent> <D-j> :call smooth_scroll#down(&scroll*17/10, 0, 2, 1)<CR>
 else
-    noremap <A-j> <C-d>
-    noremap <A-k> <C-u>
+	noremap <silent> <A-k> :call smooth_scroll#up(&scroll*17/10, 0, 2, 1)<CR>
+	noremap <silent> <A-j> :call smooth_scroll#down(&scroll*17/10, 0, 2, 1)<CR>
 endif
 "}
 
@@ -222,14 +222,6 @@ endif
 let NERDSpaceDelims = 1 
 au BufEnter,BufRead,BufNewFile *.txt setlocal ft=txt "txtBrowser called
 au BufEnter,BufRead,BufNewFile *.trc setlocal ft=trc "trcBrowser called
-
-" showmarks setting{
-let showmarks_enable = 1
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let showmarks_ignore_type = "hqm"
-let showmarks_hlline_lower = 1
-" let showmarks_hlline_upper = 1 
-"}
 
 " a.vim {
 let g:alternateNoDefaultAlternate = 1
@@ -374,7 +366,7 @@ nmap <silent> <leader>gs <ESC>:lcs f s <c-r><c-w><cr>:lw<cr>
 command! -nargs=+ -complete=dir FindFiles :call FindFiles(<f-args>)
 
 nmap <leader>u :call UpdateGtags(expand('<afile>'))<cr>
-au BufAdd *.[ch] call FindGtags(expand('<afile>'))
+" au BufAdd *.[ch] call FindGtags(expand('<afile>'))
 
 " au VimEnter * call VimEnterCallback()
 " au BufAdd *.[ch] call FindGtags(expand('<afile>'))
@@ -400,7 +392,7 @@ function! VimEnterCallback()
         if fnamemodify(f, ':e') != 'c' && fnamemodify(f, ':e') != 'h'
             continue
         endif
-        echoerr "VimEnterCallback" f
+        " echoerr "VimEnterCallback" f
         call FindGtags(f)
     endfor
 endfunc
