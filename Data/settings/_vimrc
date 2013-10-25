@@ -4,7 +4,7 @@
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.5
-"   LastChange: 2013-10-18 17:43:04
+"   LastChange: 2013-10-25 16:43:50
 "      History:
 "=============================================================================
 " Platform
@@ -169,6 +169,11 @@ set ffs=dos,unix
 nmap <leader>fd :se ff=dos<cr>
 nmap <leader>fu :se ff=unix<cr>
 
+" Persistent Undo
+set undofile
+set undodir=$VIMFILES/\_undodir
+set undolevels=100 "maximum number of changes that can be undone
+
 
 " matchIt plug
 let loaded_matchit = 1
@@ -207,14 +212,15 @@ let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_width = 30
 let g:tagbar_sort = 0
 
-nnoremap zz ztkkkjjj
+nnoremap zz zt6k6j
+
 " roll 90% screen in screen Alt + jk {
 if has("gui_macvim")
-	noremap <silent> <D-k> :call smooth_scroll#up(&scroll*17/10, 0, 2, 1)<CR>
-	noremap <silent> <D-j> :call smooth_scroll#down(&scroll*17/10, 0, 2, 1)<CR>
+    noremap <silent> <D-k> :call smooth_scroll#up(&scroll*17/10, 0, 2, 0)<CR>
+    noremap <silent> <D-j> :call smooth_scroll#down(&scroll*17/10, 0, 2, 0)<CR>
 else
-	noremap <silent> <A-k> :call smooth_scroll#up(&scroll*17/10, 0, 2, 1)<CR>
-	noremap <silent> <A-j> :call smooth_scroll#down(&scroll*17/10, 0, 2, 1)<CR>
+    noremap <silent> <A-k> :call smooth_scroll#up(&scroll*17/10, 0, 2, 0)<CR>
+    noremap <silent> <A-j> :call smooth_scroll#down(&scroll*17/10, 0, 2, 0)<CR>
 endif
 "}
 
@@ -366,7 +372,7 @@ nmap <silent> <leader>gs <ESC>:lcs f s <c-r><c-w><cr>:lw<cr>
 command! -nargs=+ -complete=dir FindFiles :call FindFiles(<f-args>)
 
 nmap <leader>u :call UpdateGtags(expand('<afile>'))<cr>
-" au BufAdd *.[ch] call FindGtags(expand('<afile>'))
+au BufAdd *.[ch] call FindGtags(expand('<afile>'))
 
 " au VimEnter * call VimEnterCallback()
 " au BufAdd *.[ch] call FindGtags(expand('<afile>'))
