@@ -208,7 +208,12 @@ imap <F7> <C-R>=strftime("%c")<CR>
 nmap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
+if has("gui_macvim")
+let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
+else
 let g:tagbar_ctags_bin = 'ctags'
+endif
+
 let g:tagbar_width = 30
 let g:tagbar_sort = 0
 
