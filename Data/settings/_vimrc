@@ -1,20 +1,20 @@
 "=============================================================================
-"     FileName: _vimrc
+"     FileName: .vimrc
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 1.0.5
-"   LastChange: 2013-10-25 16:43:50
+"      Version: 1.0.6
+"   LastChange: 2013-11-04 20:46:09
 "      History:
 "=============================================================================
 " Platform
 
 " if has("win32") || has("win64")
-    " let g:OS = "win"
+" let g:OS = "win"
 " elseif has("mac") || has("macunix")
-    " let g:OS = "mac"
+" let g:OS = "mac"
 " elseif has("unix")
-    " let g:OS = "unix"
+" let g:OS = "unix"
 " endif
 "}}}
 
@@ -36,7 +36,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'loseblue/vim-smooth-scroll'
 Bundle 'ihacklog/Mark'
 Bundle 'Yggdroot/indentLine'
-Bundle 'amiorin/vim-project'
+“ Bundle 'amiorin/vim-project'
 Bundle 'matchit.zip'
 " Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neosnippet'
@@ -71,7 +71,7 @@ filetype plugin indent on    " required!
 syntax enable
 colorscheme solarized
 if has("gui") || has("gui_running")
-	set background=light
+    set background=light
 else
     set background=dark
 endif
@@ -209,9 +209,9 @@ nmap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_singleclick = 0
 if has("gui_macvim")
-let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
+    let g:tagbar_ctags_bin = '/usr/local/Cellar/ctags/5.8/bin/ctags'
 else
-let g:tagbar_ctags_bin = 'ctags'
+    let g:tagbar_ctags_bin = 'ctags'
 endif
 
 let g:tagbar_width = 30
@@ -311,14 +311,14 @@ let EasyGrepCommand = 1  "grep
 
 " " Define dictionary.
 " let g:neocomplcache_dictionary_filetype_lists = {
-            " \ 'default' : '',
-            " \ 'vimshell' : $HOME.'/.vimshell_hist',
-            " \ 'scheme' : $HOME.'/.gosh_completions'
-            " \ }
+" \ 'default' : '',
+" \ 'vimshell' : $HOME.'/.vimshell_hist',
+" \ 'scheme' : $HOME.'/.gosh_completions'
+" \ }
 
 " " Define keyword.
 " if !exists('g:neocomplcache_keyword_patterns')
-    " let g:neocomplcache_keyword_patterns = {}
+" let g:neocomplcache_keyword_patterns = {}
 " endif
 " let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
@@ -342,7 +342,7 @@ let EasyGrepCommand = 1  "grep
 
 " " Enable heavy omni completion.
 " if !exists('g:neocomplcache_omni_patterns')
-    " let g:neocomplcache_omni_patterns = {}
+" let g:neocomplcache_omni_patterns = {}
 " endif
 
 " let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
@@ -359,7 +359,7 @@ let EasyGrepCommand = 1  "grep
 
 " " For snippet_complete marker.
 " if has('conceal')
-    " set conceallevel=2 concealcursor=i
+" set conceallevel=2 concealcursor=i
 " endif
 
 " " Load my snippets
@@ -371,72 +371,17 @@ let EasyGrepCommand = 1  "grep
 set cscopetag
 set cscopeprg=gtags-cscope
 set cscopequickfix=c-,d-,e-,f-,g0,i-,s-,t-
+let g:GtagsCscope_Auto_Load = 1
+let g:GtagsCscope_Auto_Map = 1
+let g:GtagsCscope_Absolute_Path = 1
 nmap <silent> <leader>gd <ESC>:cstag <c-r><c-w><CR>
 nmap <silent> <leader>gc <ESC>:lcs f c <c-r><c-w><cr>:lw<cr>
 nmap <silent> <leader>gs <ESC>:lcs f s <c-r><c-w><cr>:lw<cr>
-command! -nargs=+ -complete=dir FindFiles :call FindFiles(<f-args>)
 
-nmap <leader>u :call UpdateGtags(expand('<afile>'))<cr>
-au BufAdd *.[ch] call FindGtags(expand('<afile>'))
+au BufWritePost *.[ch] call UpdateGtags()
 
-" au VimEnter * call VimEnterCallback()
-" au BufAdd *.[ch] call FindGtags(expand('<afile>'))
-" au BufWritePost *.[ch] call UpdateGtags(expand('<afile>'))
-
-function! FindFiles(pat, ...)
-    let path = ''
-    for str in a:000
-        let path .= str . ','
-    endfor
-
-    if path == ''
-        let path = &path
-    endif
-    redraw
-    call append(line('$'), split(globpath(path, a:pat), '\n'))
-    echo 'finding...done!'
-    redraw
-endfunc
-
-function! VimEnterCallback()
-    for f in argv()
-        if fnamemodify(f, ':e') != 'c' && fnamemodify(f, ':e') != 'h'
-            continue
-        endif
-        " echoerr "VimEnterCallback" f
-        call FindGtags(f)
-    endfor
-endfunc
-
-function! FindGtags(f)
-    let dir = fnamemodify(a:f, ':p:h')
-    let depth = 10
-    while depth > 0
-        if has('win32') || has('win64')
-            let tmp = dir . '\GTAGS'
-        else
-            let tmp = dir . '/GTAGS'
-        endif
-		
-        if filereadable(tmp)
-            exe 'cs add ' . tmp . ' ' . dir
-            break
-        elseif dir == '/'
-            break
-        endif
-
-        let dir = fnamemodify(dir, ":h")
-        let depth -= 1
-    endwhile
-endfunc
-
-function! UpdateGtags(f)
-    let dir = fnamemodify(a:f, ':p:h')
-	" echoerr "fnamemodify" dir
-    " exe 'silent !cd ' . dir . ' && global -u'
-	" call xolox#misc#os#exec({'command': printf('cd %s && global -u', dir), 'async': 1})
-    call xolox#misc#os#exec({'command': printf('cd %s', dir), 'async': 1})
-	call xolox#misc#os#exec({'command': 'global -u', 'async': 1})
+function! UpdateGtags()
+    call xolox#misc#os#exec({'command': 'global -u', 'async': 1})
 endfunction
 
 set diffexpr=MyDiff()
@@ -464,26 +409,3 @@ function MyDiff()
     silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-
-let g:project_use_nerdtree = 1
-set rtp+=~/.vim/bundle/vim-project/
-call project#rc("d:\work")
-
-Project  'sunnada_lte'
-" 
-Project  '~/.vim/bundle/vim-fenced-code-blocks' , 'fenced'
-
-" Project  'gollum'
-" File     'gollum/Todo.md'                       , 'todo'
-" Callback 'gollum'                               , 'RemoveTextWidth'
-
-" function! RemoveTextWidth(...) abort
-  " setlocal textwidth=0
-" endfunction
-
-" Project  'leitner'
-" Callback 'leitner'                              , ['AddSpecToPath', 'RemoveTextWidth']
-
-" function! AddSpecToPath(tile) abort
-  " setlocal path+=spec
-" endfunction
