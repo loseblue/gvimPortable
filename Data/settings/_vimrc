@@ -1,21 +1,32 @@
 "=============================================================================
-"     FileName: .vimrc
+"     FileName: _vimrc
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
-"      Version: 1.0.6
-"   LastChange: 2013-11-04 20:46:09
+"      Version: 1.0.8
+"   LastChange: 2013-11-07 22:37:06
 "      History:
 "=============================================================================
 " Platform
+if(has("win32") || has("win64") || has("win95") || has("win16"))
+    let g:iswindows = 1
+    let g:isMac = 0
+    let g:isLinux = 0
+elseif has("mac") || has("macunix")
+    let g:iswindows = 0
+    let g:isMac = 1
+    let g:isLinux = 0
+else
+    let g:iswindows = 0
+    let g:isMac = 0
+    let g:isLinux = 1
+endif
 
-" if has("win32") || has("win64")
-" let g:OS = "win"
-" elseif has("mac") || has("macunix")
-" let g:OS = "mac"
-" elseif has("unix")
-" let g:OS = "unix"
-" endif
+if has("gui") || has("gui_running")
+    let g:isGUI = 1
+else
+    let g:isGUI = 0
+endif
 "}}}
 
 "=========================== Vundle start ================================
@@ -36,7 +47,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'loseblue/vim-smooth-scroll'
 Bundle 'ihacklog/Mark'
 Bundle 'Yggdroot/indentLine'
-“ Bundle 'amiorin/vim-project'
+" Bundle 'amiorin/vim-project'
 Bundle 'matchit.zip'
 " Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neosnippet'
@@ -60,6 +71,7 @@ Bundle 'DrawIt'
 Bundle 'tpope/vim-fugitive'
 Bundle 'TeTrIs.vim'
 "==========colorscheme============
+Bundle 'bling/vim-airline'
 Bundle 'loseblue/Wombat'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'junegunn/vim-emoji'
@@ -70,7 +82,7 @@ filetype plugin indent on    " required!
 " {{{colorscheme
 syntax enable
 colorscheme solarized
-if has("gui") || has("gui_running")
+if (g:isGUI)
     set background=light
 else
     set background=dark
@@ -112,14 +124,15 @@ set paste
 
 " status line setting [including OS,filecoding, course position,present, time]
 set laststatus=2 
-highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
-set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+" highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
+" set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+" nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
+set noshowmode 
 
 " Ignore compiled files
 set wildignore=*.o,*.a,*~,*.pyc
-if has("win32") || has("win64")
+if g:iswindows 
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
     set wildignore+=.git\*,.hg\*,.svn\*
@@ -131,15 +144,26 @@ let g:mapleader = ","
 set ignorecase smartcase "search cease smart
 
 " VIM font setting
-if has("gui_macvim")
+if (g:isMac)
     set guifont=Monaco:h12
-elseif has("unix")
+elseif (g:isLinux)
     set guifont=Monaco
 else
-    " set guifont=Envy_Code_R:h10:cANSI
-    " set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
     set guifont=yaheiInconsolata:h11
 endif
+set laststatus=2 
+set t_Co=256 
+" let g:Powerline_symbols='fancy' 
+let g:airline_theme="solarized"
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_branch_prefix = '⭠'
+let g:airline_readonly_symbol = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
+
 
 " C setting
 set tabstop=4       " set width of tab
@@ -180,7 +204,7 @@ let loaded_matchit = 1
 
 " """"""""""""""""""" F1-F12"""""""""""""""""""""""""
 " F1 Toggle Menu and Toolbar {
-if has("gui") || has("gui_running")
+if g:isGUI
     set guioptions-=m
     set guioptions-=T
     map <silent> <F1> :if &guioptions =~# 'T' <Bar>
@@ -220,7 +244,7 @@ let g:tagbar_sort = 0
 nnoremap zz zt6k6j
 
 " roll 90% screen in screen Alt + jk {
-if has("gui_macvim")
+if (g:isMac)
     noremap <silent> <D-k> :call smooth_scroll#up(&scroll*17/10, 0, 2, 0)<CR>
     noremap <silent> <D-j> :call smooth_scroll#down(&scroll*17/10, 0, 2, 0)<CR>
 else
@@ -249,7 +273,7 @@ let g:multi_cursor_quit_key='<Esc>'
 "tabbar & tab swith{
 let g:Tb_UseSingleClick = 1
 let g:Tb_ModSelTarget = 1
-if has("gui_macvim")
+if (g:isMac)
     map <D-Left> :Tbbn<CR>
     map <D-Right> :Tbbp<CR>
     map <D--> :Tbbd<CR>
@@ -408,4 +432,5 @@ function MyDiff()
     endif
     silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
+
 
