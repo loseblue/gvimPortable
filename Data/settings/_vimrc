@@ -1,10 +1,10 @@
 "=============================================================================
-"     FileName: _vimrc
+"     FileName: .vimrc
 "         Desc: 
 "       Author: loseblue
 "        Email: loseblue[a]163.com
 "      Version: 1.0.8
-"   LastChange: 2013-11-07 22:37:06
+"   LastChange: 2013-12-12 20:42:46
 "      History:
 "=============================================================================
 " Platform
@@ -42,58 +42,54 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'a.vim'
 Bundle 'loseblue/AuthorInfo'
-Bundle 'EasyMotion'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'loseblue/vim-smooth-scroll'
 Bundle 'ihacklog/Mark'
 Bundle 'Yggdroot/indentLine'
-" Bundle 'amiorin/vim-project'
 Bundle 'matchit.zip'
 " Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neosnippet'
+Bundle 'justinmk/vim-sneak'
 " ======easytags=====
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-shell'
 " Bundle 'xolox/vim-easytags'
 " ======easytags=====
 Bundle 'gtags.vim'
-Bundle 'jordanchen/gtags-cscope.vim'
+Bundle 'loseblue/gtags-cscope.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'majutsushi/tagbar'
 Bundle 'genutils'
 Bundle 'EasyGrep'
 Bundle 'loseblue/TabBar'
-Bundle 'surround.vim'
+" Bundle 'surround.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'DrawIt'
 Bundle 'tpope/vim-fugitive'
 Bundle 'TeTrIs.vim'
+Bundle 'osyo-manga/vim-over'
+Bundle 'plasticboy/vim-markdown'
 "==========colorscheme============
 Bundle 'bling/vim-airline'
-Bundle 'loseblue/Wombat'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'junegunn/vim-emoji'
+Bundle 'chriskempson/tomorrow-theme'
 "==========colorscheme============
 
 filetype plugin indent on    " required!
 
 " {{{colorscheme
 syntax enable
-colorscheme solarized
-if (g:isGUI)
-    set background=light
-else
-    set background=dark
-endif
-"}}}
+colorscheme Tomorrow-Night-Eighties
 
+"}}}
+set cursorline
+set cursorcolumn
 "=========================== END Vundle ================================
 
 set nobackup               " cloese backup
 set display=lastline
-filetype plugin indent on  " detect file type
 set iskeyword+=_,$,@,%,#,-
 set backspace=2            " backspace can be used
 set nu!                    " show line number
@@ -120,15 +116,12 @@ set listchars=tab:\|-
 set tabpagemax=15 
 set showtabline=2
 set paste
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+set noshowmode 
 
-
-" status line setting [including OS,filecoding, course position,present, time]
 set laststatus=2 
 " highlight StatusLineNC guifg=LightGrey guibg=LightSlateGrey 
 " set statusline=[%<%f\]\ %{fugitive#statusline()}\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [A=\%03.3b/H=0x\%02.2B]\ [POS=%l,%v][%p%%]\ %y%r%m%*%=\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-" nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
-
-set noshowmode 
 
 " Ignore compiled files
 set wildignore=*.o,*.a,*~,*.pyc
@@ -156,6 +149,8 @@ set t_Co=256
 " let g:Powerline_symbols='fancy' 
 let g:airline_theme="solarized"
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#syntastic#enabled = 0
+
 let g:airline_left_sep = '⮀'
 let g:airline_left_alt_sep = '⮁'
 let g:airline_right_sep = '⮂'
@@ -166,13 +161,16 @@ let g:airline_linecolumn_prefix = '⭡'
 
 
 " C setting
+set sm        " bracket mactch
 set tabstop=4       " set width of tab
 set shiftwidth=4    " set with of assignment blank num = 4
 set et              " set exchange tab to 4 blanks
-set sm        " bracket mactch
 set cindent   " c style cindent
-set cino=l1   " case brace indent
-let b:verilog_indent_modules = 1
+set cinoptions={0,1s,t0,(0,
+nnoremap zz zt6k6j
+nnoremap [[ [[zt6k6j
+nnoremap ]] ]]zt6k6j
+
 
 nmap <silent> <A-q> :q<CR>
 "window jump in VIM Ctrl + hjkl
@@ -198,6 +196,9 @@ set undofile
 set undodir=$VIMFILES/\_undodir
 set undolevels=100 "maximum number of changes that can be undone
 
+" sneak search
+nmap f <Plug>SneakForward
+nmap F <Plug>SneakBackward
 
 " matchIt plug
 let loaded_matchit = 1
@@ -240,8 +241,6 @@ endif
 
 let g:tagbar_width = 30
 let g:tagbar_sort = 0
-
-nnoremap zz zt6k6j
 
 " roll 90% screen in screen Alt + jk {
 if (g:isMac)
@@ -319,7 +318,7 @@ let NERDTreeWinPos="right"
 let NERDTreeShowBookmarks=1
 " }
 
-" dasyGrep{
+" easyGrep{
 let EasyGrepMode = 2     "extension mode
 let EasyGrepCommand = 1  "grep
 " }
@@ -433,4 +432,7 @@ function MyDiff()
     silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-
+" markdown highlight {
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_initial_foldlevel=1
+" }
